@@ -7,15 +7,33 @@
                 padding: 0;
             }
             body{
-                margin: 20px;
-                max-width: 1000px;
+                margin: 1.2em;
+                max-width: 900px;
             }
             h1 {
-                font-size: 30px;
-                font-family: Helvetica, Arial, sans-serif;
+                font-size: 1.6em;
+                font-family: 'Times New Roman', Times, serif;
             }
-            li, p {
-                font-size: 20px;
+
+            h2 {
+                font-size: 1.4em;
+                font-family: 'Times New Roman', Times, serif;
+                border-bottom: 1px solid black;
+                margin-top: 0.8em;
+                padding-bottom: 0.2em;
+                margin-bottom: 0.4em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+                font-family: 'Times New Roman', Times, serif;
+                margin-top: 0.8em;
+                padding-bottom: 0.4em;
+
+            }
+
+            li, p, table td {
+                font-size: 1.2em;
                 font-family: 'Times New Roman', Times, serif;
                 font-weight: normal;
             }
@@ -27,30 +45,101 @@
                 color: blueviolet;
             }
             .about {
-                margin-bottom: 20px;
+                margin-bottom: 1.2em;
             }
-            ul li {
+            table {
+                border-collapse:separate; 
+                border-spacing: 0 0.3em;
+            }
+            table td {
+                vertical-align: top;
+            }
+            table tr {
+                border-bottom: 1px solid black; 
+            }
+            ol li {
+                counter-increment: work;
+                margin-bottom: 0.3em;
+            }
+
+            ol li:before {
+                content: "[" counter(work) "] ";
+            }
+            
+            ol {
                 list-style: none;
-                margin-bottom: 10px;
+                counter-reset: work;
             }
         </style>
     </head>
     <body>
+
         <div class="about">
             <h1>Gaurav Singh</h1>
-            <p>Machine Learning, Mathematics</p>
-            <p><i>Curr.</i> Looking for PhD opportunities</p>
-            <p><i>Also.</i> Founder, Mathscapes (2008-Present); Design Copilot, Topcoder Inc. (2018-Present)</i> </p>
-            <p><i>Past.</i> Faculty member, Srishti Manipal Institute, Bangalore, India (2016-2022)</p>
-            <p><a href="mailto:gv-sh@outlook.com">[Email]</a> <a href="https://orcid.org/0000-0003-1651-6602">[OrcID]</a> <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">[GScholar]</a> <a href="https://github.com/gv-sh">[GH.]</a> <a href="https://linkedin.com/in/gv-sh">[LinkedIn]</a> <a href="https://twitter.com/gv__sh">[Tw.]</a> <a href="https://instagram.com/gv__sh">[Ig.]</a></p>
         </div>
+        
+        <table>
+            <tr><td width="180px">Location</td> <td>Bangalore, India</td></tr>
+            <tr><td>OrcID</td> <td><a href="https://orcid.org/0000-0003-1651-6602">https://orcid.org/0000-0003-1651-6602</a></td></tr>
+            <tr><td>GitHub</td> <td><a href="https://github.com/gv-sh">https://github.com/gv-sh</a></td></tr>
+        </table>
+
+        <h2>Education</h2>
+        <table>
+            <tr><td width="180px"><b>2013-15</b></td> <td><b>ADP</b> in Innovation and Experience Design; Srishti, India</td></tr>
+            <tr><td><b>2008-12</b></td> <td><b>B.Tech</b> in Computer Science & Engg.; JNTU-A, India</td></tr>
+        </table>
+
+        <h2>Professional Experience</h2>
+        <table>
+            <tr><td width="180px"><b>Jul 2022-Present</b></td> <td><b>Research Assistant to Dr. Zia Javanbakht</b>; Griffith University, Australia</td></tr>
+            <tr><td><b>2018-Present</b></td> <td><b>Design Copilot - Remote Position</b>; Topcoder Inc., USA</td></tr>
+            <tr><td><b>2008-Present</b></td> <td><b>Founder and Researcher</b>; Mathscapes, India</td></tr>
+            <tr><td><b>2017-22</b></td> <td><b>Faculty member and Researcher</b>; Srishti Manipal Institute, India</td></tr>
+            <tr><td><b>2016</b></td> <td><b>Research Assistant</b>; Art in Transit</td></tr>
+            <tr><td><b>2014</b></td> <td><b>Research Intern</b>; S.Labs</td></tr>
+            <tr><td><b>2008-15</b></td> <td><b>Designer</b>; Independent</td></tr>
+        </table>
+
+        <h2>Work</h2>
         <div class="list">
-            <ul>
-                <li>(Performance) Lena Heubeush, Avril Stormy Unger, Nikhil Nagaraj, Gaurav Singh and Walkin Studios. <i>Together with Touch.</i> 2021. Conceptualised by Walkin Studios and funded by the International Relief Fund for Organisations in Culture and Education 2021 of the German Federal Foreign Office, the Goethe-Institut and partners</li>
-                <li>Naveen Bagalkot, Gaurav Singh, Vineeta Rath, Tomas Sokoler, and Anchit Shukla. 2019. <i>ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute.</i> In Proceedings of the Thirteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '19). Association for Computing Machinery, New York, NY, USA, 443-450. <a href="https://doi.org/10.1145/3294109.3300986">https://doi.org/10.1145/3294109.3300986</a></li>
-                <li>Naveen Bagalkot, Tomas Sokoler, Riyaj Shaikh, Gaurav Singh, Anders Edelbo Lillie, Pratiksha Dixit, Aditi Rai, Chakravarthy Vignesh & Ashwin Senthil. 2017. <i>ReRide.</i> Human-Computer Interaction – INTERACT 2017. Lecture Notes in Computer Science, vol 10516. Springer, Cham. <a href="https://doi.org/10.1007/978-3-319-68059-0_43">https://doi.org/10.1007/978-3-319-68059-0_43</a></li>
-                <li>Suraj Baadkar, Gaurav Singh, Atul Saraf, and Naveen Bagalkot. 2014. <i>SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being.</i> In Proceedings of the India HCI 2014 Conference on Human-Computer Interaction (IndiaHCI '14). Association for Computing Machinery, New York, NY, USA, 136-141. <a href="https://doi.org/10.1145/2676702.2676719">https://doi.org/10.1145/2676702.2676719</a></li>
-            </ul>
+            <ol>
+                <li>(Performance) L Heubeush, AS Unger, N Nagaraj, <b>G Singh</b> and Walkin Studios. <i>Together with Touch.</i> 2021. Conceptualised by Walkin Studios and funded by the International Relief Fund for Organisations in Culture and Education 2021 of the German Federal Foreign Office, the Goethe-Institut and partners</li>
+                <li>(Conference Proceedings) N Bagalkot, <b>G Singh</b>, V Rath, T Sokoler, and A Shukla. 2019. <i>ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute.</i> In Proceedings of the Thirteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '19). Association for Computing Machinery, New York, NY, USA, 443-450. <a href="https://doi.org/10.1145/3294109.3300986">https://doi.org/10.1145/3294109.3300986</a></li>
+                <li>(Conference Proceedings) N Bagalkot, T Sokoler, R Shaikh, <b>G Singh</b>, AE Lillie, P Dixit, A Rai, V Chakravarthy & A Senthil. 2017. <i>ReRide.</i> Human-Computer Interaction – INTERACT 2017. Lecture Notes in Computer Science, vol 10516. Springer, Cham. <a href="https://doi.org/10.1007/978-3-319-68059-0_43">https://doi.org/10.1007/978-3-319-68059-0_43</a></li>
+                <li>(Conference Proceedings) S Baadkar, <b>G Singh</b>, A Saraf, and N Bagalkot. 2014. <i>SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being.</i> In Proceedings of the India HCI 2014 Conference on Human-Computer Interaction (IndiaHCI '14). Association for Computing Machinery, New York, NY, USA, 136-141. <a href="https://doi.org/10.1145/2676702.2676719">https://doi.org/10.1145/2676702.2676719</a></li>
+            </ol>
         </div>
+
+        <h2>Teaching</h2>
+        <table>
+            <tr><td width="180px"><b>2021-Present</b></td> <td>Should you Copyleft? (2022); Cellular Automata (2022); Mathematics of Magnificent Flora (2022); Explain with GIFs (2021); Sketch, Crit and Remix - Transdisciplinary Research (2021)</td></tr>
+            <tr><td><b>2015-20</b></td> <td>Deconstructing Algorithms (2020); Design and Futures (2020); Drawing Fractals with Code (2020); Algorithms, Computation and HCI (2019); Making with Algorithms (2019); Programming as a Design Tool for Prototyping (2019); Visual Thinking Tools (2018); Programming as a Design Tool for Prototyping (2018); Tangible Computing (2018); Future of Interaction Design (2018); Interaction Design: Beyond Screens (2018); Interaction Design for Screens (2018); Learning Expedition to Shimoga (2018); Advanced Programming and Prototyping (2017); Algorithms, Computation and HCI (2017); Interaction Design 2 (2017); Interaction Design 1 (2017); Interaction Design: Beyond Screens (2017); Maths for Programming (2017); Physical Computing (2017); Digital Making (2016): Object-Oriented Design (2016); Digital Interfaces: Web Programming (2016); Embedding Emerging Technologies into Materials (2016)</td></tr>
+            <tr><td><b>2010-15</b></td> <td>Learning to Code with Processing (2015); Computer Programming from Ground up (2014); Designing Interfaces with Adobe Illustrator (2013); Advanced Java Programming; Building your own CMS (2013)</td></tr>
+        </table>
+
+        <h3>Thesis Projects mentored</h3>
+        <table>
+            <tr><td width="180px"><b>2020</b></td> <td><b>Deciphering Algorithms - Discovering Algorithmic Literacy through the lens of Explainable AI</b>. D Dixit D, S Singh. B.Des Visual Communication, B.Des Human-Centered Design resp.</td></tr>
+            <tr><td><b>2020</b></td> <td><b>GreenBox Algorithms: Financial indicators that motivate impact investment behaviour</b>. A Avadhana, N Patny, S Mishra. B.Des Human-Centered Design</td></tr>
+            <tr><td><b>2013</b></td> <td><b>Location and arrival prediction using smartphones</b>. Shobha R, Pavani A, Kalpana, B.Tech Information Tech.</td></tr>
+        </table>
+
+        <h2>Conferences and Workshops</h2>
+        <table>
+            <tr><td width="180px"><b>2018</b></td> <td>Co-chaired Demonstrations track - <b>IndiaHCI 2018</b>, Srishti Institute of Art, Design & Technology, Bangalore, India</td></tr>
+            <tr><td><b>2017</b></td> <td>Helped in organising and moderated sessions <b>Cumulus Conference 2017</b>. Letters to the Future, Srishti Institute of Art, Design and Technology, India</td></tr>
+            <tr><td><b>2015</b></td> <td>Postgraduate thesis presented - <b>Srishti 2015 Grad Show</b> at Karnataka Chitrakala Parishath, Bangalore, India</td></tr>
+            <tr><td><b>2011</b></td> <td>Participated in <b>Pragnya 2011</b>, National Technical Symposium, Department of Electrical and Electronics Engineering, JNTU-H, India</td></tr>
+            <tr><td><b>2011</b></td> <td>Participated in <b>Gravitas 2011</b>, International Technology Festival, VIT University, India.</td></tr>
+        </table>
+
+        <h2>Grants and Awards</h2>
+        <table>
+            <tr><td width="180px"><b>2021</b></td> <td>Received grant from <b>Adobe Fund for Design 2021</b> for making integrations for Adobe Creative Cloud suite by Adobe Inc.</td></tr>
+            <tr><td><b>2017</b></td> <td><b>Topcoder Open 2017 India Regionals</b> - Design Champion</td></tr>
+            <tr><td><b>2012</b></td> <td>Invited to Orlando, Florida, USA, to compete in <b>Topcoder Open 2012 Finals</b></td></tr>
+            <tr><td><b>2011</b></td> <td>Invited to Fort Lauderdale, Florida, USA, to compete in <b>Topcoder Open 2011 Finals</b></td></tr>
+        </table>
     </body>
 </html>
