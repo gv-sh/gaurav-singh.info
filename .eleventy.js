@@ -23,4 +23,5 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postYear", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
+  eleventyConfig.addPassthroughCopy("CNAME");
 };
