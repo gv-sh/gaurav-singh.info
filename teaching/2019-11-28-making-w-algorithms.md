@@ -10,6 +10,7 @@ cover: https://cdn.mathscapes.xyz/static/images/2019/mwa_1.jpg
 layout: base.njk
 description: Recent technological developments in neural networks, computer vision and blockchains are radically transforming the digital landscape around us. Through this course, we explored the modern role of designer working with such technologies through the idea of algorithmic-driven design; and use algorithms as a material to design with.
 showFurther: true
+permalink: /teaching/making-with-algorithms/
 --- 
 
 Recent technological developments in neural networks, computer vision and blockchains are radically transforming the digital landscape around us. Through this course, we explored the modern role of designer working with such technologies through the idea of algorithmic-driven design; and use algorithms as a material to design with.

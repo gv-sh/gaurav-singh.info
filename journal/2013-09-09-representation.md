@@ -5,8 +5,8 @@ showTitle: true
 date: 2013-09-09
 deck: Study
 layout: post.njk
-description: Recently, I attended a masterclass at Srishti on reflective practice, where I better understood its significance in personal and professional growth. I learned that reflective practice involves critically analyzing one's work and measuring change over time. It is a tool that empowers practitioners to learn from their mistakes, discover their reactions and actions, and identify their strengths and weaknesses. I also explored the challenges of reflective practice and the available models. Before reading Stuart Hall's book Representation, [1] I was curious about how reflective practice can be applied to other areas of life.
-permalink: /journal/stuart-halls-representation
+description: Recently, I attended a masterclass at Srishti on reflective practice, where I better understood its significance in personal and professional growth. I learned that reflective practice involves critically analyzing one's work and measuring change over time. It is a tool that empowers practitioners to learn from their mistakes, discover their reactions and actions, and identify their strengths and weaknesses. I also explored the challenges of reflective practice and the available models. Before reading Stuart Hall's book Representation, I was curious about how reflective practice can be applied to other areas of life.
+permalink: /journal/stuart-halls-representation/
 
 --- 
 

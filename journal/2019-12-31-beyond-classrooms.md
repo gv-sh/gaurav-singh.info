@@ -7,7 +7,7 @@ date: 2019-12-31
 cover: https://cdn.mathscapes.xyz/static/images/2019/future-making.jpg
 layout: post.njk
 description: "In 2019, my teaching load was reduced, allowing me to explore diverse pedagogical approaches and their impact on student learning. This year proved transformative in my understanding and approach to education. I taught three courses throughout the year: Algorithms, computation, and HCI, which was a repetition of a course previously offered in 2017; Making with algorithms, which focused on the modern role of designers working with algorithmic-driven design; and Programming as a design tool for prototyping, a course repeated from 2018."
-permalink: /journal/beyond-classrooms
+permalink: /journal/beyond-classrooms/
 --- 
  
 <img src="https://cdn.mathscapes.xyz/static/images/2019/future-making.jpg"/>

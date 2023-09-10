@@ -8,7 +8,7 @@ date: 2018-07-15
 cover: https://cdn.mathscapes.xyz/static/images/2018/3.jpg
 layout: post.njk
 description: ReRide, after the demo at Interact 2017 went into its dormancy for some time due to our teaching engagements. But after an excellent, rigorous session of making and building the prototype for Interact 2017, we did learn a few things about rethinking the underlying architecture to create a more stable platform.
-permalink: /journal/designing-the-next-iteration-of-reride
+permalink: /journal/designing-the-next-iteration-of-reride/
 --- 
 
 <img src="https://cdn.mathscapes.xyz/static/images/2018/3.jpg"/>

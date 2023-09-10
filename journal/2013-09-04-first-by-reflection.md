@@ -6,7 +6,7 @@ date: 2013-09-04
 deck: Study
 layout: post.njk
 description: "Confucius indicates three distinct methods of acquiring wisdom: reflection, imitation, and experience. Each method has its advantages and disadvantages, offering a more comprehensive approach to personal growth and development. Reflection involves introspection and the examination of our own thoughts and emotions, allowing us to gain insight into our values and beliefs. It encourages self-awareness and self-discovery. However, it requires time, effort, and discipline, and it can be challenging to confront our own shortcomings. Imitation, on the other hand, involves observing and emulating the behavior and attitudes of others whom we admire. This might be the easiest learning method, as it requires less effort than reflection or experience. However, it can limit our creativity and authenticity and may not always apply to our unique circumstances. Finally, experience is the bitterest method of learning, as it involves going through the hardships and challenges of life and learning from our mistakes and failures. It is often the most effective method, allowing us to develop practical knowledge and skills tailored to our unique circumstances. However, it can be painful and difficult to accept, and it may take a long time to gain the necessary insights."
-permalink: /journal/first-by-reflection
+permalink: /journal/first-by-reflection/
 --- 
 
 By three methods, we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third, by experience, which is the bitterest. — Confucius

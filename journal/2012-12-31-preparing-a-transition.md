@@ -6,7 +6,7 @@ date: 2012-12-31
 deck: Year in Review
 layout: post.njk
 description: In 2012, I encountered a period of slowing down as I transitioned from completing my 4-year engineering program in Computer Science to discovering the design field. The year was filled with uncertainties as I navigated unplanned, embracing challenges and opportunities for personal development. Shortly after concluding my engineering studies, I relocated to Chennai. I wasn't bothered about getting a job; just keen on furthering my education and expanding.
-permalink: /journal/preparing-a-transition
+permalink: /journal/preparing-a-transition/
 --- 
 
 In 2012, I encountered a period of slowing down as I transitioned from completing my 4-year engineering program in Computer Science to discovering the design field. The year was filled with uncertainties as I navigated unplanned, embracing challenges and opportunities for personal development. Shortly after concluding my engineering studies, I relocated to Chennai. I wasn't bothered about getting a job; just keen on furthering my education and expanding.

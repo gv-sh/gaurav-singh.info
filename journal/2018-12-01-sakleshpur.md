@@ -7,7 +7,7 @@ attribution: Alongwith Triangle
 date: 2018-12-01
 cover: https://cdn.mathscapes.xyz/static/images/2018/skpr_4.jpg
 layout: post.njk
-permalink: /journal/sakleshpur-2018
+permalink: /journal/sakleshpur-2018/
 --- 
 
 <img src="https://cdn.mathscapes.xyz/static/images/2018/skpr_1.jpg">

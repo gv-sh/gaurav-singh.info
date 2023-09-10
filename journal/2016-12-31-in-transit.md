@@ -7,7 +7,7 @@ date: 2016-12-31
 cover: https://cdn.mathscapes.xyz/static/images/2016/metro.jpg
 layout: post.njk
 description: The year 2016 was a transformative period, with experiences that impacted my professional and personal growth. My journey commenced with an invitation from Abhiyan Humane to collaborate with Art in Transit. This opportunity allowed me to hone various skills, such as pitching ideas to potential collaborators, supporting artists and students in developing creative technological installations, and handling various administrative tasks. I discovered growing interest in teaching and mentoring as I collaborated with students.
-permalink: /journal/in-transit
+permalink: /journal/in-transit/
 --- 
 
 <img src="https://cdn.mathscapes.xyz/static/images/2016/metro.jpg"/>

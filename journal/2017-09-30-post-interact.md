@@ -7,7 +7,7 @@ date: 2017-09-30
 cover: https://cdn.mathscapes.xyz/static/images/2017/interact_7.jpg
 layout: post.njk
 description: Beginning to write this as we complete the first day of ReRide demonstration at Interact 2017 Conference in IIT Bombay. The last week till afternoon today have been quite intense for us but also has been quite fruitful. It was very gratifying to finally see the synergy of the team to complete the demo despite few challenges we faced. The demo intended to develop a working proof of concept to demonstrate the intent, which we think has met, though the time crunch has affected us and we could not do the pilot test in a real setting. Nevertheless, we were ready for the Demo. The entire exercise just echoed what I already believe. There is a lot of value in making physical and working concepts (esp. for designers), more often you’ll find that you’re rethinking most of your design decisions made when drafting ideas. What you see is “not” what you get!
-permalink: /journal/interact-2017
+permalink: /journal/interact-2017/
 --- 
 
 <img src="https://cdn.mathscapes.xyz/static/images/2017/interact_7.jpg" alt=""/> 

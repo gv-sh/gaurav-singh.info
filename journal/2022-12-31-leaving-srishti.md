@@ -7,7 +7,7 @@ date: 2022-12-31
 cover: https://cdn.mathscapes.xyz/static/images/2022/workspace.jpg
 layout: post.njk
 description: Reflecting on 2022, I experienced a significant transformation in my teaching career. As my expectations and requirements became more apparent, I was presented with the fantastic opportunity to establish my informal cohort as a dedicated lab space called the Experimental Maths Lab. This development renewed my hope for my future at Srishti and marked a complete departure from traditional classroom-based teaching. The lab allowed me to operate autonomously, creating an alternative learning space for students within the context of a design school. Although the turnout was initially low, the lab gradually attracted students, some of whom found relevance in the space and became consistent participants.
-permalink: /journal/leaving-srishti
+permalink: /journal/leaving-srishti/
 --- 
 
 <img src="https://cdn.mathscapes.xyz/static/images/2022/workspace.jpg"/>
