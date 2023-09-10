@@ -7,7 +7,7 @@ deck: Study
 cover: https://cdn.mathscapes.xyz/static/images/2012/multimarker.jpg
 layout: post.njk
 description: The primary aim of this project was to develop a method capable of tracking multiple coded markers simultaneously, robustly, and accurately in real-time, particularly in challenging conditions such as low light or partially obstructed images. Existing single object tracking methods faced limitations in scaling with the number of objects, necessitating a more efficient approach to handle multiple markers. Additionally, the project sought to compute the locations and orientations of these markers to embed 2D/3D virtual objects onto the video sequence and enable interaction with the markers/virtual objects in the physical setting.
-permalink: /projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction
+permalink: /projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/
 --- 
 
 <img src="https://cdn.mathscapes.xyz/static/images/2012/multimarker.jpg"/>

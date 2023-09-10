@@ -8,7 +8,7 @@ deck: Exploration
 cover: https://cdn.mathscapes.xyz/static/images/2020/2020.jpg
 layout: post.njk
 description: "Algorithms are everywhere, from recommending which movie to watch next, automate grunt jobs, or accessing any information at fingertips. As described by Ed Finn in his book What Algorithms want (Finn 2017), he referred algorithms as culture machines, as complex assemblages of abstractions, processes, and people. As much as they might appear magical, behind them exist things, obscured from the end-user. Such information is potent of being used for or against the users in ways which can flip scenarios where our actions are informed by algorithms around us and not the other way around. Furthermore, this brings us to the questions: How much of our actions can be informed by algorithms? and How might we attempt to make sense of complex algorithms and their effects and make their information accessible to everyone?"
-permalink: /projects/deconstructing-algorithms-2020
+permalink: /projects/deconstructing-algorithms-2020/
 --- 
 
 This note features student work.
