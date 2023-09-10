@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- Add in beginning of head if including math equations -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+                onload="renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: '$$', right: '$$', display: true},
+                                {left: '$', right: '$', display: false},
+                            ],
+                            throwOnError : false
+                        });"></script>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEN47XT3N8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-KEN47XT3N8');
+        </script>
+        <title>SVideo — Synced video playback with Raspberry Pi</title>
+        <link rel="stylesheet" href="https://use.typekit.net/vsr8dth.css">
+        <link rel="stylesheet" href="/bundle.css">
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header>
+    <h1 class="title">Gaurav Singh</h1>
+</header>
+
+        <!-- Sidebar -->
+        <aside>
+  <ul>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/">Home</a>
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/projects/">Projects</a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/research/">Research</a>
+        </li>
+      
+    
+      
+        <li>
+          <a  href="/teaching/">Teaching</a>
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/journal/">Journal</a>
+        </li>
+      
+    
+  </ul>
+</aside>
+
+        <!-- Main content -->
+        <main>
+            <div class="item">
+                <h6>Exploration</h6>
+                <h3>SVideo — Synced video playback with Raspberry Pi</h3>
+                <p class="meta">
+                
+                    2020-04-03 ● Alongwith Debanshu Bhaumik
+                
+                </p>
+            </div>
+            
+            <img src="https://cdn.mathscapes.xyz/static/images/2019/reride.jpg"/>
+<p><em>Cover</em></p>
+<p>This project was done in collaboration with <a href="https://www.debanshubhaumik.com">Debanshu Bhaumik</a>, a Creative technologist &amp; New media art practitioner.</p>
+<p>Popularity and power of single board computers like Raspberry Pi have made it possible not just to promote the teaching of basic computer science but also to prototype and in fact, to be even used by artists in their installations who often have particular requirements to be met. Boards like Raspberry Pi are quite capable and in many cases can substitute full PCs for such installations. Playing single/multiple videos across multiple (and often large) displays require specialized hardware splitters and devices to read in video from a computer and then sent out to multiple devices in a synchronised manner. However, these devices are expensive and require an expert who has the know-how of using it. This small but meaningful realization by Debanshu eventually led us to build a simple API to facilitate synced video playback across multiple Raspberry Pi boards.</p>
+<p>We have currently built a basic prototype of the implementation, and the following part of this post explains the working of it in detail. On one side, the boards are connected in a master-slave combination where the master computer controls the playback across the rest of the boards, which works in slave mode, each of the boards can be connected to any display device. The display devices may be placed in multiple configurations — from the standard grid to anything desired. The current implementation of the API does not do anything to the video file and uses pre-stored video files on the respective boards to playback in a synchronized manner. The current method can also extend to run a video file from the network or apply effects like cropping, video filters in near real time.</p>
+<p>The boards communicate over standard TCP/IP socket and get paired by a single handshake and tell the master computer whenever they are ready to start playback. Once all the slave computer responds with the available status, the master computer schedules or instructs all the slave computers to initiate the video playback. VLC player currently holds the video playback through the command line, which also removes any other screen to be displayed on the actual display, which otherwise is not relevant to the overall aesthetics/experience of the installation.</p>
+<p>SVideo can be freely used from <a href="https://github.com/gv-sh/svideo">https://github.com/gv-sh/svideo</a></p>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+    <p>GS</p>
+</footer>
+
+    </body>
+
+</html>

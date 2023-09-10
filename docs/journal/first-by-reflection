@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- Add in beginning of head if including math equations -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+                onload="renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: '$$', right: '$$', display: true},
+                                {left: '$', right: '$', display: false},
+                            ],
+                            throwOnError : false
+                        });"></script>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEN47XT3N8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-KEN47XT3N8');
+        </script>
+        <title>First, by reflection</title>
+        <link rel="stylesheet" href="https://use.typekit.net/vsr8dth.css">
+        <link rel="stylesheet" href="/bundle.css">
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header>
+    <h1 class="title">Gaurav Singh</h1>
+</header>
+
+        <!-- Sidebar -->
+        <aside>
+  <ul>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/">Home</a>
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/projects/">Projects</a>
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/research/">Research</a>
+        </li>
+      
+    
+      
+        <li>
+          <a  href="/teaching/">Teaching</a>
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          <a  href="/journal/">Journal</a>
+        </li>
+      
+    
+  </ul>
+</aside>
+
+        <!-- Main content -->
+        <main>
+            <div class="item">
+                <h6>Study</h6>
+                <h3>First, by reflection</h3>
+                <p class="meta">
+                
+                    2013-09-04
+                
+                </p>
+            </div>
+            
+            <p>By three methods, we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third, by experience, which is the bitterest. — Confucius</p>
+<p>Confucius indicates three distinct methods of acquiring wisdom: reflection, imitation, and experience. Each method has its advantages and disadvantages, offering a more comprehensive approach to personal growth and development. Reflection involves introspection and the examination of our own thoughts and emotions, allowing us to gain insight into our values and beliefs. It encourages self-awareness and self-discovery. However, it requires time, effort, and discipline, and it can be challenging to confront our own shortcomings. Imitation, on the other hand, involves observing and emulating the behavior and attitudes of others whom we admire. This might be the easiest learning method, as it requires less effort than reflection or experience. However, it can limit our creativity and authenticity and may not always apply to our unique circumstances. Finally, experience is the bitterest method of learning, as it involves going through the hardships and challenges of life and learning from our mistakes and failures. It is often the most effective method, allowing us to develop practical knowledge and skills tailored to our unique circumstances. However, it can be painful and difficult to accept, and it may take a long time to gain the necessary insights.</p>
+<p>In this essay, I will be exploring my recent introduction to reflective practice, which has helped me better understand its significance in personal and professional growth. As a designer, I have been exposed to reflections before, but this masterclass at Srishti has allowed me to look at it more structured and deliberately. Understanding reflection as a process of critically analyzing one's work and expressing every minute detail from the piece of work into words. It is a tool that empowers practitioners to learn from their mistakes, discover their reactions and actions, and measure their growth over time. Mastering any field is not achieved overnight but requires constant practice and curiosity over time. Furthermore, I have learned that reflective practice has a rich history, dating back to the ancient Buddhists [1] and also Roman era [2]; and their emphasis on self-examination. It has been embraced in various forms throughout history, including in the works of John Dewey [3] and Donald Schon [4]. Today, it is widely recognized as an essential professional development component across many fields.</p>
+<p>Reflective practice has a long and varied history, with roots in ancient Buddhism and Roman era and an evolution that continues today. It examines and evaluates our experiences to gain insight and learn from them. Donald Schön is credited with introducing the reflective practice to a broader audience through his 1983 book, &quot;The Reflective Practitioner.&quot; [4] A concept that Schön had pioneered earlier with as Argyris, who developed the idea of single and double-loop learning in 1978 [5]. Single-loop learning involves relying on the same strategies even after making an error, while double-loop learning involves modifying strategies or techniques to avoid repeating the same mistake. Other models of reflective practice include Kolb's 1975 model of experiential learning [6], which focuses on transforming information into knowledge. Gibbs developed a structured debriefing model in 1988 [7], including initial experience, description, feeling, evaluation, analysis, conclusion (general and specific), and the personal action plan. John's 1995 model is structured around sharing with a colleague or mentor [8], while Brookfield's 1998 model looks at researching assumptions through four lenses: the autobiography of learners of reflective practice, the lens of colleague's perception, the learner's eye, and the lens of theoretical, philosophical, and research literature [9]. Rolfe's 2001 model is based on a simple cycle of three questions: What? So what? and Now what? [10] Reflective practice has become essential in various fields, such as education, healthcare, social work, and business. It encourages practitioners to examine their experiences, learn from their mistakes, and improve their practice over time. It helps them identify their strengths and weaknesses and develop self-awareness, which is essential for personal and professional growth.</p>
+<p>Reflective practice involves different components that are important for practitioners to learn from their experiences and improve their practice. Being unbiased is a crucial part of reflective practice. Practitioners should try to reflect on their experiences without personal biases. This helps them understand their practice more honestly. Developing self-awareness is another key part of reflective practice. It means being aware of our thoughts, feelings, and actions and how they affect our practice. By being self-aware, practitioners can recognize their strengths and weaknesses and make choices to improve their practice. Taking responsibility for learning is also important. This means actively seeking new experiences, reflecting on them, and getting feedback from others. Identifying strengths and weaknesses is a crucial part of reflective practice. Practitioners can improve their practice by building on their strengths and working on their weaknesses. Seeking feedback from others is also helpful. It gives practitioners a new perspective on their practice and helps them identify areas for improvement. There are different ways to reflect, such as writing or structured debriefing. Writing allows practitioners to organize their thoughts and review their reflections over time. Structured debriefing is a formalized process of reflection that may include guided questions.</p>
+<p>Reflective practice can be challenging, requiring practitioners to confront their biases, weaknesses, and mistakes. These challenges sometimes make it difficult to engage in reflective practice and hinder personal and professional growth. One of the main challenges of reflective practice is being unbiased. Practitioners may find it challenging to reflect on their experiences objectively, free from personal biases and preconceptions. This can lead to a skewed understanding of their practice and impede their ability to learn and grow. Another challenge is the discomfort of confronting one's weaknesses and mistakes. Practitioners may find it uncomfortable or even painful to reflect on their mistakes, but it is essential to do so to learn from them and improve their practice. Integrating reflective practice into one's daily routine can also be a challenge. With busy schedules and competing priorities, finding the time and space for reflection can take time and effort. This can lead to a lack of consistency in reflective practice and hinder personal and professional growth. To overcome these challenges, practitioners can employ a variety of strategies. Developing a supportive network of peers or mentors can provide a safe and constructive space for reflection and offer valuable feedback and guidance. Setting aside dedicated time for reflection, even just a few minutes each day, can make reflective practice a consistent part of one's routine. Adopting a growth mindset, which emphasizes learning and improvement over fixed abilities, can also help practitioners approach reflective practice with a positive and open attitude.</p>
+<p>In the future, I hope to explore different reflective practice models and find the best approach for me. Additionally, I'm curious how reflective practice can be applied to other areas of my life.</p>
+<hr>
+<ol>
+<li>Winter, Richard. 'Buddhism and Action Research: Towards an Appropriate Model of Inquiry for the Caring Professions.' Educational Action Research 11, no. 1 (March 2003): 141-60. doi:<a href="https://doi.org/10.1080/09650790300200208">10.1080/09650790300200208</a></li>
+<li>Mac Suibhne, Seamus. '‘Wrestle to Be the Man Philosophy Wished to Make You': Marcus Aurelius, Reflective Practitioner.' Reflective Practice 10, no. 4 (September 2009): 429-36. doi:<a href="https://doi.org/10.1080/14623940903138266">10.1080/14623940903138266</a></li>
+<li>Dewey, John. How We Think: A Restatement of the Relation of Reflective Thinking to the Educative Process. Boston: Houghton Mifflin, 1998.</li>
+<li>Schön, Donald A. The Reflective Practitioner: How Professionals Think in Action. New York: Basic Books, 1983.</li>
+<li>Argyris, C., &amp; Schön, D. A. (1978). Organizational learning: A theory of action perspective. Addison-Wesley.</li>
+<li>Kolb, D. A. (1975). Learning style inventory. McBer &amp; Company.</li>
+<li>Gibbs, G. (1988). Learning by doing: A guide to teaching and learning methods. Further Education Unit.</li>
+<li>Johns, C. (1995). Framing learning through reflection within Carper's fundamental ways of knowing in nursing. Journal of advanced nursing, 22(2), 226-234.</li>
+<li>Brookfield, S. D. (1998). Critically reflective practice. Journal of continuing education in the health professions, 18(4), 197-205.</li>
+<li>Rolfe, G., Freshwater, D., &amp; Jasper, M. (2001). Critical reflection in nursing and the helping professions: A user's guide. Palgrave Macmillan.</li>
+</ol>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+    <p>GS</p>
+</footer>
+
+    </body>
+
+</html>
