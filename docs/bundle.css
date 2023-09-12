@@ -266,4 +266,9 @@ code {
     main {
         margin-top: 1em;
     }
+
+    header {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 }
