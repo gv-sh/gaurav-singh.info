@@ -253,6 +253,8 @@ code {
     line-height: 0.8;
 }
 
+.katex { font-size: 1.1em; }
+
 /* Responsive layout */
 @media (max-width: 768px) {
 

@@ -4,17 +4,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Add in beginning of head if including math equations -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-                onload="renderMathInElement(document.body, {
-                            delimiters: [
-                                {left: '$$', right: '$$', display: true},
-                                {left: '$', right: '$', display: false},
-                            ],
-                            throwOnError : false
-                        });"></script>
+
+        <!-- KaTeX CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+
+        <!-- To automatically render math in text elements, include the auto-render extension: -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+            });
+        }); 
+        </script>
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEN47XT3N8"></script>
@@ -220,6 +236,8 @@
     
       
     
+      
+    
   </ul>
 </aside>
 
@@ -243,10 +261,16 @@
 <p>I began looking at the sequence and what a fantastic puzzle this is! The distribution despite following a rule does not let us pinpoint the next occurrence of prime. Is Mathematics advance enough to write a solution? Or it will remain in the class of hard problems which cannot be otherwise solved by non-brute force approach.</p>
 <p>'Mathematicians have tried in vain to this day to discover some order in the sequence of prime numbers, and we have reason to believe that it is a mystery into which the mind will never penetrate'. — Euler</p>
 <p>A prime number is a positive integer $p&gt;1$ that has no positive integer divisors other than $1$ and $p$ itself. And a method for determining whether a number is prime or not is called as Primality Test.</p>
-<p>$$ \mathbb{P} = { x \in \mathbb{Z}{+} \text{ s.t } x \neq a \times b \text{ | } a,b &gt; 1 \in \mathbb{Z}{+} } $$</p>
+<p>
+$$ \mathbb{P} = { x \in \mathbb{Z}{+} \text{ s.t } x \neq a \times b \text{ | } a,b > 1 \in \mathbb{Z}{+} } $$
+</p>
 <p>While it's quite simple to identify small prime numbers, the problem appears when number grow large as it then needs to be checked far more times to decide its primality. To start with, trial division is the simplest method to test primality where given number is checked for its divisibility by numbers smaller than itself. function</p>
 <p>Lets consider function $\omega(x)$ which represents the number of distinct prime factors of $x$, which can be defined as: $$ x = \prod{i=1}^{\omega(x)} p{i}^{\alpha_{i}} $$</p>
-<p>With this, set $\mathbb{P}$ can be now rewritten as (for the sake of understanding the implementation): $$ \mathbb{P} = { x \in \mathbb{Z}{+} \text{ s.t } \omega(x) = 2 \text{ | } x = \prod{i=1}^{\omega(x)} p{i}^{\alpha{i}} } $$</p>
+<p>With this, set $\mathbb{P}$ can be now rewritten as (for the sake of understanding the implementation):</p>
+<p>
+$$
+\mathbb{P} = { x \in \mathbb{Z}{+} \text{ s.t } \omega(x) = 2 \text{ | } x = \prod{i=1}^{\omega(x)} p{i}^{\alpha{i}} } $$
+</p>
 <p>This can be implemented (in Python) to write primality test as:</p>
 <pre><code class="language-python">def omega(x):
     distinct_factors = 0

@@ -40,7 +40,7 @@
             gtag('js', new Date());
             gtag('config', 'G-KEN47XT3N8');
         </script>
-        <title>2018 — Joys of teaching</title>
+        <title>Rendering Hypercube</title>
         <link rel="stylesheet" href="https://use.typekit.net/vsr8dth.css">
         <link rel="stylesheet" href="/bundle.css">
     </head>
@@ -244,21 +244,37 @@
         <!-- Main content -->
         <main>
             <div class="item">
-                <h6>Year in Review</h6>
-                <h3>2018 — Joys of teaching</h3>
+                <h6>Math vis</h6>
+                <h3>Rendering Hypercube</h3>
                 <p class="meta">
                 
-                    2018-12-31
+                    2023-09-15
                 
                 </p>
             </div>
             
-            <img src="https://cdn.mathscapes.xyz/static/images/2018/ninasam.jpg"/>
-<p><em>A monkey family opposite the Ninasam theatre during Shimoga expedition</em></p>
-<p>2018 marked an inflection in my teaching journey as I engaged in different courses and workshops that enabled my growth as an educator. I facilitated various courses throughout the year, from visual thinking and programming to tangible computing. Each class presented distinctive challenges and opportunities for growth. For instance, during the visual thinking workshop, I observed students' adeptness in crafting multiple anamorphic artworks without prior planning on paper, relying instead on peer guidance. Additionally, I pursued the ReRide project, concentrating on designing the subsequent iteration and getting into camera-based posture tracking.</p>
-<p>Upon reflecting, the courses and workshops enabled students to investigate various dimensions of design and stimulated creativity. The expedition to Shimoga with foundation year students highlighted the importance of learning beyond the confines of the classroom and adapting to distinct perspectives to effectively navigate the field. Moreover, I derived gratification from collaborating with Venkat on the first programming course of the series, which allowed me to refine my instructional methods and accommodate students' needs. Drawing inspiration from these experiences and reflecting on the theories and ideas I encountered, I acknowledged the significance of adapting my pedagogy to remain up-to-date on emerging technologies and their ripples on design. Paul Graham's notion of considering programming languages akin to pencil and paper influenced the design of my programming courses and strengthened my commitment to evolving instructional methods. I also echoed Dr. Naveen's perspective on the importance of prototyping in the learning process.</p>
-<p>Comparing my experiences from 2016 and 2017, I can discern my development as an educator in 2018. In the preceding years, I have had the opportunity to collaborate with students in many settings, allowing me to appreciate the joys and challenges intrinsic to teaching. The spectrum of courses I taught in 2018 and the rich repository of experiences broadened my understanding of how students learn and flourish. Furthermore, my aptitude for adapting and evolving my teaching methods has strengthened, adding to my confidence in my ability to provide meaningful and engaging learning experiences. As a consequence of these reflections, I actively experimented with novel approaches to teaching and learning. I am indebted to Naveen for allowing me to compose a series of programming courses to cultivate students' proficiency in programming and electronic prototyping. By incorporating an assortment of teaching methods, I was able to cater to diverse learning styles and foster a more engaging and productive learning environment.</p>
-<p>2018 manifested a year of growth and discovery for me as an educator. By immersing myself in a selection of courses, workshops, and learning experiences, I continuously adapted and evolved my instruction style, ensuring that students were equipped with the essential skills to excel in the evolving realm of design. I aspire to refine my teaching methods and explore innovative avenues to inspire students.</p>
+            <p><img src="/assets/sketches/sketch_hypercube.gif" alt="Hypercube">
+<em>Hypercube</em></p>
+<p>The hypercube, or more commonly known as the tesseract, is a geometry that exists in four-dimensional space. If you've ever been entranced by the tesseract scene in the movie &quot;Interstellar&quot;, you've already had a cinematic glimpse of this concept. But how do we visualize a 4D object in our 3D world and then render it on a 2D screen?</p>
+<p>Mathematically, a point on a line can be represented by a single number $x$, on a plane by a pair $(x, y)$, and in space by a triplet $(x, y, z)$. The fourth dimension is a bit trickier. Imagine a new axis, $w$, that's perpendicular to the other three. This gives us a 4D point represented as $(x, y, z, w)$. Just as a square is to a cube, a cube is to a hypercube. It's the 4D analog of our familiar 3D cube. If you've ever wondered how a cube would cast a shadow in 4D, it would look like a hypercube!</p>
+<p>Each vertex of a hypercube in 4D space can be represented by a 4-bit binary number. Mathematically, a vertex in n-dimensional space can be represented as:</p>
+<p>$$ V = (b_1, b_2, ..., b_n) $$</p>
+<p>where each $b_i$ is a bit (0 or 1).</p>
+<p>The relationship between vertices and edges in the hypercube is fascinating. Using combinatorics, we can determine that a hypercube has $2^4 = 16$ vertices and $4 \times 2^3 = 32$ edges.</p>
+<p><em>Projection</em> is the mathematical principle of mapping points from a higher-dimensional space to a lower one. Think of how a 3D object casts a 2D shadow. That shadow is a projection! Visualizing a 4D object in 3D space is akin to understanding how a 3D object casts a 2D shadow. This involves &quot;slicing&quot; the 4D object in such a way that we can understand its structure in 3D.</p>
+<p>In 4D space, we have hyperplanes like the XY and ZW planes. A point can be rotated around these planes using rotation matrices. Introducing the concept of hyperplanes in 4D, we can represent a rotation in the XY plane as:</p>
+<p>$$
+\begin{bmatrix*}[r]
+\cos(ax) & -\sin(ax) & 0 & 0 \\
+\sin(ax) & \cos(ax) & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 
+\end{bmatrix*}
+$$</p>
+<p>After rotation, we need to give the illusion of depth. This is achieved using perspective projection. The mathematics of perspective division involves dividing by the fourth dimension, $w$, to achieve this effect:</p>
+<p>$$ \text{projected}[x,y,z] = \left[ \frac{pt[x]}{2 - pt[w]}, \frac{pt[y]}{2 - pt[w]}, \frac{pt[z]}{2 - pt[w]} \right] $$</p>
+<p>The final step involves understanding orthographic vs. perspective projection. In simple terms, it's about how we view the 3D object on our 2D screen.</p>
+<p>Modern computer graphics handle this transformation using a series of matrix multiplications. The viewport transformation, for instance, ensures that the 3D object fits within the bounds of our screen, while the role of the camera determines from which angle we view the object.</p>
 
         </main>
 
