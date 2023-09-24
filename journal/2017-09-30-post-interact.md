@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Design
+deck: Demonstration
 title: Interact 2017 — ReRide demo and more
 showTitle: true
 date: 2017-09-30

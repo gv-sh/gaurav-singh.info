@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Design
+deck: Electronic Prototyping
 title: Designing the next iteration of ReRide
 showTitle: true
 attribution: Alongwith ReRide team

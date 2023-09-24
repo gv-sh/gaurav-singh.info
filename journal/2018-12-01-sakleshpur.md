@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Photo essays
+deck: Photo essay
 title: Sakleshpur 2018
 showTitle: true
 attribution: Alongwith Triangle
