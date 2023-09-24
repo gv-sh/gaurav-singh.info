@@ -32,14 +32,6 @@
         }); 
         </script>
 
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEN47XT3N8"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-KEN47XT3N8');
-        </script>
         <title>Srishti Citizen Space Agency</title>
         <link rel="stylesheet" href="https://use.typekit.net/vsr8dth.css">
         <link rel="stylesheet" href="/bundle.css">
@@ -54,17 +46,189 @@
 
         <!-- Sidebar -->
         <aside>
-  <ul>                                                                                                                                                           <li> <a  href="/">Home</a> </li>      <li> <a  href="/projects/">Projects</a> </li>    <li> <a  href="/research/">Research</a> </li>    <li> <a  href="/teaching/">Teaching</a> </li>    <li> <a  href="/journal/">Journal</a> </li>           </ul>
-</aside>
+			<ul>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				<li><a  href="/">Home</a></li>
+			
+				
+			
+				<li><a  href="/projects/">Projects</a></li>
+			
+				<li><a  href="/research/">Research</a></li>
+			
+				<li><a  href="/teaching/">Teaching</a></li>
+			
+				<li><a  href="/journal/">Journal</a></li>
+			
+				
+			</ul>
+		</aside>
 
         <!-- Main content -->
         <main>
             <div class="item">
-                <h6>Exploration</h6>
+                <h6>Telemedicine</h6>
                 <h3>Srishti Citizen Space Agency</h3>
                 <p class="meta">
                 
-                    2013-11-13
+                    2013-11-13 ● with SCSA team
                 
                 </p>
             </div>
@@ -93,7 +257,7 @@
 <p>During the final week of the Srishti Citizens Space Agency project, we focused on completing the development of the ATM+ prototype. We started by building the computer setup, which included a software program to connect doctors with users over a browser-based video call. We used WebRTC over HTML5 to create this setup. For the demonstration and exhibit, we planned to run the prototype over a local area network (LAN) where one of us would enact the role of a doctor from another room. Visitors could then get a feel of actually visiting an ATM+ and experience its benefits firsthand. We were excited to exhibit our prototype at the Visvesvaraya Museum, and it was a great experience to share our work with senior engineers and people from various backgrounds. We received positive feedback on our project, and many appreciated the potential of ATM+ in addressing the healthcare needs of people in remote areas. Overall, it was an enriching and rewarding experience to be a part of the Srishti Citizens Space Agency project. We learned a lot about the potential of space technology in addressing real-world problems and gained valuable experience in developing a project from scratch. The opportunity to exhibit our prototype at the Visvesvaraya Museum was a highlight of the project, and we were grateful for the chance to share our work with others.</p>
 <img src="https://cdn.mathscapes.xyz/static/images/2013/scsa.jpg"/>
 <p><em>Extended class of Srishti Interim 2013 — Srishti Citizens Space Agency.</em></p>
-<p>ATM+ Team: <a href="https://in.linkedin.com/in/prakhar-ojha-597957211">Prakhar Ojha</a>, Gaurav Singh (me), <a href="https://in.linkedin.com/in/arcturus23">Swati Sharma</a>, <a href="https://in.linkedin.com/in/sarvashree-jain-172115b9">Sarvashree Jain</a>, <a href="https://www.linkedin.com/in/pragya-sharma-066a8b4b">Pragya Sharma</a></p>
+<p>SCSA/ATM+ Team: <a href="https://in.linkedin.com/in/prakhar-ojha-597957211">Prakhar Ojha</a>, Gaurav Singh (me), <a href="https://in.linkedin.com/in/arcturus23">Swati Sharma</a>, <a href="https://in.linkedin.com/in/sarvashree-jain-172115b9">Sarvashree Jain</a>, <a href="https://www.linkedin.com/in/pragya-sharma-066a8b4b">Pragya Sharma</a></p>
 <hr>
 <ol>
 <li>Everett, John and Institution of Electrical Engineers, eds. VSATs, Very Small Aperture Terminals. IEE Telecommunications Series 28. London: P. Peregrinus on behalf of the Institution of Electrical Engineers, 1992.</li>

@@ -14,6 +14,10 @@ _Further interests._ High-performance visualization tools, large-sized graphs, o
 
 <div class="spacer"></div>
 
+---
+
+<div class="spacer"></div>
+
 {% for entry in entries %}
 <div class="item">
     {% if entry.data.cover %}

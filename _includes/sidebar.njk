@@ -1,3 +1,5 @@
 <aside>
-  <ul> {% for collection in collections.all %} {% if collection.data.sidebar %} <li> <a {% if page.url == collection.url %} class="active" {% endif %} href="{{ collection.url }}">{{ collection.data.title }}</a> </li> {% endif %} {% endfor %} </ul>
-</aside>
+			<ul>{% for collection in collections.all %}
+				{% if collection.data.sidebar %}<li><a {% if page.url == collection.url %}class="active"{% endif %} href="{{ collection.url }}">{{ collection.data.title }}</a></li>{% endif %}
+			{% endfor %}</ul>
+		</aside>

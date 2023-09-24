@@ -2,6 +2,7 @@
 layout: base
 title: "ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute"
 deck: "Embodied self-monitoring"
+date: 2019-03-17
 permalink: /research/reride-tei19/
 ---
 

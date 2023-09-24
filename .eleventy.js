@@ -24,6 +24,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postYear", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
+
+  eleventyConfig.addTransform("removeEmptyLines", function (content, outputPath) {
+    if (outputPath.endsWith(".html")) {
+      return content.replace(/^\s*\n/gm, "");
+    }
+    return content;
+  });
+
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("robots.txt");
 };

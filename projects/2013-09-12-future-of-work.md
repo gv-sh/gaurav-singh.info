@@ -2,9 +2,9 @@
 tags: post
 title: Future of Work — Imagining work experiences for the informal economy
 showTitle: true
-meta: with Sarvashree Jain
+attribution: with Sarvashree Jain
 date: 2013-09-12
-deck: Exploration
+deck: Informal Economy
 layout: post.njk
 description: The goal of this project, conducted by a team of four students as part of the ADP program at Srishti, was to redefine work experiences for unorganized workers using emerging sensor technologies. The team was divided into two groups, one focusing on enhancing professional growth with assisted tools and technologies, and the other on the social well-being of informal workers.
 permalink: /projects/future-of-work/

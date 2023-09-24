@@ -3,7 +3,7 @@ tags: post
 title: Designing for neutral spine
 showTitle: true
 date: 2014-10-25
-deck: Exploration
+deck: Personal informatics
 cover: https://cdn.mathscapes.xyz/static/images/2014/nspine-1.jpg
 layout: post.njk
 description: To study aspects that efficiently improves the posture of physical rehabilitees suffering from posture-related problems due to back issues, using pervasive technology, personal informatics, and the Internet of Things (IoT). The goal is to enhance situated negotiation for exercising in out-of-clinic settings, enabling users to introspect their own body postures during daily chores and exercise, fostering self-reflection and motivation for regular exercise. 

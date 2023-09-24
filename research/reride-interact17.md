@@ -2,6 +2,7 @@
 layout: base
 title: "ReRide: A Platform to Explore Interaction with Personal Data Before, During, and After Motorcycle Commuting"
 deck: "Personal informatics"
+date: 2017-09-25
 permalink: /research/reride-interact17/
 ---
 

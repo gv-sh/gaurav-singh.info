@@ -1,10 +1,10 @@
 ---
 tags: post
-title: Situated memory
+title: "SnapTag — Leveraging Situated Memory to enhance self-efficacy for well-being"
 showTitle: true
-meta: with Suraj Baadkar
+attribution: with Suraj Baadkar
 date: 2014-09-19
-deck: Study
+deck: Self Efficacy
 layout: post.njk
 description: To devise a technology-based intervention that supports senior citizens in maintaining independence and self-confidence by harnessing situated memory, fostering self-efficacy, and facilitating the completion of daily tasks. Elderly individuals frequently encounter difficulties performing basic daily tasks due to age-related physical and cognitive decline, including short-term memory impairment. The absence of children and other support networks exacerbates these challenges. This project aims to address these issues by designing a mobile technology solution specifically tailored to the unique needs of senior citizens.
 permalink: /projects/situated-memory/

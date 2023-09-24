@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- KaTeX CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
-
         <!-- The loading of KaTeX is deferred to speed up page rendering -->
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
-
         <!-- To automatically render math in text elements, include the auto-render extension: -->
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
             onload="renderMathInElement(document.body);"></script>
-
         <script>
         document.addEventListener("DOMContentLoaded", function() {
             renderMathInElement(document.body, {
@@ -31,44 +26,34 @@
             });
         }); 
         </script>
-
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEN47XT3N8"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-KEN47XT3N8');
-        </script>
         <title>Shannon&#39;s theory of information</title>
         <link rel="stylesheet" href="https://use.typekit.net/vsr8dth.css">
         <link rel="stylesheet" href="/bundle.css">
     </head>
-
     <body>
-
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
 </header>
-
         <!-- Sidebar -->
         <aside>
-  <ul>                                                                                                                                                           <li> <a  href="/">Home</a> </li>      <li> <a  href="/projects/">Projects</a> </li>    <li> <a  href="/research/">Research</a> </li>    <li> <a  href="/teaching/">Teaching</a> </li>    <li> <a  href="/journal/">Journal</a> </li>           </ul>
-</aside>
-
+			<ul>
+				<li><a  href="/">Home</a></li>
+				<li><a  href="/projects/">Projects</a></li>
+				<li><a  href="/research/">Research</a></li>
+				<li><a  href="/teaching/">Teaching</a></li>
+				<li><a  href="/journal/">Journal</a></li>
+			</ul>
+		</aside>
         <!-- Main content -->
         <main>
             <div class="item">
                 <h6>Study</h6>
                 <h3>Shannon&#39;s theory of information</h3>
                 <p class="meta">
-                
                     2011-11-03
-                
                 </p>
             </div>
-            
             <p>In 2008, during my first year of engineering, I developed a fascination for memory-efficient data structures and algorithms. Combined with a prior interest in prime numbers and their properties, they eventually led me to explore information entropy, which I learned through Claude Shannon's seminal paper, 'A Mathematical Theory of Communication.'[1] Shannon, an American mathematician, and electrical engineer, is often referred to as the 'father of information theory,' His groundbreaking contributions have revolutionized the fields of digital circuit design and communication theory. In his paper, Shannon introduced the concept of entropy as a measure of the amount of information in a message, which has profoundly impacted modern technology's development. The paper has also served as an inspiration for my interest in developing information compression algorithms, which I hope to get to, on one day. In this review note, I will summarize Shannon's paper, analyze its impact and limitations, and explore its ongoing relevance to information theory in the modern world.</p>
 <p>Shannon, C. E. 'A Mathematical Theory of Communication.' Bell System Technical Journal 27, no. 3 (July 1948): 379-423. doi:<a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">10.1002/j.1538-7305.1948.tb01338.x</a></p>
 <p>In 1948, Claude Shannon published a paper on communication theory that revolutionized the field. Shannon's approach was to quantify information in a message, which marked a significant departure from the prevailing focus on improving communication channel reliability. Shannon introduced the concept of information entropy, which measures the randomness or uncertainty of a message. Shannon's formula for entropy is $$ H(X) = - \sum_{x} p(x) \log p(x),$$ where $p(x)$ is the probability distribution of possible messages. Shannon also proposed a method for encoding information for efficient transmission and storage and introduced the concept of channel capacity, which is the maximum amount of information that can be transmitted through a communication channel. Additionally, Shannon introduced the concept of redundancy in a message, which determines transmission efficiency. His work also introduced error-correcting codes, enabling the detection and correction of errors in information transmission. Shannon's contributions to communication theory have profoundly impacted modern technology. His work has also transformed the field of digital circuit design and remains relevant in communication theory.</p>
@@ -81,14 +66,10 @@
 <li>Pasco, Richard Clark (May 1976). Source coding algorithms for fast data compression (PhD). Stanford Univ. CiteSeerX 10.1.1.121.3377</li>
 <li>Welch. 'A Technique for High-Performance Data Compression.' Computer 17, no. 6 (June 1984): 8-19. doi:<a href="https://doi.org/10.1109/MC.1984.1659158">10.1109/MC.1984.1659158</a></li>
 </ol>
-
         </main>
-
         <!-- Footer -->
         <footer>
     <p>Hosted on <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>. Powered by <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">11ty</a>. Typography set in <a href="https://typekit.com/fonts/futura-pt" target="_blank" rel="noopener noreferrer">Futura PT</a>.</p>
 </footer>
-
     </body>
-
 </html>
