@@ -26,7 +26,7 @@ _Further interests._ High-performance visualization tools, large-sized graphs, o
         {{ entry.data.date | postDate }}{% if entry.data.attribution %} ● {{ entry.data.attribution }}{% endif %}
     {% endif %}
     </p>
-    <p>{{ entry.data.description }}</p>
+    <p>{{ entry.content }}</p>
     {% if entry.data.showFurther %}
         <p><a href="{{ entry.url }}">View more</a></p>
     {% endif %}

@@ -103,15 +103,15 @@ Dr. Venkat Chilukuri: for his review and suggestion on project brief; and helpin
 
 <img src="https://cdn.mathscapes.xyz/static/images/2020/2.jpg"/>
 
-_Simran has a great sense of organisation. You will find her desk all neat and organised, composed with all her notes and sketches. The picture on the right is a tiny glimpse of her desk during the project. Daksha, on the other hand, is fearless when she is reading and thinking, she does not hesitate to use large brown sheets to map her notes. She reads, reads and reads until she really understands the topic. Her notes mirror her thinking process. Her only weakness might be skipping breakfast but who can beat her otherwise?_
+Simran has a great sense of organisation. You will find her desk all neat and organised, composed with all her notes and sketches. The picture on the right is a tiny glimpse of her desk during the project. Daksha, on the other hand, is fearless when she is reading and thinking, she does not hesitate to use large brown sheets to map her notes. She reads, reads and reads until she really understands the topic. Her notes mirror her thinking process. Her only weakness might be skipping breakfast but who can beat her otherwise?
 
 <img src="https://cdn.mathscapes.xyz/static/images/2020/3.jpg"/>
 
-_(Picture on left) Green team is forced to put down their plan for the next few weeks. I hoped to contribute in their thinking process, but they did an amazing job on their own. I failed to understand how they did it all but credit goes to them for the putting together the mountain of hard work._
+(Picture on left) Green team is forced to put down their plan for the next few weeks. I hoped to contribute in their thinking process, but they did an amazing job on their own. I failed to understand how they did it all but credit goes to them for the putting together the mountain of hard work.
 
 <img src="https://cdn.mathscapes.xyz/static/images/2020/4.jpg"/>
 
-_Project room - 407, Srishti's N5 campus in Bangalore. The pandemic is here. Students have left to their home. "I want to fly" says the sticky notes on the wall next to Apoorva's desk. Apoorva may not listen every time but pulls through by the end of the day. But, Nupur is a great listener and very organised too. Shreya might be sitting under the table reading books, and what if she is running a bit late, her work reflects strong understanding of how things work. I wish I had a picture of them working together._
+Project room - 407, Srishti's N5 campus in Bangalore. The pandemic is here. Students have left to their home. "I want to fly" says the sticky notes on the wall next to Apoorva's desk. Apoorva may not listen every time but pulls through by the end of the day. But, Nupur is a great listener and very organised too. Shreya might be sitting under the table reading books, and what if she is running a bit late, her work reflects strong understanding of how things work. I wish I had a picture of them working together.
 
 <img src="https://cdn.mathscapes.xyz/static/images/2020/5.jpg"/>
 

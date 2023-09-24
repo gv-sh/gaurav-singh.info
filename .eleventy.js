@@ -25,4 +25,5 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 };
