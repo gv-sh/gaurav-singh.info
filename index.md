@@ -10,7 +10,4 @@ In addition to my computer science background, I have also studied Innovation an
 
 In 2017, my interest in teaching and research led me to become a faculty member at the [Srishti-Manipal Institute](https://srishtimanipalinstitute.in), where I taught courses and workshops in human-computer interaction, mathematics, and programming at both undergraduate and graduate levels. My experience as a designer and researcher informs my teaching, providing students with a unique perspective on the intersection of design, mathematics, and technology. In 2022, I left Srishti to pursue further studies, continuing to draw from mathematics, computation, and ethics to structure my thoughts, ideas, and projects.
 
---- 
-
-###### Yearly notes
-[2022](/journal/leaving-srishti/), [2021](/journal/lockdown/), [2020](/journal/pandemic/), [2019](/journal/beyond-classrooms/), [2018](/journal/joys-of-teaching/), [2017](/journal/back-to-srishti/), [2016](/journal/in-transit/), [2015](/journal/contrasts-and-growth/), [2014](/journal/competing-interests/), [2013](/journal/first-year-at-srishti/), [2012](/journal/preparing-a-transition/), [2011](/journal/markers-and-matches/), [2010](/journal/book-swapping/), [2009](/journal/maxwell-escape/)
+Contact: ✉️ [Email](mailto:gv-sh@outlook.com)
