@@ -274,3 +274,17 @@ code {
         margin-bottom: 1em;
     }
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; /* Spacing between images */
+    margin-bottom: 16px;
+}
+
+/* Adjusting image to fit the container */
+.grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
