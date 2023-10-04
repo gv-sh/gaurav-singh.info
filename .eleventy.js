@@ -18,6 +18,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("journal", function (collection) {
     return collection.getFilteredByGlob("journal/*.md").reverse();
   });
+  eleventyConfig.addCollection("store", function (collection) {
+    return collection.getFilteredByGlob("store/*.md").reverse();
+  });
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toISODate();
   });

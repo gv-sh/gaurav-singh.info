@@ -288,3 +288,9 @@ code {
     height: auto;
     display: block;
 }
+
+sup {
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+}
