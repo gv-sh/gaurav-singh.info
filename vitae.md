@@ -58,7 +58,7 @@ Nov'08-Apr'15: Designer, Independent
 
 ---
 
-ADP: Advanced Diploma Program \
+ADP: Advanced Diploma Program - Post grad.\
 IED: Innovation and Experience Design \
 CSE: Computer Science and Engineering \
 NTS: National Technical Symposium \
