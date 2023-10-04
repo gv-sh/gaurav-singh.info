@@ -46,7 +46,8 @@ Nov'08-Apr'15: Designer, Independent
 2018: Co-chair, Demo track – IndiaHCI 2018, Bangalore \
 2017: Organising team, Cumulus Conference 2017, Bangalore \
 2011: Participant, Pragnya 2011, NTS, JNTU-H, India \
-2011: Participant, Gravitas 2011, ITF, VIT, India
+2011: Participant, Gravitas 2011, ITF, VIT, India \
+2010: Participant, Gravitas 2010, ITF, VIT, India
 
 ###### Recognition
 2023: Grant, Adobe Fund for Design 2023 \
