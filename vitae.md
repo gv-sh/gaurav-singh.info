@@ -34,7 +34,7 @@ Nov'08-Apr'15: Designer, Independent
 {% endfor %}
 
 ###### Teaching
-{% for entry in collections.teaching %} {{ entry.data.date | postYear }}: <a href="{{ entry.url }}">{{ entry.data.title }}</a> {% if entry.last %}{% else %} {% endif %}
+{% for entry in collections.teaching %} {{ entry.data.date | postYear }}: {{ entry.data.title }} {% if entry.last %}{% else %} {% endif %}
 {% endfor %}
 
 ###### Thesis projects mentored
