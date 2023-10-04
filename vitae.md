@@ -66,8 +66,5 @@ HCD: Human Centered Design \
 IT: Information Technology \
 VC: Visual Communication \
 BTech: Bachelor of Technology \
-BDes: Bachelor of Design
-
----
-
+BDes: Bachelor of Design \
 <sup>R</sup>: Remote
