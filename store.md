@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Store
-sidebar: true
+sidebar: false
 pagination: 
     data: collections.store
     size: 15
