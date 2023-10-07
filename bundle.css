@@ -5,6 +5,7 @@
     line-height: 1.4;
     margin: 0;
     font-kerning: normal;
+    text-rendering: geometricPrecision;
 }
 
 body {
@@ -284,6 +285,20 @@ code {
 
 /* Adjusting image to fit the container */
 .grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.store {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px; /* Spacing between images */
+    margin-bottom: 16px;
+}
+
+/* Adjusting image to fit the container */
+.store img {
     width: 100%;
     height: auto;
     display: block;

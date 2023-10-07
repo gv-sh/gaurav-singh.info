@@ -1,13 +1,13 @@
 ---
 layout: base.njk
 title: Store
-sidebar: false
+sidebar: true
 pagination: 
     data: collections.store
     size: 15
     alias: entries
 ---
-<div class="grid">
+<div class="store">
 {% for entry in entries %} <div><img src="{{ entry.data.cover }}"><div class="caption"><a href="{{ entry.url }}">{{ entry.data.title }}</a></div></div>{% endfor %}
 </div>
 
