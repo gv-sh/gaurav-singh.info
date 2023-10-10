@@ -69,3 +69,7 @@ VC: Visual Communication \
 BTech: Bachelor of Technology \
 BDes: Bachelor of Design \
 <sup>R</sup>: Remote
+
+---
+
+A print version of this CV is available on [request](mailto:gv-sh@outlook.com).
