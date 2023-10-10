@@ -4,7 +4,7 @@ title: Alien Worlds
 showTitle: true
 date: 2023-08-01
 deck: Generative art x SDXL
-cover: /assets/alienworlds/aw_ep1_1.jpeg
+cover: /assets/alienworlds/aw_ep1_1.jpg
 layout: post.njk
 description: "In 'Alien Worlds,' I've used Stable Diffusion XL to envision the life forms of ancient Mars. While these depictions spring from pure imagination rather than scientific facts, they capture the essence of what might have been in a universe as vast and varied as ours. As you delve into these explorations, ponder this: In an age where AI breathes life into our visions, how do we navigate between the known realms of science and the boundless horizons of imagination?"
 permalink: /projects/alien-worlds/
