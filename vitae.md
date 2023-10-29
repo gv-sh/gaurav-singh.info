@@ -5,7 +5,7 @@ sidebar: true
 ---
 
 Full name: Gaurav Singh \
-Location: Bangalore, India \
+Location: Gold Coast, Australia \
 Contact: [Email](mailto:gv-sh@outlook.com) \
 OrcID: [0000-0003-1651-6602](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602) \
 Website: [gaurav-singh.info](https://gaurav-singh.info) \
