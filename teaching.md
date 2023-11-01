@@ -14,7 +14,7 @@ pagination:
         <img src="{{ entry.data.cover }}" alt="{{ entry.data.title }}">
     {% endif %}
     <h6>{{ entry.data.deck }}</h6>
-    <h3>{{ entry.data.title }}</h3>
+    <h3>{{ entry.data.title }} {% if entry.data.meta %} [{{ entry.data.meta }}] {% endif %}</h3>
     <p class="meta">
     {% if entry.data.date %}
         {{ entry.data.date | postYear }}{% if entry.data.attribution %} ● {{ entry.data.attribution }}{% endif %}

@@ -34,7 +34,7 @@ Nov'08-Apr'15: Designer, Independent
 {% endfor %}
 
 ###### Teaching
-{% for entry in collections.teaching %} {{ entry.data.date | postYear }}: {{ entry.data.title }} {% if entry.last %}{% else %} {% endif %}
+{% for entry in collections.teaching %} {{ entry.data.date | postYear }}: {{ entry.data.title }} {% if entry.data.meta %} [{{ entry.data.meta }}] {% endif %} {% if entry.last %}{% else %} {% endif %}
 {% endfor %}
 
 ###### Thesis projects mentored
@@ -68,7 +68,10 @@ IT: Information Technology \
 VC: Visual Communication \
 BTech: Bachelor of Technology \
 BDes: Bachelor of Design \
-<sup>R</sup>: Remote
+<sup>R</sup>: Remote \
+NB: Co-facilitated course with Dr.Naveen Bagalkot \
+RS: Co-facilitated course with (Dr.) Riyaz Shaikh \
+VC: Co-facilitated course with Dr.Venkat Chilukuri
 
 ---
 

@@ -4,7 +4,6 @@ title: Making with Algorithms
 showTitle: true
 attribution: Alongwith students
 date: 2019-11-28
-meta: 2019
 deck: Photos
 cover: https://cdn.mathscapes.xyz/static/images/2019/mwa_1.jpg
 layout: base.njk

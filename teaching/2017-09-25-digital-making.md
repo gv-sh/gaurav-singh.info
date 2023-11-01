@@ -3,7 +3,6 @@ tags: post
 title: Digital Making workshop for foundation students
 showTitle: true
 date: 2017-09-25
-meta: 2017
 deck: Workshop
 cover: https://cdn.mathscapes.xyz/static/images/2017/2.jpg
 layout: base.njk
