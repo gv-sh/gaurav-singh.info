@@ -10,7 +10,9 @@ pagination:
 
 Applications of ML in context of HCI/Engineering; Complex data visualization; Image processing
 
-_Further interests._ High-performance visualization tools, large-sized graphs, optimal graph drawing algorithms, OpenGL or WebGL contexts, algorithmic explainability, natural science, tacit knowledge, human-computer interaction (HCI), artificial intelligence, interaction design, ethical conflicts, open-access knowledge, archiving, accessibility beyond internet, open source, lesser-restricted licensing, recreational mathematics, pedagogy, engaging learning environments, mathematics activities.
+_Further interests._ High-performance visualization tools, large-sized graphs, optimal graph drawing algorithms, OpenGL or WebGL contexts, algorithmic explainability, natural science, tacit knowledge, human-computer interaction (HCI), artificial intelligence, interaction design, ethical conflicts, archiving, accessibility beyond internet, recreational mathematics, pedagogy, engaging learning environments, mathematical activities.
+
+_Orientation._ Human-centered design (HCD), open-access knowledge, open source, lesser-restricted licensing.
 
 <div class="spacer"></div>
 

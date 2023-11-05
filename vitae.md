@@ -12,6 +12,7 @@ Website: [gaurav-singh.info](https://gaurav-singh.info) \
 GitHub: [gv-sh](https://github.com/gv-sh)
 
 ###### Education
+2023-25*: Masters, Info tech + Data analytics; Griffith, Aus \
 2013-15: ADP, IED; Srishti, India \
 2008-12: BTech, CSE; JNTU-A, India
 
