@@ -10,9 +10,9 @@ description: Tensor calculus is a branch of mathematics that extends the well-es
 permalink: /journal/tensor-notations/
 --- 
 
-Tensor calculus is a branch of mathematics that extends the well-established principles of linear algebra in higher dimensions. In its essence, tensor calculus deals with tensors, which are mathematical objects that generalize the concepts of scalars and vectors to higher dimensions. Scalars are rank-0 tensors, representing simple quantities that are described by a single number, such as temperature or mass. Tensors, on the other hand, can be thought of as multi-dimensional arrays, where each element is identified by a set of indices and can encapsulate more complex data structures and relationships. 
+Tensor calculus is a branch of mathematics that extends the well-established principles of linear algebra in higher dimensions. In its essence, tensor calculus deals with tensors, which are mathematical objects that generalize the concepts of scalars and vectors to higher dimensions. Scalars are rank-0 tensors, representing simple quantities that are described by a single number, such as temperature or mass. Tensors, on the other hand, can be thought of as multi-dimensional arrays, where each element is identified by a set of indices and can encapsulate more complex data structures and relationships. Following notes summarises the key concepts for tensor notations from the book _Continuum Mechanics and Thermodynamics_ by Tadmor and others [1].
 
-The roots of tensor calculus are deeply embedded in the works of mathematicians such as Gregorio Ricci-Curbastro and his student Tullio Levi-Civita [1]. Their pioneering work provided the mathematical tools necessary for formulating theories that have shaped the landscape of modern physics and engineering disciplines, and to not forget, continuum mechanics. As I'm revising tensor calculus in the context of my studies in continuum mechanics, I find it important to learn these fundamental concepts.
+The roots of tensor calculus are deeply embedded in the works of mathematicians such as Gregorio Ricci-Curbastro and his student Tullio Levi-Civita [2]. Their pioneering work provided the mathematical tools necessary for formulating theories that have shaped the landscape of modern physics and engineering disciplines, and to not forget, continuum mechanics. As I'm revising tensor calculus in the context of my studies in continuum mechanics, I find it important to learn these fundamental concepts.
 
 Understanding tensors is essential for analyzing the stress, strain, and deformation of materials under various forces, a central theme in continuum mechanics. This note serves as a refresher and an archive as I go deeper into tensor maths.
 
@@ -129,6 +129,6 @@ This symbol also appears in the field of ML, particularly in algorithms that inv
 Through a good understanding of tensor notations, one gains the ability to tensor calculus, which is essential for modeling complex systems in physics, engineering, and ML. Further, logical structure of tensor calculus, with its notational clarity and mathematical rigor, provides a strong foundation for analyzing and solving a wide range of problems in these advanced fields.
 
 --- 
+1. Tadmor, Ellad B., et al. Continuum Mechanics and Thermodynamics: From Fundamental Concepts to Governing Equations. Cambridge University Press, 2012.
 
-1. Ricci, M. M. G., and T. Levi-Civita. ‘Méthodes de calcul différentiel absolu et leurs applications’. Mathematische Annalen, vol. 54, no. 1–2, Mar. 1900, pp. 125–201. DOI.org (Crossref), https://doi.org/10.1007/BF01454201.
-2. Tadmor, Ellad B., et al. Continuum Mechanics and Thermodynamics: From Fundamental Concepts to Governing Equations. Cambridge University Press, 2012.
+2. Ricci, M. M. G., and T. Levi-Civita. ‘Méthodes de calcul différentiel absolu et leurs applications’. Mathematische Annalen, vol. 54, no. 1–2, Mar. 1900, pp. 125–201. DOI.org (Crossref), https://doi.org/10.1007/BF01454201.
