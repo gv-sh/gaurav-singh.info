@@ -131,4 +131,4 @@ Through a good understanding of tensor notations, one gains the ability to tenso
 --- 
 1. Tadmor, Ellad B., et al. Continuum Mechanics and Thermodynamics: From Fundamental Concepts to Governing Equations. Cambridge University Press, 2012.
 
-2. Ricci, M. M. G., and T. Levi-Civita. ‘Méthodes de calcul différentiel absolu et leurs applications’. Mathematische Annalen, vol. 54, no. 1–2, Mar. 1900, pp. 125–201. DOI.org (Crossref), https://doi.org/10.1007/BF01454201.
+2. Ricci, M. M. G., and T. Levi-Civita. ‘Méthodes de calcul différentiel absolu et leurs applications’. Mathematische Annalen, vol. 54, no. 1–2, Mar. 1900, pp. 125–201. DOI.org (Crossref), [https://doi.org/10.1007/BF01454201](https://doi.org/10.1007/BF01454201).
