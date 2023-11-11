@@ -25,3 +25,7 @@ In the course of the pandemic, people have been forced to adapt to a new normal.
 _Goethe Institut Bangalore presents this project as part of the Artistic Exchange at Goethe Institut Bangalore, facilitated by @walkinstudios._
 
 @publicdomain.garden explores the changing landscape of public life, and hybridity of the virtual and physical that we live in. The project is conceptualised by Walkin Studios and funded by the International Relief Fund for Organisations in Culture and Education 2021 of the German Federal Foreign Office, the Goethe-Institut and partners.
+
+---
+
+1. Sudevan, Praveen. ‘Dancing to the Sounds of Twitter: An Experimental Art Performance to Highlight Mental Health’. The Hindu, 18 Dec. 2021. www.thehindu.com, https://www.thehindu.com/entertainment/art/together-with-touch-lena-heubusch/article37983905.ece.
