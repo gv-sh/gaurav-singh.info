@@ -14,7 +14,7 @@ GitHub: [gv-sh](https://github.com/gv-sh)
 ###### Education
 2023-25*: Masters, Info tech + Data analytics; Griffith, Aus \
 2013-15: ADP, IED; Srishti, India \
-2008-12: BTech, CSE; JNTU-A, India
+2008-12: BTech, CSE; JNTU-A, India. [Thesis](/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/)
 
 ###### Other coursework
 2015: Think101x, UoQ, Aus; 12 weeks <sup>R</sup> \
@@ -76,4 +76,4 @@ VC: Co-facilitated course with Dr.Venkat Chilukuri
 
 ---
 
-A print version of this CV is available on [request](mailto:gv-sh@outlook.com).
+A print and more detailed version of this CV is available on [request](mailto:gv-sh@outlook.com).
