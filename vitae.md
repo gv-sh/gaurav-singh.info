@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Vitae
+title: C. Vitae
 sidebar: true
 ---
 
@@ -12,8 +12,8 @@ Website: [gaurav-singh.info](https://gaurav-singh.info) \
 GitHub: [gv-sh](https://github.com/gv-sh)
 
 ###### Education
-2023-25*: Masters, Info tech + Data analytics; Griffith, Aus \
-2013-15: ADP, IED; Srishti, India \
+2023-25*: Masters + Research dissert., IT + Data analytics; Griffith \
+2013-15: ADP, Innovation and Experience Design; Srishti, India \
 2008-12: BTech, CSE; JNTU-A, India. [Thesis](/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/)
 
 ###### Other coursework
@@ -60,7 +60,6 @@ Nov'08-Apr'15: Designer, Independent
 ---
 
 ADP: Advanced Diploma Program - Post grad.\
-IED: Innovation and Experience Design \
 CSE: Computer Science and Engineering \
 NTS: National Technical Symposium \
 ITF: International Technology Festival \

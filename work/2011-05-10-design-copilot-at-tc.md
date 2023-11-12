@@ -9,7 +9,7 @@ duration: "4+ years"
 deck: Design Leadership
 remote: true
 layout: work.njk
-description: Served as one of the Design Copilots for Topcoder, the world’s largest crowdsourcing company with an open global community of designers, developers, data scientists, and competitive programmers. Gaurav has helped onboard new designers for years and en- gaged with several Fortune 500 companies to facilitate design challenges.
+description: Served as one of the Design Copilots for Topcoder, the world’s largest crowdsourcing company with an open global community of designers, developers, data scientists, and competitive programmers. Gaurav has helped onboard new designers for years and engaged with several Fortune 500 companies to facilitate design challenges.
 permalink: /work/design-copilot-at-tc/
 --- 
 

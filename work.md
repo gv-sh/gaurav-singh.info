@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Work
+title: Work Exp.
 sidebar: true
 pagination: 
     data: collections.work
@@ -21,7 +21,7 @@ pagination:
     {% endif %}
     </p>
     <p>{{ entry.data.description }}</p>
-    <a href="{{ entry.url }}">View more</a>
+    <!-- <a href="{{ entry.url }}">View more</a> -->
 </div>
 <div class="spacer"></div>
 {% endfor %}
