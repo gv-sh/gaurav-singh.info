@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Co-founder, M56, India
+title: Co-founder at M56, India
 startDate: 2015-04-01
 showTitle: true
 date: 2015-04-01

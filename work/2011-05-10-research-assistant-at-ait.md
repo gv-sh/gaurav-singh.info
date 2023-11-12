@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Research assistant, Art in Transit, Srishti, India
+title: Research assistant at Art in Transit, Srishti, India
 startDate: 2016-02-01
 endDate: 2016-12-31
 showTitle: true

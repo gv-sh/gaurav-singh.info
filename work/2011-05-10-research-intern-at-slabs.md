@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Research Intern, S.Labs, India
+title: Research intern at S.Labs, India
 startDate: 2014-05-01
 endDate: 2014-07-01
 showTitle: true

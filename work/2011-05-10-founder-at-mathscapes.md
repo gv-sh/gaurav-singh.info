@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Founder, Mathscapes, India
+title: Founder at Mathscapes, India
 startDate: 2008-04-01
 showTitle: true
 date: 2008-04-01

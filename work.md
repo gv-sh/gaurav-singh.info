@@ -17,7 +17,7 @@ pagination:
     <h3>{{ entry.data.title }}</h3>
     <p class="meta">
     {% if entry.data.startDate %}
-        {{ entry.data.startDate | postDate }} to {% if entry.data.endDate %} {{ entry.data.endDate | postDate }} {% else %} Present {% endif %}  ● {{ entry.data.duration }}
+        {{ entry.data.startDate | postDate }} to {% if entry.data.endDate %} {{ entry.data.endDate | postDate }} {% else %} Present {% endif %} ● {{ entry.data.duration }} {% if entry.data.remote %} ● Remote {% endif %}
     {% endif %}
     </p>
     <p>{{ entry.data.description }}</p>
