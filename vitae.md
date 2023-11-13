@@ -6,19 +6,17 @@ sidebar: true
 
 Full name: Gaurav Singh \
 Location: Gold Coast, Australia \
-Contact: [Email](mailto:gv-sh@outlook.com) \
-OrcID: [0000-0003-1651-6602](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602) \
-Website: [gaurav-singh.info](https://gaurav-singh.info) \
-GitHub: [gv-sh](https://github.com/gv-sh)
+Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github](https://github.com/gv-sh), [OrcID](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602)
+
 
 ###### Education
 2023-25*: Masters + Research dissert., IT + Data analytics; Griffith \
 2013-15: ADP, Innovation and Experience Design; Srishti, India \
-2008-12: BTech, CSE; JNTU-A, India. [Thesis](/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/)
+2008-12: Bachelors, Computer Science & Engg.; JNTU-A, India
 
 ###### Other coursework
-2015: Think101x, UoQ, Aus; 12 weeks <sup>R</sup> \
-2014: Astro2290x, Cornell, USA: 8 weeks <sup>R</sup>
+2015: The science of everyday thinking, UoQ, Aus; 12 weeks <sup>R</sup> \
+2014: Relativity and Astrophysics, Cornell, USA: 8 weeks <sup>R</sup>
  
 ###### Professional experience
 Apr'08-Present: Founder, Mathscapes, India \
@@ -46,9 +44,8 @@ Nov'08-Apr'15: Designer, Independent
 ###### Conferences
 2018: Co-chair, Demo track – IndiaHCI 2018, Bangalore \
 2017: Organising team, Cumulus Conference 2017, Bangalore \
-2011: Participant, Pragnya 2011, NTS, JNTU-H, India \
-2011: Participant, Gravitas 2011, ITF, VIT, India \
-2010: Participant, Gravitas 2010, ITF, VIT, India
+2011: Participant, Pragnya 2011 NTS, JNTU-H, India \
+2010 and '11: Participant, Gravitas ITF, VIT, India 
 
 ###### Recognition
 2023: Grant, Adobe Fund for Design 2023 \
@@ -66,7 +63,6 @@ ITF: International Technology Festival \
 HCD: Human Centered Design \
 IT: Information Technology \
 VC: Visual Communication \
-BTech: Bachelor of Technology \
 BDes: Bachelor of Design \
 <sup>R</sup>: Remote \
 NB: Co-facilitated course with Dr.Naveen Bagalkot \
