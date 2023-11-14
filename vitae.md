@@ -19,14 +19,14 @@ Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info)
 2014: Relativity and Astrophysics, Cornell, USA: 8 weeks <sup>R</sup>
  
 ###### Professional experience
-Apr'08-Present: Founder, Mathscapes, India \
-Apr'15-Present: Co-founder, M56, India \
-Jul'22-Jan'23: RA to Dr. Javanbakht <sup>R</sup>, Griffith, Aus \
-Jul’17-Sep’22: Faculty, Srishti-Manipal, India \
-Jan'18-Nov'22: Design copilot <sup>R</sup>, Topcoder, Inc., USA \
-Feb’16-Dec’16: RA, Art in Transit, Srishti, India \
-May'14-Jul'14: Research Intern, S.Labs, India \
-Nov'08-Apr'15: Designer, Independent
+Apr'08-Present: Founder at Mathscapes, India \
+Apr'15-Present: Co-founder at M56, India \
+Jul'22-Jan'23: Research assistant to Dr. Javanbakht <sup>R</sup>, Griffith, Aus \
+Jul’17-Sep’22: Faculty member at Srishti-Manipal, India \
+Jan'18-Nov'22: Design copilot <sup>R</sup> at Topcoder, Inc., USA \
+Feb’16-Dec’16: Research assistant at Art in Transit, Srishti, India \
+May'14-Jul'14: Research intern at S.Labs, India \
+Nov'08-Apr'15: Independent designer
 
 ###### Research publications
 {% for entry in collections.research %} {{ entry.data.date | postYear }}: <a href="{{ entry.url }}">{{ entry.data.title }}</a> {% if entry.last %}{% else %} {% endif %}
