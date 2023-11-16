@@ -24,6 +24,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("work", function (collection) {
     return collection.getFilteredByGlob("work/*.md").reverse();
   });
+  eleventyConfig.addCollection("education", function (collection) {
+    return collection.getFilteredByGlob("education/*.md").reverse();
+  });
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toISODate();
   });

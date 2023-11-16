@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Work Exp.
+title: Work
 sidebar: true
 pagination: 
     data: collections.work

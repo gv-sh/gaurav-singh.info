@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: C. Vitae
+title: Vitae
 sidebar: true
 ---
 

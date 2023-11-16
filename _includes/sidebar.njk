@@ -1,5 +1,28 @@
 <aside>
-			<ul>{% for collection in collections.all %}
-				{% if collection.data.sidebar %}<li>{% if collection.data.emoji %}{{ collection.data.emoji }}{% endif %} <a {% if page.url == collection.url %}class="active"{% endif %} href="{{ collection.url }}">{{ collection.data.title }}</a></li>{% endif %}
-			{% endfor %}</ul>
-		</aside>
+    <ul>
+        <!-- Handle Home Page Separately -->
+        {% for collection in collections.all %}
+            {% if collection.data.title == "Home" %}
+                <li>
+                    {% if collection.data.emoji %}{{ collection.data.emoji }}{% endif %}
+                    <a {% if page.url == collection.url %}class="active"{% endif %} href="{{ collection.url }}">
+                        {{ collection.data.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        <!-- Sort and Display Other Pages -->
+        {% set sortedCollections = collections.all | sort(attribute='data.title') %}
+        {% for collection in sortedCollections %}
+            {% if collection.data.sidebar and collection.data.title != "Home" %}
+                <li>
+                    {% if collection.data.emoji %}{{ collection.data.emoji }}{% endif %}
+                    <a {% if page.url == collection.url %}class="active"{% endif %} href="{{ collection.url }}">
+                        {{ collection.data.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</aside>
