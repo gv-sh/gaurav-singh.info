@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Faculty at Srishti-Manipal, India
+title: Faculty member at Srishti-Manipal, India
 startDate: 2017-07-01
 endDate: 2022-09-01
 showTitle: true
