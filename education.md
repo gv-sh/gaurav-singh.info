@@ -21,7 +21,7 @@ pagination:
     {% endif %}
     </p>
     <p>{{ entry.data.description }}</p>
-    <!-- <a href="{{ entry.url }}">View more</a> -->
+    <a href="{{ entry.url }}">View more</a>
 </div>
 <div class="spacer"></div>
 {% endfor %}

@@ -196,7 +196,7 @@ table {
 
 table th {
     font-weight: 500;
-    padding: 0.5em 0;
+    padding: 0.5em 0.5em;
     text-align: left;
     font-size: 14px;
     text-transform: uppercase;
@@ -204,7 +204,7 @@ table th {
 }
 
 table td {
-    padding: 0.5em 0;
+    padding: 0.5em 0.5em;
     font-size: 14px;
     border-top: 1px solid #000;
 }

@@ -13,3 +13,5 @@ permalink: /work/independent-designer/
 --- 
 
 Worked towards design competitions, commissioned work that includes several global organisations — Topcoder, Fergusson, LendingTree, ShopEzgo, Life Tech., Appirio, Cornell University, Virginia Tech, Humana, Praxair, IBM, EMC2, Honeywell, Brivo Labs, AstraZeneca, Accenture, School of Coding, Air Products and others.
+
+More information available on [request](mailto:gv-sh@outlook.com).

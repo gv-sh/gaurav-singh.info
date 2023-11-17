@@ -15,3 +15,5 @@ permalink: /work/research-assistant-at-ait/
 Supervisors: Mr.Abhiyan Humane, Ms.Arzu Mistry
 
 Gaurav was part of the Art in Transit team to help students and artists to deploy their projects in metro stations in Bangalore, India. He helped pitch to collaborators and produce for the Festival of Stories in Bangalore in October and December 2016.
+
+More information available on [request](mailto:gv-sh@outlook.com).

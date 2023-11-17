@@ -10,23 +10,23 @@ Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info)
 
 
 ###### Education
-2023-25*: Masters + Research dissert., IT + Data analytics; Griffith \
-2013-15: ADP, Innovation and Experience Design; Srishti, India \
-2008-12: Bachelors, Computer Science & Engg.; JNTU-A, India
+2023-25*: [Masters + Research dissert., IT + Data analytics; Griffith](/education/masters/) \
+2013-15: [ADP, Innovation and Experience Design; Srishti, India](/education/adp-ied/) \
+2008-12: [Bachelors, Computer Science & Engg.; JNTU-A, India](/education/bachelors-cs/)
 
 ###### Other coursework
 2015: The science of everyday thinking, UoQ, Aus; 12 weeks <sup>R</sup> \
 2014: Relativity and Astrophysics, Cornell, USA: 8 weeks <sup>R</sup>
  
 ###### Professional experience
-Apr'08-Present: Founder at Mathscapes, India \
-Apr'15-Present: Co-founder at M56, India \
-Jul'22-Jan'23: Research assistant to Dr. Javanbakht <sup>R</sup>, Griffith, Aus \
-Jul’17-Sep’22: Faculty member at Srishti-Manipal, India \
-Jan'18-Nov'22: Design copilot <sup>R</sup> at Topcoder, Inc., USA \
-Feb’16-Dec’16: Research assistant at Art in Transit, Srishti, India \
-May'14-Jul'14: Research intern at S.Labs, India \
-Nov'08-Apr'15: Independent designer
+Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
+Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
+Jul'22-Jan'23: [Research assistant to Dr. Javanbakht <sup>R</sup>, Griffith, Aus](/work/ra-to-dr-javanbakht/) \
+Jul’17-Sep’22:[Faculty member at Srishti-Manipal, India](/work/faculty-member-at-srishti-manipal/) \
+Jan'18-Nov'22: [Design copilot <sup>R</sup> at Topcoder, Inc., USA](/work/design-copilot-at-tc/) \
+Feb’16-Dec’16: [Research assistant at Art in Transit, Srishti, India](/work/research-assistant-at-ait/) \
+May'14-Jul'14: [Research intern at S.Labs, India](/work/research-intern-at-slabs/) \
+Nov'08-Apr'15: [Independent designer](/work/independent-designer/)
 
 ###### Research publications
 {% for entry in collections.research %} {{ entry.data.date | postYear }}: <a href="{{ entry.url }}">{{ entry.data.title }}</a> {% if entry.last %}{% else %} {% endif %}
@@ -37,8 +37,8 @@ Nov'08-Apr'15: Independent designer
 {% endfor %}
 
 ###### Thesis projects mentored
-2020: Discovering Algorithmic Literacy through Explainable AI. D Dixit, S Singh. BDes VC, BDes HCD resp. \
-2020: Financial indicators that motivate impact investment behaviour. A Avadhana, N Patny, S Mishra. BDes HCD \
+2020: [Discovering Algorithmic Literacy through Explainable AI](/projects/deconstructing-algorithms-2020/). D Dixit, S Singh. BDes VC, BDes HCD resp. \
+2020: [Financial indicators that motivate impact investment behaviour](/projects/deconstructing-algorithms-2020/). A Avadhana, N Patny, S Mishra. BDes HCD \
 2013: Location and arrival prediction+. Shobha R, Pavani A, Kalpana, BTech IT
 
 ###### Conferences
