@@ -1,28 +1,16 @@
 <aside>
     <ul>
-        <!-- Handle Home Page Separately -->
-        {% for collection in collections.all %}
-            {% if collection.data.title == "Home" %}
-                <li>
-                    {% if collection.data.emoji %}{{ collection.data.emoji }}{% endif %}
-                    <a {% if page.url == collection.url %}class="active"{% endif %} href="{{ collection.url }}">
-                        {{ collection.data.title }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
+        <li><a href="/">Home</a></li>
+        <li><a href="/vitae/">CV</a></li>
+        <li><a href="/journal/">Journal</a></li>
 
-        <!-- Sort and Display Other Pages -->
-        {% set sortedCollections = collections.all | sort(attribute='data.title') %}
-        {% for collection in sortedCollections %}
-            {% if collection.data.sidebar and collection.data.title != "Home" %}
-                <li>
-                    {% if collection.data.emoji %}{{ collection.data.emoji }}{% endif %}
-                    <a {% if page.url == collection.url %}class="active"{% endif %} href="{{ collection.url }}">
-                        {{ collection.data.title }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
+        <li class="sidebar-section">Experience</li>
+        <li><a href="/education/">Education</a></li>
+        <li><a href="/work/">Work</a></li>
+
+        <li class="sidebar-section"></li>
+        <li><a href="/teaching/">Teaching</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/research/">Research</a></li>
     </ul>
 </aside>
