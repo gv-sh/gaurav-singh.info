@@ -257,8 +257,26 @@ code {
 .katex { font-size: 1.1em; }
 
 li.sidebar-section {
-    margin-top: 1em;
     opacity: 0.3;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+/* Add margin if not the first section */
+li.sidebar-section:not(:first-child) {
+    margin-top: 1em;
+}
+
+aside ul li a {
+    color: #888;
+    text-decoration: none;
+    border-bottom: none;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1em;
+    font-weight:400;
 }
 
 /* Responsive layout */

@@ -27,6 +27,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("education", function (collection) {
     return collection.getFilteredByGlob("education/*.md").reverse();
   });
+  eleventyConfig.addCollection("peers", function (collection) {
+    return collection.getFilteredByGlob("peers/*.md").reverse();
+  });
+  eleventyConfig.addCollection("students", function (collection) {
+    return collection.getFilteredByGlob("students/*.md").reverse();
+  });
+  eleventyConfig.addCollection("mentors", function (collection) {
+    return collection.getFilteredByGlob("mentors/*.md").reverse();
+  });
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toISODate();
   });
