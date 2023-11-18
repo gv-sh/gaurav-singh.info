@@ -266,7 +266,7 @@ li.sidebar-section {
 
 /* Add margin if not the first section */
 li.sidebar-section:not(:first-child) {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 aside ul li a {
