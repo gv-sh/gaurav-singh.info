@@ -14,7 +14,7 @@ In addition to my CS background, I have also studied [Innovation and Experience 
 
 In 2017, my interest in teaching and research led me to become a faculty member at the [Srishti-Manipal Institute](https://srishtimanipalinstitute.in), where I taught courses and workshops in human-computer interaction, mathematics, and programming at both undergraduate and graduate levels. My experience as a designer and researcher informs my teaching, providing students with a unique perspective on the intersection of design, mathematics, and technology. In 2022, I left Srishti to pursue further studies, continuing to draw from mathematics, computation, and ethics to structure my thoughts, ideas, and projects.
 
-[Email](mailto:gv-sh@outlook.com) &nbsp; [Vitae](/vitae)
+[<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com) &nbsp; [CV](/vitae)
 
 ---
 
