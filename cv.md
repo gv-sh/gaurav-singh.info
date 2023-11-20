@@ -6,10 +6,27 @@ sidebar: true
 
 Full name: Gaurav Singh \
 Location: Gold Coast, Australia \
-Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github](https://github.com/gv-sh), [OrcID](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602)
+Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github <i class="bi bi-box-arrow-up-right"></i>](https://github.com/gv-sh), [OrcID <i class="bi bi-box-arrow-up-right"></i>](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602)
 
+#### Research interest
 
-###### Education
+_Primary interest._ Applications of ML in context of HCI/Engineering; Complex data visualization; Image processing
+
+_Further interests._ High-performance visualization tools, large-sized graphs, optimal graph drawing algorithms, OpenGL or WebGL contexts, algorithmic explainability, natural science, tacit knowledge, human-computer interaction (HCI), artificial intelligence, interaction design, ethical conflicts, archiving, accessibility beyond internet, recreational mathematics, pedagogy, engaging learning environments, mathematical activities.
+
+_Orientation_. Human-centered design (HCD), open-access knowledge, open source, lesser-restricted licensing.
+
+#### Skills and competencies
+
+_Machine Learning._ Computational and statistical learning theory: design and analysis of ML algorithms; applications of ML in engineering; CV/image processing; experience with PyTorch, Scikit-learn, Tensorflow; statistical computing: R.
+
+_Mathematical Modelling._ Working across theoretical mathematical models and experimental studies; differen- tial equations; deterministic and statistical model; L-systems; automata; game theory.
+
+_CS, Computer Graphics and Visualisation._ Models of computation; data structures; applications; software engineering; programming paradigms; experience in scientific computing: C, C++, Lisp/Scheme, Python; microprocessors and assembly: x86, 8051; understanding of fundamental rendering algorithms; experience with OpenGL/GLSL, Three.js, D3.js, MatPlotLib, GGPlot.
+
+#### Education
+
+###### Formal
 <i class="bi bi-dot"></i> 2023-25: [Masters + Research dissertation, IT+; Griffith, Australia](/education/masters/) \
 <i class="bi bi-check"></i> 2013-15: [ADP, Innovation and Experience Design; Srishti, India](/education/adp-ied/) \
 <i class="bi bi-check"></i> 2008-12: [Bachelors, Computer Science & Engg.; JNTU-A, India](/education/bachelors-cs/)
@@ -18,6 +35,8 @@ Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info)
 <i class="bi bi-check"></i> 2015: [The science of everyday thinking, UoQ, Aus; 12 weeks <sup>R</sup> <i class="bi bi-box-arrow-up-right"></i>](https://verify.edx.org/cert/9675d109fabd4904b0892335d0bb37d5) \
 <i class="bi bi-check"></i> 2014: [Relativity and Astrophysics, Cornell, USA: 8 weeks <sup>R</sup> <i class="bi bi-box-arrow-up-right"></i>](https://verify.edx.org/cert/2c48cfb34351461fa7a74eaf989c0a6f)
  
+#### Work and Academic experience
+
 ###### Professional experience
 <i class="bi bi-dot"></i> Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
 <i class="bi bi-dot"></i> Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
@@ -32,21 +51,26 @@ Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info)
 {% for entry in collections.research %} {{ entry.data.date | postYear }}: <a href="{{ entry.url }}">{{ entry.data.title }}</a> {% if entry.last %}{% else %} {% endif %}
 {% endfor %}
 
+<i class="bi bi-info-circle"></i> For detailed descriptions, please check [Research](/research/) page.
+
 ###### Teaching
 {% for entry in collections.teaching %} {{ entry.data.date | postYear }}: {{ entry.data.title }} {% if entry.data.meta %} [{{ entry.data.meta }}] {% endif %} {% if entry.last %}{% else %} {% endif %}
 {% endfor %}
 
+<i class="bi bi-info-circle"></i> For detailed descriptions, please check [Teaching](/teaching/) page.
+
 ###### Thesis projects mentored
-2020: [Discovering Algorithmic Literacy through Explainable AI](/projects/deconstructing-algorithms-2020/). D Dixit, S Singh. BDes VC, BDes HCD resp. \
-2020: [Financial indicators that motivate impact investment behaviour](/projects/deconstructing-algorithms-2020/). A Avadhana, N Patny, S Mishra. BDes HCD \
+2020: [Discovering Algorithmic Literacy through Explainable AI](/projects/deconstructing-algorithms-2020/). D Dixit, [S Singh](/students/simran-singh/). BDes VC, BDes HCD resp. \
+2020: [Financial indicators that motivate impact investment behaviour](/projects/deconstructing-algorithms-2020/). [A Avadhana](/students/apoorva-avadhana/), N Patny, S Mishra. BDes HCD \
 2013: Location and arrival prediction+. Shobha R, Pavani A, Kalpana, BTech IT
 
 ###### Conferences
-2018: Co-chair, Demo track – IndiaHCI 2018, Bangalore \
+2018: Co-chair, Demo track – [IndiaHCI 2018](https://indiahci.org/2018/), Bangalore \
 2017: Organising team, Cumulus Conference 2017, Bangalore \
 2011: Participant, Pragnya 2011 NTS, JNTU-H, India \
 2010 and '11: Participant, Gravitas ITF, VIT, India 
 
+#### 
 ###### Recognition
 2023: Grant, Adobe Fund for Design 2023 \
 2021: Grant, Adobe Fund for Design 2021 \
@@ -65,9 +89,9 @@ IT: Information Technology \
 VC: Visual Communication \
 BDes: Bachelor of Design \
 <sup>R</sup>: Remote \
-NB: Co-facilitated course with Dr.Naveen Bagalkot \
+NB: Co-facilitated course with [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/) \
 RS: Co-facilitated course with (Dr.) Riyaz Shaikh \
-VC: Co-facilitated course with Dr.Venkat Chilukuri
+VC: Co-facilitated course with [Dr.Venkat Chilukuri](/mentors/venkat-chilukuri/)
 
 ---
 
