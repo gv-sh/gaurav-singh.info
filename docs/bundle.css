@@ -299,6 +299,22 @@ aside ul li a {
         margin-top: 1em;
         margin-bottom: 1em;
     }
+
+    aside {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    aside ul{
+        /* Set the ul into two columns */
+        columns: 2;
+        width: 100%;
+
+        /* Prevent the list from breaking into two columns */
+        break-inside: avoid;
+
+        /* Prevent the list from breaking into more than two columns */
+        break-after: avoid;
+    }
 }
 
 .grid {

@@ -4,7 +4,7 @@ title: Home
 sidebar: true
 ---
 
-### Hello! I'm Gaurav, a researcher and educator from India and studying at Griffith University in Gold Coast, Australia.
+### Hello! I'm Gaurav, a researcher and educator from India and currently studying at Griffith University in Gold Coast, Australia
 
 ![](/assets/IMG20231111175931.png)
 _Gold Coast, Australia_
