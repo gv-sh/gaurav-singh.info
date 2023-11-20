@@ -302,6 +302,7 @@ aside ul li a {
 
     aside {
         border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 64px;
     }
 
     aside ul{
