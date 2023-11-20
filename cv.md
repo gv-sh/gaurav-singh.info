@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Vitae
+title: CV
 sidebar: true
 ---
 
@@ -10,23 +10,23 @@ Connect: [Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info)
 
 
 ###### Education
-2023-25*: [Masters + Research dissert., IT + Data analytics; Griffith](/education/masters/) \
-2013-15: [ADP, Innovation and Experience Design; Srishti, India](/education/adp-ied/) \
-2008-12: [Bachelors, Computer Science & Engg.; JNTU-A, India](/education/bachelors-cs/)
+<i class="bi bi-dot"></i> 2023-25: [Masters + Research dissertation, IT+; Griffith, Australia](/education/masters/) \
+<i class="bi bi-check"></i> 2013-15: [ADP, Innovation and Experience Design; Srishti, India](/education/adp-ied/) \
+<i class="bi bi-check"></i> 2008-12: [Bachelors, Computer Science & Engg.; JNTU-A, India](/education/bachelors-cs/)
 
 ###### Other coursework
-2015: The science of everyday thinking, UoQ, Aus; 12 weeks <sup>R</sup> \
-2014: Relativity and Astrophysics, Cornell, USA: 8 weeks <sup>R</sup>
+<i class="bi bi-check"></i> 2015: [The science of everyday thinking, UoQ, Aus; 12 weeks <sup>R</sup> <i class="bi bi-box-arrow-up-right"></i>](https://verify.edx.org/cert/9675d109fabd4904b0892335d0bb37d5) \
+<i class="bi bi-check"></i> 2014: [Relativity and Astrophysics, Cornell, USA: 8 weeks <sup>R</sup> <i class="bi bi-box-arrow-up-right"></i>](https://verify.edx.org/cert/2c48cfb34351461fa7a74eaf989c0a6f)
  
 ###### Professional experience
-Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
-Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
-Jul'22-Jan'23: [Research assistant to Dr. Javanbakht <sup>R</sup>, Griffith, Aus](/work/ra-to-dr-javanbakht/) \
-Jul’17-Sep’22:[Faculty member at Srishti-Manipal, India](/work/faculty-member-at-srishti-manipal/) \
-Jan'18-Nov'22: [Design copilot <sup>R</sup> at Topcoder, Inc., USA](/work/design-copilot-at-tc/) \
-Feb’16-Dec’16: [Research assistant at Art in Transit, Srishti, India](/work/research-assistant-at-ait/) \
-May'14-Jul'14: [Research intern at S.Labs, India](/work/research-intern-at-slabs/) \
-Nov'08-Apr'15: [Independent designer](/work/independent-designer/)
+<i class="bi bi-dot"></i> Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
+<i class="bi bi-dot"></i> Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
+<i class="bi bi-check"></i> Jul'22-Jan'23: [RA to Dr. Javanbakht <sup>R</sup>, Griffith, Australia](/work/ra-to-dr-javanbakht/) \
+<i class="bi bi-check"></i> Jan'18-Nov'22: [Design copilot <sup>R</sup> at Topcoder, Inc., USA](/work/design-copilot-at-tc/) \
+<i class="bi bi-check"></i> Jul’17-Sep’22: [Faculty member at Srishti-Manipal, India](/work/faculty-member-at-srishti-manipal/) \
+<i class="bi bi-check"></i> Feb’16-Dec’16: [RA at Art in Transit, Srishti, India](/work/research-assistant-at-ait/) \
+<i class="bi bi-check"></i> May'14-Jul'14: [Research intern at S.Labs, India](/work/research-intern-at-slabs/) \
+<i class="bi bi-check"></i> Nov'08-Apr'15: [Independent designer](/work/independent-designer/)
 
 ###### Research publications
 {% for entry in collections.research %} {{ entry.data.date | postYear }}: <a href="{{ entry.url }}">{{ entry.data.title }}</a> {% if entry.last %}{% else %} {% endif %}
