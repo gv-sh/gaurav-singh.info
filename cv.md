@@ -66,7 +66,7 @@ _CS, Computer Graphics and Visualisation._ Models of computation; data structure
 
 ###### Conferences
 2018: Co-chair, Demo track – [IndiaHCI 2018](https://indiahci.org/2018/), Bangalore \
-2017: Organising team, Cumulus Conference 2017, Bangalore \
+2017: Organising team, [Cumulus Conference 2017](https://cumulusassociation.org/wp-content/uploads/2021/10/Letters-To-The-Future-1.pdf), Bangalore \
 2011: Participant, Pragnya 2011 NTS, JNTU-H, India \
 2010 and '11: Participant, Gravitas ITF, VIT, India 
 
