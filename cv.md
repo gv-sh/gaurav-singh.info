@@ -24,6 +24,8 @@ _Mathematical Modelling._ Working across theoretical mathematical models and exp
 
 _CS, Computer Graphics and Visualisation._ Models of computation; data structures; applications; software engineering; programming paradigms; experience in scientific computing: C, C++, Lisp/Scheme, Python; microprocessors and assembly: x86, 8051; understanding of fundamental rendering algorithms; experience with OpenGL/GLSL, Three.js, D3.js, MatPlotLib, GGPlot.
 
+<i class="bi bi-info-circle"></i> For a more complete list, please [request](mailto:gv-sh@outlook.com) a detailed CV.
+
 #### Education
 
 ###### Formal
