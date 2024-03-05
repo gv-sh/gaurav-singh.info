@@ -18,13 +18,41 @@ _Orientation_. Human-centered design (HCD), open-access knowledge, open source, 
 
 #### Skills and competencies
 
-_Machine Learning._ Computational and statistical learning theory: design and analysis of ML algorithms; applications of ML in engineering; CV/image processing; experience with PyTorch, Scikit-learn, Tensorflow; statistical computing: R.
+_Machine Learning_ \
+Statistical computing: R and Python \
+Appliying ML in Engineering + HCI contexts \
+Computer vision and mathematical image processing \
+Experience with PyTorch, Scikit-learn, Tensorflow
 
-_Mathematical Modelling._ Working across theoretical mathematical models and experimental studies; differen- tial equations; deterministic and statistical model; L-systems; automata; game theory.
+_Mathematical Modelling_ \
+Theoretical mathematical models \
+Differential equations + Discrete maths \
+Deterministic and statistical models \
+L-systems + Automata theory + Game theory
 
-_CS, Computer Graphics and Visualisation._ Models of computation; data structures; applications; software engineering; programming paradigms; experience in scientific computing: C, C++, Lisp/Scheme, Python; microprocessors and assembly: x86, 8051; understanding of fundamental rendering algorithms; experience with OpenGL/GLSL, Three.js, D3.js, MatPlotLib, GGPlot.
+_CS and Computer Graphics_ \
+Experience in scientific computing: C, C++, Lisp, Python \
+Fundamental rendering algorithms + OpenGL/GLSL \
+Three.js + D3.js + MatPlotLib + GGPlot \
+P5/OpenFrameworks + Creative coding
 
-<i class="bi bi-info-circle"></i> For a more complete list, please [request](mailto:gv-sh@outlook.com) a detailed CV.
+_Interface and experience design_ \
+User research + Wireframing + Prototyping \
+Human-centered design principles \
+User interface and experience design \
+Adobe XD + Sketch + Figma + Adobe Illustrator
+
+_Web and Application Development_ \
+Front-end technologies: JS + HTML + CSS \
+Experience in React for building user interfaces \
+Back-end development using NodeJS and Python \
+Version control systems like Git, Subversion
+
+_Writing and Visualization_ \
+Technical writing + documentation \
+Creative writing and storytelling \
+Design and programming for Data visualization \
+Infographics design + Interactive media
 
 #### Education
 
@@ -72,7 +100,6 @@ _CS, Computer Graphics and Visualisation._ Models of computation; data structure
 2011: Participant, Pragnya 2011 NTS, JNTU-H, India \
 2010 and '11: Participant, Gravitas ITF, VIT, India 
 
-#### 
 ###### Recognition
 2023: Grant, Adobe Fund for Design 2023 \
 2021: Grant, Adobe Fund for Design 2021 \

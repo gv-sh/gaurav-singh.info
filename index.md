@@ -22,13 +22,10 @@ In 2017, my interest in teaching and research led me to become a faculty member 
 ### Latest
 
 _Work/study in progress_\
-KM1, [RAMS+](/journal/understanding-the-rams-model/), [7001ICT](/education/masters/), [7002ICT](/education/masters/), [7610ICT](/education/masters/), [7611ICT](/education/masters/)
+[7230ICT](/education/masters/), [7003ICT](/education/masters/), [7006ICT](/education/masters/), [7113ICT](/education/masters/)
 
 _Upcoming work_\
-KM2, OPT
-
-KMx: Study of auxetics using neural networks\
-OPT: Optical tracking of deformation in auxetics
+TBA
 
 ---
 

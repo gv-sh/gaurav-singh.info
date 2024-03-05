@@ -19,3 +19,4 @@ _Research Dissertation._ Details coming soon.
 | T | Courses studied |
 | --- | --- |
 | 2023.T3 | Programming Principles, Systems Development, Introduction to Information Systems, Computer Systems and Networks |
+| 2024.T1 | Database Design, Big data analytics and Social media, Introduction to AI, Research Methods in AI |
