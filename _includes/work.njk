@@ -52,7 +52,7 @@
                 <h3>{{ title }}</h3>
                 <p class="meta">
                 {% if startDate %}
-                    {{ startDate | postDate }} to {% if endDate %} {{ endDate | postDate }} {% else %} Present {% endif %} ● {{ duration }} {% if remote %} ● Remote {% endif %}
+                    {{ startDate | postDate }} to {% if endDate %} {{ endDate | postDate }} {% else %} Present {% endif %} / {{ duration }} {% if remote %} / Remote {% endif %}
                 {% endif %}
                 </p>
             </div>

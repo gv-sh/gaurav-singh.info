@@ -23,7 +23,7 @@ pagination:
     <h3>{{ entry.data.title }}</h3>
     <p class="meta">
     {% if entry.data.date %}
-        {{ entry.data.date | postDate }}{% if entry.data.attribution %} ● {{ entry.data.attribution }}{% endif %}
+        {{ entry.data.date | postDate }}{% if entry.data.attribution %} / {{ entry.data.attribution }}{% endif %}
     {% endif %}
     </p>
     <p>{{ entry.content }}</p>

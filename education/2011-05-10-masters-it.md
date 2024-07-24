@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Masters + Research dissert., IT + Data analytics; Griffith
+title: Masters + Research dissert., IT; Griffith
 startDate: 2023-11-06
 endDate: 2025-11-01
 showTitle: true

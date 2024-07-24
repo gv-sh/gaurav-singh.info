@@ -52,7 +52,7 @@
                 <h3>{{ title }}</h3>
                 <p class="meta">
                 {% if date %}
-                    {{ date | postDate }}{% if attribution %} ● {{ attribution }}{% endif %}
+                    {{ date | postDate }}{% if attribution %} / {{ attribution }}{% endif %}
                 {% endif %}
                 </p>
             </div>
