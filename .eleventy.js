@@ -1,6 +1,7 @@
 const yaml = require("js-yaml");
 const fs = require("fs");
 const { DateTime } = require("luxon");
+const truncate = require('./_11ty/filters/truncate');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.html");
@@ -42,6 +43,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postYear", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
+  eleventyConfig.addFilter('truncate', truncate);
 
   eleventyConfig.addTransform("removeEmptyLines", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
