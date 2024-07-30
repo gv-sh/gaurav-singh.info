@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Research assistant to Dr.Javanbakht, Griffith, Australia
+title: Research assistant to Dr.Javanbakht, Griffith
 startDate: 2022-07-01
 endDate: 2023-01-01
 showTitle: true

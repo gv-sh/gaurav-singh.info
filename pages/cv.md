@@ -19,37 +19,37 @@ _Orientation_. Human-centered design (HCD), open-access knowledge, open source, 
 
 #### Skills and competencies
 
-_Machine Learning_ \
+###### Machine Learning
 Working experience with Generative AI models; Python \
 Appliying ML in Engineering + HCI contexts \
 Computer vision and mathematical image processing \
 Experience with PyTorch, Scikit-learn, Tensorflow
 
-_Mathematical Modelling_ \
+###### Mathematical Modelling
 Theoretical mathematical models \
 Differential equations + Discrete maths \
 Deterministic and statistical models \
 L-systems + Automata theory + Game theory
 
-_CS and Computer Graphics_ \
+###### CS and Computer Graphics
 Experience in scientific computing: C, C++, Lisp, Python \
 Fundamental rendering algorithms + OpenGL/GLSL \
 Three.js + D3.js + MatPlotLib + GGPlot \
 P5/OpenFrameworks + Creative coding
 
-_Interface and experience design_ \
+###### Interface and experience design
 User research + Wireframing + Prototyping \
 Human-centered design principles \
 User interface and experience design \
 Adobe XD + Sketch + Figma + Adobe Illustrator
 
-_Web and Application Development_ \
+###### Web and Application Development
 Front-end technologies: JS + HTML + CSS \
 Experience in React for building user interfaces \
 Back-end development using Flask and Python \
 Version control systems like Git
 
-_Writing and Visualization_ \
+###### Writing and Visualization
 Technical writing + documentation \
 Creative writing and storytelling \
 Design and programming for data visualization \
