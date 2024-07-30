@@ -6,9 +6,9 @@ sidebar: true
 
 Full name: Gaurav Singh \
 Location: Gold Coast, Australia \
-Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github <i class="bi bi-box-arrow-up-right"></i>](https://github.com/gv-sh), [OrcID <i class="bi bi-box-arrow-up-right"></i>](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602)
+Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github <i class="bi bi-box-arrow-up-right"></i>](https://github.com/gv-sh), [OrcID <i class="bi bi-box-arrow-up-right"></i>](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602), [Linkedin <i class="bi bi-box-arrow-up-right"></i>](https://linkedin.com/in/gv-sh)
 
-#### Research interest
+#### Area of interest
 
 _Primary interest._ Applications of ML in context of HCI/Engineering; Complex data visualization; Image processing
 
@@ -19,7 +19,7 @@ _Orientation_. Human-centered design (HCD), open-access knowledge, open source, 
 #### Skills and competencies
 
 _Machine Learning_ \
-Statistical computing: R and Python \
+Working experience with Generative AI models; Python \
 Appliying ML in Engineering + HCI contexts \
 Computer vision and mathematical image processing \
 Experience with PyTorch, Scikit-learn, Tensorflow
@@ -45,13 +45,13 @@ Adobe XD + Sketch + Figma + Adobe Illustrator
 _Web and Application Development_ \
 Front-end technologies: JS + HTML + CSS \
 Experience in React for building user interfaces \
-Back-end development using NodeJS and Python \
-Version control systems like Git, Subversion
+Back-end development using Flask and Python \
+Version control systems like Git
 
 _Writing and Visualization_ \
 Technical writing + documentation \
 Creative writing and storytelling \
-Design and programming for Data visualization \
+Design and programming for data visualization \
 Infographics design + Interactive media
 
 #### Education
@@ -121,7 +121,3 @@ BDes: Bachelor of Design \
 NB: Co-facilitated course with [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/) \
 RS: Co-facilitated course with (Dr.) Riyaz Shaikh \
 VC: Co-facilitated course with [Dr.Venkat Chilukuri](/mentors/venkat-chilukuri/)
-
----
-
-A print and more detailed version of this CV is available on [request](mailto:gv-sh@outlook.com).
