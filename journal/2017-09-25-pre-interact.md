@@ -22,7 +22,7 @@ What if information about a rider’s condition such as body posture, lean angle
 
 The motorcycle could soon be the new frontier for the exploration of human interaction with advanced digital technology. In this paper we present a demo of a system designed and implemented as platform exploring the design of personal informatics tools for motorbike commuting and help us conduct in-situ evaluation of such tools. We present the system architecture and demonstrate the capabilities of the system by presenting a case instantiation in the form of an interactive soft-and- hardware prototype that collects rider’s posture data, visualizes the data on the motorbike dashboard in real-time, and pushes the data to the cloud server for later retrieval. (Excerpt from the demo paper we submitted for Interact 2017 conference)
 
-This project is continuation of original ReRide design experiment started by Dr. Naveen Bagalkot and Suraj Baadkar at Srishti Institute of Art, Design & Technology, Bangalore in collaboration with Tomas Sokoler at the Digital Design Department at the IT University of Copenhagen.
+This project is continuation of original ReRide design experiment started by [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/) and Suraj Baadkar at Srishti Institute of Art, Design & Technology, Bangalore in collaboration with Tomas Sokoler at the Digital Design Department at the IT University of Copenhagen.
 
 Bagalkot, Naveen L., Tomas Sokoler, and Suraj Baadkar. ‘Reride: Performing Lower Back Rehabilitation While Riding Your Motorbike in Traffic’. In Proceedings of the 10th EAI International Conference on Pervasive Computing Technologies for Healthcare, 77–80. PervasiveHealth ’16. Brussels, BEL: ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering), 2016. doi:[10.5555/3021319.3021331](https://dl.acm.org/doi/10.5555/3021319.3021331)
 
@@ -40,4 +40,4 @@ We see our work on ReRide as an invitation to Personal Informatics and HCI commu
 
 ---
 
-Our Team: Dr. Naveen Bagalkot, Dr.Tomas Sokoler, Riyaz Shaikh, Gaurav Singh, Anders Edelbo Lillie, Vignesh Chakravarthy, Pratiksha Dixit, Sapna Nayak, Mangesh Ashrit, Somya Saxena, Ashwin Senthil Kumar, and Aditi Rai.
+Our Team: [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/), Dr.Tomas Sokoler, Riyaz Shaikh, Gaurav Singh, Anders Edelbo Lillie, Vignesh Chakravarthy, Pratiksha Dixit, Sapna Nayak, Mangesh Ashrit, Somya Saxena, Ashwin Senthil Kumar, and Aditi Rai.

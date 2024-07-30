@@ -12,7 +12,7 @@ description: Conducted workshop for faculty members at Srishti to build an under
 permalink: /work/research-intern-at-slabs/
 --- 
 
-Supervisor: Mr.Atul Saraf, Dr.Naveen Bagalkot
+Supervisor: Mr.Atul Saraf, [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/)
 
 Conducted workshop for faculty members at Srishti to build an understanding of shared ethics and values from diverse practices and pedagogies. Synthesised complex aspects into directions that led us to imagine new information systems.
 

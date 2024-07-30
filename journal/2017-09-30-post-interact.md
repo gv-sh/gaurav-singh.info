@@ -55,7 +55,7 @@ _Key points_
 
 ---
 
-Our Team: Dr. Naveen Bagalkot , Dr.Tomas Sokoler, Riyaz Shaikh, Gaurav Singh, Anders Edelbo Lillie, Vignesh Chakravarthy, Pratiksha Dixit, Sapna Nayak, Mangesh Ashrit, Somya Saxena, Ashwin Senthil Kumar, and Aditi Rai.
+Our Team: [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/) , Dr.Tomas Sokoler, Riyaz Shaikh, Gaurav Singh, Anders Edelbo Lillie, Vignesh Chakravarthy, Pratiksha Dixit, Sapna Nayak, Mangesh Ashrit, Somya Saxena, Ashwin Senthil Kumar, and Aditi Rai.
  
 Also special thanks to [Pranjal Jain](https://www.linkedin.com/in/pranjaljain1) for his help putting up the demo at the site.
 
