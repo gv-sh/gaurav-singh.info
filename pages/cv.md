@@ -9,56 +9,37 @@ Full name: Gaurav Singh \
 Location: Gold Coast, Australia \
 Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github <i class="bi bi-box-arrow-up-right"></i>](https://github.com/gv-sh), [OrcID <i class="bi bi-box-arrow-up-right"></i>](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602), [Linkedin <i class="bi bi-box-arrow-up-right"></i>](https://linkedin.com/in/gv-sh)
 
-#### Area of interest
+#### Inclination
 
-_Primary interest._ Applications of ML in context of HCI/Engineering; Complex data visualization; Image processing
+###### Primary interest
+<i class="bi bi-dot"></i> Broad: Applications of ML in context of engineering \
+<i class="bi bi-dot"></i> Specific: Complex data visualization and image processing
 
-_Further interests._ High-performance visualization tools, large-sized graphs, optimal graph drawing algorithms, OpenGL or WebGL contexts, algorithmic explainability, natural science, tacit knowledge, human-computer interaction (HCI), artificial intelligence, interaction design, ethical conflicts, archiving, accessibility beyond internet, recreational mathematics, pedagogy, engaging learning environments, mathematical activities.
+###### Further interests
+<i class="bi bi-dot"></i> High-performance visualization tools \
+<i class="bi bi-dot"></i> Optimal graph drawing algorithms
 
-_Orientation_. Human-centered design (HCD), open-access knowledge, open source, lesser-restricted licensing.
+###### Orientation
+<i class="bi bi-dot"></i> Broad: Human-centered design (HCD)\
+<i class="bi bi-dot"></i> Specific 1: Algorithmic explanability \
+<i class="bi bi-dot"></i> Specific 2: Lesser-restricted licensing
 
-#### Skills and competencies
+#### Technical skills
 
 ###### Machine Learning
-Working experience with Generative AI models; Python \
-Appliying ML in Engineering + HCI contexts \
-Computer vision and mathematical image processing \
-Experience with PyTorch, Scikit-learn, Tensorflow
+<i class="bi bi-dot"></i> Appliying ML in Engineering + HCI contexts \
+<i class="bi bi-dot"></i> Computer vision and mathematical image processing \
+<i class="bi bi-dot"></i> Experience with PyTorch, Scikit-learn
 
-###### Mathematical Modelling
-Theoretical mathematical models \
-Differential equations + Discrete maths \
-Deterministic and statistical models \
-L-systems + Automata theory + Game theory
-
-###### CS and Computer Graphics
-Experience in scientific computing: C, C++, Lisp, Python \
-Fundamental rendering algorithms + OpenGL/GLSL \
-Three.js + D3.js + MatPlotLib + GGPlot \
-P5/OpenFrameworks + Creative coding
-
-###### Interface and experience design
-User research + Wireframing + Prototyping \
-Human-centered design principles \
-User interface and experience design \
-Adobe XD + Sketch + Figma + Adobe Illustrator
-
-###### Web and Application Development
-Front-end technologies: JS + HTML + CSS \
-Experience in React for building user interfaces \
-Back-end development using Flask and Python \
-Version control systems like Git
-
-###### Writing and Visualization
-Technical writing + documentation \
-Creative writing and storytelling \
-Design and programming for data visualization \
-Infographics design + Interactive media
+###### Computer Graphics
+<i class="bi bi-dot"></i> Experience in scientific computing: C, C++, Lisp, Python \
+<i class="bi bi-dot"></i> Fundamental rendering algorithms + OpenGL/GLSL \
+<i class="bi bi-dot"></i> Three.js + D3.js + MatPlotLib + GGPlot
 
 #### Education
 
 ###### Formal
-<i class="bi bi-dot"></i> 2023-25: [Masters + Research dissertation, IT+; Griffith, Australia](/education/masters/) \
+<i class="bi bi-hourglass-split"></i> 2023-25: [Masters + Research dissertation, IT+; Griffith, Australia](/education/masters/) \
 <i class="bi bi-check"></i> 2013-15: [ADP, Innovation and Experience Design; Srishti, India](/education/adp-ied/) \
 <i class="bi bi-check"></i> 2008-12: [Bachelors, Computer Science & Engg.; JNTU-A, India](/education/bachelors-cs/)
 
@@ -69,8 +50,8 @@ Infographics design + Interactive media
 #### Work and Academic experience
 
 ###### Professional experience
-<i class="bi bi-dot"></i> Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
-<i class="bi bi-dot"></i> Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
+<i class="bi bi-hourglass-split"></i> Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
+<i class="bi bi-hourglass-split"></i> Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
 <i class="bi bi-check"></i> Jul'22-Jan'23: [RA to Dr. Javanbakht <sup>R</sup>, Griffith, Australia](/work/ra-to-dr-javanbakht/) \
 <i class="bi bi-check"></i> Jan'18-Nov'22: [Design copilot <sup>R</sup> at Topcoder, Inc., USA](/work/design-copilot-at-tc/) \
 <i class="bi bi-check"></i> Jul’17-Sep’22: [Faculty member at Srishti-Manipal, India](/work/faculty-member-at-srishti-manipal/) \
