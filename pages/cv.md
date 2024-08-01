@@ -9,6 +9,27 @@ Full name: Gaurav Singh \
 Location: Gold Coast, Australia \
 Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [Website](https://gaurav-singh.info), [Github <i class="bi bi-box-arrow-up-right"></i>](https://github.com/gv-sh), [OrcID <i class="bi bi-box-arrow-up-right"></i>](https://orcid.org/my-orcid?orcid=0000-0003-1651-6602), [Linkedin <i class="bi bi-box-arrow-up-right"></i>](https://linkedin.com/in/gv-sh)
 
+#### Key professional skills
+
+###### Problem solving
+Ability to identify and solve complex problems attributing to emphasizing importance of lateral thinking and strong experience spanning across both engineering and design schools
+
+###### Teaching and facilitation
+5+ years of teaching exp. in leading design school in India
+Last held position: Head of studies, M.Des - Design Computation at Srishti Manipal Institute, India
+
+#### Relevant technical skills
+
+###### Machine learning
+<i class="bi bi-dot"></i> Appliying ML in Engineering + HCI contexts \
+<i class="bi bi-dot"></i> Computer vision and mathematical image processing \
+<i class="bi bi-dot"></i> Experience with PyTorch, Scikit-learn
+
+###### CS and Computer Graphics
+<i class="bi bi-dot"></i> Experience in scientific computing: C, C++, Python \
+<i class="bi bi-dot"></i> Fundamental rendering algorithms + OpenGL/GLSL \
+<i class="bi bi-dot"></i> Three.js + D3.js + MatPlotLib + GGPlot
+
 #### Inclination
 
 ###### Primary interest
@@ -24,18 +45,6 @@ Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [W
 <i class="bi bi-dot"></i> Specific 1: Algorithmic explanability \
 <i class="bi bi-dot"></i> Specific 2: Lesser-restricted licensing
 
-#### Technical skills
-
-###### Machine Learning
-<i class="bi bi-dot"></i> Appliying ML in Engineering + HCI contexts \
-<i class="bi bi-dot"></i> Computer vision and mathematical image processing \
-<i class="bi bi-dot"></i> Experience with PyTorch, Scikit-learn
-
-###### Computer Graphics
-<i class="bi bi-dot"></i> Experience in scientific computing: C, C++, Lisp, Python \
-<i class="bi bi-dot"></i> Fundamental rendering algorithms + OpenGL/GLSL \
-<i class="bi bi-dot"></i> Three.js + D3.js + MatPlotLib + GGPlot
-
 #### Education
 
 ###### Formal
@@ -49,9 +58,7 @@ Connect: [<i class="bi bi-envelope-at"></i> Email](mailto:gv-sh@outlook.com), [W
  
 #### Work and Academic experience
 
-###### Professional experience
-<i class="bi bi-hourglass-split"></i> Apr'08-Present: [Founder at Mathscapes, India](/work/founder-at-mathscapes/) \
-<i class="bi bi-hourglass-split"></i> Apr'15-Present: [Co-founder at M56, India](/work/co-founder-at-m56/) \
+###### Professional **experience**
 <i class="bi bi-check"></i> Jul'22-Jan'23: [RA to Dr. Javanbakht <sup>R</sup>, Griffith, Australia](/work/ra-to-dr-javanbakht/) \
 <i class="bi bi-check"></i> Jan'18-Nov'22: [Design copilot <sup>R</sup> at Topcoder, Inc., USA](/work/design-copilot-at-tc/) \
 <i class="bi bi-check"></i> Jul’17-Sep’22: [Faculty member at Srishti-Manipal, India](/work/faculty-member-at-srishti-manipal/) \
