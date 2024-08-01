@@ -58,7 +58,7 @@ Last held position: Head of studies, M.Des - Design Computation at Srishti Manip
  
 #### Work and Academic experience
 
-###### Professional **experience**
+###### Professional experience
 <i class="bi bi-check"></i> Jul'22-Jan'23: [RA to Dr. Javanbakht <sup>R</sup>, Griffith, Australia](/work/ra-to-dr-javanbakht/) \
 <i class="bi bi-check"></i> Jan'18-Nov'22: [Design copilot <sup>R</sup> at Topcoder, Inc., USA](/work/design-copilot-at-tc/) \
 <i class="bi bi-check"></i> Jul’17-Sep’22: [Faculty member at Srishti-Manipal, India](/work/faculty-member-at-srishti-manipal/) \
