@@ -8,7 +8,7 @@ date: 2023-11-06
 duration: "2 years (Ongoing)"
 deck: Engineering
 layout: work.njk
-description: "Currently, I am pursuing my second postgraduate study, a Master of Information Technology with a major in Data Analytics at Griffith University. This program, with its interactive curriculum and emphasis on research, is a strategic step towards making myself eligible for PhD research in my chosen field. While the coursework, grounded in both theory and practical application, may not pose significant challenges due to my previous academic experiences, it provides an invaluable opportunity to delve deeper into the subject. This deeper exploration is crucial for me to connect these learnings with my forthcoming research, setting a solid foundation for my doctoral studies."
+description: "Currently, I am pursuing my second postgraduate study, a Master of Information Technology with a major in Data Analytics at Griffith University. This program, with its interactive curriculum and emphasis on research, is a strategic step towards making myself eligible for PhD research in my chosen field. While the coursework, grounded in both theory and practical application, may not pose significant challenges due to my previous academic experiences, it provides an invaluable opportunity to delve deeper into the subject. This deeper exploration is important for me to connect these learnings with my forthcoming research, setting a solid foundation for my doctoral studies."
 permalink: /education/masters/
 --- 
 
