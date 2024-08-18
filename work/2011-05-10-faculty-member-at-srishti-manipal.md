@@ -16,4 +16,6 @@ Taught undergraduate and graduate courses in programming, mathematics, and human
 
 I worked on the design and programming for the posture-sensing module under the supervision of [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/) (Srishti) and Dr.Tomas Sokoler (ITU Copenhagen). Our efforts culminated in two research papers, and our work was part of INTERACT 2017 at IIT Bombay, India and TEI 2019 at Arizona State University, USA.
 
+[List of courses/workshops taught at Srishti](/teaching/)
+
 More information available on [request](mailto:gv-sh@outlook.com).
