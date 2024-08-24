@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "Automated Detection of Deformation Mechanisms in Re-entrant Honeycomb Auxetics Using Machine Learning"
+title: "Automated Detection of Deformation Mechanisms in Re-entrant Honeycomb Auxetics using Machine Learning"
 deck: "Re-entrant Honeycomb Auxetics"
 date: 2024-08-24
 permalink: /research/auxetics-1/
