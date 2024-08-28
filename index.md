@@ -4,6 +4,10 @@ title: Home
 sidebar: true
 ---
 
+### Hello, I'm Gaurav, based in Gold Coast, Aus. — Exploring ML and data visualization to solve complex engineering problems
+
+&nbsp;
+
 ![](/assets/20240715_142519.jpg)
 _Cradle mountain, Tasmania_
 
