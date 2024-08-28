@@ -4,7 +4,7 @@ title: Home
 sidebar: true
 ---
 
-### Hello, I'm Gaurav, based in Gold Coast, Aus. — Exploring ML and data visualization to solve complex engineering problems
+### Hello, I'm Gaurav, based in Gold Coast — Exploring ML and data visualization to solve complex engineering problems
 
 &nbsp;
 
