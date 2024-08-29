@@ -3,20 +3,20 @@
 
 * {
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 21px;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 1.3;
     margin: 0;
     font-kerning: normal;
     text-rendering: geometricPrecision;
 }
 
 body {
-    font-family: 'Gowun Batang', serif;
+    font-family: Times, 'Gowun Batang', serif;
     margin: 0 auto;
     padding: 1em;
-    max-width: 700px;
-    background-color: #FAF9F6;
+    max-width: 760px;
+    background-color: #fff;
 }
 
 /* Header */
@@ -41,7 +41,7 @@ aside ul li a{
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: 'Gowun Dodum', sans-serif;
+    font-family: Times, 'Gowun Dodum', sans-serif;
 }
 
 aside ul li a.active {
@@ -65,10 +65,13 @@ main {
 }
 
 a {
-    color: #888;
+    color: blue;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    font-family: 'Gowun Dodum', sans-serif;
+    /* font-family: Helvetica, 'Gowun Dodum', sans-serif; */
+    /* font-size: 0.8em; */
+    /* font-weight: 700; */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 a:hover {
@@ -76,12 +79,16 @@ a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+a.external {
+    color: magenta;
+}
+
 p {
     margin-bottom: 1.5em;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     margin-bottom: 0.5em;
     font-weight: 400;
     line-height: 1;
@@ -105,14 +112,14 @@ hr {
 h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    line-height: 1.1;
+    line-height: 1;
     font-weight: 400;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 0.5em;
-    line-height: 1.35;
+    line-height: 1.25;
     font-weight: 400;
 }
 
@@ -130,7 +137,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.25em;
+    font-size: 1.2em;
     margin-bottom: 0.5em;
     font-weight: 400;
 }
@@ -143,11 +150,10 @@ h5 {
 
 h6 {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.7em;
     font-weight: 400;
-    letter-spacing: 0.1em;
     margin-bottom: 0.5em;
-    font-family: 'Gowun Dodum', sans-serif;
+    font-family: Helvetica, 'Gowun Dodum', sans-serif;
 }
 
 nav ol {
@@ -172,22 +178,21 @@ img {
 }
 
 em, em a {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 0.8;
-    /* letter-spacing: 0.1em; */
+    font-size: 0.8em;
+    font-weight: 700;
     /* text-transform: uppercase; */
     text-align: left;
     margin-bottom: 1em;
     margin-top: 0.5em;
     font-style: normal;
     display: inline;
-    font-family: 'Gowun Dodum', sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Select p with single child em */
 p > em:only-child {
-    line-height: 1;
+    display: inline-block;
+    line-height: 1.3;
 }
 
 em a {
@@ -267,11 +272,12 @@ code {
 .katex { font-size: 1.1em; }
 
 li.sidebar-section {
-    opacity: 0.3;
+    opacity: 1;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.1em;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-bottom: 5px;
 }
 
 /* Add margin if not the first section */
@@ -280,7 +286,7 @@ li.sidebar-section:not(:first-child) {
 }
 
 aside ul li a {
-    color: #888;
+    color: #000;
     text-decoration: none;
     border-bottom: none;
     text-transform: none;
