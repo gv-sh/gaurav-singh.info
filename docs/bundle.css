@@ -365,3 +365,7 @@ sup {
     vertical-align: super;
     line-height: 0;
 }
+
+.border {
+    border: 1px solid #bbb;
+}
