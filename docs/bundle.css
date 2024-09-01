@@ -215,7 +215,7 @@ table th {
     text-align: left;
     font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 table td {

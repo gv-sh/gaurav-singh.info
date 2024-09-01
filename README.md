@@ -1,3 +1,2 @@
 Build instructions:
 npx @11ty/eleventy --input=. --output=docs --serve
-pandoc -s -t revealjs -o present.html _present/present.md

@@ -7,6 +7,13 @@ permalink: /cv/
 
 <div class="docs">
     <div>
+        <img class="border" src="/assets/cv/2024.jpg">
+        <div class="caption">
+            <a href="https://drive.google.com/file/d/1nUdmJm-gS4SrO4rtHZQgLBBtzlgr10eV/view?usp=share_link">Download CV (2024)</a> 3 pages, 91KB
+        </div>
+    </div>
+
+    <div>
         <img class="border" src="/assets/cv/2024_a.jpg">
         <div class="caption">
             <a href="https://drive.google.com/file/d/1zNfmLgWPNLpIJbArrSV44vJIBMK8RdER/view?usp=sharing">Download Academic CV (2024)</a> 5 pages, 130KB
