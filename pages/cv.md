@@ -5,7 +5,7 @@ sidebar: true
 permalink: /cv/
 ---
 
-<div class="docs">
+<div>
     <div>
         <img class="border" src="/assets/cv/2024.jpg">
         <div class="caption">
