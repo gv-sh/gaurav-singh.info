@@ -7,7 +7,7 @@ pagination:
     size: 5
     alias: entries
 ---
-Please check my [CV](/cv/) for a list of my research interests. Ongoing and upcoming studies can be found on the [home page](/) of this website under _Latest_ section.
+Please check my [CV](/cv/) for a list of my research interests.
 
 ---
 
