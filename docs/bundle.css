@@ -366,13 +366,7 @@ aside ul li a {
     font-weight: var(--font-weight-normal);
 }
 
-@media (max-width: var(--max-width-body)) {
-
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
+@media (max-width: 768px) {
 
     aside,
     main {
@@ -397,7 +391,7 @@ aside ul li a {
     }
 
     aside ul {
-        columns: 1;
+        columns: 2;
         width: var(--dimension-full);
         break-inside: avoid;
         break-after: avoid;
