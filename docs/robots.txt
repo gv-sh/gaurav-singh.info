@@ -1,2 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.gif$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.svg$
+Disallow: /*.ico$
+Disallow: /*.mp4$
+Disallow: /*.mp3$
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.7z$

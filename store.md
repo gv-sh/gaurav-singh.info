@@ -7,7 +7,9 @@ pagination:
     size: 15
     alias: entries
 ---
-<div class="store">
+Coming soon.
+
+<!-- <div class="store">
 {% for entry in entries %} <div><img src="{{ entry.data.cover }}"><div class="caption"><a href="{{ entry.url }}">{{ entry.data.title }}</a></div></div>{% endfor %}
 </div>
 
@@ -17,4 +19,4 @@ pagination:
         <li><a href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>{{ forloop.index }}</a></li>
     {%- endfor %}
   </ol>
-</nav>
+</nav> -->
