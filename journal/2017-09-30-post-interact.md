@@ -4,13 +4,13 @@ deck: Demonstration
 title: Interact 2017 — ReRide demo and more
 showTitle: true
 date: 2017-09-30
-cover: https://cdn.mathscapes.xyz/static/images/2017/interact_7.jpg
+cover: /assets/images/2017/interact_7.jpg
 layout: post.njk
 description: Beginning to write this as we complete the first day of ReRide demonstration at Interact 2017 Conference in IIT Bombay. The last week till afternoon today have been quite intense for us but also has been quite fruitful. It was very gratifying to finally see the synergy of the team to complete the demo despite few challenges we faced. The demo intended to develop a working proof of concept to demonstrate the intent, which we think has met, though the time crunch has affected us and we could not do the pilot test in a real setting. Nevertheless, we were ready for the Demo. The entire exercise just echoed what I already believe. There is a lot of value in making physical and working concepts (esp. for designers), more often you’ll find that you’re rethinking most of your design decisions made when drafting ideas. What you see is “not” what you get!
 permalink: /journal/interact-2017/
 --- 
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_7.jpg" alt=""/> 
+<img src="/assets/images/2017/interact_7.jpg" alt=""/> 
 
 _Cover_
 
@@ -20,17 +20,17 @@ One of the things that I think is quite instrumental for designers is the abilit
 
 The Media Lab’s founding director, Nicholas Negroponte, famously said ‘demo or die,’ as opposed to publish or perish, the tradition academic way of thinking, Ito told the TED audience in March (2014). “The demo only has to work once because the primary mode of us impacting the world was through large companies being inspired by us and creating things like the Kindle or Lego Mindstorms. But today, with the ability of to deploy things into the real world at low cost, I’m changing the motto now. And this is official: deploy or die.” \[…\] “Less planning and more presence in the moment can accelerate innovation, he argues. Getting objects out into the real world is the point. Don’t be a futurist, he urges, be a now-ist.”
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_3.jpg" alt=""/>
+<img src="/assets/images/2017/interact_3.jpg" alt=""/>
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_4.jpg" alt=""/>
+<img src="/assets/images/2017/interact_4.jpg" alt=""/>
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_5.jpg" alt=""/>
+<img src="/assets/images/2017/interact_5.jpg" alt=""/>
 
 _Photographs of putting together the ReRide demo prototype for Interact Conference._
 
 Our prototype included — a) Seat cover with sensors embedded to get information about rider’s balance, b) a wearable sensor to sense how much rider lean in, c) a mobile/dashboard display, d) a push button near the left handle. These components together sense rider’s posture and present an abstract visualization to the rider during or post ride.
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_6.jpg" alt=""/>
+<img src="/assets/images/2017/interact_6.jpg" alt=""/>
 
 _ReRide Demo space for Interact 2017 at Victor Menezes Convention Center, IIT Bombay._
 
@@ -38,11 +38,11 @@ Bagalkot, Naveen, Tomas Sokoler, Riyaj Shaikh, Gaurav Singh, Anders Edelbo Lilli
 
 Global Thoughts: Local Designs — In this new age of global connectivity, designers are often required to design products for users who are beyond their borders and belonging to distinctly different cultures. The process of designing products is becoming more multi-disciplinary by the day. Solutions are now designed with a global perspective in mind, however local the solution might be. For those in the field of human-computer interaction, the phenomenon of global thoughts, local designs would have a direct impact. It encompasses the areas of HCI in the industry of emerging economies, HCI contributions in socio-economic development, HCI for products and services in emerging markets, including mobile systems, HCI and designs for low-literacy users, HCI and designs for bottom of the pyramid users, and HCI for remote contexts, including issues related to international outsourcing / global software development. We would develop onthese ideas going forward. (From www.interact2017.org)
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_2.jpg"/>
+<img src="/assets/images/2017/interact_2.jpg"/>
 
 _Dr.Naveen Bagalkot presenting a short paper on [“Watching your Back while riding your bike”](https://link.springer.com/chapter/10.1007/978–3–319–67684–5_19) co-authored with Dr.Tomas Sokoler (Photo by Mangesh Ashrit)_
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/interact_1.jpg"/>
+<img src="/assets/images/2017/interact_1.jpg"/>
 
 _Closing keynote speech by Matt Jones_
 

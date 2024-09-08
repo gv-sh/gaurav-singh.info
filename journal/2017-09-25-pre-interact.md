@@ -4,7 +4,7 @@ deck: Exploration
 title: Working on ReRide demo for Interact 2017
 showTitle: true
 date: 2017-09-25
-cover: https://cdn.mathscapes.xyz/static/images/2017/wor_7.jpg
+cover: /assets/images/2017/wor_7.jpg
 layout: post.njk
 description: The following story is a glimpse into our ongoing research through designing a platform to explore, design, and in-situ test ideas for interactions with personal data around motorcycle riding. What if information about a rider’s condition such as body posture, lean angles, and heartrate, were made available as part of the ride experience? A glimpse into our ongoing research into designing a platform to explore, design, and in-situ test ideas for interactions with personal data around motorcycle riding. In collaboration with the Digital Design Department at the IT University of Copenhagen.
 permalink: /journal/working-on-reride-demo-for-interact-2017/

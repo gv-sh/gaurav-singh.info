@@ -4,13 +4,13 @@ title: "2014 — Competing interests"
 showTitle: true
 date: 2014-12-31
 deck: Year in Review
-cover: https://cdn.mathscapes.xyz/static/images/2014/slabs.jpg
+cover: /assets/images/2014/slabs.jpg
 layout: post.njk
 description: In 2014, I met a variety of experiences that shaped my perspective and understanding of my educational journey. These experiences included completing an additional astrophysics course, working on a situated memory project, and exploring the expectations and limitations of the program at Srishti. Looking back, I realized that while Srishti offered numerous opportunities for exploration, it also presented challenges in engaging deeply with specific subjects due to the schedule I can afford as a student at Srishti and multiple competing interests of self. This made me question my decision to pursue a broad range of subjects at Srishti instead of focusing on a narrower range of topics. Despite this, I appreciated the valuable experiences I gained, such as working on the situated memory project, which helped me develop practical skills and an understanding of senior citizens.
 permalink: /journal/competing-interests/
 --- 
 
-<img src="https://cdn.mathscapes.xyz/static/images/2014/slabs.jpg"/>
+<img src="/assets/images/2014/slabs.jpg"/>
 
 _S.labs at N2 campus, Srishti_
 

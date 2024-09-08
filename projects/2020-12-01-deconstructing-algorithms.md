@@ -4,7 +4,7 @@ title: Deconstructing algorithms 2020
 showTitle: true
 date: 2020-12-01
 deck: Mentoring
-cover: https://cdn.mathscapes.xyz/static/images/2020/2020.jpg
+cover: /assets/images/2020/2020.jpg
 attribution: Student work
 layout: post.njk
 description: "Algorithms are everywhere, from recommending which movie to watch next, automate grunt jobs, or accessing any information at fingertips. As described by Ed Finn in his book What Algorithms want (Finn 2017), he referred algorithms as culture machines, as complex assemblages of abstractions, processes, and people. As much as they might appear magical, behind them exist things, obscured from the end-user. Such information is potent of being used for or against the users in ways which can flip scenarios where our actions are informed by algorithms around us and not the other way around. Furthermore, this brings us to the questions: How much of our actions can be informed by algorithms? and How might we attempt to make sense of complex algorithms and their effects and make their information accessible to everyone?"
@@ -13,7 +13,7 @@ permalink: /projects/deconstructing-algorithms-2020/
 
 This note features student work.
 
-<img src="https://cdn.mathscapes.xyz/static/images/2020/1.jpg"/>
+<img src="/assets/images/2020/1.jpg"/>
 
 _Deconstructing Algorithms 2020: Initial challenge brief given to the students_
 
@@ -25,7 +25,7 @@ Deconstructing Algorithms was offered as one of the thesis theme electives for t
 
 ### Contributors
 
-<img src="https://cdn.mathscapes.xyz/static/images/2020/2020.jpg"/>
+<img src="/assets/images/2020/2020.jpg"/>
 
 In clockwise direction: Daksha Dixit, Simran Singh, Apoorva Avadhana, Nupur Patny and Shreya Mishra
 
@@ -101,19 +101,19 @@ Shine your light on the world girls, your time has come!
 Dr. Venkat Chilukuri: for his review and suggestion on project brief; and helping in facilitating the signup process; Vineeta Rath: for recommending students to join this project; and supporting this project to happen; for help in initial setup of the project space; for being constant support to students; Rustam Vania: for allowing and supporting this project to happen; Roćio Fatas: for her review and suggestion on project brief; Anand Vijayan: for his suggestions on finding people in Srishti who may help us with the notionn of Deconstruction; Hilda Cynthia: for being welcoming and helping in find a space to facilitate project in; Manjari Singh: for being welcoming and allowing to change the space as per the needs of the project; allocating more space near the screening room for putting up work; and guiding both Gaurav and students on every possible need; [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/): for considering my request to offer this project; Karan Dudeja: for his review and suggestion on project brief; for help in initial setup of the project space; for giving feedback at Oribaka exhibition; Dr. Srijan Sandip Mandal: for his belief and support for the project; and for his review and suggestion on project brief; Kshama Nagaraja: for her review and suggestion on project brief; Dr. Geetha Narayanan: for listening to the idea of the project and her belief in the project; Team Rafiki - Arsh, Ananya, Sohaya, Janaki, Rashi: for participating in the pilot study of Oribaka; Zenab Bastawala: for visiting Oribaka exhibition with her students and encouragement; Pratyush Raman: for agreeing to swap spaces for the sake of project Whatsapp: for being the platform where students finally respond to my questions unlike email; Sajoo Bhaskaran: for listening our questions and giving us time to show us VITM; Arvind Venkatadri: for reviewing the project and his feedback; Tapasya Thapa: for reviewing the project and her feedback; Sanjukta Ghosh: for reviewing the project and guiding authors on topics related to data analysis;  Paul Anthony: for reviewing the project and his feedback; Several others: Agrim Agarwal, Rohit Patny, Balchand Singhi, Debashish Banerjee, Shriniwas Mishra, Vijay Kumar, Niteen Pradhan, Ravi Mani, Ranjani Balasubramanian
 
 
-<img src="https://cdn.mathscapes.xyz/static/images/2020/2.jpg"/>
+<img src="/assets/images/2020/2.jpg"/>
 
 Simran has a great sense of organisation. You will find her desk all neat and organised, composed with all her notes and sketches. The picture on the right is a tiny glimpse of her desk during the project. Daksha, on the other hand, is fearless when she is reading and thinking, she does not hesitate to use large brown sheets to map her notes. She reads, reads and reads until she really understands the topic. Her notes mirror her thinking process. Her only weakness might be skipping breakfast but who can beat her otherwise?
 
-<img src="https://cdn.mathscapes.xyz/static/images/2020/3.jpg"/>
+<img src="/assets/images/2020/3.jpg"/>
 
 (Picture on left) Green team is forced to put down their plan for the next few weeks. I hoped to contribute in their thinking process, but they did an amazing job on their own. I failed to understand how they did it all but credit goes to them for the putting together the mountain of hard work.
 
-<img src="https://cdn.mathscapes.xyz/static/images/2020/4.jpg"/>
+<img src="/assets/images/2020/4.jpg"/>
 
 Project room - 407, Srishti's N5 campus in Bangalore. The pandemic is here. Students have left to their home. "I want to fly" says the sticky notes on the wall next to Apoorva's desk. Apoorva may not listen every time but pulls through by the end of the day. But, Nupur is a great listener and very organised too. Shreya might be sitting under the table reading books, and what if she is running a bit late, her work reflects strong understanding of how things work. I wish I had a picture of them working together.
 
-<img src="https://cdn.mathscapes.xyz/static/images/2020/5.jpg"/>
+<img src="/assets/images/2020/5.jpg"/>
 
 _Evening before the exhibition. The creators are shooting a tutorial video._
 

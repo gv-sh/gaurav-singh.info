@@ -78,7 +78,7 @@
                     2018-07-15 / Alongwith ReRide team
                 </p>
             </div>
-            <img src="https://cdn.mathscapes.xyz/static/images/2018/3.jpg"/>
+            <img src="/assets/images/2018/3.jpg"/>
 <p><em>Mounting FSRs to study weight distribution during different postures</em></p>
 <p>ReRide, after the demo at Interact 2017 went into its dormancy for some time due to our teaching engagements. But after an excellent, rigorous session of making and building the prototype for Interact 2017, we did learn a few things about rethinking the underlying architecture to create a more stable platform.</p>
 <p><em>Technical challenges in the earlier demonstration</em>. Genuino board fell short at handling simultaneous BLE connections from the sensors and the visualisation app suffered due to untimely handshakes and connection latency.</p>
@@ -103,7 +103,7 @@
 <p>One small but significant bit is to understand that Raspberry Pi is based on ARM architecture and you may not find pre-compiled binaries for a lot of libraries that may be required to develop an IoT prototype. In our case, we are using Python &gt;3.4, and OpenCV &gt;3.2 and that led us to build all the dependencies from source on RPi to ensure maximum compatibility. Building OpenCV from source on RPi ZeroW took us over 4+ hours.</p>
 <p><em>Camera system for posture estimation (Version 2)</em></p>
 <p>In the next version, we took a step back and looked at first accomplishing the ability to detect and extract posture information rather than spending time on image recognition problem itself. The camera system uses an 8 MP NoIR camera with an RPi Zero, capable of detecting specific markers which are placed on the rider’s helmet and body to get the coordinates of head and shoulder to extract proximity and orientation.</p>
-<img src="https://cdn.mathscapes.xyz/static/images/2018/2.jpg"/>
+<img src="/assets/images/2018/2.jpg"/>
 <p><em>Enclosure for mounting camera system (by Chakra/Vineeta)</em></p>
 <p><em>Fixing the Tech stack</em>. How do we decide and fix the technology stack for the prototype, when the prototype is evolving? Working on the same stack will be easier and convenient for teams but less flexible. And the changing stack could be more flexible to achieve the goals, but not easy for the team.</p>
 <p>Learning from previous attempt, our codebase is now largely written using consistent framework and have lesser dependencies than previous. Also, we have just two — Anchit and I working on the code and thus, we did not face any issues in this context. Also, the codebase is being documented with detail to scale this into full fledged SDK and more contributors in the future.</p>

@@ -4,13 +4,13 @@ deck: Year in Review
 title: "2017 — Back to Srishti"
 showTitle: true
 date: 2017-12-31
-cover: https://cdn.mathscapes.xyz/static/images/2017/iitb.jpg
+cover: /assets/images/2017/iitb.jpg
 layout: post.njk
 description: The year 2017 marked a new chapter in my professional journey, as I received an invitation from Srishti to join the human-centered design (HCD) department as a full-time faculty member. Interestingly, this department had evolved from the same space where I had completed my graduation. I was happy to join this workspace with interesting people and eagerly accepted the role, primarily due to the opportunity to participate in Dr.Naveen's ReRide project. Switching roles and adjusting to full-time teaching responsibilities at Srishti presented some challenges. Initially, I was assigned to teach classes outside my primary interests and familiarity. However, due to certain cancellations and reassignments, I eventually got to teach two interaction design units, one for master's students and another for undergraduates.
 permalink: /journal/back-to-srishti/
 --- 
 
-<img src="https://cdn.mathscapes.xyz/static/images/2017/iitb.jpg"/>
+<img src="/assets/images/2017/iitb.jpg"/>
 
 _ReRide demo at display at Victor Menezes Convention Centre, IIT Bombay. In frame: Mangesh Ashrit and Somya Saxena, ReRide team members._
 

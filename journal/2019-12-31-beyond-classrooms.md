@@ -4,13 +4,13 @@ deck: Year in Review
 title: "2019 — Beyond classrooms"
 showTitle: true
 date: 2019-12-31
-cover: https://cdn.mathscapes.xyz/static/images/2019/future-making.jpg
+cover: /assets/images/2019/future-making.jpg
 layout: post.njk
 description: "In 2019, my teaching load was reduced, allowing me to explore diverse pedagogical approaches and their impact on student learning. This year proved transformative in my understanding and approach to education. I taught three courses throughout the year: Algorithms, computation, and HCI, which was a repetition of a course previously offered in 2017; Making with algorithms, which focused on the modern role of designers working with algorithmic-driven design; and Programming as a design tool for prototyping, a course repeated from 2018."
 permalink: /journal/beyond-classrooms/
 --- 
  
-<img src="https://cdn.mathscapes.xyz/static/images/2019/future-making.jpg"/>
+<img src="/assets/images/2019/future-making.jpg"/>
 
 _Students and I putting together an anamorphic invitation in N2 campus to the upcoming work (then) Making with Algorithms at Srishti's N5 campus. In frame: Arsh, Raashi, Abhijit, Ananya, Janaki, Vanshika and me_
 

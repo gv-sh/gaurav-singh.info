@@ -5,13 +5,13 @@ title: Designing the next iteration of ReRide
 showTitle: true
 attribution: Alongwith ReRide team
 date: 2018-07-15
-cover: https://cdn.mathscapes.xyz/static/images/2018/3.jpg
+cover: /assets/images/2018/3.jpg
 layout: post.njk
 description: ReRide, after the demo at Interact 2017 went into its dormancy for some time due to our teaching engagements. But after an excellent, rigorous session of making and building the prototype for Interact 2017, we did learn a few things about rethinking the underlying architecture to create a more stable platform.
 permalink: /journal/designing-the-next-iteration-of-reride/
 --- 
 
-<img src="https://cdn.mathscapes.xyz/static/images/2018/3.jpg"/>
+<img src="/assets/images/2018/3.jpg"/>
 
 _Mounting FSRs to study weight distribution during different postures_
 
@@ -46,7 +46,7 @@ _Camera system for posture estimation (Version 2)_
 
 In the next version, we took a step back and looked at first accomplishing the ability to detect and extract posture information rather than spending time on image recognition problem itself. The camera system uses an 8 MP NoIR camera with an RPi Zero, capable of detecting specific markers which are placed on the rider’s helmet and body to get the coordinates of head and shoulder to extract proximity and orientation.
 
-<img src="https://cdn.mathscapes.xyz/static/images/2018/2.jpg"/>
+<img src="/assets/images/2018/2.jpg"/>
 
 _Enclosure for mounting camera system (by Chakra/Vineeta)_
 
