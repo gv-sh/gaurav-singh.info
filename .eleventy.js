@@ -54,4 +54,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("robots.txt");
+
+  // Define metadata
+  eleventyConfig.addGlobalData("metadata", {
+    description: "Gaurav Singh's personal website",
+    keywords: "Gaurav Singh, personal website, blog",
+    author: "Gaurav Singh",
+    url: "https://gaurav-singh.info"
+  });
 };
