@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Home
+title: Gaurav Singh | Machine Learning, HCI, Data Visualization
 sidebar: true
 ---
 
