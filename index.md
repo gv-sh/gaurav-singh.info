@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Gaurav Singh | Machine Learning, HCI, Data Visualization
+title: Introduction
 sidebar: true
 ---
 
@@ -12,7 +12,6 @@ _Cradle mountain, Tasmania_
 Welcome to my corner on the web — think of this as an open book. Start with the [foreword](/foreword/) from friends, then flip to the [prologue](/prologue/) to see how it all started. Check out my [CV](/cv/) for the basics, or dive into the [journal](/journal/) for some personal stories and study notes. You’ll find chapters on my [education](/education/), [work](/work/), [teaching](/teaching/), [projects](/projects/), and [research](/research/). Meet the awesome [peers](/peers/), [students](/students/), and [mentors](/mentors/) along the way. Don’t miss [Mathscapes](/mathscapes/), my life's project, or the [store](/store/) for my latest stuff. Wrap things up with the [epilogue](/epilogue/) and use the [index](/index/) to find your way around. I hope you find something useful or inspiring here.
 
 ---
-
 
 Hello! I’m Gaurav Singh, originally from India and currently evolving my expertise in Machine Learning (ML) at Griffith University, Gold Coast, Australia. My professional journey combines together a [foundation in computer science](/education/bachelors-cs/) with an interest for visual arts and a commitment to creative and ethical practice. I am particularly focused on exploring ML within the realms of human-computer interaction (HCI) and engineering, striving to bridge the gap between technology and creativity. My motivation is to make advanced data analysis techniques more accessible while thoughtfully addressing their societal, environmental, and ethical implications. This focus guides my current projects and inspires my future ambitions, with a vision for responsible progress in these areas.
 

@@ -335,7 +335,7 @@ pre {
 
 code {
     font-family: monospace;
-    /* font-size: var(--font-size-small); */
+    font-size: var(--font-size-small);
     /* line-height: 0.8; */
 }
 
@@ -455,4 +455,32 @@ sup {
 
 #musicControls {
     opacity: 0.5;
+}
+
+#timeline-container {
+  margin: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+#timeline-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.event-text {
+  fill: var(--primary-text-color);
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: var(--secondary-bg-color);
+  border: 1px solid var(--semi-transparent-border);
+  border-radius: 4px;
+  pointer-events: none;
+  color: var(--primary-text-color);
 }
