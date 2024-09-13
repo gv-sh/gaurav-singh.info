@@ -57,7 +57,9 @@
     --padding-body: 1em;
     --padding-pre: 1em 1.5em;
 
-    --color-midgrey: #ddd;
+    --color-midgrey: #777;
+    --color-lightgrey: #ddd;
+    --color-darkgrey: #444;
 }
 
 * {
@@ -82,7 +84,9 @@
         --link-color: #8be9fd;
         --border-default: 1px solid #bbb;
         --border-strong: 2px solid #fff;
-        --color-midgrey: #444;
+        --color-midgrey: #777;
+        --color-lightgrey: #ddd;
+        --color-darkgrey: #444;
     }
 }
 
@@ -350,6 +354,7 @@ li.sidebar-section {
     font-weight: var(--font-weight-normal);
     font-family: var(--font-family-sans-serif);
     margin-bottom: 5px;
+    color: var(--color-midgrey);
 }
 
 li.sidebar-section:not(:first-child) {

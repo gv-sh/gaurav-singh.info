@@ -8,7 +8,7 @@ pagination:
     alias: entries
 ---
 Please check my [CV](/cv/) for a list of my research interests.
-
+ 
 ---
 
 <div class="spacer"></div>
