@@ -11,7 +11,7 @@ permalink: /journal/evolution-of-my-personal-website/
 
 #### 2000-2004: Where It All Began – HTML and the Discovery of Digital Identity
 
-In 2000, when I first stumbled upon web design, it felt like discovering a new world. HTML was a gateway to creating something entirely my own, and the web was a blank canvas where I could experiment, test ideas, and reflect pieces of myself. Back then, with Microsoft FrontPage, I created crude websites made of a few pages and links. There was no CSS, no JavaScript—just HTML stitched together by a curious beginner trying to find his digital voice.
+In 2000, when I first stumbled upon web design, it felt like discovering a new world. HTML was a gateway to creating something entirely my own, and the web was a blank canvas where I could experiment, test ideas, and reflect pieces of myself. Back then, with Microsoft FrontPage, I created crude websites made of a few pages and links. There was no CSS, no JavaScript — just HTML stitched together by a curious beginner trying to find his digital voice.
 
 Reflecting on those early days, I see how deeply I was influenced by the loud, garish aesthetics of the 90s web—bright colors, busy pages, blinking text. But even in that chaos, there was beauty. I often wonder, why did those early designs, however unpolished, feel so alive? Was it their unpredictability? Their unrefined yet authentic attempt at self-expression? The web felt like an uncharted territory, and that excitement was palpable in every page I designed.
 
