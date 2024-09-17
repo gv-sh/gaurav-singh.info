@@ -162,6 +162,9 @@ p {
     margin-bottom: var(--margin-medium);
 }
 
+b {
+    font-weight: var(--font-weight-bold);
+}
 h1 {
     font-size: var(--font-size-large);
     margin-bottom: var(--margin-small);

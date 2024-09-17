@@ -88,6 +88,22 @@
 <p>We have currently built a basic prototype of the implementation, and the following part of this post explains the working of it in detail. On one side, the boards are connected in a master-slave combination where the master computer controls the playback across the rest of the boards, which works in slave mode, each of the boards can be connected to any display device. The display devices may be placed in multiple configurations — from the standard grid to anything desired. The current implementation of the API does not do anything to the video file and uses pre-stored video files on the respective boards to playback in a synchronized manner. The current method can also extend to run a video file from the network or apply effects like cropping, video filters in near real time.</p>
 <p>The boards communicate over standard TCP/IP socket and get paired by a single handshake and tell the master computer whenever they are ready to start playback. Once all the slave computer responds with the available status, the master computer schedules or instructs all the slave computers to initiate the video playback. VLC player currently holds the video playback through the command line, which also removes any other screen to be displayed on the actual display, which otherwise is not relevant to the overall aesthetics/experience of the installation.</p>
 <p>SVideo can be freely used from <a href="https://github.com/gv-sh/svideo">https://github.com/gv-sh/svideo</a></p>
+                        <hr/>
+            <!-- Cite as -->
+            <div id="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>SVideo — Synced video playback with Raspberry Pi.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2020-04-03. <a href="https://gaurav-singh.info/journal/svideo-synced-video-playback-with-raspberry-pi/">https://gaurav-singh.info/journal/svideo-synced-video-playback-with-raspberry-pi/</a></p>
+                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <script>
+                function copyToClipboard() {
+                    const citationText = `Gaurav Singh. "SVideo — Synced video playback with Raspberry Pi." Gaurav Singh's Personal Website. Last modified 2020-04-03. https://gaurav-singh.info/journal/svideo-synced-video-playback-with-raspberry-pi/`;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        alert('Citation copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </div>
         </main>
         <!-- Footer -->
         <footer>

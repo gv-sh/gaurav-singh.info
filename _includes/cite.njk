@@ -1,0 +1,17 @@
+            <hr/>
+            
+            <!-- Cite as -->
+            <div id="cite-as">
+                <p><em>Cite this webpage as:</em> {{ metadata.author }}. <b>{{ title }}.</b> <i>Gaurav Singh's Personal Website</i>. Last modified {{ page.date | postDate }}. <a href="{{ metadata.url }}{{ page.url }}">{{ metadata.url }}{{ page.url }}</a></p>
+                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <script>
+                function copyToClipboard() {
+                    const citationText = `{{ metadata.author }}. "{{ title }}." Gaurav Singh's Personal Website. Last modified {{ page.date | postDate }}. {{ metadata.url }}{{ page.url }}`;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        alert('Citation copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </div>

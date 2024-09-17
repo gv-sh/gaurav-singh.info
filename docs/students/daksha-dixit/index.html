@@ -87,5 +87,21 @@
         <footer>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
 </footer>
+                    <hr/>
+            <!-- Cite as -->
+            <div id="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Daksha Dixit.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/students/daksha-dixit/">https://gaurav-singh.info/students/daksha-dixit/</a></p>
+                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <script>
+                function copyToClipboard() {
+                    const citationText = `Gaurav Singh. "Daksha Dixit." Gaurav Singh's Personal Website. Last modified 2023-11-06. https://gaurav-singh.info/students/daksha-dixit/`;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        alert('Citation copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </div>
     </body>
 </html>

@@ -86,5 +86,21 @@
         <footer>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
 </footer>
+                    <hr/>
+            <!-- Cite as -->
+            <div id="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Malay Vasa.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/students/malay-vasa/">https://gaurav-singh.info/students/malay-vasa/</a></p>
+                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <script>
+                function copyToClipboard() {
+                    const citationText = `Gaurav Singh. "Malay Vasa." Gaurav Singh's Personal Website. Last modified 2023-11-06. https://gaurav-singh.info/students/malay-vasa/`;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        alert('Citation copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </div>
     </body>
 </html>

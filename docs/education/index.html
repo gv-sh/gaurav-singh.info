@@ -109,6 +109,22 @@
         <li><a href="/education/" aria-current="page">1</a></li>
   </ol>
 </nav>
+                        <hr/>
+            <!-- Cite as -->
+            <div id="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Education.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-11-16. <a href="https://gaurav-singh.info/education/">https://gaurav-singh.info/education/</a></p>
+                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <script>
+                function copyToClipboard() {
+                    const citationText = `Gaurav Singh. "Education." Gaurav Singh's Personal Website. Last modified 2023-11-16. https://gaurav-singh.info/education/`;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        alert('Citation copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </div>
         </main>
         <!-- Footer -->
         <footer>
