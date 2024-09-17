@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Lateral thinking
+deck: Design Philosophy
 title: "In defense of a creative pursuit"
 showTitle: true
 date: 2024-07-30
