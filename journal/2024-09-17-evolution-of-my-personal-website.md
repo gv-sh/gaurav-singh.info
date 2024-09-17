@@ -25,7 +25,7 @@ During this time, I started experimenting with Adobe Photoshop to design visual 
 
 This was also the time I began to confront deeper questions in web design. What is my responsibility as a designer in shaping the web? It wasn’t just about making things look good anymore — it was about accessibility, privacy, and ensuring that design served everyone. These were questions that would stay with me, shaping my decisions as a designer and creator.
 
-### 2009-2012: The CMS Experiment – WordPress, Tumblr, and the Art of Letting Go
+#### 2009-2012: The CMS Experiment – WordPress, Tumblr, and the Art of Letting Go
 
 As I navigated the latter half of this decade, I realized that I needed a platform that could grow with me. Hand-coding every aspect of my website was becoming unmaintainable, especially as my life got busier. This led me to explore content management systems (CMS), such as WordPress, Drupal, and Joomla. WordPress stood out for its flexibility and a huge support community—is design about control, or is it about collaboration? Platforms like WordPress showed me the power of community — how design could be a shared experience, supported by others’ knowledge and creativity.
 
@@ -53,7 +53,7 @@ _My website in 2014_
 
 But simplicity also raised new challenges. How do you make something simple yet engaging? How do you design for a deeper emotional connection? These were questions that led me to focus more on typography and layout, aiming for a minimalism that didn’t strip away personality or depth.
 
-### 2020-2024: Control, Simplicity, and a Personal Digital Space
+#### 2020-2024: Control, Simplicity, and a Personal Digital Space
 
 Entering the 2020s, I finally feel like I’ve come full circle. After two decades of exploring different platforms and tools — WordPress, Tumblr, Medium, Squarespace — I’ve now settled on something that feels authentically me. Using HTML, CSS, and JavaScript in the Jamstack framework, I’ve built a site that is both minimalist and highly customizable.
 
