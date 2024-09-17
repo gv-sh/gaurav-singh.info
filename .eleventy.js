@@ -57,6 +57,7 @@ module.exports = function (eleventyConfig) {
 
   // Define metadata
   eleventyConfig.addGlobalData("metadata", {
+    siteName: "Gaurav Singh",
     description: "Exploring ML, data visualization, and ethical engineering solutions",
     keywords: "Gaurav Singh, personal website, blog, human-computer interaction, ethical AI, data visualization, responsible innovation, design mathematics, researcher Griffith University, researcher Srishti, creative coding, ML and art.",
     author: "Gaurav Singh",
