@@ -62,22 +62,26 @@
         <li><a href="/years-in-review/">Yearly notes</a></li>
         <!--<li><a href="/store/">Store</a></li>-->
         <li class="sidebar-section">Misc.</li>
-        <li><a href="/graphic-shots/">Graphic work</a></li>
-        <li><a href="/latest-commits/">Commits</a></li>
-        <li><a href="/map/">Map</a></li>
         <li><a href="/resources/">Resources</a></li>
         <li><a href="/tools/">Tools</a></li>
-        <li class="sidebar-section">Socials</li>
-        <li><a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a></li>
-        <li><a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a></li>
         <li class="sidebar-section">Back matter</li>
-        <li><a href="/prologue/">Epilogue</a></li>
         <li><a href="/index/">Index</a></li>
     </ul>
 </aside>
         <!-- Main content -->
         <main>
             <div class="item">
+<p><img src="/assets/images/2015/cpalle.jpg" alt="2015 — Contrasts and growth"></p>
+<p><h6>Year in Review</h6>
+<h3>2015 — Contrasts and growth</h3>
+<p class="meta"></p>
+<p>2015-12-31</p>
+<p></p>
+<p>In 2015, during the final year of my postgraduate studies at Srishti, I engaged with the thesis work. This two-fold project involved an investigation of Chintalayyagarepalle, a remote off-grid village, and exploring piezoelectric materials, specifically Rochelle salt. The project allowed me to comprehend the challenges communities face in off-grid situations and learn about the potential of sustainable energy solutions. However, as I navigated through this undertaking, I found mixed feelings regarding my overall experiences throughout the program. Throughout the year, I sensed the positive and negative aspects of my academic journey. Disappointment and frustration arose from the insufficient representation of our work at the grad show, while the program's lateral exploration left me longing for a deeper understanding of specific subjects. Nevertheless, I acknowledged the importance of continuous reflection, adaptation to new situations, and pursuing growth in areas that piqued my interest.</p>
+<a href="/journal/contrasts-and-growth/">View more</a></p>
+</div>
+<div class="spacer"></div>
+<div class="item">
 <p><img src="/assets/images/2014/slabs.jpg" alt="2014 — Competing interests"></p>
 <p><h6>Year in Review</h6>
 <h3>2014 — Competing interests</h3>
@@ -120,16 +124,6 @@
 <a href="/journal/stuart-halls-representation/">View more</a></p>
 </div>
 <div class="spacer"></div>
-<div class="item">
-<p><h6>Study</h6>
-<h3>First, by reflection</h3>
-<p class="meta"></p>
-<p>2013-09-04</p>
-<p></p>
-<p>Confucius indicates three distinct methods of acquiring wisdom: reflection, imitation, and experience. Each method has its advantages and disadvantages, offering a more comprehensive approach to personal growth and development. Reflection involves introspection and the examination of our own thoughts and emotions, allowing us to gain insight into our values and beliefs. It encourages self-awareness and self-discovery. However, it requires time, effort, and discipline, and it can be challenging to confront our own shortcomings. Imitation, on the other hand, involves observing and emulating the behavior and attitudes of others whom we admire. This might be the easiest learning method, as it requires less effort than reflection or experience. However, it can limit our creativity and authenticity and may not always apply to our unique circumstances. Finally, experience is the bitterest method of learning, as it involves going through the hardships and challenges of life and learning from our mistakes and failures. It is often the most effective method, allowing us to develop practical knowledge and skills tailored to our unique circumstances. However, it can be painful and difficult to accept, and it may take a long time to gain the necessary insights.</p>
-<a href="/journal/first-by-reflection/">View more</a></p>
-</div>
-<div class="spacer"></div>
 <nav aria-labelledby="my-pagination">
   <ol>
         <li><a href="/journal/">1</a></li>
@@ -146,15 +140,23 @@
                         <hr/>
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/6/">https://gaurav-singh.info/journal/6/</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/6/">https://gaurav-singh.info/journal/6/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `Gaurav Singh. "Journal." Gaurav Singh's Personal Website. Last modified 2023-10-29. https://gaurav-singh.info/journal/6/`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Journal." The Personal Website of Gaurav Singh. Last modified 2023-10-29. https://gaurav-singh.info/journal/6/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>
@@ -162,9 +164,14 @@
         </main>
         <!-- Footer -->
         <footer>
+    <p>Also on: &nbsp;
+        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+    </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
-</footer>
-        <script>
+    <script>
         function updateTime() {
             const now = new Date();
             const options = { 
@@ -184,6 +191,7 @@
         // Update time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
-        </script>
+    </script>
+</footer>
     </body>
 </html>

@@ -62,16 +62,9 @@
         <li><a href="/years-in-review/">Yearly notes</a></li>
         <!--<li><a href="/store/">Store</a></li>-->
         <li class="sidebar-section">Misc.</li>
-        <li><a href="/graphic-shots/">Graphic work</a></li>
-        <li><a href="/latest-commits/">Commits</a></li>
-        <li><a href="/map/">Map</a></li>
         <li><a href="/resources/">Resources</a></li>
         <li><a href="/tools/">Tools</a></li>
-        <li class="sidebar-section">Socials</li>
-        <li><a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a></li>
-        <li><a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a></li>
         <li class="sidebar-section">Back matter</li>
-        <li><a href="/prologue/">Epilogue</a></li>
         <li><a href="/index/">Index</a></li>
     </ul>
 </aside>
@@ -118,14 +111,14 @@
 </div>
 <div class="spacer"></div>
 <div class="item">
-<p><img src="/assets/goldcoast.jpg" alt="2023 — Moved to Gold Coast"></p>
-<p><h6>Year in Review</h6>
-<h3>2023 — Moved to Gold Coast</h3>
+<p><img src="/assets/images/2024/IMG_0871.jpeg" alt="A trip to Byron Bay, in rain and in head"></p>
+<p><h6>Travel</h6>
+<h3>A trip to Byron Bay, in rain and in head</h3>
 <p class="meta"></p>
-<p>2023-12-18</p>
+<p>2024-01-08</p>
 <p></p>
-<p>2023 has seen the most vivid strokes of challenge and change, each decision I took has painted a critical part of my life’s trajectory. My journey through this year began with a key decision and an unexpected setback, both shaping my path in unseen ways. In September 2022, I made the difficult choice to resign from my faculty position at Srishti-Manipal Institute. This decision, stemming from prolonged issues with work assessment and compensation, was more than a career move; I had to take this before figuring out my next step. The process was tinged with a blend of disappointment and optimism, the latter fueled by Dr. Venkat's encouragement to name one of the key ones. His words inspired a newfound determination to pursue a PhD. I realised I have not collected transcripts from my post-graduation of ten years ago. The task of collecting my ADP transcripts from 2013-15 was my first encounter with the administrative complexities of academia. This endeavor, though with obstacles, had the support of my mentors. Their guidance was critical in guiding me through.</p>
-<a href="/journal/moved-to-gold-coast/">View more</a></p>
+<p>January 2024. The rain had already soaked through my clothes as I trudged to Arpita’s place in the early morning, probably around 7am. The trams weren't operating from the usual 5am due to public holidays if I remember correctly. Also, it wasn’t just the rain; my mind was drenched too, heavy with thoughts I couldn’t shake. This trip to Byron Bay with my friends — Arpita, Prathap and Aditya — was meant to be a break, a chance to breathe outside of the Gold Coast bubble. But, the weight inside doesn’t always lift when we change our surroundings.</p>
+<a href="/journal/a-trip-to-byron-bay-in-rain-and-in-head/">View more</a></p>
 </div>
 <div class="spacer"></div>
 <nav aria-labelledby="my-pagination">
@@ -144,15 +137,23 @@
                         <hr/>
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/">https://gaurav-singh.info/journal/</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/">https://gaurav-singh.info/journal/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `Gaurav Singh. "Journal." Gaurav Singh's Personal Website. Last modified 2023-10-29. https://gaurav-singh.info/journal/`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Journal." The Personal Website of Gaurav Singh. Last modified 2023-10-29. https://gaurav-singh.info/journal/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>
@@ -160,9 +161,14 @@
         </main>
         <!-- Footer -->
         <footer>
+    <p>Also on: &nbsp;
+        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+    </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
-</footer>
-        <script>
+    <script>
         function updateTime() {
             const now = new Date();
             const options = { 
@@ -182,6 +188,7 @@
         // Update time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
-        </script>
+    </script>
+</footer>
     </body>
 </html>

@@ -62,16 +62,9 @@
         <li><a href="/years-in-review/">Yearly notes</a></li>
         <!--<li><a href="/store/">Store</a></li>-->
         <li class="sidebar-section">Misc.</li>
-        <li><a href="/graphic-shots/">Graphic work</a></li>
-        <li><a href="/latest-commits/">Commits</a></li>
-        <li><a href="/map/">Map</a></li>
         <li><a href="/resources/">Resources</a></li>
         <li><a href="/tools/">Tools</a></li>
-        <li class="sidebar-section">Socials</li>
-        <li><a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a></li>
-        <li><a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a></li>
         <li class="sidebar-section">Back matter</li>
-        <li><a href="/prologue/">Epilogue</a></li>
         <li><a href="/index/">Index</a></li>
     </ul>
 </aside>
@@ -85,15 +78,23 @@
                         <hr/>
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Prologue.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/prologue/">https://gaurav-singh.info/prologue/</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Prologue.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/prologue/">https://gaurav-singh.info/prologue/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `Gaurav Singh. "Prologue." Gaurav Singh's Personal Website. Last modified 2024-09-04. https://gaurav-singh.info/prologue/`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Prologue." The Personal Website of Gaurav Singh. Last modified 2024-09-04. https://gaurav-singh.info/prologue/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>
@@ -101,9 +102,14 @@
         </main>
         <!-- Footer -->
         <footer>
+    <p>Also on: &nbsp;
+        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+    </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
-</footer>
-        <script>
+    <script>
         function updateTime() {
             const now = new Date();
             const options = { 
@@ -123,6 +129,7 @@
         // Update time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
-        </script>
+    </script>
+</footer>
     </body>
 </html>

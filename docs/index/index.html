@@ -62,16 +62,9 @@
         <li><a href="/years-in-review/">Yearly notes</a></li>
         <!--<li><a href="/store/">Store</a></li>-->
         <li class="sidebar-section">Misc.</li>
-        <li><a href="/graphic-shots/">Graphic work</a></li>
-        <li><a href="/latest-commits/">Commits</a></li>
-        <li><a href="/map/">Map</a></li>
         <li><a href="/resources/">Resources</a></li>
         <li><a href="/tools/">Tools</a></li>
-        <li class="sidebar-section">Socials</li>
-        <li><a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a></li>
-        <li><a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a></li>
         <li class="sidebar-section">Back matter</li>
-        <li><a href="/prologue/">Epilogue</a></li>
         <li><a href="/index/">Index</a></li>
     </ul>
 </aside>
@@ -96,7 +89,8 @@
 <a href="/journal/leaving-srishti/">2022 — Leaving Srishti</a><br>
 <a href="/journal/moved-to-gold-coast/">2023 — Moved to Gold Coast</a></p>
 <h3>A</h3>
-<p><a href="/education/adp-ied/">ADP, Innovation and Experience Design; Srishti, India</a><br>
+<p><a href="/journal/a-trip-to-byron-bay-in-rain-and-in-head/">A trip to Byron Bay, in rain and in head</a><br>
+<a href="/education/adp-ied/">ADP, Innovation and Experience Design; Srishti, India</a><br>
 <a href="/journal/about-m56/">About M56 team</a><br>
 <a href="/teaching/advanced-programming-and-prototyping/">Advanced programming and prototyping</a><br>
 <a href="/teaching/algorithms-computation-and-hci-2019/">Algorithms, computation and HCI</a><br>
@@ -164,8 +158,7 @@
 <h3>K</h3>
 <p><a href="/peers/karan-dudeja/">Karan Dudeja</a></p>
 <h3>L</h3>
-<p><a href="/latest-commits/">Latest commits</a><br>
-<a href="/teaching/learning-expedition-to-shimoga/">Learning expedition to Shimoga</a><br>
+<p><a href="/teaching/learning-expedition-to-shimoga/">Learning expedition to Shimoga</a><br>
 <a href="/teaching/learning-to-code-with-processing/">Learning to code with Processing</a><br>
 <a href="/peers/lena/">Lena Heubusch</a></p>
 <h3>M</h3>
@@ -213,6 +206,7 @@
 <a href="/research/snaptag/">SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being</a><br>
 <a href="/projects/srishti-citizen-space-agency/">Srishti Citizen Space Agency</a><br>
 <a href="/journal/starting-m56-collective/">Starting M56 collective</a><br>
+<a href="/journal/story-of-experimental-maths-lab/">Story of Experimental Maths Lab</a><br>
 <a href="/journal/stuart-halls-representation/">Stuart Hall's Representation</a><br>
 <a href="/students/">Students</a><br>
 <a href="/students/sumit-meena/">Sumit Meena</a><br>
@@ -247,15 +241,23 @@
                         <hr/>
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Index.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/index/">https://gaurav-singh.info/index/</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Index.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/index/">https://gaurav-singh.info/index/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `Gaurav Singh. "Index." Gaurav Singh's Personal Website. Last modified 2024-09-04. https://gaurav-singh.info/index/`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Index." The Personal Website of Gaurav Singh. Last modified 2024-09-04. https://gaurav-singh.info/index/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>
@@ -263,9 +265,14 @@
         </main>
         <!-- Footer -->
         <footer>
+    <p>Also on: &nbsp;
+        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+    </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
-</footer>
-        <script>
+    <script>
         function updateTime() {
             const now = new Date();
             const options = { 
@@ -285,6 +292,7 @@
         // Update time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
-        </script>
+    </script>
+</footer>
     </body>
 </html>

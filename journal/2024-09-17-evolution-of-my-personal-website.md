@@ -25,13 +25,13 @@ During this time, I started experimenting with Adobe Photoshop to design visual 
 
 This was also the time I began to confront deeper questions in web design. What is my responsibility as a designer in shaping the web? It wasn’t just about making things look good anymore — it was about accessibility, privacy, and ensuring that design served everyone. These were questions that would stay with me, shaping my decisions as a designer and creator.
 
-#### 2009-2012: The CMS Experiment – WordPress, Tumblr, and the Art of Letting Go
+#### 2010-2012: The CMS Experiment – WordPress, Tumblr, and the Art of Letting Go
 
 As I navigated the latter half of this decade, I realized that I needed a platform that could grow with me. Hand-coding every aspect of my website was becoming unmaintainable, especially as my life got busier. This led me to explore content management systems (CMS), such as WordPress, Drupal, and Joomla. WordPress stood out for its flexibility and a huge support community — is design about control, or is it about collaboration? Platforms like WordPress showed me the power of community — how design could be a shared experience, supported by others’ knowledge and creativity.
 
 But a new moment came when I discovered Tumblr. Tumblr’s simplicity captivated me. It allowed me to focus on content — my thoughts, my work — without getting lost in the endless technicalities. For the first time, I was willing to let go of control. My website became less about rigid structure and more about fluid expression. The question that stayed with me was: What does it mean to create a personal digital space?
 
-Yet even as I loved Tumblr’s minimalism, I couldn’t shake the feeling that something was missing. The design was still confined to templates. I wanted to create something that was distinctly mine—something that could evolve beyond platforms. How do you find balance between creative expression and the simplicity of a platform? I was caught between the ease of Tumblr and the control I craved from hand-coding. This tension would continue to shape my approach for years to come.
+Yet even as I loved Tumblr’s minimalism, I couldn’t shake the feeling that something was missing. The design was still confined to templates. I wanted to create something that was distinctly mine — something that could evolve beyond platforms. How do you find balance between creative expression and the simplicity of a platform? I was caught between the ease of Tumblr and the control I craved from hand-coding. This tension would continue to shape my approach for years to come.
 
 #### 2013-2019: Minimalism and the Rise of the Static Site
 
@@ -57,7 +57,7 @@ But simplicity also raised new challenges. How do you make something simple yet 
 
 Entering the 2020s, I finally feel like I’ve come full circle. After two decades of exploring different platforms and tools — WordPress, Tumblr, Medium, Squarespace — I’ve now settled on something that feels authentically me. Using HTML, CSS, and JavaScript in the Jamstack framework, I’ve built a site that is both minimalist and highly customizable.
 
-I design directly in the browser now, with no intermediaries. This shift has allowed me to think deeply about what makes a website truly personal? Is it the design, the content, or the balance between the two? For me, it’s about control, simplicity, and the ability to experiment. My current setup — Eleventy, Nunjucks for templating, and Markdown for content—provides a stable yet flexible foundation. Yet I still ask myself: How do you continue to evolve while maintaining simplicity?
+I design directly in the browser now, with no intermediaries. This shift has allowed me to think deeply about what makes a website truly personal? Is it the design, the content, or the balance between the two? For me, it’s about control, simplicity, and the ability to experiment. My current setup — <a class="external" href="https://www.11ty.dev/">Eleventy</a>, <a class="external" href="https://www.nunjucks.org/">Nunjucks</a> for templating, and <a class="external" href="https://daringfireball.net/projects/markdown/">Markdown</a> for content — provides a stable yet flexible foundation. Yet I still ask myself: How do you continue to evolve while maintaining simplicity?
 
 This journey hasn’t just been about web design — it’s been about space for documenting my life. Design is anyway much beyond just about aesthetics or code. It might be about asking important questions: What kind of space I'm creating? Is it accessible? Does it reflect the values I hold dear? My website is now a reflection of who I am, and as I continue to grow, so too will my understanding of what it means to design in a world that is constantly changing.
 

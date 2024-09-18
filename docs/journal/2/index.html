@@ -62,22 +62,26 @@
         <li><a href="/years-in-review/">Yearly notes</a></li>
         <!--<li><a href="/store/">Store</a></li>-->
         <li class="sidebar-section">Misc.</li>
-        <li><a href="/graphic-shots/">Graphic work</a></li>
-        <li><a href="/latest-commits/">Commits</a></li>
-        <li><a href="/map/">Map</a></li>
         <li><a href="/resources/">Resources</a></li>
         <li><a href="/tools/">Tools</a></li>
-        <li class="sidebar-section">Socials</li>
-        <li><a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a></li>
-        <li><a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a></li>
         <li class="sidebar-section">Back matter</li>
-        <li><a href="/prologue/">Epilogue</a></li>
         <li><a href="/index/">Index</a></li>
     </ul>
 </aside>
         <!-- Main content -->
         <main>
             <div class="item">
+<p><img src="/assets/images/2022/workspace.jpg" alt="2022 — Leaving Srishti"></p>
+<p><h6>Year in Review</h6>
+<h3>2022 — Leaving Srishti</h3>
+<p class="meta"></p>
+<p>2022-12-31</p>
+<p></p>
+<p>Reflecting on 2022, I experienced a significant transformation in my teaching career. As my expectations and requirements became more apparent, I was presented with the fantastic opportunity to establish my informal cohort as a dedicated lab space called the Experimental Maths Lab. This development renewed my hope for my future at Srishti and marked a complete departure from traditional classroom-based teaching. The lab allowed me to operate autonomously, creating an alternative learning space for students within the context of a design school. Although the turnout was initially low, the lab gradually attracted students, some of whom found relevance in the space and became consistent participants.</p>
+<a href="/journal/leaving-srishti/">View more</a></p>
+</div>
+<div class="spacer"></div>
+<div class="item">
 <p><img src="/assets/twt/1@3x.jpg" alt="Together with Touch — A collaboration with Lena Heubeush, Avril Stormy Unger, Nikhil Nagaraj and Walkin Studios"></p>
 <p><h6>Generative music</h6>
 <h3>Together with Touch — A collaboration with Lena Heubeush, Avril Stormy Unger, Nikhil Nagaraj and Walkin Studios</h3>
@@ -121,17 +125,6 @@
 <a href="/journal/pandemic/">View more</a></p>
 </div>
 <div class="spacer"></div>
-<div class="item">
-<p><img src="/assets/images/2019/reride.jpg" alt="SVideo — Synced video playback with Raspberry Pi"></p>
-<p><h6>Networking</h6>
-<h3>SVideo — Synced video playback with Raspberry Pi</h3>
-<p class="meta"></p>
-<p>2020-04-03 / Alongwith Debanshu Bhaumik</p>
-<p></p>
-<p>Popularity and power of single board computers like Raspberry Pi have made it possible not just to promote the teaching of basic computer science but also to prototype and in fact, to be even used by artists in their installations who often have particular requirements to be met. Boards like Raspberry Pi are quite capable and in many cases can substitute full PCs for such installations. Playing single/multiple videos across multiple (and often large) displays require specialized hardware splitters and devices to read in video from a computer and then sent out to multiple devices in a synchronised manner. However, these devices are expensive and require an expert who has the know-how of using it. This small but meaningful realization by Debanshu eventually led us to build a simple API to facilitate synced video playback across multiple Raspberry Pi boards.</p>
-<a href="/journal/svideo-synced-video-playback-with-raspberry-pi/">View more</a></p>
-</div>
-<div class="spacer"></div>
 <nav aria-labelledby="my-pagination">
   <ol>
         <li><a href="/journal/">1</a></li>
@@ -148,15 +141,23 @@
                         <hr/>
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/2/">https://gaurav-singh.info/journal/2/</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/2/">https://gaurav-singh.info/journal/2/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `Gaurav Singh. "Journal." Gaurav Singh's Personal Website. Last modified 2023-10-29. https://gaurav-singh.info/journal/2/`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Journal." The Personal Website of Gaurav Singh. Last modified 2023-10-29. https://gaurav-singh.info/journal/2/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>
@@ -164,9 +165,14 @@
         </main>
         <!-- Footer -->
         <footer>
+    <p>Also on: &nbsp;
+        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+    </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
-</footer>
-        <script>
+    <script>
         function updateTime() {
             const now = new Date();
             const options = { 
@@ -186,6 +192,7 @@
         // Update time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
-        </script>
+    </script>
+</footer>
     </body>
 </html>

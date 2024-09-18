@@ -2,15 +2,23 @@
             
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> {{ metadata.author }}. <b>{{ title }}.</b> <i>Gaurav Singh's Personal Website</i>. Last modified {{ page.date | postDate }}. <a href="{{ metadata.url }}{{ page.url }}">{{ metadata.url }}{{ page.url }}</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> {{ metadata.author }}. <b>{{ title }}.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified {{ page.date | postDate }}. <a href="{{ metadata.url }}{{ page.url }}">{{ metadata.url }}{{ page.url }}</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `{{ metadata.author }}. "{{ title }}." Gaurav Singh's Personal Website. Last modified {{ page.date | postDate }}. {{ metadata.url }}{{ page.url }}`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `{{ metadata.author }}. "{{ title }}." The Personal Website of Gaurav Singh. Last modified {{ page.date | postDate }}. {{ metadata.url }}{{ page.url }}`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>

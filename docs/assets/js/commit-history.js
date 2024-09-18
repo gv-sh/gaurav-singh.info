@@ -1,3 +1,5 @@
+import process from 'process';
+
 const repos = ['gv-sh/gaurav-singh.info']; // Add all your repos here
 const commitList = document.getElementById('commit-history');
 const token = process.env.GH_TOKEN;

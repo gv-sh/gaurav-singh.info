@@ -62,22 +62,26 @@
         <li><a href="/years-in-review/">Yearly notes</a></li>
         <!--<li><a href="/store/">Store</a></li>-->
         <li class="sidebar-section">Misc.</li>
-        <li><a href="/graphic-shots/">Graphic work</a></li>
-        <li><a href="/latest-commits/">Commits</a></li>
-        <li><a href="/map/">Map</a></li>
         <li><a href="/resources/">Resources</a></li>
         <li><a href="/tools/">Tools</a></li>
-        <li class="sidebar-section">Socials</li>
-        <li><a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a></li>
-        <li><a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a></li>
         <li class="sidebar-section">Back matter</li>
-        <li><a href="/prologue/">Epilogue</a></li>
         <li><a href="/index/">Index</a></li>
     </ul>
 </aside>
         <!-- Main content -->
         <main>
             <div class="item">
+<p><img src="/assets/images/2017/iitb.jpg" alt="2017 — Back to Srishti"></p>
+<p><h6>Year in Review</h6>
+<h3>2017 — Back to Srishti</h3>
+<p class="meta"></p>
+<p>2017-12-31</p>
+<p></p>
+<p>The year 2017 marked a new chapter in my professional journey, as I received an invitation from Srishti to join the human-centered design (HCD) department as a full-time faculty member. Interestingly, this department had evolved from the same space where I had completed my graduation. I was happy to join this workspace with interesting people and eagerly accepted the role, primarily due to the opportunity to participate in Dr.Naveen's ReRide project. Switching roles and adjusting to full-time teaching responsibilities at Srishti presented some challenges. Initially, I was assigned to teach classes outside my primary interests and familiarity. However, due to certain cancellations and reassignments, I eventually got to teach two interaction design units, one for master's students and another for undergraduates.</p>
+<a href="/journal/back-to-srishti/">View more</a></p>
+</div>
+<div class="spacer"></div>
+<div class="item">
 <p><img src="/assets/images/2017/interact_7.jpg" alt="Interact 2017 — ReRide demo and more"></p>
 <p><h6>Demonstration</h6>
 <h3>Interact 2017 — ReRide demo and more</h3>
@@ -119,17 +123,6 @@
 <a href="/journal/about-m56/">View more</a></p>
 </div>
 <div class="spacer"></div>
-<div class="item">
-<p><img src="/assets/images/2017/award.jpg" alt="TCO17 India regionals, Bangalore"></p>
-<p><h6>Event</h6>
-<h3>TCO17 India regionals, Bangalore</h3>
-<p class="meta"></p>
-<p>2017-09-02</p>
-<p></p>
-<p>Topcoder has arrived in the city for their India Regional event and their inaugural design workshop in India. It is with great pleasure that I inform you that Srishti Institute of Art, Design and Technology had the honor of hosting Topcoder's first-ever design workshop in India. The workshop was open to all Srishti students pursuing the Human-Centered Design discipline. The participants were surprised by the two Rapid UX challenges announced by <a href="https://www.linkedin.com/in/adroc/">Adam Morehead</a>, Creative Head of Topcoder, as they had not been provided much detail about Topcoder or the workshop beforehand. The time constraints of RUX and their limited experience in designing interfaces left the students feeling challenged. However, Adam and <a href="https://www.linkedin.com/in/harshitmehta15">Harshit Mehta</a> (Topcoder Evangelist) did a remarkable job of engaging with the students and clearly discussing the future of design. During his presentation, Adam introduced cognitive design and its significance for designers. The RUX winners were rewarded with cash prizes, which certainly made them happier and demonstrated Topcoder's appreciation for their participation.</p>
-<a href="/journal/tco17-india-regionals/">View more</a></p>
-</div>
-<div class="spacer"></div>
 <nav aria-labelledby="my-pagination">
   <ol>
         <li><a href="/journal/">1</a></li>
@@ -146,15 +139,23 @@
                         <hr/>
             <!-- Cite as -->
             <div id="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>Gaurav Singh's Personal Website</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/4/">https://gaurav-singh.info/journal/4/</a></p>
-                <a onclick="copyToClipboard()" href="#">Copy Citation</a>
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Journal.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-10-29. <a href="https://gaurav-singh.info/journal/4/">https://gaurav-singh.info/journal/4/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
                 <script>
-                function copyToClipboard() {
-                    const citationText = `Gaurav Singh. "Journal." Gaurav Singh's Personal Website. Last modified 2023-10-29. https://gaurav-singh.info/journal/4/`;
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Journal." The Personal Website of Gaurav Singh. Last modified 2023-10-29. https://gaurav-singh.info/journal/4/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
-                        alert('Citation copied to clipboard!');
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
                     }).catch(err => {
                         console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
                     });
                 }
                 </script>
@@ -162,9 +163,14 @@
         </main>
         <!-- Footer -->
         <footer>
+    <p>Also on: &nbsp;
+        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+    </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
-</footer>
-        <script>
+    <script>
         function updateTime() {
             const now = new Date();
             const options = { 
@@ -184,6 +190,7 @@
         // Update time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
-        </script>
+    </script>
+</footer>
     </body>
 </html>
