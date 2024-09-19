@@ -71,8 +71,9 @@
     line-height: var(--line-height-default);
     margin: var(--margin-default);
     font-kerning: normal;
-    text-rendering: geometricPrecision;
     color: var(--primary-text-color);
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
     opacity: 0;
     animation: fadeIn var(--fade-in-duration) ease-in-out forwards;
 }
@@ -134,7 +135,7 @@ aside ul li a {
 
 aside ul li a.active {
     font-weight: var(--font-weight-normal);
-    color: var(--primary-text-color);
+    color: var(--highlight-color) !important;
     border-bottom: none;
 }
 
