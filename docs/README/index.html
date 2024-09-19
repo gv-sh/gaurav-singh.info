@@ -1,2 +1,4 @@
 <p>Build instructions:
-npx @11ty/eleventy --input=. --output=docs --serve</p>
+npx @11ty/eleventy --input=. --output=docs --serve
+find . -name &quot;<em>.md&quot; -type f ! -name &quot;all_content.md&quot; -print0 | xargs -0 cat &gt; dataset/all_content.md
+sed -e 's/&lt;[^&gt;]</em>&gt;//g' dataset/all_content.md &gt; dataset/all_content_no_html.md</p>

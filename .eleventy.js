@@ -44,10 +44,6 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
   eleventyConfig.addFilter('truncate', truncate);
-  eleventyConfig.addGlobalData("eleventyExcludeFromCollections", [
-    "dataset/**/*",
-    "draft/**/*"
-  ]);
 
   eleventyConfig.addTransform("removeEmptyLines", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
