@@ -3,14 +3,15 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 
-<?xml version="1.0" encoding="UTF-8"?>
+{% set xmlString %}<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in collections.all %}
   <url>
-    <loc>{{ site.url }}{{ page.url | url }}</loc>
+    <loc>{{ metadata.url }}{{ page.url | url }}</loc>
     {% if page.date %}
-    <lastmod>{{ page.date.toISOString().split('T')[0] }}</lastmod>  {# Using toISOString to format the date #}
+    <lastmod>{{ page.date | postDate }}</lastmod>
     {% endif %}
   </url>
   {% endfor %}
-</urlset>
+</urlset>{% endset %}
+{{ xmlString | safe }}
