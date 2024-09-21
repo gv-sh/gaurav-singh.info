@@ -5,7 +5,7 @@ showTitle: true
 date: 2017-09-25
 deck: Workshop
 cover: /assets/images/2017/2.jpg
-layout: base.njk
+layout: post.njk
 description: At Srishti, we have two studio cycles of 5 weeks in each semester. And a two-week slot of the workshop in between the cycles. The students of this workshop have just started their journey in Srishti and spent only about one month doing few classes on generic skills. They had little to no information or related course work from the discipline they had signed up. This workshop is supposed to be their first interface to introduce them to this domain and set the right expectations which will help them get a clearer idea of HCD.
 showFurther: true
 permalink: /teaching/digital-making-workshop-for-foundation-students/

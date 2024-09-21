@@ -3,33 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Exploring ML, data visualization, and ethical engineering solutions">
-        <meta name="keywords" content="Gaurav Singh, personal website, blog, human-computer interaction, ethical AI, data visualization, responsible innovation, design mathematics, researcher Griffith University, researcher Srishti, creative coding, ML and art.">
-        <meta name="author" content="Gaurav Singh">
-        <link rel="canonical" href="https://gaurav-singh.info/teaching/design-and-futures/">
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-                onload="renderMathInElement(document.body, {
-                            delimiters: [
-                                {left: '$$', right: '$$', display: true},
-                                {left: '$', right: '$', display: false},
-                            ],
-                            throwOnError : false
-                        });"></script>
-        <title>Gaurav Singh | Design and Futures</title>
-        <link rel="stylesheet" href="/bundle.css">
-        <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "WebPage",
-            "name": "Design and Futures",
-            "description": "Exploring ML, data visualization, and ethical engineering solutions",
-            "url": "https://gaurav-singh.info/teaching/design-and-futures/"
-        }
+        <!-- KaTeX CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+        <!-- To automatically render math in text elements, include the auto-render extension: -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+            });
+        }); 
         </script>
+        <title>Design and Futures</title>
+        <link rel="stylesheet" href="https://use.typekit.net/vsr8dth.css">
+        <link rel="stylesheet" href="/bundle.css">
     </head>
     <body>
         <!-- Header -->
@@ -70,8 +69,13 @@
 </aside>
         <!-- Main content -->
         <main>
+            <div class="item">
+                <h6>Workshop</h6>
                 <h3>Design and Futures</h3>
-                <em>NB</em>
+                <p class="meta">
+                    2020-09-25
+                </p>
+            </div>
             <p>Co-facilitated with <a href="/mentors/naveen-bagalkot/">Dr.Naveen Bagalkot</a></p>
 <p>This workshop aimed to explore the intersection of design and futures through speculative and critical design practices. Participants were encouraged to reflect on the historical evolution of design as an agent of change and its role in producing social, economic, and ecological inequities. The workshop also examined how design can reconcile with rapidly evolving technology and complex challenges to remain relevant. Through conversations with digital, physical, and social materials, participants explored multiple paths of inquiry in the emerging complex contexts of technology and change. The workshop introduced critical technical practices and focused on innovation and change in the context of history and futures.</p>
                         <hr/>
@@ -102,10 +106,10 @@
         <!-- Footer -->
         <footer>
     <p>Also on: &nbsp;
-        <a class="external" target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
-        <a class="external" target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
-        <a class="external" target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
-        <a class="external" target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
+        <a target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
+        <a target="_blank" href="https://instagram.com/gvsh_maths">Instagram</a> &nbsp;
+        <a target="_blank" href="https://x.com/gvsh_maths">X (Formerly Twitter)</a> &nbsp;
+        <a target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
     </p>
     <p><span id="current-time"></span><br/>UTC+10 Gold Coast, Australia</p>
     <script>

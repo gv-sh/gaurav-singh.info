@@ -6,6 +6,7 @@
     --hover-border: rgba(0, 0, 0, 0.5);
     --highlight-color: magenta;
     --link-color: blue;
+    --green-color: green;
 
     --font-family-serif: 'Times New Roman', Times, serif;
     --font-family-sans-serif: Helvetica, Arial, sans-serif;
@@ -175,6 +176,7 @@ p {
 b {
     font-weight: var(--font-weight-bold);
 }
+
 h1 {
     font-size: var(--font-size-large);
     margin-bottom: var(--margin-small);
@@ -506,3 +508,22 @@ sup {
 #rotating-greeting {
     transition: opacity 1s ease-in-out;
   }
+
+details {
+    margin-bottom: var(--margin-medium);
+    transition: max-height 1s ease; 
+    min-height: fit-content;
+}
+
+details[open] {
+    max-height: fit-content;
+}
+
+details summary {
+    cursor: pointer;
+    color: var(--color-midgrey);
+}
+
+details[open] summary {
+    margin-bottom: var(--margin-small);
+}
