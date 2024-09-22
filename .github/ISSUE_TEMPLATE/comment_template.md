@@ -1,5 +1,6 @@
 ---
 name: Comment
+about: Use this template for adding a comment on the website.
 description: Use this template to add a comment on the website.
 title: "[Comment] Your comment title"
 labels: comment
