@@ -1,12 +1,6 @@
 
 https://gaurav-singh.info/work/founder-at-mathscapes/
 https://gaurav-singh.info/work/independent-designer/
-https://gaurav-singh.info/store/maxwell-escape3/
-https://gaurav-singh.info/store/maxwell-escape4/
-https://gaurav-singh.info/store/maxwell-escape6/
-https://gaurav-singh.info/store/maxwell-escape5/
-https://gaurav-singh.info/store/maxwell-escape2/
-https://gaurav-singh.info/store/maxwell-escape/
 https://gaurav-singh.info/journal/maxwell-escape/
 https://gaurav-singh.info/journal/book-swapping/
 https://gaurav-singh.info/projects/harr-cascade-based-detection/
@@ -147,3 +141,4 @@ https://gaurav-singh.info/journal/evolution-of-my-personal-website/
 https://gaurav-singh.info/map/
 https://gaurav-singh.info/search/
 https://gaurav-singh.info/recommendations/
+https://gaurav-singh.info/.github/ISSUE_TEMPLATE/comment_template/

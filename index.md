@@ -35,9 +35,9 @@ In addition to my computer science background, I've studied [Innovation and Expe
 --- 
 
 #### Featured pages
-- [Places I've been](/map/)
+- [Places I've been](/map/) (Visualisation)
 - [Graphic work](/graphic-shots/) (Screenshots)
-- <a target="_blank" class="external" href="https://docs.google.com/presentation/d/1ZEFgsGSbvhxkISJNc6xFoFhgyMTzoNEtWAiibE7x--Q/pub?start=false&loop=false&delayms=3000">Introduction slides</a>
+- <a target="_blank" href="https://docs.google.com/presentation/d/1ZEFgsGSbvhxkISJNc6xFoFhgyMTzoNEtWAiibE7x--Q/pub?start=false&loop=false&delayms=3000">Introduction slides</a> (External link)
 - Story behind my website: [Prologue](/prologue/), [Evolution](/journal/evolution-of-my-personal-website/) and [Design](/journal/design-of-my-personal-website/)
 - Five projects that I'm proud of: [Deconstructing algorithms](/projects/deconstructing-algorithms-2020/), [ReRide](/projects/reride/), [IMTAR](/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/), [HARR-CD](/projects/harr-cascade-based-detection/)
 - Five of my favorite courses that I've facilitated: [Making with Algorithms](/teaching/making-with-algorithms/), [Sketch, Crit and Remix](/teaching/sketch-crit-and-remix/), [MagFlora](/teaching/mathematics-of-magnificent-flora/), [Should you Copyleft?](/teaching/should-you-copyleft/), [Digital Making](/teaching/digital-making-workshop-for-foundation-students/)

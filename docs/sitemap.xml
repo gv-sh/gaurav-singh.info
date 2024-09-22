@@ -9,30 +9,6 @@
     <lastmod>2008-11-01</lastmod>  
   </url>
   <url>
-    <loc>/store/maxwell-escape3/</loc>
-    <lastmod>2009-12-31</lastmod>  
-  </url>
-  <url>
-    <loc>/store/maxwell-escape4/</loc>
-    <lastmod>2009-12-31</lastmod>  
-  </url>
-  <url>
-    <loc>/store/maxwell-escape6/</loc>
-    <lastmod>2009-12-31</lastmod>  
-  </url>
-  <url>
-    <loc>/store/maxwell-escape5/</loc>
-    <lastmod>2009-12-31</lastmod>  
-  </url>
-  <url>
-    <loc>/store/maxwell-escape2/</loc>
-    <lastmod>2009-12-31</lastmod>  
-  </url>
-  <url>
-    <loc>/store/maxwell-escape/</loc>
-    <lastmod>2009-12-31</lastmod>  
-  </url>
-  <url>
     <loc>/journal/maxwell-escape/</loc>
     <lastmod>2009-12-31</lastmod>  
   </url>
@@ -590,6 +566,10 @@
   </url>
   <url>
     <loc>/recommendations/</loc>
+    <lastmod>2024-09-22</lastmod>  
+  </url>
+  <url>
+    <loc>/.github/ISSUE_TEMPLATE/comment_template/</loc>
     <lastmod>2024-09-22</lastmod>  
   </url>
   </urlset>
