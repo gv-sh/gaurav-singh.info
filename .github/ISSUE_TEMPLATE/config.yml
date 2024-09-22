@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Add a comment
-    url: https://github.com/gaurav-singh.info/issues/new?template=comment_template.md&title=Comment on {{ page.url }}
+    url: https://github.com/gaurav-singh.info/issues/new?template=comment_template.md
     about: Please provide your comment below.
