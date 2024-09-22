@@ -74,6 +74,29 @@
                 <h6>Data scientist, educator</h6>
             </div>
             <p>Venkat Chilukuri is a data scientist with a solid foundation in civil and transportation engineering. His educational journey includes a Bachelor's degree in Civil and Environmental Engineering from Andhra University, India, followed by a Master's and a Ph.D. in Civil (Transportation) Engineering from the University of Missouri, USA. Venkat's professional career has been diverse, beginning as a Traffic Engineer (EIT) at HDR Engineering in the USA, then as a Post-Doctoral Fellow at CiSTUP, Indian Institute of Science, Bangalore, and later as a Data Scientist at Voonik Technologies, Bangalore. His interest areas span data literacy, understanding uncertainty in systems, and enhancing quality of life through data-driven insights. After his tenure at Srishti, Venkat embarked on an independent practice in data science earlier in 2022. In his current practice, he continues to leverage his expertise in data science, focusing on innovative approaches and solutions. Venkat's commitment to data literacy and his ability to apply data science in various contexts make him a respected figure and a valuable mentor in the field.</p>
+            <!-- Cite as -->
+            <div class="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Dr.Venkat Chilukuri.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/mentors/venkat-chilukuri/">https://gaurav-singh.info/mentors/venkat-chilukuri/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
+                <script>
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Dr.Venkat Chilukuri." The Personal Website of Gaurav Singh. Last modified 2023-11-06. https://gaurav-singh.info/mentors/venkat-chilukuri/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
+                    });
+                }
+                </script>
+            </div>
         </main>
         <!-- Footer -->
         <footer>
@@ -107,28 +130,5 @@
         setInterval(updateTime, 1000);
     </script>
 </footer>
-            <!-- Cite as -->
-            <div class="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Dr.Venkat Chilukuri.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/mentors/venkat-chilukuri/">https://gaurav-singh.info/mentors/venkat-chilukuri/</a></p>
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
-                <script>
-                function copyToClipboard(event) {
-                    event.preventDefault();
-                    const citationText = `Gaurav Singh. "Dr.Venkat Chilukuri." The Personal Website of Gaurav Singh. Last modified 2023-11-06. https://gaurav-singh.info/mentors/venkat-chilukuri/`;
-                    const copyLink = document.getElementById('copyLink');
-                    const originalScrollPosition = window.pageYOffset;
-                    navigator.clipboard.writeText(citationText).then(() => {
-                        copyLink.textContent = 'Citation copied';
-                        setTimeout(() => {
-                            copyLink.textContent = 'Copy citation';
-                            window.scrollTo(0, originalScrollPosition);
-                        }, 3000);
-                    }).catch(err => {
-                        console.error('Failed to copy: ', err);
-                        window.scrollTo(0, originalScrollPosition);
-                    });
-                }
-                </script>
-            </div>
     </body>
 </html>

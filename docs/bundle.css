@@ -541,3 +541,8 @@ details[open] summary {
     padding: 1em;
     background-color: var(--secondary-bg-color);
 }
+
+.leave-your-message {
+    display: inline-block;
+    margin-bottom: 1em;
+}

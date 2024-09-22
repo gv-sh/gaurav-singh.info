@@ -78,6 +78,29 @@
 <p>In her current role as a Teaching Assistant for Intro to Assistive Tech, she offers both technical and conceptual support in accessibility and inclusive design. As a Graduate Researcher at The Ability Project, she is engaged in designing accessible navigation tools for the NYU campus. Apoorva is also known for co-founding Dance2Konnect from 2014 to 2018, a student-led initiative leveraging dance to aid underprivileged communities.</p>
 <p>Apoorva's path is distinguished by her strong self-confidence, her willingness to work collaboratively, and her spontaneous approach to naming variables and programs in her programming work. With the completion of her master's degree on the horizon, I look forward to her ongoing contributions to the user experience design field, where her combination of creativity and technical acumen can lead to meaningful innovation.</p>
 <p><a href="https://apoorvaavadhana.com/">apoorvaavadhana.com</a></p>
+            <!-- Cite as -->
+            <div class="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Apoorva Avadhana.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/students/apoorva-avadhana/">https://gaurav-singh.info/students/apoorva-avadhana/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
+                <script>
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Apoorva Avadhana." The Personal Website of Gaurav Singh. Last modified 2023-11-06. https://gaurav-singh.info/students/apoorva-avadhana/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
+                    });
+                }
+                </script>
+            </div>
         </main>
         <!-- Footer -->
         <footer>
@@ -111,28 +134,5 @@
         setInterval(updateTime, 1000);
     </script>
 </footer>
-            <!-- Cite as -->
-            <div class="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Apoorva Avadhana.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/students/apoorva-avadhana/">https://gaurav-singh.info/students/apoorva-avadhana/</a></p>
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
-                <script>
-                function copyToClipboard(event) {
-                    event.preventDefault();
-                    const citationText = `Gaurav Singh. "Apoorva Avadhana." The Personal Website of Gaurav Singh. Last modified 2023-11-06. https://gaurav-singh.info/students/apoorva-avadhana/`;
-                    const copyLink = document.getElementById('copyLink');
-                    const originalScrollPosition = window.pageYOffset;
-                    navigator.clipboard.writeText(citationText).then(() => {
-                        copyLink.textContent = 'Citation copied';
-                        setTimeout(() => {
-                            copyLink.textContent = 'Copy citation';
-                            window.scrollTo(0, originalScrollPosition);
-                        }, 3000);
-                    }).catch(err => {
-                        console.error('Failed to copy: ', err);
-                        window.scrollTo(0, originalScrollPosition);
-                    });
-                }
-                </script>
-            </div>
     </body>
 </html>

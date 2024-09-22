@@ -78,6 +78,29 @@
 <p>What is truly truly inspiring about Simran is her potential. Her analytical abilities are evolving, promising to enhance—and perhaps outshine—her substantial making skills. She holds great understanding of the subtleties behind her tasks, suggesting that she is on course for a future rich with leadership in HCI projects and teams, driving meaningful innovation.</p>
 <p>I take pride in the journey Simran has embarked upon, progressing from a student in my classes to a professional influencing the future of HCI. Her path is a proof to her ambition and natural aptitude for design and research. I am eager to see how she continues to progress in 'imagining' and 'creating' pathbreaking work in user experience design.</p>
 <p><a href="https://www.linkedin.com/in/simran-singh-7bba87137">LinkedIn</a></p>
+            <!-- Cite as -->
+            <div class="cite-as">
+                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Simran Singh.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/students/simran-singh/">https://gaurav-singh.info/students/simran-singh/</a></p>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
+                <script>
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "Simran Singh." The Personal Website of Gaurav Singh. Last modified 2023-11-06. https://gaurav-singh.info/students/simran-singh/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Copy citation';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
+                    });
+                }
+                </script>
+            </div>
         </main>
         <!-- Footer -->
         <footer>
@@ -111,28 +134,5 @@
         setInterval(updateTime, 1000);
     </script>
 </footer>
-            <!-- Cite as -->
-            <div class="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Simran Singh.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/students/simran-singh/">https://gaurav-singh.info/students/simran-singh/</a></p>
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
-                <script>
-                function copyToClipboard(event) {
-                    event.preventDefault();
-                    const citationText = `Gaurav Singh. "Simran Singh." The Personal Website of Gaurav Singh. Last modified 2023-11-06. https://gaurav-singh.info/students/simran-singh/`;
-                    const copyLink = document.getElementById('copyLink');
-                    const originalScrollPosition = window.pageYOffset;
-                    navigator.clipboard.writeText(citationText).then(() => {
-                        copyLink.textContent = 'Citation copied';
-                        setTimeout(() => {
-                            copyLink.textContent = 'Copy citation';
-                            window.scrollTo(0, originalScrollPosition);
-                        }, 3000);
-                    }).catch(err => {
-                        console.error('Failed to copy: ', err);
-                        window.scrollTo(0, originalScrollPosition);
-                    });
-                }
-                </script>
-            </div>
     </body>
 </html>
