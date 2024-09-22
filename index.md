@@ -35,7 +35,7 @@ In addition to my computer science background, I've studied [Innovation and Expe
 --- 
 
 #### Featured pages
-- [Places I've been](/map/) (Interactive visualisation)
+- [Places I've been](/map/)
 - [Graphic work](/graphic-shots/) (Screenshots)
 - <a target="_blank" class="external" href="https://docs.google.com/presentation/d/1ZEFgsGSbvhxkISJNc6xFoFhgyMTzoNEtWAiibE7x--Q/pub?start=false&loop=false&delayms=3000">Introduction slides</a>
 - Story behind my website: [Prologue](/prologue/), [Evolution](/journal/evolution-of-my-personal-website/) and [Design](/journal/design-of-my-personal-website/)

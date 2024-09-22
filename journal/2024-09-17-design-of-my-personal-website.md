@@ -4,10 +4,14 @@ deck: Design Philosophy
 title: "Design of my personal website"
 showTitle: true
 date: 2024-09-17
+cover: /assets/website/2024.png
 layout: post.njk
 description: In the fast-paced digital world, where platforms rise and fall, my personal website stands as a constant — a space of reflection, documentation, and continuity. More than a portfolio or a static information hub, my website serves as a **living archive** and a **biographical book** of sorts, chronicling my journey, ideas, and evolution. Unlike social media, which thrives on fleeting updates and algorithmic curation, my website is grounded in a philosophy of permanence and control. Here, I own my narrative. I shape its form, structure, and content to reflect the complexities and nuances of my personal and professional life, capturing not just milestones but the process behind them.
 permalink: /journal/design-of-my-personal-website/
 --- 
+
+![Screenshot of my website]({{ cover }})
+_Design of my personal website (2024)_
 
 In the fast-paced digital world, where platforms rise and fall, my personal website stands as a constant — a space of reflection, documentation, and continuity. More than a portfolio or a static information hub, my website serves as a **living archive** and a **biographical book** of sorts, chronicling my journey, ideas, and evolution. Unlike social media, which thrives on fleeting updates and algorithmic curation, my website is grounded in a philosophy of permanence and control. Here, I own my narrative. I shape its form, structure, and content to reflect the complexities and nuances of my personal and professional life, capturing not just milestones but the process behind them.
 

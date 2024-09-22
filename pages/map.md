@@ -2,6 +2,7 @@
 layout: base.njk
 title: Map
 sidebar: true
+permalink: /map/
 ---
 
 ### Places I've visited

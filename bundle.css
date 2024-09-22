@@ -527,3 +527,11 @@ details summary {
 details[open] summary {
     margin-bottom: var(--margin-small);
 }
+
+.full-width, .full-width main {
+    width: 100% !important;
+}
+
+.deck {
+    color: var(--highlight-color);
+}

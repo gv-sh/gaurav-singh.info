@@ -11,6 +11,6 @@ This digital space is more than a collection of pages; it’s a glimpse into my 
 
 I’m driven by a love for archiving — capturing the process, the experiments, the failures, and the triumphs. It’s beyond preserving knowledge and creating a living archive that others can explore, learn from, and build upon. My work is rooted in the belief that technology should break down barriers, not build them, making learning accessible and engaging for everyone.
 
-<a class="external" href="https://mathscapes.xyz">Mathscapes</a> is my big project and aligns with this philosophy — an umbrella project that brings the beauty of math and computation to life in ways that are approachable and engaging. This site also connects my professional journey with the personal one, [mentors](/mentors/) who’ve guided me, the [students](/students/) who’ve inspired me, and the [peers](/peers/) who’ve walked alongside me.
+<a href="/mathscapes/">Mathscapes</a> is my big project and aligns with this philosophy — an umbrella project that brings the beauty of math and computation to life in ways that are approachable and engaging. This site also connects my professional journey with the personal one, [mentors](/mentors/) who’ve guided me, the [students](/students/) who’ve inspired me, and the [peers](/peers/) who’ve walked alongside me.
 
 Turn the page, dive into the [stories](/journal/), and explore the paths I’ve taken. This is a space for learning, sharing, and connecting — a place where ideas meet action. Let’s see where this journey takes us next.
