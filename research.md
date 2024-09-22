@@ -18,7 +18,7 @@ Please check my [CV](/cv/) for a list of my research interests.
     {% if entry.data.cover %}
         <img src="{{ entry.data.cover }}" alt="{{ entry.data.title }}">
     {% endif %}
-    <h6>{{ entry.data.deck }}</h6>
+    <h6 class="deck">{{ entry.data.deck }}</h6>
     <h3>{{ entry.data.title }}</h3>
     <p class="meta">
     {% if entry.data.date %}

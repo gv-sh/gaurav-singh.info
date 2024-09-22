@@ -259,6 +259,7 @@ nav ol li {
 
 footer {
     margin-top: var(--margin-large);
+    margin-bottom: var(--margin-large);
     padding-top: var(--margin-large);
     clear: both;
 }
@@ -534,4 +535,9 @@ details[open] summary {
 
 .deck {
     color: var(--highlight-color);
+}
+
+.cite-as {
+    padding: 1em;
+    background-color: var(--secondary-bg-color);
 }
