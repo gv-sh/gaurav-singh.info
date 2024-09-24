@@ -20,7 +20,7 @@ In addition to my computer science background, I've studied [Innovation and Expe
 </details>
 
 [Email](mailto:gv-sh@outlook.com)
-
+ 
 ---
 
 #### Latest from my journal  
