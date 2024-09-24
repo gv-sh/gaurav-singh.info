@@ -231,10 +231,14 @@
 <a href="/work/">Work</a></p>
 <h3>Y</h3>
 <p><a href="/years-in-review/">Years in review</a></p>
+        </main>
+        <!-- Footer -->
+        <footer>
+    <p>            
             <!-- Cite as -->
             <div class="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Index.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/index/">https://gaurav-singh.info/index/</a></p>
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
+                <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Index.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/index/">https://gaurav-singh.info/index/</a></p>-->
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this webpage</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -244,7 +248,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Copy citation';
+                            copyLink.textContent = 'Cite this page';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {
@@ -253,11 +257,7 @@
                     });
                 }
                 </script>
-            </div>
-        </main>
-        <!-- Footer -->
-        <footer>
-    <p>Also on: &nbsp;
+            </div> &nbsp;
         <a target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
         <a target="_blank" href="https://instagram.com/themakingofnow">IG.</a> &nbsp;
         <a target="_blank" href="https://x.com/gvsh_maths">X/Twitter</a> &nbsp;

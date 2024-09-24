@@ -80,10 +80,14 @@
 <p><em>More</em> <br>
 <a href="/journal/about-m56/">About M56</a> <br>
 <a href="/journal/starting-m56-collective/">Starting M56 collective</a></p>
+        </main>
+        <!-- Footer -->
+        <footer>
+    <p>            
             <!-- Cite as -->
             <div class="cite-as">
-                <p><em>Cite this webpage as:</em> Gaurav Singh. <b>Co-founder at M56, India.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2015-04-01. <a href="https://gaurav-singh.info/work/co-founder-at-m56/">https://gaurav-singh.info/work/co-founder-at-m56/</a></p>
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Copy citation</a>
+                <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Co-founder at M56, India.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2015-04-01. <a href="https://gaurav-singh.info/work/co-founder-at-m56/">https://gaurav-singh.info/work/co-founder-at-m56/</a></p>-->
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this webpage</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -93,7 +97,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Copy citation';
+                            copyLink.textContent = 'Cite this page';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {
@@ -102,11 +106,7 @@
                     });
                 }
                 </script>
-            </div>
-        </main>
-        <!-- Footer -->
-        <footer>
-    <p>Also on: &nbsp;
+            </div> &nbsp;
         <a target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
         <a target="_blank" href="https://instagram.com/themakingofnow">IG.</a> &nbsp;
         <a target="_blank" href="https://x.com/gvsh_maths">X/Twitter</a> &nbsp;

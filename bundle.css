@@ -538,8 +538,9 @@ details[open] summary {
 }
 
 .cite-as {
-    padding: 1em;
-    background-color: var(--secondary-bg-color);
+    display: inline-block;
+    /* padding: 1em; */
+    /* background-color: var(--secondary-bg-color); */
 }
 
 .leave-your-message {
