@@ -8,6 +8,7 @@ date: 2018-12-01
 cover: /assets/images/2018/skpr_4.jpg
 layout: post.njk
 permalink: /journal/sakleshpur-2018/
+keywords: Gaurav Singh, personal website, 2018, Sakleshpur, Karnataka, India, travel, photography, landscape, nature, greenery, hills, mountains, coffee plantations, architecture, history, exploration, travelogue, photography, landscape, nature, greenery, hills, mountains, coffee plantations, architecture, history, exploration, travelogue
 --- 
 
 <img src="/assets/images/2018/skpr_1.jpg">

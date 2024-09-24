@@ -6,6 +6,7 @@ date: 2013-09-09
 deck: Study
 layout: post.njk
 description: Recently, I attended a masterclass at Srishti on reflective practice, where I better understood its significance in personal and professional growth. I learned that reflective practice involves critically analyzing one's work and measuring change over time. It is a tool that empowers practitioners to learn from their mistakes, discover their reactions and actions, and identify their strengths and weaknesses. I also explored the challenges of reflective practice and the available models. Before reading Stuart Hall's book Representation, I was curious about how reflective practice can be applied to other areas of life.
+keywords: Gaurav Singh, personal website, 2013, Stuart Hall's Representation, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/stuart-halls-representation/
 
 --- 

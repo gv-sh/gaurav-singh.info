@@ -7,6 +7,7 @@ date: 2022-02-15
 cover: /assets/twt/1@3x.jpg
 layout: post.njk
 description: Together With Touch is a live performance that took place in a public space in Dec 2021. Underlying theme of Mental Health is explored through the mediums of contemporary dance and live data that drives the music.
+keywords: Gaurav Singh, personal website, 2022, Together With Touch, live performance, mental health, contemporary dance, live data, music, public space, Dec 2021, Walkin Studios, Lena Heubeush, Avril Stormy Unger, Nikhil Nagaraj, computational geometry, data visualisation, machine learning, human-computer interaction, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/together-with-touch/
 --- 
 

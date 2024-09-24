@@ -1,6 +1,8 @@
 ---
 layout: base.njk
 title: Introduction
+description: The Personal Webbsite of Gaurav Singh
+keywords: Gaurav Singh, personal website, introduction, CV, journal, projects, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India Bangalore
 sidebar: true
 ---
 

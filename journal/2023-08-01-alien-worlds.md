@@ -7,6 +7,7 @@ deck: Generative art x SDXL
 cover: /assets/alienworlds/aw_ep1_1.jpg
 layout: post.njk
 description: "In 'Alien Worlds,' I've used Stable Diffusion XL to envision the life forms of ancient Mars. While these depictions spring from pure imagination rather than scientific facts, they capture the essence of what might have been in a universe as vast and varied as ours. As you delve into these explorations, ponder this: In an age where AI breathes life into our visions, how do we navigate between the known realms of science and the boundless horizons of imagination?"
+keywords: Gaurav Singh, personal website, 2023, Alien Worlds, generative art, SDXL, Stable Diffusion XL, ancient Mars, life forms, imagination, scientific facts, universe, AI, visions, realms of science, horizons of imagination, computational geometry, data visualisation, machine learning, human-computer interaction, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /projects/alien-worlds/
 --- 
 

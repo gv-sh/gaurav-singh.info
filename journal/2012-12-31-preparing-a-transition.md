@@ -6,6 +6,7 @@ date: 2012-12-31
 deck: Year in Review
 layout: post.njk
 description: In 2012, I encountered a period of slowing down as I transitioned from completing my 4-year engineering program in Computer Science to discovering the design field. The year was filled with uncertainties as I navigated unplanned, embracing challenges and opportunities for personal development. Shortly after concluding my engineering studies, I relocated to Chennai. I wasn't bothered about getting a job; just keen on furthering my education and expanding.
+keywords: Gaurav Singh, personal website, 2012, preparing a transition, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/preparing-a-transition/
 --- 
 

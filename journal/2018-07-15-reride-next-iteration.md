@@ -8,6 +8,7 @@ date: 2018-07-15
 cover: /assets/images/2018/3.jpg
 layout: post.njk
 description: ReRide, after the demo at Interact 2017 went into its dormancy for some time due to our teaching engagements. But after an excellent, rigorous session of making and building the prototype for Interact 2017, we did learn a few things about rethinking the underlying architecture to create a more stable platform.
+keywords: Gaurav Singh, personal website, 2018, ReRide, motorcycle riding, personal data, body posture, lean angles, heartrate, ride experience, platform, design, interaction, in-situ test, motorcycle commuting, digital design, IT University of Copenhagen, collaboration, research, exploration, design thinking, human-computer interaction, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/designing-the-next-iteration-of-reride/
 --- 
 

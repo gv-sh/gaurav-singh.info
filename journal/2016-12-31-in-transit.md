@@ -7,6 +7,7 @@ date: 2016-12-31
 cover: /assets/images/2016/metro.jpg
 layout: post.njk
 description: The year 2016 was a transformative period, with experiences that impacted my professional and personal growth. My journey commenced with an invitation from Abhiyan Humane to collaborate with Art in Transit. This opportunity allowed me to hone various skills, such as pitching ideas to potential collaborators, supporting artists and students in developing creative technological installations, and handling various administrative tasks. I discovered growing interest in teaching and mentoring as I collaborated with students.
+keywords: Gaurav Singh, personal website, 2016, in transit, Abhiyan Humane, Art in Transit, collaborative projects, pitching ideas, potential collaborators, creative installations, administrative tasks, teaching and mentoring, students, professional growth, personal growth, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/in-transit/
 --- 
 

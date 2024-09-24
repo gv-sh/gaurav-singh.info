@@ -7,6 +7,7 @@ date: 2023-09-15
 cover: /assets/sketches/sketch_hypercube.gif
 layout: post.njk
 description: The hypercube, or more commonly known as the tesseract, is a geometric marvel that exists in four-dimensional space. If you've ever been entranced by the tesseract scene in the movie "Interstellar", you've already had a cinematic glimpse of this concept. But how do we visualize a 4D object in our 3D world and then render it on a 2D screen?
+keywords: Gaurav Singh, personal website, 2023, hypercube, tesseract, 4D object, 3D world, 2D screen, movie "Interstellar", geometric marvel, four-dimensional space, visualizing 4D, rendering 4D, computational geometry, data visualisation, machine learning, human-computer interaction, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/rendering-hypercube/
 --- 
 

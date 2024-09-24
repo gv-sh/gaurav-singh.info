@@ -7,6 +7,7 @@ date: 2024-01-08
 cover: /assets/images/2024/IMG_0871.jpeg
 layout: post.njk
 description: January 2024. The rain had already soaked through my clothes as I trudged to Arpita’s place in the early morning, probably around 7am. The trams weren't operating from the usual 5am due to public holidays if I remember correctly. Also, it wasn’t just the rain; my mind was drenched too, heavy with thoughts I couldn’t shake. This trip to Byron Bay with my friends — Arpita, Prathap and Aditya — was meant to be a break, a chance to breathe outside of the Gold Coast bubble. But, the weight inside doesn’t always lift when we change our surroundings.
+keywords: Gaurav Singh, personal website, 2024, Byron Bay, Australia, travel, rain, thoughts, friends, Arpita, Prathap, Aditya, Gold Coast, bubble, break, weight, change, surroundings, computational geometry, data visualisation, machine learning, human-computer interaction, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/a-trip-to-byron-bay-in-rain-and-in-head/
 --- 
 
