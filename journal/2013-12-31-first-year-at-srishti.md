@@ -6,7 +6,7 @@ date: 2013-12-31
 deck: Year in Review
 cover: /assets/images/2013/old-campus.jpg
 layout: post.njk
-description: 2013 was a year of new experiences. From attending the first design workshop in Bangalore to my eventual enrollment at Srishti, the year brought new experiences. I was eager to join a design school after dropping a year to prepare for it, and I imagined an open-ended program, giving me the responsibility to make decisions about my projects and courses. The reality was a bit different, as mandatory core courses blocked my time and left me busy for other projects.
+description: 2013 was a year of new experiences. From attending the first design workshop in Bangalore to my eventual enrolment at Srishti, the year brought new experiences. I was eager to join a design school after dropping a year to prepare for it, and I imagined an open-ended program, giving me the responsibility to make decisions about my projects and courses. The reality was a bit different, as mandatory core courses blocked my time and left me busy for other projects.
 keywords: Gaurav Singh, personal website, 2013, first year at Srishti, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 permalink: /journal/first-year-at-srishti/
 --- 
@@ -15,7 +15,7 @@ permalink: /journal/first-year-at-srishti/
 
 _After the first day at Srishti's old campus_
  
-2013 was a year of new experiences. From attending the first design workshop in Bangalore to my eventual enrollment at Srishti, the year brought new experiences. I was eager to join a design school after dropping a year to prepare for it, and I imagined an open-ended program, giving me the responsibility to make decisions about my projects and courses. The reality was a bit different, as mandatory core courses blocked my time and left me busy for other projects.
+2013 was a year of new experiences. From attending the first design workshop in Bangalore to my eventual enrolment at Srishti, the year brought new experiences. I was eager to join a design school after dropping a year to prepare for it, and I imagined an open-ended program, giving me the responsibility to make decisions about my projects and courses. The reality was a bit different, as mandatory core courses blocked my time and left me busy for other projects.
 
 However, I began to appreciate that these courses were designed to help us understand the different schools of thought. Despite this, given the program's pace, it took me more time. Nevertheless, I quickly realized the immense amount of resources and knowledge available at Srishti. One year or maybe even two years wouldn't be sufficient to grasp the essence of designing.
 
