@@ -4,7 +4,7 @@
     --secondary-bg-color: #f5f5f5;
     --semi-transparent-border: rgba(0, 0, 0, 0.2);
     --hover-border: rgba(0, 0, 0, 0.5);
-    --highlight-color: magenta;
+    --highlight-color: #A52A2A;
     --link-color: blue;
     --green-color: green;
 
@@ -367,10 +367,10 @@ li.sidebar-section {
     opacity: 1;
     text-transform: uppercase;
     font-size: var(--font-size-small);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     font-family: var(--font-family-sans-serif);
     margin-bottom: 5px;
-    color: var(--color-midgrey);
+    color: var(--primary-text-color);
 }
 
 li.sidebar-section:not(:first-child) {
@@ -535,6 +535,7 @@ details[open] summary {
 
 .deck {
     color: var(--highlight-color);
+    font-weight: var(--font-weight-bold);
 }
 
 .cite-as {

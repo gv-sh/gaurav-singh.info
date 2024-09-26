@@ -9,6 +9,20 @@ permalink: /cv/
 
 <div>
     <div>
+        <img class="border" src="/assets/cv/2024b.jpg">
+        <div class="caption">
+            <a href="https://drive.google.com/file/d/1fTRAL0R_9S0EpAXh13IUEM19kXI-ZHPP/view?usp=sharing">Download CV (2024) Rev.2</a> 3 pages, 132KB
+        </div>
+    </div>
+
+    <div>
+        <img class="border" src="/assets/cv/2024b_a.jpg">
+        <div class="caption">
+            <a href="https://drive.google.com/file/d/19kT7JAYIyZ8CdTuG0G2iNxhY-4UTVLdR/view?usp=sharing">Download Academic CV (2024) Rev.2</a> 5 pages, 179KB
+        </div>
+    </div>
+
+    <div>
         <img class="border" src="/assets/cv/2024.jpg">
         <div class="caption">
             <a href="https://drive.google.com/file/d/1nUdmJm-gS4SrO4rtHZQgLBBtzlgr10eV/view?usp=share_link">Download CV (2024)</a> 3 pages, 91KB
