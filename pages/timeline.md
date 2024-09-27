@@ -11,6 +11,7 @@ Page under construction.
 
 ### 2024
 - STEM Professional ICT - Gold achievement, Griffith Sciences
+- Travelled to Tasmania
 
 ### 2023
 - Started [Masters + Research dissert., IT](/education/masters/) at Griffith University, Gold Coast, Australia

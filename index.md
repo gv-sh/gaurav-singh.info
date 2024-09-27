@@ -13,14 +13,6 @@ _Cradle mountain, Tasmania_
 
 Welcome to my digital space — think of this as an book. Start with the <!--[foreword](/foreword/) from friends, then flip to the--> [prologue](/prologue/) to see how it began. Check out my [CV](/cv/) for the basics, or dive into the [journal](/journal/) for stories and study notes. Explore chapters on my [education](/education/), [work](/work/), [teaching](/teaching/), [projects](/projects/), and [research](/research/). Along the way, meet my [peers](/peers/), [students](/students/), and [mentors](/mentors/). Don’t miss [Mathscapes](/mathscapes/), my life's project<!--, or the [store](/store/) for my latest stuff-->. Use the [index](/index/) to find your way around. I hope you find something useful or inspiring here.
 
-<details>
-<summary>Read more about me</summary>
-
-Hello! I’m Gaurav Singh, originally from India and currently evolving my expertise in Machine Learning (ML) at Griffith University, Gold Coast, Australia. My journey combines together a [foundation in computer science](/education/bachelors-cs/) with an interest for visual arts and a commitment to creative and ethical practice. My work explores ML within human-computer interaction (HCI) and engineering, striving to make data analysis more accessible while considering its societal and ethical dimensions. This focus drives my projects and future ambitions for conscientious technology innovation.
-
-In addition to my computer science background, I've studied [Innovation and Experience Design](/education/adp-ied/), focusing on creative problem-solving and the societal role of technology. From 2008 to 2015, I worked as an [independent designer](/work/independent-designer/), developing [Mathscapes](https://mathscapes.xyz), a space for creating accessible design tools through mathematics. In 2017, I took a [faculty position at Srishti-Manipal](/work/faculty-member-at-srishti-manipal/), where I taught courses in HCI, mathematics, and programming. My dual roles as designer and researcher have shaped my teaching, offering students unique perspectives on design and technology. In 2022, I left Srishti to pursue further studies, continuing to merge mathematics, computation, and ethics in my work.
-</details>
-
 [Email](mailto:gv-sh@outlook.com)
  
 ---
