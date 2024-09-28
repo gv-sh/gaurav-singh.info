@@ -19,12 +19,9 @@ Welcome to my digital space — think of this as an book. Start with the <!--[fo
 
 #### Latest from my journal  
 
-<ul>
 {% assign latestPosts = collections.journal | slice: 0, 10 %}
-{% for post in latestPosts %}
-<li><a href="{{ post.url }}">{{ post.data.title | truncate: 30 }}</a> posted on {% if post.data.date %}{{ post.data.date | postDate }}{% if post.data.attribution %} / {{ post.data.attribution }}{% endif %}{% endif %}</li> 
+{% for post in latestPosts %}{% if post.data.date %}{{ post.data.date | postDate }}{% endif %} <a href="{{ post.url }}">{{ post.data.title | truncate: 30 }}</a>{% unless forloop.last %}\{% endunless %}
 {% endfor %}
-</ul>
 
 --- 
 

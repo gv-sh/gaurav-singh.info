@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post.njk
 title: "ReRide: A Platform to Explore Interaction with Personal Data Before, During, and After Motorcycle Commuting"
 deck: "Personal informatics"
 date: 2017-09-25

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post.njk
 title: "SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being"
 deck: "Self-efficacy"
 date: 2014-12-07
