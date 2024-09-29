@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("journal", function (collection) {
     return collection.getFilteredByGlob("journal/*.md").reverse();
   });
+  eleventyConfig.addCollection("cv", function (collection) {
+    return collection.getFilteredByGlob("cv/*.md").reverse();
+  });
   eleventyConfig.addCollection("store", function (collection) {
     return collection.getFilteredByGlob("store/*.md").reverse();
   });

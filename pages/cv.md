@@ -1,17 +1,19 @@
 ---
 layout: base.njk
 title: CV
-description: Gaurav's CV
-keywords: Gaurav Singh, personal website, CV, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, design, embodied self-monitoring, motorbike commuting, bike area network, modular platform, personal informatics, cloud-based platform, interactive prototype, situated memory, self-efficacy, well-being, senior citizens, digital technology, real-time data visualization, posture tracking, in-situ evaluation, user experience design, community engagement, ethical technology, interdisciplinary studies, technology innovation, educational technology, algorithmic design, interactive media
 sidebar: true
+description: Gaurav's CV
+keywords: Gaurav Singh, personal website, journal, stories, notes, reflections, thoughts, experiences, learning, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India, academic writing, personal growth, insights, creative process, interdisciplinary studies, technology and society, educational experiences, narrative, exploration, critical thinking, professional development, community engagement
 permalink: /cv/
 ---
 
-### Curriculum Vitae (CV)
-[2024 Rev.2](https://drive.google.com/file/d/1fTRAL0R_9S0EpAXh13IUEM19kXI-ZHPP/view?usp=sharing) &nbsp; [2024](https://drive.google.com/file/d/1nUdmJm-gS4SrO4rtHZQgLBBtzlgr10eV/view?usp=share_link) &nbsp; [2022](https://drive.google.com/file/d/1jyNq14lb5CZW6BIAjddK4fvAEse_Y9W1/view?usp=sharing) &nbsp; [2017](https://drive.google.com/file/d/1rVfCTB8fjMjoqROXtFVPJEbufXnGQuWr/view?usp=sharing) &nbsp; [2015](https://drive.google.com/file/d/1sp0rJ7x-7Bm5QmXDY09w6WnQZ9_RbiIF/view?usp=sharing) &nbsp; [2012](https://drive.google.com/file/d/19Sxl2rILnculoPZ8qG12TMHTC1i0-tCh/view?usp=sharing) &nbsp; [2008](https://drive.google.com/file/d/1a1xbVhSfCERBoIJg9U3LY5fHh9N81Cvj/view?usp=sharing) 
+### Latest
 
-### Academic CV
-[2024 Rev.2](https://drive.google.com/file/d/19kT7JAYIyZ8CdTuG0G2iNxhY-4UTVLdR/view?usp=sharing) &nbsp; [2024](https://drive.google.com/file/d/1zNfmLgWPNLpIJbArrSV44vJIBMK8RdER/view?usp=sharing) &nbsp; [2022](https://drive.google.com/file/d/1q4aD2OvI2yN9cUoOrldP8UI9MeK5nnRn/view?usp=sharing) &nbsp; [2017](https://drive.google.com/file/d/1KX_Ol5NYzxfQk43d37VQ7dbWmQG63FhF/view?usp=sharing)
+{% assign sorted_entries = collections.cv | sort: 'data.year', 'data.code' | reverse | where: 'data.active', true %}
+{% for entry in sorted_entries %}{{ entry.data.year }} <span class="doc-code">[{{ entry.data.code }}]</span> <a target="_blank" href="{{ entry.data.link }}" title="{{ entry.data.title }}">{{ entry.data.title }}</a>{% unless forloop.last %}\{% endunless %}
+{% endfor %}
 
-### Personal Statement
-[2022](https://drive.google.com/file/d/1w2lLkjQ5mf5tzI02w1gc8cV0qYMbfiae/view?usp=sharing) 
+### Older versions
+{% assign sorted_entries = collections.cv | sort: 'data.year', 'data.code' | reverse | where: 'data.active', false %}
+{% for entry in sorted_entries %}{{ entry.data.year }} <span class="doc-code">[{{ entry.data.code }}]</span> <a target="_blank" href="{{ entry.data.link }}" title="{{ entry.data.title }}">{{ entry.data.title }}</a>{% unless forloop.last %}\{% endunless %}
+{% endfor %}

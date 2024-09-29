@@ -574,3 +574,11 @@ details[open] summary {
 strong {
     font-style: italic;
 }
+
+.doc-code {
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-midgrey);
+    font-family: var(--font-family-mono);
+    padding: 0.25em;
+}

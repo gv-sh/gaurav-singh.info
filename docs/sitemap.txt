@@ -1,11 +1,13 @@
 
 https://gaurav-singh.info/work/founder-at-mathscapes/
+https://gaurav-singh.info/cv/2008/
 https://gaurav-singh.info/work/independent-designer/
 https://gaurav-singh.info/journal/maxwell-escape/
 https://gaurav-singh.info/journal/book-swapping/
 https://gaurav-singh.info/projects/harr-cascade-based-detection/
 https://gaurav-singh.info/journal/shannons-theory-of-information/
 https://gaurav-singh.info/journal/markers-and-matches/
+https://gaurav-singh.info/cv/2012/
 https://gaurav-singh.info/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/
 https://gaurav-singh.info/journal/preparing-a-transition/
 https://gaurav-singh.info/journal/prime-numbers-and-their-properties/
@@ -27,6 +29,7 @@ https://gaurav-singh.info/journal/competing-interests/
 https://gaurav-singh.info/education/bachelors-cs/
 https://gaurav-singh.info/work/co-founder-at-m56/
 https://gaurav-singh.info/education/adp-ied/
+https://gaurav-singh.info/cv/2015/
 https://gaurav-singh.info/teaching/learning-to-code-with-processing/
 https://gaurav-singh.info/journal/contrasts-and-growth/
 https://gaurav-singh.info/work/research-assistant-at-ait/
@@ -35,6 +38,8 @@ https://gaurav-singh.info/teaching/digital-interfaces/
 https://gaurav-singh.info/teaching/embedding-emerging-technologies-into-materials/
 https://gaurav-singh.info/journal/in-transit/
 https://gaurav-singh.info/journal/teaching/
+https://gaurav-singh.info/cv/academic/2017/
+https://gaurav-singh.info/cv/2017/
 https://gaurav-singh.info/work/faculty-member-at-srishti-manipal/
 https://gaurav-singh.info/journal/starting-m56-collective/
 https://gaurav-singh.info/journal/tco17-india-regionals/
@@ -83,6 +88,9 @@ https://gaurav-singh.info/journal/mathscapes-identity-2021/
 https://gaurav-singh.info/journal/lockdown/
 https://gaurav-singh.info/teaching/mathematics-of-magnificent-flora/
 https://gaurav-singh.info/journal/together-with-touch/
+https://gaurav-singh.info/cv/academic/2022/
+https://gaurav-singh.info/cv/2022/
+https://gaurav-singh.info/personal-statement/2022/
 https://gaurav-singh.info/work/ra-to-dr-javanbakht/
 https://gaurav-singh.info/teaching/glider-gun/
 https://gaurav-singh.info/teaching/should-you-copyleft/
@@ -95,7 +103,6 @@ https://gaurav-singh.info/journal/
 https://gaurav-singh.info/projects/
 https://gaurav-singh.info/research/
 https://gaurav-singh.info/teaching/
-https://gaurav-singh.info/cv/
 https://gaurav-singh.info/education/masters/
 https://gaurav-singh.info/mentors/naveen-bagalkot/
 https://gaurav-singh.info/mentors/venkat-chilukuri/
@@ -125,6 +132,10 @@ https://gaurav-singh.info/students/
 https://gaurav-singh.info/journal/moved-to-gold-coast/
 https://gaurav-singh.info/journal/a-trip-to-byron-bay-in-rain-and-in-head/
 https://gaurav-singh.info/graphic-shots/
+https://gaurav-singh.info/cv/academic/2024/revision/
+https://gaurav-singh.info/cv/academic/2024/
+https://gaurav-singh.info/cv/2024/revision/
+https://gaurav-singh.info/cv/2024/
 https://gaurav-singh.info/journal/what-is-aatp/
 https://gaurav-singh.info/journal/in-defense-of-a-creative-pursuit/
 https://gaurav-singh.info/index/
@@ -138,3 +149,4 @@ https://gaurav-singh.info/journal/evolution-of-my-personal-website/
 https://gaurav-singh.info/map/
 https://gaurav-singh.info/recommendations/
 https://gaurav-singh.info/timeline/
+https://gaurav-singh.info/cv/
