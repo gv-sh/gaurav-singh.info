@@ -3,7 +3,7 @@ tags: post
 deck: Recognition
 title: "Progress through the STEM Professional Program by Griffith Sciences"
 showTitle: true
-date: 2024-09-17
+date: 2024-09-29
 layout: post.njk
 description: This year, the STEM Professional Program at Griffith University, designed to guide participants in developing professional artefacts and planning their trajectory as STEM professionals in Australia, unexpectedly gave me the opportunity to rethink my approach to writing. While the program centered on broader aspects of professional development, the exercises encouraged me to view writing as a tool for articulating professional identity with precision and nuance. Through these exercises, my perspective on writing has shifted; each refinement deepens both intellectual clarity and self-representation.
 cover: /assets/images/2024/stem-award.jpg
