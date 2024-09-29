@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Demonstration
-title: Interact 2017 — ReRide demo and more
+title: "Interact 2017: ReRide demo and more"
 showTitle: true
 date: 2017-09-30
 cover: /assets/images/2017/interact_7.jpg

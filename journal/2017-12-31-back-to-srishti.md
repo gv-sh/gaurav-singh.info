@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Year in Review
-title: "2017 — Back to Srishti"
+title: "Yearly note 2017: Back to Srishti"
 showTitle: true
 date: 2017-12-31
 cover: /assets/images/2017/iitb.jpg

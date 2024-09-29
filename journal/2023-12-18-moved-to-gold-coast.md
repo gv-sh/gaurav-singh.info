@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Year in Review
-title: "2023 — Moved to Gold Coast"
+title: "Yearly note 2023: Moved to Gold Coast"
 showTitle: true
 date: 2023-12-18
 cover: /assets/goldcoast.jpg

@@ -1,6 +1,6 @@
 ---
 tags: post
-title: "2012 — Preparing a transition"
+title: "Yearly note 2012: Preparing a transition"
 showTitle: true
 date: 2012-12-31
 deck: Year in Review

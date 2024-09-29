@@ -1,6 +1,6 @@
 ---
 tags: post
-title: "2013 — First year at Srishti"
+title: "Yearly note 2013: First year at Srishti"
 showTitle: true
 date: 2013-12-31
 deck: Year in Review

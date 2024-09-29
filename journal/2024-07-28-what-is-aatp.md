@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Agricultural transparency
-title: "What is AATP — Australian Agriculture Traceability Protocol?"
+title: "What is AATP?"
 showTitle: true
 date: 2024-07-28
 layout: post.njk

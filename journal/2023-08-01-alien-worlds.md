@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Alien Worlds
+title: "Microscopic life at Mars: An AI Exploration"
 showTitle: true
 date: 2023-08-01
 deck: Generative art x SDXL

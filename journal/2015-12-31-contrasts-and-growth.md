@@ -1,6 +1,6 @@
 ---
 tags: post
-title: "2015 — Contrasts and growth"
+title: "Yearly note 2015: Contrasts and growth"
 showTitle: true
 date: 2015-12-31
 deck: Year in Review

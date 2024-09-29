@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Year in Review
-title: "2018 — Joys of teaching"
+title: "Yearly note 2018: Joys of teaching"
 showTitle: true
 date: 2018-12-31
 cover: /assets/images/2018/ninasam.jpg

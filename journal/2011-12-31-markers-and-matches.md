@@ -1,6 +1,6 @@
 ---
 tags: post
-title: "2011 — Markers and matches"
+title: "Yearly note 2011: Markers and matches"
 showTitle: true
 date: 2011-12-31
 deck: Year in Review

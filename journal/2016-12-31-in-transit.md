@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Year in Review
-title: "2016 — In transit"
+title: "Yearly note 2016: In transit"
 showTitle: true
 date: 2016-12-31
 cover: /assets/images/2016/metro.jpg

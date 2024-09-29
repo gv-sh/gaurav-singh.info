@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Math vis
-title: "Rendering Hypercube"
+title: "How do you render a hypercube?"
 showTitle: true
 date: 2023-09-15
 cover: /assets/sketches/sketch_hypercube.gif

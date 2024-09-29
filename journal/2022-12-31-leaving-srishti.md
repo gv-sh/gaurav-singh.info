@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Year in Review
-title: "2022 — Leaving Srishti"
+title: "Yearly note 2022: Leaving Srishti"
 showTitle: true
 date: 2022-12-31
 cover: /assets/images/2022/workspace.jpg

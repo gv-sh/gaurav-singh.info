@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Generative music
-title: "Together with Touch — A collaboration with Lena Heubeush, Avril Stormy Unger, Nikhil Nagaraj and Walkin Studios"
+title: "Together with Touch 2021"
 showTitle: true
 date: 2022-02-15
 cover: /assets/twt/1@3x.jpg

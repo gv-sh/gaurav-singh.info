@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: Year in Review
-title: "2019 — Beyond classrooms"
+title: "Yearly note 2019: Beyond classrooms"
 showTitle: true
 date: 2019-12-31
 cover: /assets/images/2019/future-making.jpg

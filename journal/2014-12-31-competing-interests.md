@@ -1,6 +1,6 @@
 ---
 tags: post
-title: "2014 — Competing interests"
+title: "Yearly note 2014: Competing interests"
 showTitle: true
 date: 2014-12-31
 deck: Year in Review
