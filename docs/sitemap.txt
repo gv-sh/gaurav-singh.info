@@ -45,9 +45,9 @@ https://gaurav-singh.info/journal/starting-m56-collective/
 https://gaurav-singh.info/journal/tco17-india-regionals/
 https://gaurav-singh.info/journal/about-m56/
 https://gaurav-singh.info/journal/switching-roles-at-srishti/
+https://gaurav-singh.info/journal/digital-making-workshop-for-foundation-students/
 https://gaurav-singh.info/journal/working-on-reride-demo-for-interact-2017/
 https://gaurav-singh.info/research/reride-interact17/
-https://gaurav-singh.info/teaching/digital-making-workshop-for-foundation-students/
 https://gaurav-singh.info/journal/interact-2017/
 https://gaurav-singh.info/teaching/advanced-programming-and-prototyping/
 https://gaurav-singh.info/teaching/algorithms-computation-and-hci/
@@ -146,6 +146,8 @@ https://gaurav-singh.info/resources/
 https://gaurav-singh.info/
 https://gaurav-singh.info/journal/design-of-my-personal-website/
 https://gaurav-singh.info/journal/evolution-of-my-personal-website/
+https://gaurav-singh.info/journal/story-of-experimental-maths-lab/
+https://gaurav-singh.info/journal/progress-through-stem-professional-program/
 https://gaurav-singh.info/map/
 https://gaurav-singh.info/recommendations/
 https://gaurav-singh.info/timeline/
