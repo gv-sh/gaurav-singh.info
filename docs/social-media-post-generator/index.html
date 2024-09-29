@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Personal Website of Gaurav Singh">
+        <meta name="keywords" content="Gaurav Singh, personal website, introduction, CV, journal, projects, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India Bangalore">
+        <meta name="author" content="Gaurav Singh">
+        <link rel="canonical" href="https://gaurav-singh.info/social-media-post-generator/">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+                onload="renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: '$$', right: '$$', display: true},
+                                {left: '$', right: '$', display: false},
+                            ],
+                            throwOnError : false
+                        });"></script>
+        <title>Gaurav Singh | Social Media Post Generator</title>
+        <link rel="stylesheet" href="/bundle.css">
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "Social Media Post Generator",
+            "description": "Exploring ML, data visualization, and ethical engineering solutions",
+            "url": "https://gaurav-singh.info/social-media-post-generator/"
+        }
+        </script>
+    </head>
+    <body>
+        <div style="display: flex; flex-direction: row;">
+            <div style="flex: 1; padding: 10px;">
+                <h2>Social Media Post Generator</h2>
+                <!-- Step 1: Artboard size selector -->
+                <label for="artboard-size">Select Artboard Size:</label>
+                <select id="artboard-size">
+                    <option value="1080x1080">Instagram Post (1080x1080)</option>
+                    <option value="1080x1920">Instagram Story (1080x1920)</option>
+                    <option value="1200x630">Facebook Post (1200x630)</option>
+                    <option value="1024x512">Twitter Post (1024x512)</option>
+                </select>
+                <!-- Step 2: Select background image -->
+                <label for="background-image">Select Background Image:</label>
+                <input type="file" id="background-image" accept="image/*">
+                <!-- Step 3: Add text -->
+                <button id="add-text">Add Text</button>
+                <!-- Step 5: Download the image -->
+                <button id="download-image">Download Image as .jpg</button>
+            </div>
+            <!-- Step 4: Live view -->
+            <div style="flex: 1; padding: 10px;">
+                <h3>Live View</h3>
+                <canvas id="live-view" style="border:1px solid #000; max-width: 100%; height: auto;"></canvas>
+            </div>
+        </div>
+        <script>
+            const canvas = document.getElementById('live-view');
+            const ctx = canvas.getContext('2d');
+            let backgroundImage = null;
+            let textNodes = [];
+            document.getElementById('artboard-size').addEventListener('change', function() {
+                const [width, height] = this.value.split('x').map(Number);
+                canvas.width = width;
+                canvas.height = height;
+                renderCanvas();
+            });
+            document.getElementById('background-image').addEventListener('change', function(event) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        backgroundImage = img;
+                        renderCanvas();
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            });
+            document.getElementById('add-text').addEventListener('click', function() {
+                const textNode = {
+                    content: prompt('Enter text:', 'Placeholder Text'),
+                    x: parseInt(prompt('Enter x position:', '50')),
+                    y: parseInt(prompt('Enter y position:', '50')),
+                    size: parseInt(prompt('Enter text size:', '16')),
+                    font: prompt('Enter font:', 'Helvetica'),
+                    alignment: prompt('Enter alignment (left, center, right):', 'left')
+                };
+                textNodes.push(textNode);
+                renderCanvas();
+            });
+            function renderCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if (backgroundImage) {
+                    const aspectRatio = backgroundImage.width / backgroundImage.height;
+                    let drawWidth = canvas.width;
+                    let drawHeight = canvas.height;
+                    if (canvas.width / canvas.height > aspectRatio) {
+                        drawWidth = canvas.height * aspectRatio;
+                    } else {
+                        drawHeight = canvas.width / aspectRatio;
+                    }
+                    ctx.drawImage(backgroundImage, 0, 0, drawWidth, drawHeight);
+                }
+                textNodes.forEach(node => {
+                    ctx.font = `${node.size}px ${node.font}`;
+                    ctx.textAlign = node.alignment;
+                    ctx.fillText(node.content, node.x, node.y);
+                    const textWidth = ctx.measureText(node.content).width;
+                    const textHeight = node.size;
+                    ctx.strokeRect(node.x, node.y - textHeight, textWidth, textHeight);
+                });
+            }
+            document.getElementById('download-image').addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.download = 'social-media-post.jpg';
+                link.href = canvas.toDataURL('image/jpeg');
+                link.click();
+            });
+            // Initialize canvas size
+            document.getElementById('artboard-size').dispatchEvent(new Event('change'));
+        </script>
+    </body>
+</html>

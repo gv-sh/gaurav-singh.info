@@ -3,10 +3,10 @@
         <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="I was part of the Art in Transit team to help students and artists to deploy their projects in metro stations in Bangalore, India. I helped pitch to collaborators and produce for the Festival of Stories in Bangalore in October and December 2016.">
-        <meta name="keywords" content="">
+        <meta name="description" content="The Personal Website of Gaurav Singh">
+        <meta name="keywords" content="Gaurav Singh, personal website, introduction, CV, journal, projects, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India Bangalore">
         <meta name="author" content="Gaurav Singh">
-        <link rel="canonical" href="https://gaurav-singh.info/work/research-assistant-at-ait/">
+        <link rel="canonical" href="https://gaurav-singh.info/social-media-gen/">
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
@@ -19,15 +19,15 @@
                             ],
                             throwOnError : false
                         });"></script>
-        <title>Gaurav Singh | Research assistant at Art in Transit, Srishti, India</title>
+        <title>Gaurav Singh | Social Media Post Generator</title>
         <link rel="stylesheet" href="/bundle.css">
         <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "WebPage",
-            "name": "Research assistant at Art in Transit, Srishti, India",
+            "name": "Social Media Post Generator",
             "description": "Exploring ML, data visualization, and ethical engineering solutions",
-            "url": "https://gaurav-singh.info/work/research-assistant-at-ait/"
+            "url": "https://gaurav-singh.info/social-media-gen/"
         }
         </script>
     </head>
@@ -71,28 +71,89 @@
 </aside>
         <!-- Main content -->
         <main>
-            <div class="item">
-                <h6 class="deck">Technology and Art</h6>
-                <h3>Research assistant at Art in Transit, Srishti, India</h3>
-                <p class="meta">
-                    2016-02-01 to  2016-12-31  / 10 months 
-                </p>
-            </div>
-            <p>Supervisors: Mr.Abhiyan Humane, Ms.Arzu Mistry</p>
-<p>I was part of the Art in Transit team to help students and artists to deploy their projects in metro stations in Bangalore, India. I helped pitch to collaborators and produce for the Festival of Stories in Bangalore in October and December 2016.</p>
-<p>More information available on <a href="mailto:gv-sh@outlook.com">request</a>.</p>
+            <div>
+    <h2>Social Media Post Generator</h2>
+<p><!-- Step 1: Artboard size selector -->
+<label for="artboard-size">Select Artboard Size:</label>
+<select id="artboard-size">
+<option value="1080x1080">Instagram Post (1080x1080)</option>
+<option value="1080x1920">Instagram Story (1080x1920)</option>
+<option value="1200x630">Facebook Post (1200x630)</option>
+<option value="1024x512">Twitter Post (1024x512)</option>
+</select></p>
+<p><!-- Step 2: Select background image -->
+<label for="background-image">Select Background Image:</label>
+<input type="file" id="background-image" accept="image/*"></p>
+<p><!-- Step 3: Add text node -->
+<div id="text-nodes">
+<h3>Text Nodes</h3>
+<button id="add-text-node">Add Text Node</button>
+</div></p>
+<p><!-- Step 4: Download the image -->
+<button id="download-image">Download Image as .jpg</button></p>
+</div>
+<script>
+    document.getElementById('add-text-node').addEventListener('click', function() {
+        const textNodeContainer = document.createElement('div');
+        textNodeContainer.classList.add('text-node-container');
+        textNodeContainer.innerHTML = `
+            <label for="text-content">Text Content:</label>
+            <input type="text" class="text-content">
+            <label for="text-x">X:</label>
+            <input type="number" class="text-x" value="0">
+            <label for="text-y">Y:</label>
+            <input type="number" class="text-y" value="0">
+            <label for="text-width">Width:</label>
+            <input type="number" class="text-width" value="100">
+            <label for="text-height">Height:</label>
+            <input type="number" class="text-height" value="50">
+            <label for="text-size">Text Size:</label>
+            <input type="number" class="text-size" value="16">
+            <label for="text-font">Font:</label>
+            <select class="text-font">
+                <option value="Helvetica">Helvetica</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+            <label for="text-alignment">Alignment:</label>
+            <select class="text-alignment">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+            </select>
+            <label for="text-location">Location:</label>
+            <select class="text-location">
+                <option value="top">Top</option>
+                <option value="top-left">Top-Left</option>
+                <option value="top-middle">Top-Middle</option>
+                <option value="top-right">Top-Right</option>
+                <option value="middle">Middle</option>
+                <option value="middle-left">Middle-Left</option>
+                <option value="middle-right">Middle-Right</option>
+                <option value="bottom">Bottom</option>
+                <option value="bottom-left">Bottom-Left</option>
+                <option value="bottom-middle">Bottom-Middle</option>
+                <option value="bottom-right">Bottom-Right</option>
+            </select>
+        `;
+        document.getElementById('text-nodes').appendChild(textNodeContainer);
+    });
+    document.getElementById('download-image').addEventListener('click', function() {
+        // Implement the logic to generate the image and download it as .jpg
+        alert('Download functionality to be implemented.');
+    });
+</script>
         </main>
         <!-- Footer -->
         <footer>
-    <p>            
+    <p>*Pages currently under construction.            
             <!-- Cite as -->
             <div class="cite-as">
-                <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Research assistant at Art in Transit, Srishti, India.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2016-02-01. <a href="https://gaurav-singh.info/work/research-assistant-at-ait/">https://gaurav-singh.info/work/research-assistant-at-ait/</a></p>-->
+                <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Social Media Post Generator.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2024-09-29. <a href="https://gaurav-singh.info/social-media-gen/">https://gaurav-singh.info/social-media-gen/</a></p>-->
                 <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
-                    const citationText = `Gaurav Singh. "Research assistant at Art in Transit, Srishti, India." The Personal Website of Gaurav Singh. Last modified 2016-02-01. https://gaurav-singh.info/work/research-assistant-at-ait/`;
+                    const citationText = `Gaurav Singh. "Social Media Post Generator." The Personal Website of Gaurav Singh. Last modified 2024-09-29. https://gaurav-singh.info/social-media-gen/`;
                     const copyLink = document.getElementById('copyLink');
                     const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
@@ -113,8 +174,7 @@
         <a target="_blank" href="https://x.com/gvsh_maths">X/Twitter</a> &nbsp;
         <a target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
         <br/>
-        <span id="current-time"></span> (UTC+10)<br/>&mdash;<br/>
-        *Pages currently under construction.
+        <span id="current-time"></span> (UTC+10)
     </p>
     <script>
         function updateTime() {

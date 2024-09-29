@@ -6,9 +6,6 @@ keywords: Gaurav Singh, personal website, introduction, CV, journal, projects, t
 sidebar: true
 ---
 
-![](/assets/20240715_142519.jpg)
-_Cradle mountain, Tasmania_
-
 ### Hello, I'm Gaurav, based in Gold Coast — Exploring ML and data visualisation to solve engineering challenges.
 
 Welcome to my digital space — think of this as an book. Start with the <!--[foreword](/foreword/) from friends, then flip to the--> [prologue](/prologue/) to see how it began. Check out my [CV](/cv/) for the basics, or dive into the [journal](/journal/) for stories and study notes. Explore chapters on my [education](/education/), [work](/work/), [teaching](/teaching/), [projects](/projects/), and [research](/research/). Along the way, meet my [peers](/peers/), [students](/students/), and [mentors](/mentors/). Don’t miss [Mathscapes](/mathscapes/), my life's project<!--, or the [store](/store/) for my latest stuff-->. Use the [index](/index/) to find your way around. I hope you find something useful or inspiring here.
@@ -20,7 +17,7 @@ Welcome to my digital space — think of this as an book. Start with the <!--[fo
 #### Latest from my journal  
 
 {% assign latestPosts = collections.journal | slice: 0, 10 %}
-{% for post in latestPosts %}{% if post.data.date %}{{ post.data.date | postDate }}{% endif %} <a href="{{ post.url }}">{{ post.data.title | truncate: 30 }}</a>{% unless forloop.last %}\{% endunless %}
+{% for entry in latestPosts %}{{ entry.data.date | postDate }} <a href="{{ entry.url }}" title="{{ entry.data.title }}">{{ entry.data.title | truncate: 40 }}</a>{% if entry.data.cover %}&nbsp;<img class="micro" src="{{ entry.data.cover }}"></img>{% endif %}{% unless forloop.last %}\{% endunless %}
 {% endfor %}
 
 --- 
