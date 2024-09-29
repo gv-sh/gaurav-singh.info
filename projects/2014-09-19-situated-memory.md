@@ -1,6 +1,6 @@
 ---
 tags: post
-title: "SnapTag — Leveraging Situated Memory to enhance self-efficacy for well-being"
+title: "SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being"
 showTitle: true
 attribution: with Suraj Baadkar
 date: 2014-09-19

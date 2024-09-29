@@ -1,6 +1,6 @@
 ---
 tags: post
-title: Future of Work — Imagining work experiences for the informal economy
+title: "Future of Work: Imagining work experiences for the informal economy"
 showTitle: true
 attribution: with Sarvashree Jain
 date: 2013-09-12
