@@ -70,6 +70,7 @@ https://gaurav-singh.info/journal/joys-of-teaching/
 https://gaurav-singh.info/research/reride-tei19/
 https://gaurav-singh.info/teaching/algorithms-computation-and-hci-2019/
 https://gaurav-singh.info/teaching/programming-as-design-tool-for-prototyping-2/
+https://gaurav-singh.info/journal/making-with-algorithms/
 https://gaurav-singh.info/teaching/making-with-algorithms/
 https://gaurav-singh.info/projects/reride/
 https://gaurav-singh.info/teaching/interaction-design-for-screens/
