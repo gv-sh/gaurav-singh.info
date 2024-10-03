@@ -16,4 +16,4 @@ Supervisor: Mr.Atul Saraf, [Dr.Naveen Bagalkot](/mentors/naveen-bagalkot/)
 
 Conducted workshop for faculty members at Srishti to build an understanding of shared ethics and values from diverse practices and pedagogies. Synthesised complex aspects into directions that led us to imagine new information systems.
 
-More information available on [request](mailto:gv-sh@outlook.com).
+More information available on [request](mailto:hi@gvsh.cc).

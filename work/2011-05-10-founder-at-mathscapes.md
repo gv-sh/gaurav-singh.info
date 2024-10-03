@@ -13,4 +13,4 @@ permalink: /work/founder-at-mathscapes/
 
 I lead Mathscapes, which develops open-source tools and resources to make maths accessible to people. Our collaborators include Adobe and several other independent artists, designers and researchers to help them design computer-based algorithms, tools/software integrations, and prototypes.
 
-More information available on [request](mailto:gv-sh@outlook.com).
+More information available on [request](mailto:hi@gvsh.cc).

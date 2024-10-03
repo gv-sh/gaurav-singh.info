@@ -18,4 +18,4 @@ I worked on the design and programming for the posture-sensing module under the 
 
 [List of courses/workshops taught at Srishti](/teaching/)
 
-More information available on [request](mailto:gv-sh@outlook.com).
+More information available on [request](mailto:hi@gvsh.cc).

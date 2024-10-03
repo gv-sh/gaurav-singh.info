@@ -15,4 +15,4 @@ permalink: /work/ra-to-dr-javanbakht/
 
 To study and use machine learning algorithms to extend an existing method, i.e. ‘Plastic- hinge tracing’ to detect complex deformation mechanisms in re-entrant honeycomb auxetics. Co-authored one manuscript* as the primary author (responsible for project execution and manuscript draft) and two more near completion.
 
-More information available on [request](mailto:gv-sh@outlook.com).
+More information available on [request](mailto:hi@gvsh.cc).
