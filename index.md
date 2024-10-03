@@ -20,6 +20,8 @@ Welcome to my digital space — think of this as an book. Start with the <!--[fo
 {% for entry in latestPosts %}{{ entry.data.date | postDate }} <a href="{{ entry.url }}" title="{{ entry.data.title }}">{{ entry.data.title | truncate: 40 }}</a>{% if entry.data.cover %}&nbsp;<img class="micro" src="{{ entry.data.cover }}"></img>{% endif %}{% unless forloop.last %}\{% endunless %}
 {% endfor %}
 
+[View all posts](/journal/)
+
 --- 
 
 #### Featured pages
