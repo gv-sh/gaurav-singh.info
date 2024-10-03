@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Year in Review
+deck: Yearly note
 title: "Yearly note 2019: Beyond classrooms"
 showTitle: true
 date: 2019-12-31

@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Year in Review
+deck: Yearly note
 title: "Yearly note 2022: Leaving Srishti"
 showTitle: true
 date: 2022-12-31

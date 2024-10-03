@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Year in Review
+deck: Yearly note
 title: "Yearly note 2016: In transit"
 showTitle: true
 date: 2016-12-31

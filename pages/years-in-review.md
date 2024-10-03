@@ -6,4 +6,4 @@ keywords: Gaurav Singh, personal website, years in review, Griffith University, 
 permalink: /years-in-review/
 ---
 
-{% for entry in collections.journal %}{% if entry.data.deck == "Year in Review" %}<a href="{{ entry.url }}">{{ entry.data.title }}</a><br/>{% endif %}{% endfor %}
+{% for entry in collections.journal %}{% if entry.data.deck == "Yearly note" %}<a href="{{ entry.url }}">{{ entry.data.title }}</a><br/>{% endif %}{% endfor %}

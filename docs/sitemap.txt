@@ -79,6 +79,7 @@ https://gaurav-singh.info/journal/beyond-classrooms/
 https://gaurav-singh.info/journal/svideo-synced-video-playback-with-raspberry-pi/
 https://gaurav-singh.info/teaching/design-and-futures/
 https://gaurav-singh.info/teaching/drawing-fractals-with-code/
+https://gaurav-singh.info/journal/deconstructing-algorithms-2020/
 https://gaurav-singh.info/m56/
 https://gaurav-singh.info/mathscapes/
 https://gaurav-singh.info/projects/deconstructing-algorithms-2020/

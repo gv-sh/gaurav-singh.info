@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Year in Review
+deck: Yearly note
 title: "Yearly note 2017: Back to Srishti"
 showTitle: true
 date: 2017-12-31

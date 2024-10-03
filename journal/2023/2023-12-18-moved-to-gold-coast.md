@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Year in Review
+deck: Yearly note
 title: "Yearly note 2023: Moved to Gold Coast"
 showTitle: true
 date: 2023-12-18

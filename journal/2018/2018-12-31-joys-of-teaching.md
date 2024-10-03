@@ -1,6 +1,6 @@
 ---
 tags: post
-deck: Year in Review
+deck: Yearly note
 title: "Yearly note 2018: Joys of teaching"
 showTitle: true
 date: 2018-12-31

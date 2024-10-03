@@ -8,16 +8,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("bundle.css");
   eleventyConfig.addCollection("projects", function (collection) {
-    return collection.getFilteredByGlob("projects/*.md").reverse();
+    return collection.getFilteredByGlob("projects/**/*.md").reverse();
   });
   eleventyConfig.addCollection("research", function (collection) {
-    return collection.getFilteredByGlob("research/*.md").reverse();
+    return collection.getFilteredByGlob("research/**/*.md").reverse();
   });
   eleventyConfig.addCollection("teaching", function (collection) {
-    return collection.getFilteredByGlob("teaching/*.md").reverse();
+    return collection.getFilteredByGlob("teaching/**/*.md").reverse();
   });
   eleventyConfig.addCollection("journal", function (collection) {
-    return collection.getFilteredByGlob("journal/*.md").reverse();
+    return collection.getFilteredByGlob("journal/**/*.md").reverse();
   });
   eleventyConfig.addCollection("cv", function (collection) {
     return collection.getFilteredByGlob("cv/*.md").reverse();
