@@ -455,6 +455,19 @@ aside ul li a {
     display: block;
 }
 
+.grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-size);
+    margin-bottom: var(--gap-size);
+}
+
+.grid-3 img {
+    width: var(--dimension-full);
+    height: var(--dimension-auto);
+    display: block;
+}
+
 .store {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);

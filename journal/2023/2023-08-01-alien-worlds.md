@@ -16,7 +16,7 @@ In "Alien Worlds," I've used Stable Diffusion XL to envision the life forms of a
 ![01](/assets/alienworlds/aw_ep1_1.jpg)
 _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at Mars's once lush and thriving ecosystems_
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep1_1.jpg"><div class="caption">P1/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep1_2.jpg"><div class="caption">P1/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep1_3.jpg"><div class="caption">P1/3</div></div>
@@ -28,7 +28,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep1_9.jpg"><div class="caption">P1/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep2_1.jpg"><div class="caption">P2/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep2_2.jpg"><div class="caption">P2/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep2_3.jpg"><div class="caption">P2/3</div></div>
@@ -40,7 +40,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep2_9.jpg"><div class="caption">P2/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep3_1.jpg"><div class="caption">P3/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep3_2.jpg"><div class="caption">P3/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep3_3.jpg"><div class="caption">P3/3</div></div>
@@ -52,7 +52,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep3_9.jpg"><div class="caption">P3/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep4_1.jpg"><div class="caption">P4/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep4_2.jpg"><div class="caption">P4/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep4_3.jpg"><div class="caption">P4/3</div></div>
@@ -64,7 +64,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep4_9.jpg"><div class="caption">P4/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep5_1.jpg"><div class="caption">P5/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep5_2.jpg"><div class="caption">P5/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep5_3.jpg"><div class="caption">P5/3</div></div>
@@ -76,7 +76,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep5_9.jpg"><div class="caption">P5/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep6_1.jpg"><div class="caption">P6/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep6_2.jpg"><div class="caption">P6/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep6_3.jpg"><div class="caption">P6/3</div></div>
@@ -88,7 +88,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep6_9.jpg"><div class="caption">P6/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep7_1.jpg"><div class="caption">P7/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep7_2.jpg"><div class="caption">P7/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep7_3.jpg"><div class="caption">P7/3</div></div>
@@ -100,7 +100,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep7_9.jpg"><div class="caption">P7/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep8_1.jpg"><div class="caption">P8/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep8_2.jpg"><div class="caption">P8/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep8_3.jpg"><div class="caption">P8/3</div></div>
@@ -112,7 +112,7 @@ _Elysian Seedling: A primordial flora with delicate spiny textures, hinting at M
     <div><img src="/assets/alienworlds/aw_ep8_9.jpg"><div class="caption">P8/9</div></div>
 </div>
 
-<div class="grid">
+<div class="grid-3">
     <div><img src="/assets/alienworlds/aw_ep9_1.jpg"><div class="caption">P9/1</div></div>
     <div><img src="/assets/alienworlds/aw_ep9_2.jpg"><div class="caption">P9/2</div></div>
     <div><img src="/assets/alienworlds/aw_ep9_3.jpg"><div class="caption">P9/3</div></div>
