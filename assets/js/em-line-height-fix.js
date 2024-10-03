@@ -1,8 +1,8 @@
-document.querySelectorAll('p').forEach(p => {
-    const em = p.querySelector('em');
+document.querySelectorAll('p, li').forEach(element => {
+    const em = element.querySelector('em');
     
-    // Check if the paragraph has text content outside of the <em> tag
-    const hasTextNodes = Array.from(p.childNodes).some(node => {
+    // Check if the element has text content outside of the <em> tag
+    const hasTextNodes = Array.from(element.childNodes).some(node => {
       return node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0;
     });
     
@@ -16,4 +16,4 @@ document.querySelectorAll('p').forEach(p => {
     if (em && hasTextNodes) {
       em.style.display = 'inline';
     }
-  });
+});

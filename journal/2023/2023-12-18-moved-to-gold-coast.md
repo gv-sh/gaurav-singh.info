@@ -4,7 +4,7 @@ deck: Yearly note
 title: "Yearly note 2023: Moved to Gold Coast"
 showTitle: true
 date: 2023-12-18
-cover: /assets/goldcoast.jpg
+cover: /assets/images/2023/IMG_0021.jpeg
 layout: post.njk
 description: 2023 was a year of significant challenges and changes, each decision I made influencing the course of my life in unexpected ways. It all started with a major decision and an unforeseen setback that made me rethink my path. In September 2022, I made the hard choice to resign from my faculty position at Srishti-Manipal Institute, largely due to ongoing issues with work assessments and compensation. It felt like stepping into uncertainty, as I didn’t have my next steps planned out. Despite the frustration, I held onto hope, especially after receiving encouragement from Dr. Venkat, who motivated me to consider pursuing a PhD. However, I quickly realized I needed to gather my transcripts from my post-graduate studies—a task I hadn’t thought about in nearly a decade. Getting my ADP transcripts from 2013-15 introduced me to the administrative challenges of academia, but with the support of my mentors, I was able to navigate the process.
 keywords: 2023 reflection, career challenges, academic setbacks, PhD rejection, unconventional education, Srishti-Manipal resignation, ADP transcripts, academia bureaucracy, Simba recovery, family support, financial challenges, PhD pursuit, masters in Australia, Griffith University, IT and Data Analytics, academic growth, research proposal, thesis development, remote work struggles, supervisor relationship, design education, research opportunities, personal growth, resilience, adaptability, setbacks and breakthroughs
