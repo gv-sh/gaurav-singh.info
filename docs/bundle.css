@@ -442,14 +442,14 @@ aside ul li a {
     }
 }
 
-.grid {
+.grid-2 {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-size);
     margin-bottom: var(--gap-size);
 }
 
-.grid img {
+.grid-2 img {
     width: var(--dimension-full);
     height: var(--dimension-auto);
     display: block;
