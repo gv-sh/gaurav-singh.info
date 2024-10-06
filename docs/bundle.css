@@ -446,7 +446,7 @@ aside ul li a {
     footer {
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: var(--padding-body);
     }
 
     footer .left, footer .right {
@@ -629,15 +629,15 @@ img.micro {
 .social-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
     justify-content: left;
+    padding-left: 8px;
 }
 
 .social-icons a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.25em;
     border-bottom: none;
 }
 
@@ -650,9 +650,10 @@ footer {
     bottom: 0;
     left: 50%; /* Center the footer */
     transform: translateX(-50%); /* Adjust for the width of the footer */
-    width: calc(100% - 2 * var(--padding-body)); /* Use full width minus padding */
-    max-width: var(--max-width-body); /* Ensure it doesn't exceed max width */
-    padding: var(--padding-body-small);
+    width: calc(var(--max-width-body) - 2 * var(--padding-body));
+    max-width: 100%;
+    padding-top: var(--padding-body-small);
+    padding-bottom: var(--padding-body-small);
     background-color: var(--primary-bg-color-transparent);
     display: flex;
     justify-content: center; /* Centered content */

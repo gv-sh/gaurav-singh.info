@@ -41,13 +41,12 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("mentors/*.md").reverse();
   });
   eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toISODate();
+    return DateTime.fromJSDate(dateObj).toFormat("dd.MM.yy");
   });
   eleventyConfig.addFilter("postYear", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
   eleventyConfig.addFilter('truncate', truncate);
-
   eleventyConfig.addTransform("removeEmptyLines", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
       return content.replace(/^\s*\n/gm, "");
