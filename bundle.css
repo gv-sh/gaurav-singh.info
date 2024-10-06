@@ -4,6 +4,7 @@
     --primary-bg-color: #fff;
     --primary-text-color: #000;
     --secondary-bg-color: #fff;
+    --primary-bg-color-transparent: rgba(255, 255, 255, 1);
     --semi-transparent-border: rgba(0, 0, 0, 1);
     --hover-border: #0033CC;
     --highlight-color: #0033CC;
@@ -102,6 +103,7 @@
         --color-midgrey: #fff;
         --color-lightgrey: #fff;
         --color-darkgrey: #fff;
+        --primary-bg-color-transparent: rgba(0, 0, 0, 1);
     }
 }
 
@@ -123,6 +125,7 @@ aside {
     float: left;
     border-right: var(--border-strong);
     margin-right: var(--margin-medium);
+    margin-bottom: 200px;
 }
 
 aside ul {
@@ -177,6 +180,7 @@ ol li {
 main {
     margin-left: var(--margin-left-main);
     max-width: var(--dimension-full);
+    margin-bottom: 200px;
 }
 
 a {
@@ -282,12 +286,7 @@ nav ol li {
     margin-right: var(--margin-list-item);
 }
 
-footer {
-    margin-top: var(--margin-large);
-    margin-bottom: var(--margin-large);
-    padding-top: var(--margin-large);
-    clear: both;
-}
+
 
 img {
     max-width: var(--dimension-full);
@@ -432,6 +431,7 @@ aside ul li a {
     aside {
         border-bottom: var(--border-strong);
         margin-bottom: 64px;
+        padding-bottom: var(--padding-body);
     }
 
     aside ul {
@@ -440,6 +440,7 @@ aside ul li a {
         break-inside: avoid;
         break-after: avoid;
     }
+
 }
 
 .grid-2 {
@@ -605,4 +606,63 @@ img.micro {
 
 .right {
     float: right;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: left;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    border-bottom: none;
+    padding: 0.25em;
+}
+
+.social-icons a:hover {
+    border-bottom: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Center the footer */
+    transform: translateX(-50%); /* Adjust for the width of the footer */
+    width: calc(100% - 2 * var(--padding-body)); /* Use full width minus padding */
+    max-width: var(--max-width-body); /* Ensure it doesn't exceed max width */
+    padding: var(--padding-body);
+    background-color: var(--primary-bg-color-transparent);
+    display: flex;
+    justify-content: center; /* Centered content */
+    border-top: var(--border-strong);
+}
+
+footer .left {
+    width: calc(var(--max-width-body) * 0.7); /* Removed float */
+}
+
+footer .right {
+    width: calc(var(--max-width-body) * 0.3); /* Removed float */
+    text-align: right;
+}
+
+footer .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: var(--primary-text-color);
+    text-shadow: 0 1px 1px var(--primary-bg-color);
+    border-bottom: none;
+}
+
+footer a:hover {
+    border-bottom: var(--border-default);
 }

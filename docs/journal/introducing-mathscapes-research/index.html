@@ -9,6 +9,7 @@
         <link rel="canonical" href="https://gaurav-singh.info/journal/introducing-mathscapes-research/">
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+        <script src="https://kit.fontawesome.com/f3cb49a58e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
@@ -92,7 +93,16 @@
         </main>
         <!-- Footer -->
         <footer>
-    <p>            
+    <div class="left social-icons">
+        <a target="_blank" href="mailto:hi@gvsh.cc"><i class="fa-solid fa-envelope"></i></a> &nbsp;
+        <a target="_blank" href="https://linkedin.com/in/gv-sh"><i class="fa-brands fa-linkedin"></i></a> &nbsp;
+        <a target="_blank" href="https://instagram.com/themakingofnow"><i class="fa-brands fa-instagram"></i></a> &nbsp;
+        <a target="_blank" href="https://scholar.google.com/citations?user=VZ5g3-YAAAAJ&hl=en"><i class="fa-solid fa-graduation-cap"></i></a> &nbsp;
+        <a target="_blank" href="https://github.com/gvsh"><i class="fa-brands fa-github"></i></a> &nbsp;
+        <a target="_blank" href="https://x.com/gvsh_maths"><i class="fa-brands fa-x-twitter"></i></a> &nbsp;
+        <a target="_blank" href="https://orcid.org/0000-0003-1651-6602"><i class="fa-brands fa-orcid"></i></a>
+    </div>
+    <div class="right">
             <!-- Cite as -->
             <div class="cite-as">
                 <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Introducing Mathscapes Research.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2016-09-01. <a href="https://gaurav-singh.info/journal/introducing-mathscapes-research/">https://gaurav-singh.info/journal/introducing-mathscapes-research/</a></p>-->
@@ -116,35 +126,7 @@
                 } 
                 </script>
             </div> &nbsp;
-        <a target="_blank" href="https://linkedin.com/in/gv-sh">LinkedIn</a> &nbsp;
-        <a target="_blank" href="https://instagram.com/themakingofnow">IG.</a> &nbsp;
-        <a target="_blank" href="https://x.com/gvsh_maths">X/Twitter</a> &nbsp;
-        <a target="_blank" href="https://orcid.org/0000-0003-1651-6602">ORCID (Outdated)</a>
-        <br/>
-        <span id="current-time"></span> (UTC+10)<br/>&mdash;<br/>
-        *Pages currently under construction.
-    </p>
-    <script>
-        function updateTime() {
-            const now = new Date();
-            const options = { 
-                timeZone: 'Australia/Brisbane',
-                weekday: 'short',
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit',
-                hour12: false
-            };
-            const dateTimeString = now.toLocaleString('en-AU', options);
-            document.getElementById('current-time').textContent = dateTimeString;
-        }
-        // Update time immediately and then every second
-        updateTime();
-        setInterval(updateTime, 1000);
-    </script>
+    </div>
 </footer> 
         <script src="/assets/js/em-line-height-fix.js"></script>
     </body>
