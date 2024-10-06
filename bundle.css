@@ -93,7 +93,7 @@
         --primary-bg-color: #000;
         --primary-text-color: #fff;
         --secondary-bg-color: #000;
-        --semi-transparent-border: rgba(255, 255, 255, 0.2);
+        --semi-transparent-border: rgba(255, 255, 255, 1);
         --hover-border: rgba(255, 255, 255, 0.5);
         --highlight-color: #ffffff;
         --link-color: #ffffff;
