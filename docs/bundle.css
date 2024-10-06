@@ -441,6 +441,22 @@ aside ul li a {
         break-after: avoid;
     }
 
+    footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .left, footer .right {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .right {
+        width: 100%;
+    }
+
 }
 
 .grid-2 {
