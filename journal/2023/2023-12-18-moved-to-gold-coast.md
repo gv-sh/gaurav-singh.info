@@ -26,7 +26,7 @@ Not long after, I encountered a major setback. My application for a PhD was reje
     <img src="/assets/images/2023/IMG_0017.jpeg" alt="Image 9"/>
 </div>
 
-_Clockwise L to R: Outside Australia Fair, Southport; The road crossing to Broadwater Parklands; The Spit, Gold Coast; Sea urchins at the Spit_
+_Clockwise L to R: Outside Australia Fair, Southport; The road crossing to Broadwater Parklands; Sea urchins at the Spit; The Spit, Gold Coast; _
 
 However, 2023 also brought a renewed sense of purpose. I decided to focus on producing quality research that could be published. Balancing this with taking care of Simba, I also considered remote work to supplement my savings, though I didn’t manage to figure that out. Conversations with professors from various parts of the world were insightful and showed me how important it is to find a supervisor who truly understands and values my unique academic background. My diverse experiences, especially my post-graduation in design, continued to make things complicated in terms of finding the right PhD opportunities. This phase again taught me the value of perseverance and finding the right fit for my academic journey.
 
