@@ -8,6 +8,7 @@ layout: post.njk
 description: 
 keywords: 
 permalink: /journal/photo-essay-flowers-of-toowoomba/
+cover: /assets/images/2024/toowoomba/mt-lofty.jpeg
 --- 
 
 ![A view from Mt Lofty Range from Toowoomba](/assets/images/2024/toowoomba/mt-lofty.jpeg)
