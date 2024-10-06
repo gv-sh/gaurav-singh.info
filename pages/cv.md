@@ -10,10 +10,10 @@ permalink: /cv/
 ### Latest
 
 {% assign sorted_entries = collections.cv | sort: 'data.year', 'data.code' | reverse | where: 'data.active', true %}
-{% for entry in sorted_entries %}{{ entry.data.year }} <span class="doc-code">[{{ entry.data.code }}]</span> <a target="_blank" href="{{ entry.data.link }}" title="{{ entry.data.title }}">{{ entry.data.title }}</a>{% unless forloop.last %}\{% endunless %}
+{% for entry in sorted_entries %}{{ entry.data.year }} <a target="_blank" href="{{ entry.data.link }}" title="{{ entry.data.title }}">{{ entry.data.title }}</a> <span class="right">(Ver. {{ entry.data.code }})</span>{% unless forloop.last %}\{% endunless %}
 {% endfor %}
 
 ### Older versions
 {% assign sorted_entries = collections.cv | sort: 'data.year', 'data.code' | reverse | where: 'data.active', false %}
-{% for entry in sorted_entries %}{{ entry.data.year }} <span class="doc-code">[{{ entry.data.code }}]</span> <a target="_blank" href="{{ entry.data.link }}" title="{{ entry.data.title }}">{{ entry.data.title }}</a>{% unless forloop.last %}\{% endunless %}
+{% for entry in sorted_entries %}{{ entry.data.year }} <a target="_blank" href="{{ entry.data.link }}" title="{{ entry.data.title }}">{{ entry.data.title }}</a> <span class="right">(Ver. {{ entry.data.code }})</span>{% unless forloop.last %}\{% endunless %}
 {% endfor %}

@@ -1,7 +1,7 @@
 ---
 tags: post
-code: GS-CVA-2024.01
-title: Curriculum Vitae - Academic
+code: 0.3
+title: CV - Academic
 year: 2024
 layout: work.njk
 permalink: /cv/academic/2024/

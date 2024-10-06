@@ -1,7 +1,7 @@
 ---
 tags: post
-code: GS-CVA-2022.01
-title: Curriculum Vitae - Academic
+code: 0.2
+title: CV - Academic
 year: 2022
 layout: work.njk
 permalink: /cv/academic/2022/

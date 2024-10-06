@@ -1,7 +1,7 @@
 ---
 tags: post
-code: GS-CVA-2017.01
-title: Curriculum Vitae - Academic
+code: 0.1
+title: CV - Academic
 year: 2017
 layout: work.njk
 permalink: /cv/academic/2017/

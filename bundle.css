@@ -602,3 +602,7 @@ img.micro {
     display: inline-block;
     float: right;
 }
+
+.right {
+    float: right;
+}

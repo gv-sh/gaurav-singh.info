@@ -1,7 +1,7 @@
 ---
 tags: post
-code: GS-CVR-2024.02
-title: Curriculum Vitae
+code: 0.7
+title: CV - Professional
 year: 2024
 layout: work.njk
 permalink: /cv/2024/revision/
