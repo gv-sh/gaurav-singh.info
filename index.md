@@ -12,7 +12,7 @@ Welcome to my digital space — think of this as an book. Start with the <!--[fo
 
 [Email](mailto:hi@gvsh.cc)
  
---- 
+---  
 
 #### Latest from my journal  
 
