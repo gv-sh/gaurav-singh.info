@@ -6,9 +6,9 @@
     --secondary-bg-color: #fff;
     --primary-bg-color-transparent: rgba(255, 255, 255, 1);
     --semi-transparent-border: rgba(0, 0, 0, 1);
-    --hover-border: #0033CC;
-    --highlight-color: #0033CC;
-    --link-color: #0033CC;
+    --hover-border: #0033CC; /* Default for Windows */
+    --highlight-color: #0033CC; /* Default for Windows */
+    --link-color: #0033CC; /* Default for Windows */
     --green-color: green;
 
     --font-family-serif: 'Times New Roman', Times, serif;
