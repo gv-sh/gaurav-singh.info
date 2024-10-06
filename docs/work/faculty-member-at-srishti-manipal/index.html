@@ -95,7 +95,7 @@
             <!-- Cite as -->
             <div class="cite-as">
                 <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Faculty member at Srishti-Manipal, India.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2017-07-01. <a href="https://gaurav-singh.info/work/faculty-member-at-srishti-manipal/">https://gaurav-singh.info/work/faculty-member-at-srishti-manipal/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -105,7 +105,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite this page';
+                            copyLink.textContent = 'Cite';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {

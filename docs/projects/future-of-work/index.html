@@ -97,7 +97,7 @@
             <!-- Cite as -->
             <div class="cite-as">
                 <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Future of Work: Imagining work experiences for the informal economy.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2013-09-12. <a href="https://gaurav-singh.info/projects/future-of-work/">https://gaurav-singh.info/projects/future-of-work/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -107,7 +107,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite this page';
+                            copyLink.textContent = 'Cite';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {

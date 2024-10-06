@@ -105,7 +105,7 @@
             <!-- Cite as -->
             <div class="cite-as">
                 <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Shannon&#39;s theory of information.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2011-11-03. <a href="https://gaurav-singh.info/journal/shannons-theory-of-information/">https://gaurav-singh.info/journal/shannons-theory-of-information/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -115,7 +115,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite this page';
+                            copyLink.textContent = 'Cite';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {

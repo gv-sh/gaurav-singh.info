@@ -163,7 +163,7 @@ $$
             <!-- Cite as -->
             <div class="cite-as">
                 <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Prime numbers and their properties.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2013-03-05. <a href="https://gaurav-singh.info/journal/prime-numbers-and-their-properties/">https://gaurav-singh.info/journal/prime-numbers-and-their-properties/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -173,7 +173,7 @@ $$
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite this page';
+                            copyLink.textContent = 'Cite';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {

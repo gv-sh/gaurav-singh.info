@@ -87,7 +87,7 @@
             <!-- Cite as -->
             <div class="cite-as">
                 <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>M56.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2020-12-01. <a href="https://gaurav-singh.info/m56/">https://gaurav-singh.info/m56/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -97,7 +97,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite this page';
+                            copyLink.textContent = 'Cite';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {
