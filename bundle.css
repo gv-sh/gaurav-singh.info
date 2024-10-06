@@ -41,9 +41,9 @@
     --line-height-tight: 1;
     --line-height-loose: 1.25;
 
-    --width-aside: 148px;
-    --margin-left-main: 180px;
-    --max-width-body: 768px;
+    --width-aside: 160px;
+    --margin-left-main: 200px;
+    --max-width-body: 800px;
 
     --gap-size: 2px;
     --height-spacer: 1em;
@@ -408,7 +408,7 @@ aside ul li a {
     font-weight: var(--font-weight-normal);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     aside,
     main {
