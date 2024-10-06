@@ -102,8 +102,7 @@
     <div class="right">
             <!-- Cite as -->
             <div class="cite-as">
-                <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Tools.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2024-09-04. <a href="https://gaurav-singh.info/tools/">https://gaurav-singh.info/tools/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -113,7 +112,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite';
+                            copyLink.textContent = 'Cite this page';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {
@@ -122,11 +121,9 @@
                     });
                 } 
                 </script>
-            </div> &nbsp;
+            </div>
     </div>
 </footer> 
         <script src="/assets/js/em-line-height-fix.js"></script>
-        <!-- Add this before the closing </body> tag -->
-        <script src="/path/to/script.js"></script>
     </body>
 </html>

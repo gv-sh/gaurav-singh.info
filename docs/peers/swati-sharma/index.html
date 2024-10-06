@@ -92,8 +92,7 @@
     <div class="right">
             <!-- Cite as -->
             <div class="cite-as">
-                <!--<p><em>Cite this page as:</em> Gaurav Singh. <b>Swati Sharma.</b> <i>The Personal Website of Gaurav Singh</i>. Last modified 2023-11-06. <a href="https://gaurav-singh.info/peers/swati-sharma/">https://gaurav-singh.info/peers/swati-sharma/</a></p>-->
-                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite</a>
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
@@ -103,7 +102,7 @@
                     navigator.clipboard.writeText(citationText).then(() => {
                         copyLink.textContent = 'Citation copied';
                         setTimeout(() => {
-                            copyLink.textContent = 'Cite';
+                            copyLink.textContent = 'Cite this page';
                             window.scrollTo(0, originalScrollPosition);
                         }, 3000);
                     }).catch(err => {
@@ -112,7 +111,7 @@
                     });
                 } 
                 </script>
-            </div> &nbsp;
+            </div>
     </div>
 </footer> 
         <script src="/assets/js/em-line-height-fix.js"></script>
