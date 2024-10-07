@@ -37,7 +37,7 @@ In 2023, I transitioned to Griffith University to further explore the applicatio
 
 #### Research and Areas of Interest
 
-My research interests are grounded in applying machine learning to solve practical problems, especially in data visualization and accessibility. I am focused on using machine learning to transform complex datasets into intuitive visual formats, democratizing technology and making it easier for users to engage with data. Additionally, I am invested in [algorithmic explainability](https://gaurav-singh.info/research/algorithmic-explainability), ensuring that technological tools are transparent and user-friendly.
+My research interests are grounded in applying machine learning to solve practical problems, especially in data visualization and accessibility. I am focused on using machine learning to transform complex datasets into intuitive visual formats, democratizing technology and making it easier for users to engage with data. Additionally, I am invested in algorithmic explainability, ensuring that technological tools are transparent and user-friendly.
 
 Notably, I was the lead designer and programmer for the ReRide project, which focused on developing personal informatics tools for motorbike commuters, including a posture-sensing module for real-time feedback. This work resulted in research papers presented at INTERACT 2017 and TEI 2019. I also collaborated on the SnapTag project, exploring the use of situated memory to enhance self-efficacy, presented at the India HCI 2014 Conference. My recent work includes collaborating with Dr. Zia Javanbakht at Griffith University on using machine learning to enhance deformation detection in complex materials.
 
