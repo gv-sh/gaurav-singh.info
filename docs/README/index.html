@@ -1,4 +1,30 @@
-<p>Build instructions:
-npx @11ty/eleventy --input=. --output=docs --serve
-find . -name &quot;<em>.md&quot; -type f ! -name &quot;all_content.md&quot; -print0 | xargs -0 cat &gt; dataset/all_content.md
-sed -e 's/&lt;[^&gt;]</em>&gt;//g' dataset/all_content.md &gt; dataset/all_content_no_html.md</p>
+<h1>gaurav-singh.info</h1>
+<h2>Overview</h2>
+<p>This project is designed to serve as my personal website, showcasing my biography, research, teaching, and projects. It aims to provide visitors with insights into my professional background and current work.</p>
+<h2>Usage</h2>
+<p>To build and serve the project, use the following command:</p>
+<pre><code class="language-bash">npx @11ty/eleventy --input=. --output=docs --serve
+</code></pre>
+<h2>Additional Commands</h2>
+<p>To concatenate all markdown files into one:</p>
+<pre><code class="language-bash">find . -name &quot;*.md&quot; -type f ! -name &quot;all_content.md&quot; -print0 | xargs -0 cat &gt; dataset/all_content.md
+</code></pre>
+<p>To remove HTML tags from the concatenated file:</p>
+<pre><code class="language-bash">sed -e 's/&lt;[^&gt;]*&gt;//g' dataset/all_content.md &gt; dataset/all_content_no_html.md
+</code></pre>
+<h2>Website Structure</h2>
+<ul>
+<li><strong>Bio</strong>: A brief introduction about myself.</li>
+<li><strong>Research</strong>: Information on my research interests and publications.</li>
+<li><strong>Teaching</strong>: Details about my teaching philosophy and courses.</li>
+<li><strong>Projects</strong>: A showcase of my projects and contributions.</li>
+<li><strong>Journal</strong>: Personal reflections and updates.</li>
+<li><strong>Work</strong>: Overview of my professional experience.</li>
+</ul>
+<h2>Contributing</h2>
+<p>If you would like to contribute to this project, please follow these guidelines:</p>
+<ul>
+<li>Fork the repository</li>
+<li>Create a new branch for your feature or bug fix</li>
+<li>Submit a pull request with a clear description of your changes</li>
+</ul>

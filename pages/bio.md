@@ -23,14 +23,14 @@ My growing interest in how technology could address societal challenges inspired
 
 My professional journey has been a combination of academia, research, and design. From 2008 to 2015, I worked independently as a designer, where I led Mathscapes, an ongoing initiative to create accessible research tools through mathematics. One of the notable outcomes of Mathscapes was the development of a visual exploration tool for fractals, designed to help users intuitively understand complex mathematical patterns.
 
-In 2017, I joined Srishti Manipal Institute as a faculty member, where I facilitated courses in programming, mathematics, and human-computer interaction (HCI). During this time, I co-established the Experimental Mathematics Lab with Vineeta Rath, promoting interdisciplinary exploration. I also led the M.Des. Design Computation program, mentoring students on projects focused on algorithmic explainability and natural language processing (NLP).
+In 2017, I joined Srishti Manipal Institute as a faculty member, where I facilitated courses in programming, mathematics, and human-computer interaction (HCI). During this time, I co-established the Experimental Maths Lab with Vineeta Rath, promoting interdisciplinary exploration. I also led the M.Des. Design Computation program, mentoring students on projects focused on algorithmic explainability and natural language processing (NLP).
 
 <div class="grid-2">
 <img src="/assets/images/2020/maths-lab.jpeg" alt="Maths lab" />
 <img src="/assets/images/2021/magflora-00.jpg" alt="Maths lab" />
 </div>
 
-_Experimental Mathematics Lab, Srishti Manipal Institute of Art and Design (2020, 2021)_
+_Experimental Maths Lab (2020), Magflora (2021)_
 
 
 In 2023, I transitioned to Griffith University to further explore the applications of machine learning in engineering, data visualization, and image processing. Throughout my academic career, teaching and mentorship have been key components, where I have worked to cultivate an interdisciplinary mindset among students, encouraging them to think analytically and creatively.
@@ -38,6 +38,13 @@ In 2023, I transitioned to Griffith University to further explore the applicatio
 #### Research and Areas of Interest
 
 My research interests are grounded in applying machine learning to solve practical problems, especially in data visualization and accessibility. I am focused on using machine learning to transform complex datasets into intuitive visual formats, democratizing technology and making it easier for users to engage with data. Additionally, I am invested in algorithmic explainability, ensuring that technological tools are transparent and user-friendly.
+
+<div class="grid-2">
+<img src="/assets/images/2014/slabs-review.jpg" alt="Maths lab" />
+<img src="/assets/images/2019/reride-new.jpg" alt="Maths lab" />
+</div>
+
+_SnapTag (2014), ReRide (2019)_
 
 Notably, I was the lead programmer for the ReRide project, which focused on developing personal informatics tools for motorbike commuters, including a posture-sensing module for real-time feedback. This work resulted in research papers presented at INTERACT 2017 and TEI 2019. I also collaborated on the SnapTag project, exploring the use of situated memory to enhance self-efficacy, presented at the India HCI 2014 Conference. My recent work includes collaborating with Dr. Zia Javanbakht at Griffith University on using machine learning to enhance deformation detection in complex materials.
 
