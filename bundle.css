@@ -50,7 +50,7 @@
 
     --border-default: 0px solid #000;
     --border-strong: 2px solid #000;
-    --border-medium: 1px solid #000;
+    --border-medium: 1px solid rgb;
     --border-width: 1px solid;
 
     --transition-speed: 0.3s;
@@ -61,7 +61,7 @@
 
     --padding-body: 1em;
     --padding-body-small: 0.5em;
-    --padding-pre: 1em 1.5em;
+    --padding-pre: 0.5em 0.5em;
 
     --color-midgrey: #000;
     --color-lightgrey: #000;
@@ -374,6 +374,32 @@ pre {
     padding: var(--padding-pre);
     overflow: hidden; /* Hide scrollbar */
     scrollbar-width: none; /* For Firefox */
+    counter-reset: line;
+}
+
+pre code {
+    display: block;
+    line-height: 1.5;
+    padding-left: 2em;
+    position: relative;
+}
+
+.line-number {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 1.5em;
+    text-align: right;
+    color: var(--primary-text-color);
+    user-select: none;
+    font-size: var(--font-size-small);
+    line-height: inherit;
+    vertical-align: baseline;
+    padding-right: 0.5em;
+}
+
+pre code {
+    padding-left: 2.5em;
 }
 
 /* For WebKit browsers */
