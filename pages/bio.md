@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Bio
+title: Biography
 description: The Personal Website of Gaurav Singh
 keywords: Gaurav Singh, personal website, introduction, CV, journal, projects, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India Bangalore
 sidebar: true
@@ -46,17 +46,17 @@ My research interests are grounded in applying machine learning to solve practic
 
 _SnapTag (2014), ReRide (2019)_
 
-Notably, I was the lead programmer for the ReRide project, which focused on developing personal informatics tools for motorbike commuters, including a posture-sensing module for real-time feedback. This work resulted in research papers presented at INTERACT 2017 and TEI 2019. I also collaborated on the SnapTag project, exploring the use of situated memory to enhance self-efficacy, presented at the India HCI 2014 Conference. My recent work includes collaborating with Dr. Zia Javanbakht at Griffith University on using machine learning to enhance deformation detection in complex materials.
+Notably, I was the lead programmer for the [ReRide project](/projects/reride/), which focused on developing personal informatics tools for motorbike commuters, including a posture-sensing module for real-time feedback. This work resulted in research papers presented at INTERACT 2017 and TEI 2019. I also collaborated on the [SnapTag project](/projects/situated-memory/), exploring the use of situated memory to enhance self-efficacy, presented at the India HCI 2014 Conference. My recent work includes collaborating with Dr. Zia Javanbakht at Griffith University on using machine learning to enhance deformation detection in complex materials.
 
 #### Recognitions and Contributions
 
-Throughout my career, I have received several recognitions reflecting my contributions to academia and industry. In 2024, I was awarded the Gold STEM Professional ICT Award by Griffith Sciences, acknowledging my efforts in promoting interdisciplinary research and ethical technology development. In addition, I received Adobe Fund for Design grants in 2021 and 2023 for my initiatives in creating accessible tools for research.
+Throughout my career, I have received several recognitions reflecting my contributions to academia and industry. In 2024, I was awarded the [Gold STEM Professional ICT Award](/journal/progress-through-stem-professional-program/) by Griffith Sciences, acknowledging my efforts in promoting interdisciplinary research and ethical technology development. In addition, I received Adobe Fund for Design grants in 2021 and 2023 for my initiatives in creating accessible tools for research.
 
 In 2017, I was honored as the Design Champion at the Topcoder Open (India Regionals), and I was also a finalist in the Topcoder Open in 2012 (Studio Rank 6) and 2011 (Studio Rank 11) and was invited for the onsite-finals at USA. My role as the co-chair for the demonstration track at IndiaHCI 2018 further reflects my focus to promoting collaboration and innovation within the HCI community. Additionally, earlier in my academic journey, I earned accolades in quiz competitions held by the South Western Air Command in Gandhinagar, Gujarat, securing 2nd place in 2006 and 4th place in 2005.
 
 #### Future Directions
 
-Moving forward, I aim to delve deeper into the convergence of machine learning and human-computer interaction. My focus will remain on ethical, human-centered technologies that enhance human experience and algorithmic transparency. By developing intuitive tools for data visualization and image processing, I hope to contribute to a technological landscape that is inclusive, supportive, and empowering for all of us.
+Moving forward, I aim to go deeper into the convergence of machine learning and human-computer interaction. My focus will remain on ethical, human-centered technologies that enhance human experience and algorithmic transparency. By developing intuitive tools for data visualization and image processing, I hope to contribute to a technological landscape that is inclusive, supportive, and empowering for all of us.
 
 #### Personal Interests
 
