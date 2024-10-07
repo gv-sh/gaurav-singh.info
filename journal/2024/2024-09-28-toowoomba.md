@@ -1,7 +1,7 @@
 ---
 tags: post
 deck: travel
-title: "Photo essay: Flowers of Toowoomba"
+title: "[Draft] Photo essay: Flowers of Toowoomba"
 showTitle: true
 date: 2024-09-28
 layout: post.njk
@@ -41,3 +41,4 @@ _A collection of flowers from the Toowoomba region._
 
 _(Cont.) A collection of flowers from the Toowoomba region._
 
+ 

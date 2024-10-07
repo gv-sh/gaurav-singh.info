@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Gaurav Singh">
+        <link rel="canonical" href="https://gaurav-singh.info/journal/aatp-demo/">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+        <script src="https://kit.fontawesome.com/f3cb49a58e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+                onload="renderMathInElement(document.body, {
+                            delimiters: [
+                                {left: '$$', right: '$$', display: true},
+                                {left: '$', right: '$', display: false},
+                            ],
+                            throwOnError : false
+                        });"></script>
+        <title>Gaurav Singh | [Draft] AATP Demo</title>
+        <link rel="stylesheet" href="/bundle.css">
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "[Draft] AATP Demo",
+            "description": "Exploring ML, data visualization, and ethical engineering solutions",
+            "url": "https://gaurav-singh.info/journal/aatp-demo/"
+        }
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+    <h1 class="title">Gaurav Singh</h1>
+</header>
+        <!-- Sidebar -->
+        <aside>
+    <ul>
+        <li class="sidebar-section">Front matter</li>
+        <li><a href="/" >Introduction</a></li>
+        <!--<li><a href="/foreword/">Foreword</a></li>-->
+        <li><a href="/prologue/" >Prologue</a></li>
+        <li class="separator"></li>
+        <li class="sidebar-section">About me</li>
+        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/journal/" >Journal</a></li>
+        <li><a href="/education/" >Education</a></li>
+        <li><a href="/timeline/" >Timeline*</a></li>
+        <li><a href="/cv/" >C.Vitae</a></li>
+        <li class="separator"></li>
+        <li class="sidebar-section">Work and Experience</li>
+        <li><a href="/work/" >Work</a></li>
+        <li><a href="/teaching/" >Teaching</a></li>
+        <li><a href="/projects/" >Projects</a></li>
+        <li><a href="/research/" >Research</a></li>
+        <li class="separator"></li>
+        <li class="sidebar-section">Community</li>
+        <li><a href="/peers/" >Peers</a></li>
+        <li><a href="/students/" >Students</a></li>
+        <li><a href="/mentors/" >Mentors</a></li>
+        <li class="separator"></li>
+        <li class="sidebar-section">Back matter</li>
+        <li><a href="/misc/" >Misc</a></li>
+        <li><a href="/index/" >Index</a></li>
+    </ul>
+</aside>
+        <!-- Main content -->
+        <main>
+            <div class="item">
+                <h6 class="deck">academic</h6>
+                <h3>[Draft] AATP Demo</h3>
+                <p class="meta">
+                    07.10.24
+                </p>
+            </div>
+            <h3>Project Overview</h3>
+<p>This project aims to enhance Australia's agricultural traceability initiatives to improve food security, safety, and agility. The primary goal is to design and implement a prototype of the Australian Agricultural Traceability Protocol (AATP)-enabled Agri Food Product Passport [1]. This prototype will utilize Decentralized Identity (DI) based W3C verifiable credentials and Decentralized Identifiers, leveraging open-source tools. The system will demonstrate the capability to issue and verify product credentials, establish a DI wallet, and create a verifiable data registry (VDR). Ultimately, this project seeks to ensure food security, safety, and agility through a product passport system with conformity credentials and traceability for specific products or batch identifiers.</p>
+<h3>Setup VON Network</h3>
+<pre><code>git clone https://github.com/bcgov/von-network
+</code></pre>
+<p>PORTS=&quot;8080:8080 8000:8000 9000:9000&quot; <br>
+scripts/run_docker start — wallet-type indy <br>
+--endpoint http://127.0.0.1:8040 <br>
+--label aatp.farmer.agent <br>
+--inbound-transport http 0.0.0.0 8040 <br>
+--outbound-transport http <br>
+--admin 0.0.0.0 8041 <br>
+--admin-insecure-mode <br>
+--wallet-type askar <br>
+--wallet-name aatp.farmer.agent.wallet <br>
+--wallet-key aatp.farmer.agent.key <br>
+--preserve-exchange-records <br>
+--auto-provision <br>
+--genesis-url http://170.64.169.233:9000/genesis <br>
+--trace-target log <br>
+--trace-tag acapy.events <br>
+--trace-label aatp.farmer.agent.trace <br>
+--auto-ping-connection <br>
+--auto-respond-credential-proposal <br>
+--auto-respond-credential-offer <br>
+--auto-respond-credential-request</p>
+<h3>Setting up agents</h3>
+<pre><code>GENESIS_FILE=http://170.64.169.233/genesis DEFAULT_POSTGRES=true python3 -m runners.faber --port 8020
+</code></pre>
+<h4>Farmer Agent</h4>
+<ul>
+<li>Role: Credential issuer (for agricultural produce details).</li>
+<li>Use Case: The farmer is responsible for issuing verifiable credentials about their agricultural products (e.g., type, quantity, harvest date). They can also receive credentials (e.g., work certification).</li>
+<li>Responsibilities:
+<ul>
+<li>Create and manage Decentralized Identifiers (DIDs) for themselves.</li>
+<li>Issue verifiable credentials about produce.</li>
+<li>Store their credentials (e.g., certifications or training).</li>
+</ul>
+</li>
+</ul>
+<h4>Supplier/Distributor Agent</h4>
+<ul>
+<li>Role: Credential verifier and holder.</li>
+<li>Use Case: The supplier verifies the farmer’s credentials (agricultural produce) and holds the credentials. They can also issue credentials downstream, such as logistics credentials related to packaging or transport.</li>
+<li>Responsibilities:
+<ul>
+<li>Verify credentials issued by the farmer.</li>
+<li>Store verified credentials.</li>
+<li>Optionally, issue credentials about the product’s transportation, packaging, or quality.</li>
+</ul>
+</li>
+</ul>
+<h4>Consumer Agent</h4>
+<ul>
+<li>Role: Credential verifier.</li>
+<li>Use Case: Consumers verify the authenticity of the product they purchase. They use credentials issued by both farmers and suppliers to ensure the product’s provenance and quality.</li>
+<li>Responsibilities:
+<ul>
+<li>Verify the entire chain of credentials issued by the farmer and supplier.</li>
+<li>Check if the product meets expected standards (e.g., organic certification).</li>
+</ul>
+</li>
+</ul>
+<h4>Regulatory Body Agent</h4>
+<ul>
+<li>Role: Credential issuer and verifier.</li>
+<li>Use Case: The regulatory body ensures compliance with agricultural laws and standards. They issue verifiable credentials to farmers or suppliers certifying that their products meet specific regulations.</li>
+<li>Responsibilities:
+<ul>
+<li>Issue certifications (e.g., organic certifications, compliance with regulations).</li>
+<li>Verify the credentials issued by farmers and suppliers to ensure compliance.</li>
+</ul>
+</li>
+</ul>
+<h4>Retailer Agent</h4>
+<ul>
+<li>Role: Credential verifier and holder.</li>
+<li>Use Case: The retailer verifies the credentials of products received from suppliers before selling them to consumers. They may also hold credentials for their inventory.</li>
+<li>Responsibilities:
+<ul>
+<li>Verify that the credentials received from suppliers and farmers are valid.</li>
+<li>Optionally, hold or issue credentials about the product’s condition or inventory.</li>
+</ul>
+</li>
+</ul>
+<h4>Logistics Agent</h4>
+<ul>
+<li>Role: Credential issuer and verifier.</li>
+<li>Use Case: Logistics providers may issue verifiable credentials related to the transport and storage conditions of agricultural produce (e.g., temperature control, delivery dates).</li>
+<li>Responsibilities:
+<ul>
+<li>Issue credentials about the status and transport conditions of goods (e.g., transport time, storage conditions).</li>
+<li>Verify credentials from the supplier or other logistics providers upstream.</li>
+</ul>
+</li>
+</ul>
+<h4>End-Product Manufacturer Agent</h4>
+<ul>
+<li>Role: Credential verifier and issuer.</li>
+<li>Use Case: Manufacturers that use the agricultural produce to create a final product (e.g., food processing companies) may verify the chain of credentials from the farmer and issue their own credentials for the final product.</li>
+<li>Responsibilities:
+<ul>
+<li>Verify credentials from the farmer and suppliers.</li>
+<li>Issue credentials for processed or final products.</li>
+</ul>
+</li>
+</ul>
+<h4>Verifiable Credential Consumer Wallet (Holder Agent)</h4>
+<ul>
+<li>Role: Credential holder.</li>
+<li>Use Case: Individuals (consumers, farmers, etc.) can hold their verifiable credentials in a secure wallet. For example, a farmer might hold their certifications, while a consumer might hold the verified product credential.</li>
+<li>Responsibilities:
+<ul>
+<li>Store all verifiable credentials (e.g., in a Bifold or compatible wallet).</li>
+<li>Provide credentials when required (e.g., when interacting with a verifier).</li>
+</ul>
+</li>
+</ul>
+<h4>Verifier Agent</h4>
+<ul>
+<li>Role: Credential verifier (can be a general agent).</li>
+<li>Use Case: A generalized agent can be set up to verify credentials as needed across the system, acting as an independent verifier for audits, inspections, or compliance checks.</li>
+<li>Responsibilities:
+<ul>
+<li>Request and verify credentials from any entity (farmer, supplier, retailer, etc.).</li>
+<li>Store verified credentials and provide attestation when needed.</li>
+</ul>
+</li>
+</ul>
+<h3>Appendix 1: Definitions and Acronyms</h3>
+<h6>Definitions</h6>
+<ul>
+<li><strong>Australian Agricultural Traceability Protocol (AATP)</strong>: A protocol aimed at enhancing food security, safety, and agility in Australia's agricultural sector through traceability.</li>
+<li><strong>Decentralized Identity (DI)</strong>: A system of identity management that utilizes decentralized identifiers (DIDs) and verifiable credentials for secure and privacy-preserving data sharing.</li>
+<li><strong>Verifiable Data Registry (VDR)</strong>: A registry used to store and verify product credentials, ensuring data integrity and traceability.</li>
+<li><strong>W3C Verifiable Credentials</strong>: Standards developed by the World Wide Web Consortium (W3C) for issuing and verifying credentials in a decentralized manner.</li>
+<li><strong>Agri Food Product Passport</strong>: A digital passport that includes traceability information, sustainability credentials, and conformity certifications for agricultural products.</li>
+<li><strong>Generative AI</strong>: Artificial intelligence techniques that generate data, such as creating dummy data for credentials in this context.</li>
+<li><strong>Role-Based Access Control (RBAC)</strong>: A method of regulating access to computer or network resources based on the roles of individual users within an organization.</li>
+<li><strong>ISO 22005</strong>: An international standard for traceability in the food and feed chain, ensuring the transparency and safety of products.</li>
+<li><strong>JSON, XML, CSV</strong>: Common data formats used for data exchange and interoperability among different systems.</li>
+</ul>
+<h6>Acronyms</h6>
+<ul>
+<li><strong>AATP</strong>: Australian Agricultural Traceability Protocol</li>
+<li><strong>DI</strong>: Decentralized Identity</li>
+<li><strong>VDR</strong>: Verifiable Data Registry</li>
+<li><strong>W3C</strong>: World Wide Web Consortium</li>
+<li><strong>ICT</strong>: Information and Communication Technology</li>
+</ul>
+<hr>
+<ol>
+<li>Veritas Digital &amp; Anonyome Labs. (2024). Project overview and client information: Enhancing agricultural traceability initiatives. AATP Project Brief.</li>
+<li>Gaurav Singh, Arpita Dhar, Prathap Reddy K, Sheikh Ashik Rahman Elahi, Jins Albi, Albin John. (2024). Team overview and roles. AATP Project Documentation.</li>
+<li>Hyperledger. (2020). Aries Cloud Agent Python: Identity management with decentralized protocols. Hyperledger Documentation. https://github.com/hyperledger/aries-cloudagent-python</li>
+<li>World Wide Web Consortium (W3C). (2021). Verifiable data registries in decentralized ecosystems. W3C Standards Documentation. https://www.w3.org/TR/vc-data-model/</li>
+<li>Hardt, D. (2012). The OAuth 2.0 authorization framework. Internet Engineering Task Force (IETF). https://tools.ietf.org/html/rfc6749</li>
+<li>Sandhu, R., Coyne, E., Feinstein, H., &amp; Youman, C. (1996). Role-based access control models. IEEE Computer, 29(2), 38-47. https://doi.org/10.1109/2.485845</li>
+</ol>
+            <!-- Add comment -->
+            Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
+        </main>
+        <!-- Footer -->
+        <footer class="desktop">
+    <div class="left social-icons">
+        <a target="_blank" href="https://linkedin.com/in/gv-sh"><i class="fa-brands fa-linkedin"></i></a> &nbsp;
+        <a target="_blank" href="https://instagram.com/themakingofnow"><i class="fa-brands fa-instagram"></i></a> &nbsp;
+        <a href="/socials/"><i class="fa-solid fa-ellipsis"></i></a> &nbsp;
+    </div>
+    <div class="right">
+            <!-- Cite as -->
+            <div class="cite-as">
+                <a id="copyLink" onclick="copyToClipboard(event)" href="#">Cite this page</a>
+                <script>
+                function copyToClipboard(event) {
+                    event.preventDefault();
+                    const citationText = `Gaurav Singh. "[Draft] AATP Demo." The Personal Website of Gaurav Singh. Last modified 07.10.24. https://gaurav-singh.info/journal/aatp-demo/`;
+                    const copyLink = document.getElementById('copyLink');
+                    const originalScrollPosition = window.pageYOffset;
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        copyLink.textContent = 'Citation copied';
+                        setTimeout(() => {
+                            copyLink.textContent = 'Cite this page';
+                            window.scrollTo(0, originalScrollPosition);
+                        }, 3000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                        window.scrollTo(0, originalScrollPosition);
+                    });
+                } 
+                </script>
+            </div>
+    </div>
+</footer> 
+        <script src="/assets/js/em-line-height-fix.js"></script>
+    </body>
+</html>
