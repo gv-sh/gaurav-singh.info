@@ -9,7 +9,7 @@ permalink: /index/
 
 {% assign allLinks = "" | split: "" %}
 {% for entry in collections.all %}
-  {% if entry.url != page.url %}
+  {% if entry.url != page.url and entry.data.index != false %}
     {% assign link = entry.data.title | append: "|" | append: entry.url %}
     {% assign allLinks = allLinks | push: link %}
   {% endif %}

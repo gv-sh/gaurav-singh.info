@@ -7,4 +7,6 @@ layout: work.njk
 permalink: /cv/academic/2024/
 link: https://drive.google.com/file/d/1zNfmLgWPNLpIJbArrSV44vJIBMK8RdER/view
 active: false
+index: false
+
 ---
