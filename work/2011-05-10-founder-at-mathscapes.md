@@ -2,6 +2,7 @@
 tags: post
 title: Founder at Mathscapes, India
 startDate: 2008-04-01
+currentPosition: true
 showTitle: true
 date: 2008-04-01
 duration: "14+ years"

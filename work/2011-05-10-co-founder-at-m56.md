@@ -2,6 +2,7 @@
 tags: post
 title: Co-founder at M56, India
 startDate: 2015-04-01
+currentPosition: true
 showTitle: true
 date: 2015-04-01
 duration: "8+ years"
