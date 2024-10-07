@@ -285,6 +285,17 @@ aca-py start \
   - Request and verify credentials from any entity (farmer, supplier, retailer, etc.).
   - Store verified credentials and provide attestation when needed.
 
+```
+"invitation": {
+  "@type": "https://didcomm.org/connections/1.0/invitation",
+  "@id": "61b9867b-cb7f-46af-b8b5-ca52bdac3438",
+  "label": "aatp.consumer.agent",
+  "recipientKeys": [
+    "84UJFjeheTagXmX6FjcgH3KxAmwB3xXLf7Ed1d7TyxZw"
+  ],
+  "serviceEndpoint": "http://127.0.0.1:8040"
+}
+```
 ### Appendix 1: Definitions and Acronyms
 
 ###### Definitions
