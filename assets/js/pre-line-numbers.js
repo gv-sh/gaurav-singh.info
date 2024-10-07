@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         copyButton.innerHTML = '<i class="fa-regular fa-copy"></i>';
         copyButton.className = 'copy-button';
         copyButton.style.position = 'absolute';
-        copyButton.style.top = '5px';
-        copyButton.style.right = '5px';
+        copyButton.style.top = '-8px';
+        copyButton.style.right = '2px';
         copyButton.style.background = 'transparent';
         copyButton.style.border = 'none';
         copyButton.style.cursor = 'pointer';

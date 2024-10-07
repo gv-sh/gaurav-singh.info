@@ -14,32 +14,30 @@ permalink: /journal/aatp-demo/
 This project aims to enhance Australia's agricultural traceability initiatives to improve food security, safety, and agility. The primary goal is to design and implement a prototype of the Australian Agricultural Traceability Protocol (AATP)-enabled Agri Food Product Passport [1]. This prototype will utilize Decentralized Identity (DI) based W3C verifiable credentials and Decentralized Identifiers, leveraging open-source tools. The system will demonstrate the capability to issue and verify product credentials, establish a DI wallet, and create a verifiable data registry (VDR). Ultimately, this project seeks to ensure food security, safety, and agility through a product passport system with conformity credentials and traceability for specific products or batch identifiers.
 
 ### Setup VON Network
-```
-git clone https://github.com/bcgov/von-network
+The VON Network is a decentralized identity network that enables organizations to issue and verify cryptographically secure credentials using the Hyperledger Indy framework. It supports privacy-preserving, self-sovereign identity management, primarily for organizational use cases [7]. 
+
+Run the following commands on a Ubuntu 22.04 server instance to setup the VON Network.
+
+```bash 
+apt install unzip
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 ```
 
+```bash
+curl -L https://github.com/bcgov/von-network/archive/main.zip > bcovrin.zip && \
+    unzip bcovrin.zip && \
+    cd von-network-main && \
+    chmod a+w ./server/
+```
 
-PORTS="8080:8080 8000:8000 9000:9000" \
-scripts/run_docker start — wallet-type indy \
-   --endpoint http://127.0.0.1:8040 \
-   --label aatp.farmer.agent \
-   --inbound-transport http 0.0.0.0 8040 \
-   --outbound-transport http \
-   --admin 0.0.0.0 8041 \
-   --admin-insecure-mode \
-   --wallet-type askar \
-   --wallet-name aatp.farmer.agent.wallet \
-   --wallet-key aatp.farmer.agent.key \
-   --preserve-exchange-records \
-   --auto-provision \
-   --genesis-url http://170.64.169.233:9000/genesis \
-   --trace-target log \
-   --trace-tag acapy.events \
-   --trace-label aatp.farmer.agent.trace \
-   --auto-ping-connection \
-   --auto-respond-credential-proposal \
-   --auto-respond-credential-offer \
-   --auto-respond-credential-request
+```bash
+./manage start public_ip_address WEB_SERVER_HOST_PORT=80 "LEDGER_INSTANCE_NAME=AATP Ledger" &
+```
+
+The VON Network will be running on port 80 and can be accessed at `http://<public-ip>`.
 
 ### Setting up agents
 
@@ -149,3 +147,4 @@ GENESIS_FILE=http://170.64.169.233/genesis DEFAULT_POSTGRES=true python3 -m runn
 4. World Wide Web Consortium (W3C). (2021). Verifiable data registries in decentralized ecosystems. W3C Standards Documentation. https://www.w3.org/TR/vc-data-model/
 5. Hardt, D. (2012). The OAuth 2.0 authorization framework. Internet Engineering Task Force (IETF). https://tools.ietf.org/html/rfc6749
 6. Sandhu, R., Coyne, E., Feinstein, H., & Youman, C. (1996). Role-based access control models. IEEE Computer, 29(2), 38-47. https://doi.org/10.1109/2.485845
+7. Hu, S. Y., Chen, J. F., & Chen, T. H. (2006). VON: a scalable peer-to-peer network for virtual environments. IEEE Network, 20(4), 22-31.

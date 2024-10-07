@@ -80,29 +80,22 @@
             <h3>Project Overview</h3>
 <p>This project aims to enhance Australia's agricultural traceability initiatives to improve food security, safety, and agility. The primary goal is to design and implement a prototype of the Australian Agricultural Traceability Protocol (AATP)-enabled Agri Food Product Passport [1]. This prototype will utilize Decentralized Identity (DI) based W3C verifiable credentials and Decentralized Identifiers, leveraging open-source tools. The system will demonstrate the capability to issue and verify product credentials, establish a DI wallet, and create a verifiable data registry (VDR). Ultimately, this project seeks to ensure food security, safety, and agility through a product passport system with conformity credentials and traceability for specific products or batch identifiers.</p>
 <h3>Setup VON Network</h3>
-<pre><code>git clone https://github.com/bcgov/von-network
+<p>The VON Network is a decentralized identity network that enables organizations to issue and verify cryptographically secure credentials using the Hyperledger Indy framework. It supports privacy-preserving, self-sovereign identity management, primarily for organizational use cases [7].</p>
+<p>Run the following commands on a Ubuntu 22.04 server instance to setup the VON Network.</p>
+<pre><code class="language-bash">apt install unzip
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 </code></pre>
-<p>PORTS=&quot;8080:8080 8000:8000 9000:9000&quot; <br>
-scripts/run_docker start — wallet-type indy <br>
---endpoint http://127.0.0.1:8040 <br>
---label aatp.farmer.agent <br>
---inbound-transport http 0.0.0.0 8040 <br>
---outbound-transport http <br>
---admin 0.0.0.0 8041 <br>
---admin-insecure-mode <br>
---wallet-type askar <br>
---wallet-name aatp.farmer.agent.wallet <br>
---wallet-key aatp.farmer.agent.key <br>
---preserve-exchange-records <br>
---auto-provision <br>
---genesis-url http://170.64.169.233:9000/genesis <br>
---trace-target log <br>
---trace-tag acapy.events <br>
---trace-label aatp.farmer.agent.trace <br>
---auto-ping-connection <br>
---auto-respond-credential-proposal <br>
---auto-respond-credential-offer <br>
---auto-respond-credential-request</p>
+<pre><code class="language-bash">curl -L https://github.com/bcgov/von-network/archive/main.zip &gt; bcovrin.zip &amp;&amp; \
+    unzip bcovrin.zip &amp;&amp; \
+    cd von-network-main &amp;&amp; \
+    chmod a+w ./server/
+</code></pre>
+<pre><code class="language-bash">./manage start public_ip_address WEB_SERVER_HOST_PORT=80 &quot;LEDGER_INSTANCE_NAME=AATP Ledger&quot; &amp;
+</code></pre>
+<p>The VON Network will be running on port 80 and can be accessed at <code>http://&lt;public-ip&gt;</code>.</p>
 <h3>Setting up agents</h3>
 <pre><code>GENESIS_FILE=http://170.64.169.233/genesis DEFAULT_POSTGRES=true python3 -m runners.faber --port 8020
 </code></pre>
@@ -236,6 +229,7 @@ scripts/run_docker start — wallet-type indy <br>
 <li>World Wide Web Consortium (W3C). (2021). Verifiable data registries in decentralized ecosystems. W3C Standards Documentation. https://www.w3.org/TR/vc-data-model/</li>
 <li>Hardt, D. (2012). The OAuth 2.0 authorization framework. Internet Engineering Task Force (IETF). https://tools.ietf.org/html/rfc6749</li>
 <li>Sandhu, R., Coyne, E., Feinstein, H., &amp; Youman, C. (1996). Role-based access control models. IEEE Computer, 29(2), 38-47. https://doi.org/10.1109/2.485845</li>
+<li>Hu, S. Y., Chen, J. F., &amp; Chen, T. H. (2006). VON: a scalable peer-to-peer network for virtual environments. IEEE Network, 20(4), 22-31.</li>
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
