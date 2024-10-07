@@ -97,7 +97,152 @@ chmod +x /usr/local/bin/docker-compose
 </code></pre>
 <p>The VON Network will be running on port 80 and can be accessed at <code>http://&lt;public-ip&gt;</code>.</p>
 <h3>Setting up agents</h3>
-<pre><code>GENESIS_FILE=http://170.64.169.233/genesis DEFAULT_POSTGRES=true python3 -m runners.faber --port 8020
+<pre><code class="language-bash">sudo apt update
+sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+curl https://pyenv.run | bash
+echo -e 'export PYENV_ROOT=&quot;$HOME/.pyenv&quot;\nexport PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;' &gt;&gt; ~/.bashrc
+echo -e 'eval &quot;$(pyenv init --path)&quot;\neval &quot;$(pyenv init -)&quot;' &gt;&gt; ~/.bashrc
+exec &quot;$SHELL&quot;
+pyenv --version
+pyenv install --list
+pyenv install 3.11.0 &amp;&amp; pyenv virtualenv 3.11.0 aatp-env &amp;&amp; pyenv activate aatp-env
+</code></pre>
+<h4>Consumer Agent</h4>
+<pre><code class="language-bash">#!/bin/bash
+# AATP Consumer Agent script
+aca-py start \
+   --endpoint http://127.0.0.1:8040 \
+   --label aatp.consumer.agent \
+   --inbound-transport http 0.0.0.0 8040 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8041 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name aatp.consumer.agent.wallet \
+   --wallet-key aatp.consumer.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label aatp.consumer.agent.trace \
+   --auto-ping-connection
+</code></pre>
+<h4>Farmer Agent</h4>
+<pre><code class="language-bash">#!/bin/bash
+aca-py start \
+   --endpoint http://127.0.0.1:8030 \
+   --label aatp.farmer.agent \
+   --inbound-transport http 0.0.0.0 8030 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8031 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name aatp.farmer.agent.wallet \
+   --wallet-key aatp.farmer.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label aatp.farmer.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
+</code></pre>
+<h4>Logistics Agent</h4>
+<pre><code class="language-bash">#!/bin/bash
+# Logistics agent script for issuing transport-related credentials
+aca-py start \
+   --endpoint http://127.0.0.1:8060 \
+   --label logistics.agent \
+   --inbound-transport http 0.0.0.0 8060 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8061 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name logistics.agent.wallet \
+   --wallet-key logistics.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label logistics.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
+</code></pre>
+<h4>Regulatory Body Agent</h4>
+<pre><code>#!/bin/bash
+# Regulatory body agent script for issuing regulatory credentials
+aca-py start \
+   --endpoint http://127.0.0.1:8090 \
+   --label regulatory.agent \
+   --inbound-transport http 0.0.0.0 8090 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8091 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name regulatory.agent.wallet \
+   --wallet-key regulatory.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label regulatory.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
+</code></pre>
+<h4>Retailer Agent</h4>
+<pre><code class="language-bash">#!/bin/bash
+# Retailer agent script for verifying and holding credentials
+aca-py start \
+   --endpoint http://127.0.0.1:8050 \
+   --label retailer.agent \
+   --inbound-transport http 0.0.0.0 8050 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8051 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name retailer.agent.wallet \
+   --wallet-key retailer.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label retailer.agent.trace \
+   --auto-ping-connection
+</code></pre>
+<h4>Supplier Agent</h4>
+<pre><code class="language-bash">#!/bin/bash
+# AATP Supplier Agent script
+aca-py start \
+   --endpoint http://127.0.0.1:8070 \
+   --label aatp.supplier.agent \
+   --inbound-transport http 0.0.0.0 8070 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8071 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name aatp.supplier.agent.wallet \
+   --wallet-key aatp.supplier.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label aatp.supplier.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
 </code></pre>
 <h4>Farmer Agent</h4>
 <ul>
@@ -239,6 +384,7 @@ chmod +x /usr/local/bin/docker-compose
     <div class="left social-icons">
         <a target="_blank" href="https://linkedin.com/in/gv-sh"><i class="fa-brands fa-linkedin"></i></a> &nbsp;
         <a target="_blank" href="https://instagram.com/themakingofnow"><i class="fa-brands fa-instagram"></i></a> &nbsp;
+        <a target="_blank" href="https://github.com/gv-sh"><i class="fa-brands fa-github"></i></a> &nbsp;
         <a href="/socials/"><i class="fa-solid fa-ellipsis"></i></a> &nbsp;
     </div>
     <div class="right">

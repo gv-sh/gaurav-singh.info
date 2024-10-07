@@ -41,8 +41,174 @@ The VON Network will be running on port 80 and can be accessed at `http://<publi
 
 ### Setting up agents
 
+```bash
+sudo apt update
+sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+curl https://pyenv.run | bash
+echo -e 'export PYENV_ROOT="$HOME/.pyenv"\nexport PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo -e 'eval "$(pyenv init --path)"\neval "$(pyenv init -)"' >> ~/.bashrc
+exec "$SHELL"
+pyenv --version
+pyenv install --list
+pyenv install 3.11.0 && pyenv virtualenv 3.11.0 aatp-env && pyenv activate aatp-env
 ```
-GENESIS_FILE=http://170.64.169.233/genesis DEFAULT_POSTGRES=true python3 -m runners.faber --port 8020
+
+#### Consumer Agent
+```bash
+#!/bin/bash
+# AATP Consumer Agent script
+
+aca-py start \
+   --endpoint http://127.0.0.1:8040 \
+   --label aatp.consumer.agent \
+   --inbound-transport http 0.0.0.0 8040 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8041 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name aatp.consumer.agent.wallet \
+   --wallet-key aatp.consumer.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label aatp.consumer.agent.trace \
+   --auto-ping-connection
+```
+
+#### Farmer Agent
+
+```bash 
+#!/bin/bash
+aca-py start \
+   --endpoint http://127.0.0.1:8030 \
+   --label aatp.farmer.agent \
+   --inbound-transport http 0.0.0.0 8030 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8031 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name aatp.farmer.agent.wallet \
+   --wallet-key aatp.farmer.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label aatp.farmer.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
+```
+
+#### Logistics Agent
+```bash
+#!/bin/bash
+# Logistics agent script for issuing transport-related credentials
+
+aca-py start \
+   --endpoint http://127.0.0.1:8060 \
+   --label logistics.agent \
+   --inbound-transport http 0.0.0.0 8060 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8061 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name logistics.agent.wallet \
+   --wallet-key logistics.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label logistics.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
+```
+
+#### Regulatory Body Agent
+
+```
+#!/bin/bash
+# Regulatory body agent script for issuing regulatory credentials
+
+aca-py start \
+   --endpoint http://127.0.0.1:8090 \
+   --label regulatory.agent \
+   --inbound-transport http 0.0.0.0 8090 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8091 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name regulatory.agent.wallet \
+   --wallet-key regulatory.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label regulatory.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
+```
+
+#### Retailer Agent
+
+```bash
+#!/bin/bash
+# Retailer agent script for verifying and holding credentials
+
+aca-py start \
+   --endpoint http://127.0.0.1:8050 \
+   --label retailer.agent \
+   --inbound-transport http 0.0.0.0 8050 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8051 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name retailer.agent.wallet \
+   --wallet-key retailer.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label retailer.agent.trace \
+   --auto-ping-connection
+```
+
+#### Supplier Agent
+
+```bash
+#!/bin/bash
+# AATP Supplier Agent script
+
+aca-py start \
+   --endpoint http://127.0.0.1:8070 \
+   --label aatp.supplier.agent \
+   --inbound-transport http 0.0.0.0 8070 \
+   --outbound-transport http \
+   --admin 0.0.0.0 8071 \
+   --admin-insecure-mode \
+   --wallet-type askar \
+   --wallet-name aatp.supplier.agent.wallet \
+   --wallet-key aatp.supplier.agent.key \
+   --preserve-exchange-records \
+   --auto-provision \
+   --genesis-url http://170.64.169.233/genesis \
+   --trace-target log \
+   --trace-tag event \
+   --trace-label aatp.supplier.agent.trace \
+   --auto-ping-connection \
+   --auto-respond-credential-proposal \
+   --auto-respond-credential-offer \
+   --auto-respond-credential-request
 ```
 
 #### Farmer Agent
