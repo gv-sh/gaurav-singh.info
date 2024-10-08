@@ -6,7 +6,7 @@
         <meta name="description" content="The Personal Website of Gaurav Singh">
         <meta name="keywords" content="Gaurav Singh, personal website, introduction, CV, journal, projects, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India Bangalore">
         <meta name="author" content="Gaurav Singh">
-        <link rel="canonical" href="https://gaurav-singh.info/bio/">
+        <link rel="canonical" href="https://gaurav-singh.info/biography/">
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
         <script src="https://kit.fontawesome.com/f3cb49a58e.js" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
             "@type": "WebPage",
             "name": "Biography",
             "description": "Exploring ML, data visualization, and ethical engineering solutions",
-            "url": "https://gaurav-singh.info/bio/"
+            "url": "https://gaurav-singh.info/biography/"
         }
         </script>
     </head>
@@ -41,7 +41,7 @@
 </nav>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const path = '/bio/';
+    const path = '/biography/';
     const breadcrumbContainer = document.getElementById('breadcrumb');
     const parts = path.split('/').filter(Boolean); 
     let currentPath = '';
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" class="active">Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
-                    const citationText = `Gaurav Singh. "Biography." The Personal Website of Gaurav Singh. Last modified 26.09.24. https://gaurav-singh.info/bio/`;
+                    const citationText = `Gaurav Singh. "Biography." The Personal Website of Gaurav Singh. Last modified 26.09.24. https://gaurav-singh.info/biography/`;
                     const copyLink = document.getElementById('copyLink');
                     const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {

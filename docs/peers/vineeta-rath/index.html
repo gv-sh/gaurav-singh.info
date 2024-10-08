@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/vineeta-rath/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,17 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Vineeta Rath</h3>
-                <h6>Met at Srishti in 2017</h6>
-            </div>
-            <p>Vineeta Rath is a Design Generalist, Facilitator, and Human-Centered Designer with a remarkable journey shaped by a diverse range of experiences. Armed with a Bachelor's in Architecture from the College of Engineering and Technology in Bhubaneswar and a Master's in Industrial Design from the Indian Institute of Technology, Bombay, Vineeta's academic foundation is further extended by her experience as a Usability Analyst from Human Factors International. Her career has been a globetrotting adventure, with roles such as a Design Researcher and Consultant in Mumbai, a Lead UX Strategist at Dhobistation, and a Senior Human Factors Specialist at Human Factors International in both Johannesburg, South Africa, and Mumbai. Vineeta's extensive journey also includes stints as a Design Associate, Field Researcher, and a Samsung Design Member in Seoul, South Korea, among other fascinating positions. Her work at organizations like 3M India Limited, IDC, IIT Bombay, and contributions to projects like VISION 2030 at IIT Kharagpur showcase her adaptability and innovative approach to design.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Vineeta Rath</h3>
+                    <h6>Met at Srishti in 2017</h6>
+                </div>
+                <p>Vineeta Rath is a Design Generalist, Facilitator, and Human-Centered Designer with a remarkable journey shaped by a diverse range of experiences. Armed with a Bachelor's in Architecture from the College of Engineering and Technology in Bhubaneswar and a Master's in Industrial Design from the Indian Institute of Technology, Bombay, Vineeta's academic foundation is further extended by her experience as a Usability Analyst from Human Factors International. Her career has been a globetrotting adventure, with roles such as a Design Researcher and Consultant in Mumbai, a Lead UX Strategist at Dhobistation, and a Senior Human Factors Specialist at Human Factors International in both Johannesburg, South Africa, and Mumbai. Vineeta's extensive journey also includes stints as a Design Associate, Field Researcher, and a Samsung Design Member in Seoul, South Korea, among other fascinating positions. Her work at organizations like 3M India Limited, IDC, IIT Bombay, and contributions to projects like VISION 2030 at IIT Kharagpur showcase her adaptability and innovative approach to design.</p>
 <p>Beyond her impressive professional resume, Vineeta Rath's true essence shines through her commitment to education and mentorship. Having had the privilege of working closely with Vineeta as a colleague at Srishti Manipal Institute from 2017 to 2022, we co-facilitated the Experimental Maths Lab at Srishti between 2021 and 2022. In this capacity, we had the honor of guiding a group of bright and passionate students whom we both deeply appreciate. Vineeta's teaching extends beyond the classroom, as she is renowned among students for being a kind and patient listener who offers personal advice and guidance. Her caring and nurturing approach to mentorship sets her apart, making her not only a remarkable educator but also a source of inspiration for those fortunate enough to work with her.</p>
 <p><a href="https://srishtimanipalinstitute.in/people/vineeta-rath">Vineeta Rath @ SMI</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

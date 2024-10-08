@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/prime-numbers-and-their-properties/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Study</h6>
-                <h3>Prime numbers and their properties</h3>
-                <p class="meta">
-                    05.03.13
-                </p>
-            </div>
-            <p>For as long as I remember, I always had a deep interest in prime numbers. And for that, this certainly makes the cut to be a notes post here. As I'm writing this post, I'm unsure about the tone and content of this notes in future, but would like it to not just have research notes but also about my first-hand experiences. Prime Numbers are the building blocks of the numbers and perhaps the processes of the Universe, as I like to think. They have special properties and some very profound applications in science and nature. However simple their definition may be, we still do not have a formula for it. I find the fundamental theorem of arithmetic [1] fairly straightforward and the fact that only primes can not be expressed as the product of other (positive natural) numbers, is a very intuitive implication that I think most would be able to understand.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Study</h6>
+                    <h3>Prime numbers and their properties</h3>
+                    <p class="meta">
+                        05.03.13
+                    </p>
+                </div>
+                <p>For as long as I remember, I always had a deep interest in prime numbers. And for that, this certainly makes the cut to be a notes post here. As I'm writing this post, I'm unsure about the tone and content of this notes in future, but would like it to not just have research notes but also about my first-hand experiences. Prime Numbers are the building blocks of the numbers and perhaps the processes of the Universe, as I like to think. They have special properties and some very profound applications in science and nature. However simple their definition may be, we still do not have a formula for it. I find the fundamental theorem of arithmetic [1] fairly straightforward and the fact that only primes can not be expressed as the product of other (positive natural) numbers, is a very intuitive implication that I think most would be able to understand.</p>
 <p>Prime makes the composite numbers. But, what are primes made up of? Are prime numbers the result of how we framed the rules of Maths to be? Or did it always existed? Well whether or not if it is real, it has irrespectively awakened my curiosity to study it and perhaps define a formula. How can something that appears simple and yet not understood entirely? Aren't primes transcendental?</p>
 <p>That being said, I'm sometimes put down by imagining the incredible literature available on the Prime numbers, which is already studied for more than 2000 years. The earliest surviving records of the explicit study of prime numbers come from ancient Greek mathematics [2]. Imagine what could be possibly appealing about these numbers for the ancient Greeks? What might have been their motivations? Euclid's Elements (c. 300 BC) proved the infinitude of primes and showed how to construct a perfect number from a Mersenne prime [3]. Pierre de Fermat (1640) stated Fermat's little theorem and investigated the primality of Fermat numbers [4]. Christian Goldbach (1742) formulated Goldbach's conjecture, that every even number is the sum of two primes [5]. Leonhard Euler (18th century) proved several important theorems related to primes, including Alhazen's conjecture and the divergence of the sum of the reciprocals of primes [3]. Bernhard Riemann (1859) outlined a proof for the conjecture that as $x$ tends to infinity, the number of primes up to x is asymptotic to $x/\log x$, which was completed by Hadamard and de la Vallée Poussin in 1896 as the prime number theorem [6].</p>
 <p>'There are two facts about the distribution of prime numbers of which I hope to convince you so overwhelmingly that they will be permanently engraved in your hearts. The first is that, despite their simple definition and role as the building blocks of the natural numbers, the prime numbers grow like weeds among the natural numbers, seeming to obey no other law than that of chance, and nobody can predict where the next one will sprout. The second fact is even more astonishing, for it states just the opposite: that the prime numbers exhibit stunning regularity, that there are laws governing their behavior, and that they obey these laws with almost military precision'. — D. Zagier at a lecture (1975)</p>
@@ -149,7 +189,8 @@ $$
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

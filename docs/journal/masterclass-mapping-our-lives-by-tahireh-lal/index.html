@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/masterclass-mapping-our-lives-by-tahireh-lal/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Understanding</h6>
-                <h3>Masterclass: Mapping our lives by Tahireh Lal</h3>
-                <p class="meta">
-                    29.07.14
-                </p>
-            </div>
-            <img src="/assets/images/2014/mapping.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Understanding</h6>
+                    <h3>Masterclass: Mapping our lives by Tahireh Lal</h3>
+                    <p class="meta">
+                        29.07.14
+                    </p>
+                </div>
+                <img src="/assets/images/2014/mapping.jpg"/>
 <p><em>Cover</em></p>
 <p><a href="http://tahireh.com">Tahireh Lal</a> is an accomplished Indian artist whose reflexive practice explores the dynamic interplay between movement and stasis. Her work draws on local contexts and materials to investigate the complex themes of time and home, finding expression in various mediums such as video, installation, and sculpture. In her masterclass on Mapping our lives, Tahireh challenged participants to create a work connected to their own lives using a set of given materials.</p>
 <p>The masterclass began with a captivating demonstration by Tahireh of her mapping of life through a series of lemonade shots. Each shot had a distinct flavor that evoked a specific memory associated with a particular place or time in her life. As the participants sipped on the lemonade, Tahireh shared stories and anecdotes that provided a unique insight into her life experiences. The demonstration set the tone for the rest of the workshop, emphasizing the importance of personal reflection and introspection in art.</p>
@@ -88,7 +128,8 @@
 <p>Finally, the masterclass was an enriching and inspiring experience that provided valuable insights into the power of personal reflection and experimentation in art. The workshop encouraged participants to explore new ideas and techniques while highlighting the importance of effective execution and constructive feedback. Through this workshop, participants were able to gain a deeper understanding of their creative process and explore new avenues of expression.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/prologue/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" class="active">Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,14 +108,15 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <h3>Prologue</h3>
+            <!-- Main content -->
+            <main>
+                <h3>Prologue</h3>
 <p>This digital space is more than a collection of pages; it’s a glimpse into my evolving journey from the India to the Australia. I’ve woven together my interest for mathematics, design, and technology into an intersection that reflects my endless curiosity and commitment to exploring new horizons.</p>
 <p>I’m driven by a love for archiving — capturing the process, the experiments, the failures, and the triumphs. It’s beyond preserving knowledge and creating a living archive that others can explore, learn from, and build upon. My work is rooted in the belief that technology should break down barriers, not build them, making learning accessible and engaging for everyone.</p>
 <p><a href="/mathscapes/">Mathscapes</a> is my big project and aligns with this philosophy — an umbrella project that brings the beauty of math and computation to life in ways that are approachable and engaging. This site also connects my professional journey with the personal one, <a href="/mentors/">mentors</a> who’ve guided me, the <a href="/students/">students</a> who’ve inspired me, and the <a href="/peers/">peers</a> who’ve walked alongside me.</p>
 <p>Turn the page, dive into the <a href="/journal/">stories</a>, and explore the paths I’ve taken. This is a space for learning, sharing, and connecting — a place where ideas meet action. Let’s see where this journey takes us next.</p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

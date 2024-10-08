@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/years-in-review/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,10 +108,11 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <p><a href="/journal/moved-to-gold-coast/">Yearly note 2023: Moved to Gold Coast</a><br/><a href="/journal/leaving-srishti/">Yearly note 2022: Leaving Srishti</a><br/><a href="/journal/lockdown/">Yearly note 2021: Lockdown</a><br/><a href="/journal/pandemic/">Yearly note 2020: Pandemic</a><br/><a href="/journal/beyond-classrooms/">Yearly note 2019: Beyond classrooms</a><br/><a href="/journal/joys-of-teaching/">Yearly note 2018: Joys of teaching</a><br/><a href="/journal/back-to-srishti/">Yearly note 2017: Back to Srishti</a><br/><a href="/journal/in-transit/">Yearly note 2016: In transit</a><br/><a href="/journal/contrasts-and-growth/">Yearly note 2015: Contrasts and growth</a><br/><a href="/journal/competing-interests/">Yearly note 2014: Competing interests</a><br/><a href="/journal/first-year-at-srishti/">Yearly note 2013: First year at Srishti</a><br/><a href="/journal/preparing-a-transition/">Yearly note 2012: Preparing a transition</a><br/><a href="/journal/markers-and-matches/">Yearly note 2011: Markers and matches</a><br/><a href="/journal/book-swapping/">Yearly note 2010: Book swapping</a><br/><a href="/journal/maxwell-escape/">Yearly note 2009: Maxwell escape</a><br/></p>
-        </main>
+            <!-- Main content -->
+            <main>
+                <p><a href="/journal/moved-to-gold-coast/">Yearly note 2023: Moved to Gold Coast</a><br/><a href="/journal/leaving-srishti/">Yearly note 2022: Leaving Srishti</a><br/><a href="/journal/lockdown/">Yearly note 2021: Lockdown</a><br/><a href="/journal/pandemic/">Yearly note 2020: Pandemic</a><br/><a href="/journal/beyond-classrooms/">Yearly note 2019: Beyond classrooms</a><br/><a href="/journal/joys-of-teaching/">Yearly note 2018: Joys of teaching</a><br/><a href="/journal/back-to-srishti/">Yearly note 2017: Back to Srishti</a><br/><a href="/journal/in-transit/">Yearly note 2016: In transit</a><br/><a href="/journal/contrasts-and-growth/">Yearly note 2015: Contrasts and growth</a><br/><a href="/journal/competing-interests/">Yearly note 2014: Competing interests</a><br/><a href="/journal/first-year-at-srishti/">Yearly note 2013: First year at Srishti</a><br/><a href="/journal/preparing-a-transition/">Yearly note 2012: Preparing a transition</a><br/><a href="/journal/markers-and-matches/">Yearly note 2011: Markers and matches</a><br/><a href="/journal/book-swapping/">Yearly note 2010: Book swapping</a><br/><a href="/journal/maxwell-escape/">Yearly note 2009: Maxwell escape</a><br/></p>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

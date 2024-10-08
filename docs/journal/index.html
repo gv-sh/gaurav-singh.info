@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" class="active">Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,9 +108,9 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <p>07.10.24 <a href="/journal/aatp-demo/" title="[Draft] AATP Demo">[Draft] AATP Demo</a><br>
+            <!-- Main content -->
+            <main>
+                <p>07.10.24 <a href="/journal/aatp-demo/" title="[Draft] AATP Demo">[Draft] AATP Demo</a><br>
 29.09.24 <a href="/journal/progress-through-stem-professional-program/" title="Progress through the STEM Professional Program by Griffith Sciences">Progress through the STEM Professional P...</a> <img class="micro" src="/assets/images/2024/stem-award.jpg"></img><br>
 28.09.24 <a href="/journal/photo-essay-flowers-of-toowoomba/" title="[Draft] Photo essay: Flowers of Toowoomba">[Draft] Photo essay: Flowers of Toowoomb...</a> <img class="micro" src="/assets/images/2024/toowoomba/mt-lofty.jpeg"></img><br>
 17.09.24 <a href="/journal/design-and-evolutionof-my-personal-website/" title="Design and evolution of my personal website">Design and evolution of my personal webs...</a><br>
@@ -119,7 +159,8 @@
 03.11.11 <a href="/journal/shannons-theory-of-information/" title="Shannon's theory of information">Shannon's theory of information</a><br>
 31.12.10 <a href="/journal/book-swapping/" title="Yearly note 2010: Book swapping">Yearly note 2010: Book swapping</a><br>
 31.12.09 <a href="/journal/maxwell-escape/" title="Yearly note 2009: Maxwell escape">Yearly note 2009: Maxwell escape</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

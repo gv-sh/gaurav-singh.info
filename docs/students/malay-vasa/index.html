@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/students/malay-vasa/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,17 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Malay Vasa</h3>
-                <h6>B.Des Class of 2022, Srishti</h6>
-            </div>
-            <p>During my first meeting with Malay Vasa at Srishti Institute in 2021, his humility and grounded nature were as evident as his skill. Now, as the Principal Product Designer at Diffusion Labs since October 2023, he embodies the rare ability to listen and incorporate new perspectives, a quality that complements his technical and creative prowess. Malay navigates the realms of design and programming with a fluidity that is truly rare, making him a standout talent across multiple domains.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Malay Vasa</h3>
+                    <h6>B.Des Class of 2022, Srishti</h6>
+                </div>
+                <p>During my first meeting with Malay Vasa at Srishti Institute in 2021, his humility and grounded nature were as evident as his skill. Now, as the Principal Product Designer at Diffusion Labs since October 2023, he embodies the rare ability to listen and incorporate new perspectives, a quality that complements his technical and creative prowess. Malay navigates the realms of design and programming with a fluidity that is truly rare, making him a standout talent across multiple domains.</p>
 <p>Malay's approachability and openness to learning underpin his professional journey, which I'm sure has seen a significant rise from his initial roles at Scalar to principal designer. His contributions to the open-source community through Google Summer of Code reveal a professional who is not only highly skilled and also deeply committed to collective growth. His potential for further education and the expansion of his horizons are boundless. I am eager to see where his talents and his willingness to embrace new knowledge will take him next.</p>
 <p><a href="https://www.linkedin.com/in/sumiitmeena/">LinkedIn</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

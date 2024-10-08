@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/leaving-srishti/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2022: Leaving Srishti</h3>
-                <p class="meta">
-                    31.12.22
-                </p>
-            </div>
-            <img src="/assets/images/2022/workspace.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2022: Leaving Srishti</h3>
+                    <p class="meta">
+                        31.12.22
+                    </p>
+                </div>
+                <img src="/assets/images/2022/workspace.jpg"/>
 <p><em>My workspace at Srishti's atelier campus</em></p>
 <p>Reflecting on 2022, I experienced a significant transformation in my teaching career. As my expectations and requirements became more apparent, I was presented with the fantastic opportunity to establish my informal cohort as a dedicated lab space called the Experimental Maths Lab. This development renewed my hope for my future at Srishti and marked a complete departure from traditional classroom-based teaching. The lab allowed me to operate autonomously, creating an alternative learning space for students within the context of a design school. Although the turnout was initially low, the lab gradually attracted students, some of whom found relevance in the space and became consistent participants.</p>
 <p>Throughout the year, the Maths Lab hosted several interdisciplinary workshops. &quot;Should you Copyleft?&quot; went into open access movements and philosophies; &quot;Glider Gun&quot; explored cellular automata, Turing machines, and their applications in various fields; and &quot;Mathematics of Magnificent Flora&quot; provided an opportunity to investigate algorithmic botany through the analysis of leaf specimens and the creation of mathematical representations using L-system grammars.</p>
@@ -85,7 +125,8 @@
 <p>Ultimately, in September, I decided to leave Srishti and return to being a student again. This marked a new chapter in my journey, where I could further explore my interests and immerse myself in a different learning environment that better resonated with my evolving perspectives on education and personal growth. Reflecting on my journey in 2022, I am incredibly grateful to the director of Srishti and <a href="/mentors/naveen-bagalkot/">Dr.Naveen</a> for their support and the opportunity to pursue Maths lab. This experience has also strengthened my belief in the importance of unstructured, informal learning environments and the immense potential for growth and exploration in the intersection of mathematics and design.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

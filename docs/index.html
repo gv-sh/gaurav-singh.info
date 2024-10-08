@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" class="active">Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,9 +108,9 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <h3>Hello, I'm Gaurav, based in Gold Coast — Exploring ML and data visualisation to solve engineering challenges.</h3>
+            <!-- Main content -->
+            <main>
+                <h3>Hello, I'm Gaurav, based in Gold Coast — Exploring ML and data visualisation to solve engineering challenges.</h3>
 <p>Welcome to my digital space — think of this as an book. Start with the <!--[foreword](/foreword/) from friends, then flip to the--> <a href="/prologue/">prologue</a> to see how it began. Check out my <a href="/cv/">CV</a> for the basics, or dive into the <a href="/journal/">journal</a> for stories and study notes. Explore chapters on my <a href="/education/">education</a>, <a href="/work/">work</a>, <a href="/teaching/">teaching</a>, <a href="/projects/">projects</a>, and <a href="/research/">research</a>. Along the way, meet my <a href="/peers/">peers</a>, <a href="/students/">students</a>, and <a href="/mentors/">mentors</a>. Don’t miss <a href="/mathscapes/">Mathscapes</a>, my life's project<!--, or the [store](/store/) for my latest stuff-->. Use the <a href="/index/">index</a> to find your way around. I hope you find something useful or inspiring here.</p>
 <p><a href="mailto:hi@gvsh.cc">Email</a></p>
 <hr>
@@ -96,7 +136,8 @@
 <li>Five projects that I'm proud of: <a href="/projects/deconstructing-algorithms-2020/">Deconstructing algorithms</a>, <a href="/projects/reride/">ReRide</a>, <a href="/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/">IMTAR</a>, <a href="/projects/harr-cascade-based-detection/">HARR-CD</a></li>
 <li>Five of my favorite courses that I've facilitated: <a href="/teaching/making-with-algorithms/">Making with Algorithms</a>, <a href="/teaching/sketch-crit-and-remix/">Sketch, Crit and Remix</a>, <a href="/teaching/mathematics-of-magnificent-flora/">MagFlora</a>, <a href="/teaching/should-you-copyleft/">Should you Copyleft?</a>, <a href="/teaching/digital-making-workshop-for-foundation-students/">Digital Making</a></li>
 </ul>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

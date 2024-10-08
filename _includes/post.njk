@@ -6,25 +6,29 @@
         <!-- Header -->
         {% include "header.njk" %}
 
-        <!-- Sidebar -->
-        {% include "sidebar.njk" %}
+        <div class="parent">
 
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">{{ deck }}</h6>
-                <h3>{{ title }}</h3>
-                <p class="meta">
-                {% if date %}
-                    {{ date | postDate }}{% if attribution %} / {{ attribution }}{% endif %}
-                {% endif %}
-                </p>
-            </div>
-            
-            {{ content | safe }}
+            <!-- Sidebar -->
+            {% include "sidebar.njk" %}
 
-            {% include "add-comment.njk" %}
-        </main>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">{{ deck }}</h6>
+                    <h3>{{ title }}</h3>
+                    <p class="meta">
+                    {% if date %}
+                        {{ date | postDate }}{% if attribution %} / {{ attribution }}{% endif %}
+                    {% endif %}
+                    </p>
+                </div>
+                
+                {{ content | safe }}
+
+                {% include "add-comment.njk" %}
+            </main>
+
+        </div>
 
         <!-- Footer -->
         {% include "footer.njk" %}

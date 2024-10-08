@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/moved-to-gold-coast/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2023: Moved to Gold Coast</h3>
-                <p class="meta">
-                    18.12.23
-                </p>
-            </div>
-            <img src="/assets/images/2023/IMG_0021.jpeg" alt="Image 1"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2023: Moved to Gold Coast</h3>
+                    <p class="meta">
+                        18.12.23
+                    </p>
+                </div>
+                <img src="/assets/images/2023/IMG_0021.jpeg" alt="Image 1"/>
 <p><em>The Spit, Gold Coast, Australia</em></p>
 <p>2023 was a year of significant challenges and changes, each decision I made influencing the course of my life in unexpected ways. It all started with a major decision and an unforeseen setback that made me rethink my path. In September 2022, I made the hard choice to resign from my faculty position at Srishti-Manipal Institute, largely due to ongoing issues with work assessments and compensation. It felt like stepping into uncertainty, as I didn’t have my next steps planned out. Despite the frustration, I held onto hope, especially after receiving encouragement from Dr. Venkat, who motivated me to consider pursuing a PhD. However, I quickly realized I needed to gather my transcripts from my post-graduate studies—a task I hadn’t thought about in nearly a decade. Getting my ADP transcripts from 2013-15 introduced me to the administrative challenges of academia, but with the support of my mentors, I was able to navigate the process.</p>
 <p>Not long after, I encountered a major setback. My application for a PhD was rejected because Srishti’s ADP program wasn’t recognized, despite being equivalent to a master’s degree with a thesis. The lack of a GPA system turned out to be a bigger obstacle than I expected. This rejection wasn’t entirely surprising, but it was still a tough moment, as it highlighted the barriers that come with non-traditional education paths. Then, in November 2022, Simba, our family pet, was involved in a serious accident. His recovery became the focus for our family, and I had to put my academic goals on hold for a while. During this time, I was forced to slow down and reflect, feeling unsure about what the future held as my plans seemed to stall.</p>
@@ -100,7 +140,8 @@
 <p>By the end of 2023, my academic life had taken on a deeper focus. Balancing coursework with developing research ideas, I started formulating potential topics for my thesis and sought guidance from faculty members. I even began drafting my research dissertation proposal, laying the foundation for my future work. As I reflect on the year, I see it as both challenging and rewarding. Resilience became a constant companion, and adaptability was essential. The setbacks and progress I experienced throughout the year shaped me into someone more determined and focused. As I look forward, I feel more prepared to face what comes next, armed with the lessons and experiences that have shaped me this year.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

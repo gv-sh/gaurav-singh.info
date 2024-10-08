@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/in-defense-of-a-creative-pursuit/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Design Philosophy</h6>
-                <h3>In defense of a creative pursuit</h3>
-                <p class="meta">
-                    30.07.24
-                </p>
-            </div>
-            <h4>Introduction</h4>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Design Philosophy</h6>
+                    <h3>In defense of a creative pursuit</h3>
+                    <p class="meta">
+                        30.07.24
+                    </p>
+                </div>
+                <h4>Introduction</h4>
 <p>Creativity in our times acts not just as a spark of brilliance, but as a bridge, connecting diverse thoughts to forge groundbreaking solutions and artistic expressions. This process embodies the spirit of 'remixing' as championed in <a href="https://en.wikipedia.org/wiki/Steal_Like_an_Artist">Austin Kleon's &quot;Steal Like An Artist,&quot;</a> where original work is often a transformation of existing ideas, reflecting the interdisciplinary nature of creativity. It involves a process of imagination, problem-solving, and breaking established patterns across various domains. Originality and novelty, the cornerstones of creativity, prompt unconventional thinking and challenge norms, resulting in meaningful impact. Similarly, as <a href="https://news.uchicago.edu/story/mihaly-csikszentmihalyi-pioneering-psychologist-and-father-flow-1934-2021">Mihaly Csikszentmihalyi's concept of 'Flow'</a> suggests, creativity thrives in states of deep immersion and focus, where individuals lose themselves in their work, enhancing both the quality and impact of their creative endeavors. This creative flow is central to effectively communicating innovative concepts, enriching society through art, science, and innovation.</p>
 <p>My exploration of machine learning (ML), human-computer interaction (HCI), and design has been a transformative journey deeply rooted in creativity. With a foundation in computer science (CS) and a strong affinity for visual arts, I think I've built a unique skill set that combines technology with creative expression. This blend is akin to the remixing of ideas, enabling breakthroughs in image processing and data visualization through lateral thinking. Beyond technical expertise, I've ventured into exploring the societal, environmental, and ethical implications at the intersection of ML and HCI, building responsible technological innovation. My journey also resonates with the concept of 'Flow', where my deep engagement in these interdisciplinary fields has led to moments of intense creative focus and productivity, furthering my interest in shaping a more innovative, equitable, and sustainable future.</p>
 <p>My path in creativity has been marked by the deliberate choice to prioritize lateral growth over deep specialization, reflecting the porous nature of disciplinary boundaries and the richness that interdisciplinary connections bring. This approach, fueled by a variety of counterintuitive ideas, has acted as a catalyst for innovative thinking. Building on constraints, appreciating the quantity of ideas as a path to quality, learning from failure, valuing breaks for subconscious processing, and welcoming diverse viewpoints have all profoundly influenced my creative journey. These concepts have pushed me to think beyond the obvious, embrace unconventional perspectives, and engage deeply in my creative pursuits, mirroring the dynamic and multifaceted nature of creativity in today's world.</p>
@@ -159,7 +199,8 @@
 <p>As I conclude, I recognize the immense potential for personal and societal transformation through creativity and lateral thinking. Those who choose lateral growth over deep specialization connect ideas from diverse domains and address complex challenges with fresh perspectives. Fostering a culture of creativity and innovation is essential for harnessing the potential of lateral thinkers, driving innovation, and shaping a more equitable and sustainable future. In a world marked by interconnectedness and multifaceted challenges, lateral thinking remains a powerful force for innovation and creativity, propelling us toward a brighter future.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

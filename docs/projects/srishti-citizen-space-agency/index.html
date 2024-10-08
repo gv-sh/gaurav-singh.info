@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/projects/srishti-citizen-space-agency/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Telemedicine</h6>
-                <h3>Srishti Citizen Space Agency</h3>
-                <p class="meta">
-                    13.11.13 / with SCSA team
-                </p>
-            </div>
-            <img src="/assets/images/2013/joanna.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Telemedicine</h6>
+                    <h3>Srishti Citizen Space Agency</h3>
+                    <p class="meta">
+                        13.11.13 / with SCSA team
+                    </p>
+                </div>
+                <img src="/assets/images/2013/joanna.jpg"/>
 <p><em>Joanna talking about Citizen Satellites project at our classroom in Srishti N3 Campus.</em></p>
 <p>During the one-month interim semester at Srishti, various artists and design practitioners are invited to run experiments or projects that students can sign up for. As someone with a fascination for space, I was excited to participate in the Srishti Citizens Space Agency project led by <a href="https://www.plymouth.ac.uk/staff/joanna-griffin">Joanna Griffin</a>, an artist researcher with a wealth of experience in the field. She has worked on commissions for art/science agency The Arts Catalyst in the UK, created a major astronomy festival in Bangalore called Kalpaneya Yatre: Journey of Imaginations, and has published in Leonardo and Cultural Politics journals. Despite not knowing what to expect from the project, I was happy to have the opportunity to work alongside such a talented and experienced artist researcher. We were all clueless about what was going to happen in the project, and Joanna wasn't ready to reveal much either. However, I was eager to contribute to the team and help create something remarkable out of this project as it unfolds.</p>
 <p><em>Week 1</em>. On the first day of the project, Joanna Griffin, our project lead, started by asking us a few questions about space and its history, and she shared some interesting facts about human exploration of space. She encouraged us to think critically and creatively, urging us to brainstorm questions that could drive our exploration of space and technology. Joanna then asked us to list out our duties as citizens of a nation. We brainstormed and shared our ideas, which she noted on the board. This activity helped us think about the role of individuals in society and their responsibilities towards the community. Next, Joanna distributed newspapers and asked us to categorize the news articles into nature, technology, and society. We read out the articles and discussed their classification, justifying why we thought each article belonged to a particular category. This activity helped us understand the different dimensions of news and how it could be categorized. We were also given a blank chart paper to write down questions that arose from the news articles. Our team chose an article about fatalities during a religious offering in the river Ganga, which led us to question how space technology could be used to enhance the safety of pilgrims during such events. This exercise helped us realize the potential of space technology in addressing real-world problems. Later in the week, we visited the Visvesvaraya Museum and explored its exhibits. We were asked to choose a conceptual direction for our project, focusing on how space technology could touch and enhance people's lives. We brainstormed ideas and selected a direction that we felt had the most potential.</p>
@@ -108,7 +148,8 @@
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

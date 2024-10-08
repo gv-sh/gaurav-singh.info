@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/students/jasraj-paik/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,17 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Jasraj Paik</h3>
-                <h6>B.Des Class of 2023, Srishti</h6>
-            </div>
-            <p>Having crossed paths with Jasraj at Srishti, his dedication and sincerity towards his craft left a lasting impression on me. Jasraj has a wide range of skills and he's really good at what he does. His work at UniBlox and Enphase Energy speak volumes of his ability to convert complex problems into elegant, user-friendly designs, significantly enhancing product interaction and customer satisfaction. At BMRCI, he demonstrated a keen ability to synthesize research into real-world intervention, making everyday travel simpler and more accessible for commuters.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Jasraj Paik</h3>
+                    <h6>B.Des Class of 2023, Srishti</h6>
+                </div>
+                <p>Having crossed paths with Jasraj at Srishti, his dedication and sincerity towards his craft left a lasting impression on me. Jasraj has a wide range of skills and he's really good at what he does. His work at UniBlox and Enphase Energy speak volumes of his ability to convert complex problems into elegant, user-friendly designs, significantly enhancing product interaction and customer satisfaction. At BMRCI, he demonstrated a keen ability to synthesize research into real-world intervention, making everyday travel simpler and more accessible for commuters.</p>
 <p>Jasraj's work ethic is defined by his thoroughness and an honest approach to design challenges. He engages with each task with full integrity, treating every project as an opportunity to push the limits of conventional design and to advocate for designs that empower and facilitate. Jasraj has a lot of different skills and he's really good in many areas of design. He could benefit from focussing on a few specific areas and becoming expert in them. Jasraj should look beyond the opportunities that are immediately available to him, because he has the ability to do things that most people can only imagine. He has the potential to use design to make a big difference in society and to help people.</p>
 <p><a href="https://www.linkedin.com/in/jasraj-paik/">LinkedIn</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

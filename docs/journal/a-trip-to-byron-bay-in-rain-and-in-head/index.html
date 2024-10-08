@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/a-trip-to-byron-bay-in-rain-and-in-head/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Travel</h6>
-                <h3>A trip to Byron Bay, in rain and in head</h3>
-                <p class="meta">
-                    08.01.24
-                </p>
-            </div>
-            <p><img src="/assets/images/2024/IMG_0841.jpeg" alt="Byron Bay Beach">
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Travel</h6>
+                    <h3>A trip to Byron Bay, in rain and in head</h3>
+                    <p class="meta">
+                        08.01.24
+                    </p>
+                </div>
+                <p><img src="/assets/images/2024/IMG_0841.jpeg" alt="Byron Bay Beach">
 <em>Walking towards the beach from Byron Bay's lighthouse</em></p>
 <p>January 2024. The rain had already soaked through my clothes as I trudged to Arpita’s place in the early morning, probably around 7am. The trams weren't operating from the usual 5am due to public holidays if I remember correctly. Also, it wasn’t just the rain; my mind was drenched too, heavy with thoughts I couldn’t shake. This trip to Byron Bay with friends — Arpita, Prathap and Aditya — was meant to be a break, a chance to breathe outside of the Gold Coast bubble. But, the weight inside doesn’t always lift when we change our surroundings.</p>
 <p>We met at the decided location, near the GCUH station and immediately hopped on a tram to the Broadbeach South tram station. We then waited a bit before getting on the bus towards Tweed Heads. We got off near the Gold Coast airport, where we grabbed a quick breakfast at Subway, but my thoughts were still elsewhere, drifting in that nebulous space where plans and reality blur. We realized we were waiting at the wrong bus stop, a rookie mistake, but the real kicker came when we learned the bus was a private one, far more expensive than we’d budgeted for. At that moment, the whole trip felt like it was slipping into chaos, but then again, chaos has a funny way of forcing you to adapt.</p>
@@ -97,7 +137,8 @@
 <p>Byron Bay didn’t fix anything, nor did I expect it to. As we left the lighthouse and the beach behind, I realized that this trip wasn’t about solving problems or finding clarity. It was about recognizing the storm inside me and knowing that, like the ocean, it would continue to ebb and flow. Byron Bay was just a moment to reflect. And that, for now, was enough.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

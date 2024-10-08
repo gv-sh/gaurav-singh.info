@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/prakhar/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,17 +108,18 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Prakhar Ojha</h3>
-                <h6>Met at Srishti in 2013</h6>
-            </div>
-            <p>I first crossed paths with Prakhar Ojha at Srishti in 2013 while pursuing our Advanced Diploma in Innovation Experience and Design. From our initial interactions, it became clear that Prakhar had a remarkable ability to combine imaginative thinking with pragmatic problem-solving, a skill set that will serve him in his future.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Prakhar Ojha</h3>
+                    <h6>Met at Srishti in 2013</h6>
+                </div>
+                <p>I first crossed paths with Prakhar Ojha at Srishti in 2013 while pursuing our Advanced Diploma in Innovation Experience and Design. From our initial interactions, it became clear that Prakhar had a remarkable ability to combine imaginative thinking with pragmatic problem-solving, a skill set that will serve him in his future.</p>
 <p>Prakhar's fascination with stories, particularly in movies and games, influences his approach to design. He has honed a unique ability to empathize with users by understanding their deeper needs, a perspective enriched by his studies in design and his life experiences.</p>
 <p>In his professional journey, Prakhar has taken on key roles that have allowed him to apply and expand his expertise. As a Product Designer at Moonraft and UST, he focused on enhancing user experiences and streamlining design processes. His tenure as the Lead in Experience Design at Moonraft with Continental Industry involved the development of a digital material library, showcasing his skill in leading innovative projects. Additionally, while working with Olam Group, he played a pivotal role in developing the Adva app, promoting sustainable living practices.</p>
 <p>Presently, Prakhar is making significant contributions in the field of experience and interaction design. His work skillfully combines narrative elements with a focus on user-centric design principles, resulting in digital products that are both effective and engaging.</p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

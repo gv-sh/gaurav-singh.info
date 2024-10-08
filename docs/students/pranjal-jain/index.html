@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/students/pranjal-jain/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,17 +108,18 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Pranjal Jain</h3>
-                <h6>M.Des Class of 2019, Srishti</h6>
-            </div>
-            <p>Pranjal Jain is a proactive and highly driven design researcher, who I first encountered at Srishti Institute of Art, Design, and Technology during his Masters in Human-Centered Design. His commitment and skill were immediately evident. Pranjal holds an undergraduate degree in Electronics and Communications Engineering from Vellore Institute of Technology, showcasing a diverse and interdisciplinary academic background.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Pranjal Jain</h3>
+                    <h6>M.Des Class of 2019, Srishti</h6>
+                </div>
+                <p>Pranjal Jain is a proactive and highly driven design researcher, who I first encountered at Srishti Institute of Art, Design, and Technology during his Masters in Human-Centered Design. His commitment and skill were immediately evident. Pranjal holds an undergraduate degree in Electronics and Communications Engineering from Vellore Institute of Technology, showcasing a diverse and interdisciplinary academic background.</p>
 <p>Professionally, Pranjal has accumulated four years of experience leading teams to design digital products and services centered around user needs. He excels in human-computer interaction (HCI), computer-supported cooperative work (CSCW), design research, and the ethics of algorithms. His work demonstrates a profound understanding of technology, customer needs, and business perspectives, ensuring the delivery of competitive and innovative products.</p>
 <p>Currently, Pranjal is advancing his expertise by pursuing a Ph.D. at Swansea University, where he is further exploring the intersection of human-machine relationships. His proactive nature and comprehensive approach to problem-solving earmark him as an exceptional talent. I eagerly anticipate his continued growth and recognition as a distinguished researcher and designer in the field of HCI.</p>
 <p><a href="https://www.swansea.ac.uk/computational-foundry/epsrc-centre-for-doctoral-training/meet-the-cohort/pranjal-jain/">Pranjal Jain @ Swansea University</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

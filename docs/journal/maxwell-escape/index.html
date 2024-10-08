@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/maxwell-escape/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,22 +108,23 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2009: Maxwell escape</h3>
-                <p class="meta">
-                    31.12.09
-                </p>
-            </div>
-            <p>2009 was a year of quiet transformation, a turning point in more ways than I expected. As I moved from my first to second year in <a href="/education/bachelors-cs/">engineering school</a>, the reality of what lay ahead began to sink in. The rush of classes, assignments, and exams seemed relentless, and there were days when it felt overwhelming. But through the chaos, I could feel myself changing, adapting to the demands. A big part of that growth came from the people around me. My friends were a constant source of support when things got challenging. One memory from this year stands out: the final practical exam in electrical engineering. I walked in feeling a knot of anxiety. I hadn’t attended enough practical sessions, and I was nervous about not making it through. But by some stroke of luck, I got assigned an experiment I was comfortable with. Finishing it successfully was a huge weight off my shoulders. That moment, though small in the grand scheme of things, felt like a personal victory.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2009: Maxwell escape</h3>
+                    <p class="meta">
+                        31.12.09
+                    </p>
+                </div>
+                <p>2009 was a year of quiet transformation, a turning point in more ways than I expected. As I moved from my first to second year in <a href="/education/bachelors-cs/">engineering school</a>, the reality of what lay ahead began to sink in. The rush of classes, assignments, and exams seemed relentless, and there were days when it felt overwhelming. But through the chaos, I could feel myself changing, adapting to the demands. A big part of that growth came from the people around me. My friends were a constant source of support when things got challenging. One memory from this year stands out: the final practical exam in electrical engineering. I walked in feeling a knot of anxiety. I hadn’t attended enough practical sessions, and I was nervous about not making it through. But by some stroke of luck, I got assigned an experiment I was comfortable with. Finishing it successfully was a huge weight off my shoulders. That moment, though small in the grand scheme of things, felt like a personal victory.</p>
 <p>Late nights became the norm, whether it was group discussions, math problems, or physics concepts. We worked through it all together. But beyond the classroom, I was starting to branch out. 2009 was the year I took my first steps into design competitions, discovering how satisfying it was to apply what I was learning to real-world problems. That leap into design, along with participating in competitions, opened up a new world for me. I still get a rush thinking about the time I submitted two projects for a competition and ended up winning both first and second place. That was a high I’ll never forget.</p>
 <p>Still, it wasn’t all smooth sailing. There were plenty of moments where doubt crept in. I found myself wishing for a mentor, someone who had been through it before and could offer advice. Although I was surrounded by friends, there was a disconnect. They didn’t quite see things the way I did, and that left me feeling isolated at times. It pushed me to rely on myself and figure things out on my own. I adopted a simple approach to my work: improve with every project. It was a solid plan, but I quickly learned that I had a tendency to dive into solutions before fully understanding the problem. That was a tough lesson in patience, a reminder that growth isn’t just about being fast or skilled but also about being thoughtful.</p>
 <p>As the year came to an end, I found myself looking inward. There was progress, but there were also a lot of questions. <strong>Where was I going? What did I really want?</strong> I realized that beyond goals, I needed clarity. I needed to figure out not just what I was aiming for, but why. Looking back, 2009 was about starting to understand the bigger picture of my own journey.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

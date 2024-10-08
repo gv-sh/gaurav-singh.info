@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/lena/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,17 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Lena Heubusch</h3>
-                <h6>Worked in Together with Touch</h6>
-            </div>
-            <p>Lena Heubusch is an artist and designer, whose work intricately explores the collective quantum connections between the material, the intuitive, and the sensitive. With a research focus on &quot;being body,&quot; Lena delves deep into the realms of human experience and expression, seeking to uncover and articulate the unseen threads that weave together the fabric of our existence.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Lena Heubusch</h3>
+                    <h6>Worked in Together with Touch</h6>
+                </div>
+                <p>Lena Heubusch is an artist and designer, whose work intricately explores the collective quantum connections between the material, the intuitive, and the sensitive. With a research focus on &quot;being body,&quot; Lena delves deep into the realms of human experience and expression, seeking to uncover and articulate the unseen threads that weave together the fabric of our existence.</p>
 <p>I have had the privilege to work with Lena on &quot;Together with Touch&quot;, which was a definite highlight of 2022 for me. We connected through mutuals to collaborate on this project, and right from the start, Lena was deeply invested in understanding my work and approach. This made the project feel collaborative from the outset. She led us with clarity and vision, yet was always grounded in realism about our goals and timelines — a quality I deeply respect. Lena consistently acknowledged everyone's hard work, ensuring we all felt valued for our contributions. It's rare to find someone who excels in their own practice while also elevating those around them. Lena and I have also maintained our connection since the project's conclusion. Our ongoing exchanges have become highlights for me, extending the value of our collaboration well beyond the project itself. I'm eagerly looking forward to another opportunity to work together. For me, working with Lena was as much about learning from her as it was about contributing to our shared project.</p>
 <p><a href="https://lenaheubusch.com">Lena Heubusch</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

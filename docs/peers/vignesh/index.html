@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/vignesh/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,17 +108,18 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Vignesh T</h3>
-                <h6>First met at TCO India Regionals, Bangalore in 2017</h6>
-            </div>
-            <p>I got to know Vignesh through our work with Topcoder, a community where his kind and welcoming demeanor immediately stood out. He's the kind of person who makes an effort to connect and supports those around him, which is a breath of fresh air in the competitive field of design. With over a decade of experience in UI/UX, Vignesh has quietly built a solid track record. He's worked diligently behind the scenes on a variety of projects, ensuring they not only look good but also work smoothly for users. His portfolio includes work for well-known companies like HP and IBM as well as projects for service providers such as T-Mobile and Philips, reflecting his ability to adapt to different clients and understand diverse user needs.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Vignesh T</h3>
+                    <h6>First met at TCO India Regionals, Bangalore in 2017</h6>
+                </div>
+                <p>I got to know Vignesh through our work with Topcoder, a community where his kind and welcoming demeanor immediately stood out. He's the kind of person who makes an effort to connect and supports those around him, which is a breath of fresh air in the competitive field of design. With over a decade of experience in UI/UX, Vignesh has quietly built a solid track record. He's worked diligently behind the scenes on a variety of projects, ensuring they not only look good but also work smoothly for users. His portfolio includes work for well-known companies like HP and IBM as well as projects for service providers such as T-Mobile and Philips, reflecting his ability to adapt to different clients and understand diverse user needs.</p>
 <p>His expertise is comprehensive, covering everything needed to create user-friendly designs from start to finish. Yet, he is always open to learning and improving, a testament to his belief that there's always room to be better. In the Topcoder community, Vignesh has been a steady presence, someone you can rely on for quality work and thoughtful input. He's not just about getting the job done; he's about doing it in a way that brings out the best in both the project and the people he works with.</p>
 <p>Moving forward, Vignesh continues to apply his skills with a quiet confidence, always focusing on the needs of the user and the goals of the project. It's his reliable, no-fuss approach to design and teamwork that truly makes him a valued colleague in the industry.</p>
 <p><a href="https://www.linkedin.com/in/teevics/">LinkedIn</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

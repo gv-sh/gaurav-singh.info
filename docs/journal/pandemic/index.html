@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/pandemic/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,23 +108,24 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2020: Pandemic</h3>
-                <p class="meta">
-                    31.12.20
-                </p>
-            </div>
-            <img src="/assets/images/2020/407.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2020: Pandemic</h3>
+                    <p class="meta">
+                        31.12.20
+                    </p>
+                </div>
+                <img src="/assets/images/2020/407.jpg"/>
 <p><em>Room 407 at Srishti's N5 campus. Evening before their first seminar.</em></p>
 <p>Reflecting on my journey in 2020, I set out to push my boundaries as an educator and challenge the traditional classroom paradigm. My growing interest in unstructured, informal teaching methods stemmed from the insights and breakthroughs I gained in the previous years. The desire to explore alternative educational approaches was fueled by my increasing familiarity with more learning theories supporting student-centered learning experiences. The opportunity to facilitate the Deconstructing Algorithms thesis project was exciting and challenging. It allowed me to explore the intersection of philosophy and algorithmic design while questioning established processes. The COVID-19 pandemic, however, abruptly halted my plans, and I couldn't help but feel a sense of disappointment for the students who could not fully explore their capabilities.</p>
 <p>This setback prompted me to reflect on the limitations of the design school's approach to project facilitation. I found the need for more emphasis on collaboration and the rigid structure of the learning environment to be limiting, which further added to my determination to explore non-traditional educational methods. In the latter half of 2020, I welcomed teaching newly started upskill courses online. This unconventional format allowed me to adopt a more informal teaching style, aligning with my evolving educational beliefs. Throughout this time, I continued to draw on the principles of various learning theories that I was interested in, focusing on fostering open, student-centered learning experiences.</p>
 <p>Looking back on my growth over the last few years, I am struck by the shift in my approach to teaching. While I had intended to leave Srishti by the middle of 2020, unforeseen circumstances related to the ongoing pandemic and other factors impeded this plan. Altogether, this year's events inspired me to adapt, rethink my objectives, and remain committed to creating dynamic and meaningful learning environments.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

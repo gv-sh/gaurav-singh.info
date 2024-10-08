@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/education/bachelors-cs/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Engineering</h6>
-                <h3>Bachelors, Computer Science &amp; Engg.; JNTU-A, India</h3>
-                <p class="meta">
-                    01.07.08 to  01.04.12  / 4 years 
-                </p>
-            </div>
-            <p>During my four-year undergraduate program in Computer Science and Engineering, I acquired a combination of foundational knowledge and specialized skills, starting with basic sciences and programming and gradually progressing to complex concepts in computer science and emerging technologies. This education was enhanced by hands-on experience through intensive projects.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Engineering</h6>
+                    <h3>Bachelors, Computer Science &amp; Engg.; JNTU-A, India</h3>
+                    <p class="meta">
+                        01.07.08 to  01.04.12  / 4 years 
+                    </p>
+                </div>
+                <p>During my four-year undergraduate program in Computer Science and Engineering, I acquired a combination of foundational knowledge and specialized skills, starting with basic sciences and programming and gradually progressing to complex concepts in computer science and emerging technologies. This education was enhanced by hands-on experience through intensive projects.</p>
 <p><em>Minor project.</em> For my minor project, I developed an efficient face detection system using the Harr cascade mechanism and the Adaboost algorithm, focusing on challenges like low light and partial obstructions. This project demonstrated both the potential of learning-based face detection systems and also emphasized the importance of understanding the nuances between face detection and face recognition, and addressing potential biases in these systems. Through the project, I also looked at potential ethical concerns, albeit at a very broader level.</p>
 <p><em>Thesis.</em> In my major project, or thesis, my team and I implemented a method for real-time tracking of multiple coded markers, to address limitations in existing single object tracking methods. This method, combining object detection and tracking techniques, proved comparatively robust and accurate in challenging conditions and enabled the integration of 2D/3D virtual objects onto video sequences. This project showcased the practicality and versatility of the developed method for real-world applications.</p>
 <table>
@@ -118,7 +158,8 @@
 </tr>
 </tbody>
 </table>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

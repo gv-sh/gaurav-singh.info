@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/students/sumit-meena/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,17 +108,18 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Sumit Meena</h3>
-                <h6>B.Des Class of 2017, Srishti</h6>
-            </div>
-            <p>Sumit Meena is an industrial designer whose extensive experience spans various facets of design, from conceptualization to execution. With an education that provided a strong foundation in design principles, he has accrued over seven years of experience, culminating in a role as an Assistant Professor at MITID, Pune. His teachings in Industrial and Interdisciplinary Design are both academically rigorous and infused with real-world applications.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Sumit Meena</h3>
+                    <h6>B.Des Class of 2017, Srishti</h6>
+                </div>
+                <p>Sumit Meena is an industrial designer whose extensive experience spans various facets of design, from conceptualization to execution. With an education that provided a strong foundation in design principles, he has accrued over seven years of experience, culminating in a role as an Assistant Professor at MITID, Pune. His teachings in Industrial and Interdisciplinary Design are both academically rigorous and infused with real-world applications.</p>
 <p>In the professional arena, Sumit founded Vulcan Design Studio, where his work—characterized by a unique blend of generative art and technology—has earned both national and international acclaim. His foray into industrial design consultancy with XYZ Designs - Chirmi Overseas and his significant contributions to The Placet have been marked by innovation and a problem-solving ethos.</p>
 <p>During his formative years, I have had the fortune to work with Sumit at Mathscapes, and I have witnessed his growth as a designer from then. Further, his practical experience as an Industrial Designer at Studio Ubbens in France and his industrious work on his thesis project with Philips highlights the breadth of his exposure. Sumit's diverse roles reveal his continuous pursuit of design knowledge, be it through teaching, creating, or consulting. His journey reflects a professional trajectory that is both inspiring and aspirational for upcoming designers.</p>
 <p><a href="https://www.linkedin.com/in/sumiitmeena/">LinkedIn</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

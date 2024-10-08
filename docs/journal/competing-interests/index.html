@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/competing-interests/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2014: Competing interests</h3>
-                <p class="meta">
-                    31.12.14
-                </p>
-            </div>
-            <img src="/assets/images/2014/slabs.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2014: Competing interests</h3>
+                    <p class="meta">
+                        31.12.14
+                    </p>
+                </div>
+                <img src="/assets/images/2014/slabs.jpg"/>
 <p><em>S.labs at N2 campus, Srishti</em></p>
 <p>In 2014, I met a variety of experiences that shaped my perspective and understanding of my educational journey. These experiences included completing an additional astrophysics course, working on a situated memory project, and exploring the expectations and limitations of the program at Srishti. Looking back, I realized that while Srishti offered numerous opportunities for exploration, it also presented challenges in engaging deeply with specific subjects due to the schedule I can afford as a student at Srishti and multiple competing interests of self. This made me question my decision to pursue a broad range of subjects at Srishti instead of focusing on a narrower range of topics. Despite this, I appreciated the valuable experiences I gained, such as working on the situated memory project, which helped me develop practical skills and an understanding of senior citizens.</p>
 <p>To make the most of my academic experience, I found it necessary to balance practical application and in-depth understanding. I hoped for more like-minded peers with similar goals and aspirations. This insight emphasized combining my interests with the program's expectations to maximize my learning potential. As the year unfolded, I struggled to apply the lessons from previous experiences to better my standing. This highlighted the importance of continuous reflection and adapting to new challenges.</p>
@@ -85,7 +125,8 @@
 <p>Although 2014 was not the most successful year in personal growth, it provided valuable insights into the importance of having clear goals and continuous reflection. By learning from various experiences, I discovered my learning preferences, faced challenges within my academic program, and recognized the importance of collaboration. As I carry these lessons into the future, I look forward to pursuing a deeper understanding and meaningful connections with my peers while maintaining a balance between breadth and depth in my educational journey.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

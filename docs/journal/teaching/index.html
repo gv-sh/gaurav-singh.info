@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/teaching/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Reflection</h6>
-                <h3>My thoughts on teachings</h3>
-                <p class="meta">
-                    17.04.17
-                </p>
-            </div>
-            <p>Reflecting on my teaching journey as I finish the first cycle since joining Srishti, I realize that speaking about it is more straightforward than putting it into practice. I have encountered several challenges while adapting to teaching design and technical subjects in academic and non-academic settings. Using Kolb's experiential learning cycle [1] has been a helpful tool in introspecting my teaching experiences and identifying areas for growth. In this reflective note, I will summarize what I have learned and the challenges I continue to face as a teacher.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Reflection</h6>
+                    <h3>My thoughts on teachings</h3>
+                    <p class="meta">
+                        17.04.17
+                    </p>
+                </div>
+                <p>Reflecting on my teaching journey as I finish the first cycle since joining Srishti, I realize that speaking about it is more straightforward than putting it into practice. I have encountered several challenges while adapting to teaching design and technical subjects in academic and non-academic settings. Using Kolb's experiential learning cycle [1] has been a helpful tool in introspecting my teaching experiences and identifying areas for growth. In this reflective note, I will summarize what I have learned and the challenges I continue to face as a teacher.</p>
 <p>One teaching experience that stands out to me is when I needed help to engage with students who were initially disinterested in the subject. Despite my planning (at least I believed so), some students probably required to be in the right frame of mind to participate fully. In response, I began incorporating theory and hands-on activities to cater to different learning styles and pique their interest. For instance, when teaching design principles, I organized smaller sessions that enabled students to apply these concepts in real time. This approach helped maintain their engagement and allowed me to provide immediate feedback. However, some students may need to be more participative in the classroom due to other things they may be going through, and it is, in fact, alright not to have perfect participation. Identifying alternate ways to engage them later may make more sense. As another possible way, I have also experimented with differentiated instruction [2], an approach to teaching that involves tailoring instructional methods, materials, and assessments to meet the diverse learning needs of students. By providing each student with the appropriate level of challenge and support based on their unique strengths, conditions, and interests, differentiated instruction can address individual differences among students, increase engagement and motivation, accommodate different learning styles, and support students with diverse backgrounds. It may require increased planning time and effort, increased workload, a focus on maintaining high expectations for all students, and attention to classroom management and behavior. Despite these potential challenges, differentiated instruction can create a more inclusive and engaging learning environment for all students. By using differentiated instruction, teachers can support the diverse needs of their students and enhance their overall learning experience. I'm entirely sure what I might focus on in the future. I also think about beginning from a leveled field.</p>
 <p>Throughout my teaching journey, with whatever little I have so far, I have also realized the significance of mathematics in empowering designers and students to create more efficiently. Mathematics is a framework for abstraction and logic, essential for decoding and designing. To address students' math anxiety, I have created an open environment where they can explore mathematical concepts without fear and encourage them to ask more questions. As a teacher, I have discovered the importance of interdisciplinary learning and connecting subjects purposefully. My teaching principles have evolved to include the importance of planning and organization, setting expectations, ensuring students understand the basics, reducing math anxiety, and fostering a solid foundation in the fundamentals. I acknowledge that not all students are initially interested in a subject, and I am responsible for preparing them and keeping them engaged.</p>
 <p>Additionally, I have learned to appreciate the benefits of structured and unstructured learning, striking a balance that enables students to experiment and explore beyond boundaries. One unresolved challenge I face is addressing individual differences among students. I continuously seek new strategies to ensure that my teaching methods resonate with each student, understanding that what works for one may not work for another. The process of continuous reflection has been instrumental in helping me adapt my teaching style and philosophy to meet students' needs better. Furthermore, I'm still trying to balance academic and research work and thus remains a challenge.</p>
@@ -89,7 +129,8 @@
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

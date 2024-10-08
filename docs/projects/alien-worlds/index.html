@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/projects/alien-worlds/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Generative art x SDXL</h6>
-                <h3>Microscopic life at Mars: An AI Exploration</h3>
-                <p class="meta">
-                    01.08.23
-                </p>
-            </div>
-            <p>In &quot;Alien Worlds,&quot; I've used Stable Diffusion XL to envision the life forms of ancient Mars. While these depictions spring from pure imagination rather than scientific facts, they capture the essence of what might have been in a universe as vast and varied as ours. As you delve into these explorations, ponder this: In an age where AI breathes life into our visions, how do we navigate between the known realms of science and the boundless horizons of imagination?</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Generative art x SDXL</h6>
+                    <h3>Microscopic life at Mars: An AI Exploration</h3>
+                    <p class="meta">
+                        01.08.23
+                    </p>
+                </div>
+                <p>In &quot;Alien Worlds,&quot; I've used Stable Diffusion XL to envision the life forms of ancient Mars. While these depictions spring from pure imagination rather than scientific facts, they capture the essence of what might have been in a universe as vast and varied as ours. As you delve into these explorations, ponder this: In an age where AI breathes life into our visions, how do we navigate between the known realms of science and the boundless horizons of imagination?</p>
 <p><img src="/assets/alienworlds/aw_ep1_1.jpg" alt="01">
 <em>Elysian Seedling: A primordial flora with delicate spiny textures, hinting at Mars's once lush and thriving ecosystems</em></p>
 <div class="grid-3">
@@ -181,7 +221,8 @@
 </div>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

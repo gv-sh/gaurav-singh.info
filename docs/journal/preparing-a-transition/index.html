@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/preparing-a-transition/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,23 +108,24 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2012: Preparing a transition</h3>
-                <p class="meta">
-                    31.12.12
-                </p>
-            </div>
-            <p>2012 was a year of transition and recalibration. After finishing my 4-year engineering degree in Computer Science, I found myself at a crossroads, moving away from the familiar path of tech and into the relatively unknown territory of design. It was a slower-paced year, filled with uncertainty and the need to embrace the unknown. Shortly after my studies, I moved to Chennai, not too concerned with landing a job, because that wasn't on my radar. My focus was on learning more, expanding my horizons, and figuring out where I truly wanted to go next.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2012: Preparing a transition</h3>
+                    <p class="meta">
+                        31.12.12
+                    </p>
+                </div>
+                <p>2012 was a year of transition and recalibration. After finishing my 4-year engineering degree in Computer Science, I found myself at a crossroads, moving away from the familiar path of tech and into the relatively unknown territory of design. It was a slower-paced year, filled with uncertainty and the need to embrace the unknown. Shortly after my studies, I moved to Chennai, not too concerned with landing a job, because that wasn't on my radar. My focus was on learning more, expanding my horizons, and figuring out where I truly wanted to go next.</p>
 <p>While my engineering years didn’t come with standout achievements, they gave me valuable skills that I knew would serve me later. As I started to immerse myself in the design world, I began to see the vast possibilities it offered, and that sparked something inside me. I was excited to explore this new field, eager to learn and grow in a way that felt aligned with my curiosity and creativity.</p>
 <p>As I considered my future, I realized that pursuing a Master’s degree in my original field wouldn’t give me the depth or the broader perspective I craved. I needed something more engaging, something that challenged me in different ways. That’s when I set my sights on design. After researching different design schools in India, I decided to take the CEED exam — the first step on this new path.</p>
 <p>My first attempt at the exam didn’t go as planned. But instead of letting it discourage me, I chose to see it as part of the learning process. I spent the rest of the year exploring my options, refining my goals, and gaining clarity about what I wanted for my future. By the end of the year, I had a clearer vision and a renewed sense of purpose, ready to take on the next challenge with more focus and determination.</p>
 <p>Looking back, 2012 taught me a valuable lesson about resilience. The setbacks didn’t define me, they pushed me to keep moving forward, refining my ambitions and solidifying the path ahead. This journey into design wasn’t just about switching fields; it was about embracing growth and letting myself be open to possibilities I hadn’t seen before.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

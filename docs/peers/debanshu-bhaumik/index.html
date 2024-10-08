@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/debanshu-bhaumik/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,17 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Debanshu Bhaumik</h3>
-                <h6>Met in Bangalore in 2018</h6>
-            </div>
-            <p>Debanshu Bhaumik is a visionary in the realms of new media art and design, known for his innovative and thought-provoking work that merges technology with artistic expression. A graduate of the National Institute of Design, India, Debanshu's journey has been marked by exploring the critical implications of emerging technologies on society. Among his notable works, Debanshu has been a prominent collaborator in the design and technology of various exhibitions, art collections, archives, and museums. His expertise in this field was affirmed when one of his exhibition designs earned the prestigious Red Dot Award in 2020 and the Interaction Awards in 2021, reflects his creative prowess and a meticulous approach to exhibition design.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Debanshu Bhaumik</h3>
+                    <h6>Met in Bangalore in 2018</h6>
+                </div>
+                <p>Debanshu Bhaumik is a visionary in the realms of new media art and design, known for his innovative and thought-provoking work that merges technology with artistic expression. A graduate of the National Institute of Design, India, Debanshu's journey has been marked by exploring the critical implications of emerging technologies on society. Among his notable works, Debanshu has been a prominent collaborator in the design and technology of various exhibitions, art collections, archives, and museums. His expertise in this field was affirmed when one of his exhibition designs earned the prestigious Red Dot Award in 2020 and the Interaction Awards in 2021, reflects his creative prowess and a meticulous approach to exhibition design.</p>
 <p>Beyond his recognition, Debanshu has made significant contributions to the intersection of technology and art. His work can be explored in various publications. Furthermore, his creative portfolio showcases a diverse range of projects that demonstrate his ability to push the boundaries of design, whether it's through Braille toys, immersive video experiences, or thought-provoking visual storytelling. Debanshu's effort on the fusion of technology and creativity extends to projects like &quot;The Interpreters,&quot; a captivating exploration of storytelling through technology, and &quot;Farm to Fork,&quot; an immersive journey into the world of food production and consumption. His work not only reflects his technical expertise but also his deep passion for sparking meaningful conversations and challenging conventional norms through art and design. As an extremely talented artist and maker, Debanshu Bhaumik continues to inspire and redefine the possibilities of creative expression in the digital age.</p>
 <p><a href="https://www.debanshubhaumik.com/">Website</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

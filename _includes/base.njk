@@ -5,22 +5,25 @@
         <!-- Header -->
         {% include "header.njk" %}
 
-        <!-- Sidebar -->
-        {% include "sidebar.njk" %}
+        <div class="parent">
 
-        <!-- Main content -->
-        <main>
-            {% if showTitle %}
-                <h3>{{ title }}</h3>
-                <em>{{ meta }}</em>
-            {% endif %}
+            <!-- Sidebar -->
+            {% include "sidebar.njk" %}
 
-            {% if cover %}
-            <img src="{{ cover }}" alt="{{ title }}">
-            {% endif %}
-            
-            {{ content | safe }}
-        </main>
+            <!-- Main content -->
+            <main>
+                {% if showTitle %}
+                    <h3>{{ title }}</h3>
+                    <em>{{ meta }}</em>
+                {% endif %}
+
+                {% if cover %}
+                <img src="{{ cover }}" alt="{{ title }}">
+                {% endif %}
+                
+                {{ content | safe }}
+            </main>
+        </div>
 
         <!-- Footer -->
         {% include "footer.njk" %}

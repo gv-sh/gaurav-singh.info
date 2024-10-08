@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/interact-2017/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Demonstration</h6>
-                <h3>Interact 2017: ReRide demo and more</h3>
-                <p class="meta">
-                    30.09.17
-                </p>
-            </div>
-            <img src="/assets/images/2017/interact_7.jpg" alt=""/> 
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Demonstration</h6>
+                    <h3>Interact 2017: ReRide demo and more</h3>
+                    <p class="meta">
+                        30.09.17
+                    </p>
+                </div>
+                <img src="/assets/images/2017/interact_7.jpg" alt=""/> 
 <p><em>Cover</em></p>
 <p>Beginning to write this as we complete the first day of ReRide demonstration at Interact 2017 Conference in IIT Bombay. The last week till afternoon today have been quite intense for us but also has been quite fruitful. It was very gratifying to finally see the synergy of the team to complete the demo despite few challenges we faced. The demo intended to develop a working proof of concept to demonstrate the intent, which we think has met, though the time crunch has affected us and we could not do the pilot test in a real setting. Nevertheless, we were ready for the Demo. The entire exercise just echoed what I already believe. There is a lot of value in making physical and working concepts (esp. for designers), more often you’ll find that you’re rethinking most of your design decisions made when drafting ideas. What you see is “not” what you get!</p>
 <p>One of the things that I think is quite instrumental for designers is the ability to think spontaneously — and use the brute-force approach. It is not always possible to come with solutions that are guaranteed to work in real settings.</p>
@@ -112,7 +152,8 @@
 </ul>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

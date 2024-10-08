@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/beyond-classrooms/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2019: Beyond classrooms</h3>
-                <p class="meta">
-                    31.12.19
-                </p>
-            </div>
-            <img src="/assets/images/2019/future-making.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2019: Beyond classrooms</h3>
+                    <p class="meta">
+                        31.12.19
+                    </p>
+                </div>
+                <img src="/assets/images/2019/future-making.jpg"/>
 <p><em>Students and I putting together an anamorphic invitation in N2 campus to the upcoming work (then) Making with Algorithms at Srishti's N5 campus. In frame: Arsh, Raashi, Abhijit, Ananya, Janaki, Vanshika and me</em></p>
 <p>In 2019, my teaching load was reduced, allowing me to explore diverse pedagogical approaches and their impact on student learning. This year proved transformative in my understanding and approach to education. I taught three courses throughout the year: Algorithms, computation, and HCI, which was a repetition of a course previously offered in 2017; Making with algorithms, which focused on the modern role of designers working with algorithmic-driven design; and Programming as a design tool for prototyping, a course repeated from 2018.</p>
 <p>The lighter teaching load gave me more time to work with students informally, urging open-ended conversations and encouraging students to pursue their genuine curiosities. This informal setting led to a more profound connection with the students and helped me identify their needs and aspirations. The Making with algorithms course, delivered in a remarkably different manner, became one of the most fulfilling courses I have facilitated to date.</p>
@@ -86,7 +126,8 @@
 <p>By challenging the traditional confines of physical classrooms and embracing a flexible, student-centered approach, I have observed the potential for deeper and more meaningful learning experiences. As an educator, I am committed to exploring and questioning the role of classrooms in education, seeking creative methods to create a nurturing and engaging environment that fosters learning, curiosity, and personal development for students.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

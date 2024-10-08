@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/tensor-notations/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Tensor Calculus</h6>
-                <h3>Tensor notations</h3>
-                <p class="meta">
-                    11.11.23
-                </p>
-            </div>
-            <p>Tensor calculus is a branch of mathematics that extends the well-established principles of linear algebra in higher dimensions. In its essence, tensor calculus deals with tensors, which are mathematical objects that generalize the concepts of scalars and vectors to higher dimensions. Scalars are rank-0 tensors, representing simple quantities that are described by a single number, such as temperature or mass. Tensors, on the other hand, can be thought of as multi-dimensional arrays, where each element is identified by a set of indices and can encapsulate more complex data structures and relationships. Following notes summarises the key concepts for tensor notations from the book <em>Continuum Mechanics and Thermodynamics</em> by Tadmor and others [1].</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Tensor Calculus</h6>
+                    <h3>Tensor notations</h3>
+                    <p class="meta">
+                        11.11.23
+                    </p>
+                </div>
+                <p>Tensor calculus is a branch of mathematics that extends the well-established principles of linear algebra in higher dimensions. In its essence, tensor calculus deals with tensors, which are mathematical objects that generalize the concepts of scalars and vectors to higher dimensions. Scalars are rank-0 tensors, representing simple quantities that are described by a single number, such as temperature or mass. Tensors, on the other hand, can be thought of as multi-dimensional arrays, where each element is identified by a set of indices and can encapsulate more complex data structures and relationships. Following notes summarises the key concepts for tensor notations from the book <em>Continuum Mechanics and Thermodynamics</em> by Tadmor and others [1].</p>
 <p>The roots of tensor calculus are deeply embedded in the works of mathematicians such as Gregorio Ricci-Curbastro and his student Tullio Levi-Civita [2]. Their pioneering work provided the mathematical tools necessary for formulating theories that have shaped the landscape of modern physics and engineering disciplines, and to not forget, continuum mechanics. As I'm revising tensor calculus in the context of my studies in continuum mechanics, I find it important to learn these fundamental concepts.</p>
 <p>Understanding tensors is essential for analyzing the stress, strain, and deformation of materials under various forces, a central theme in continuum mechanics. This note serves as a refresher and an archive as I go deeper into tensor maths.</p>
 <p>The <em>rank</em> or order of a tensor is foundational in tensor calculus, indicating the number of dimensions or indices required to describe it. Scalars are tensors of rank 0, representing simple quantities without direction. Vectors, tensors of rank 1, have both magnitude and direction, and matrices are rank-2 tensors, which can be visualized as two-dimensional grids of numbers.</p>
@@ -176,7 +216,8 @@ $$
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

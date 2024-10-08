@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/design-and-evolutionof-my-personal-website/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Design Philosophy</h6>
-                <h3>Design and evolution of my personal website</h3>
-                <p class="meta">
-                    17.09.24
-                </p>
-            </div>
-            <h3>Purpose</h3>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Design Philosophy</h6>
+                    <h3>Design and evolution of my personal website</h3>
+                    <p class="meta">
+                        17.09.24
+                    </p>
+                </div>
+                <h3>Purpose</h3>
 <p>My personal website is a space for reflection, documentation, and growth. It's more than a portfolio; it's a record of my journey, ideas, and evolution. Unlike social media, which often focuses on fleeting updates, my website is about permanence and control. Here, I own my narrative, shaping it to reflect my growth and capturing both milestones and the journey behind them. This website also serves a broader purpose: to share my process, inspire others, and offer value to those navigating similar creative or professional paths. By documenting my thoughts and projects, I hope to show the value of having a personal space online — a place where creativity, exploration, and learning can unfold freely.</p>
 <p>The motivation behind creating and maintaining this website is rooted in the desire for ownership and authenticity. In a world where many aspects of our digital lives are controlled by third-party platforms, this website represents a space where I have full autonomy. It allows me to document my work in a way that feels true to my experiences, without the interference of external constraints. At its core, my website is an evolving archive of my thoughts, creative projects, and professional achievements. It tracks my progress over time, preserving my ideas and documenting how my work has changed. My journal is a key part of this — a place for reflections, technical insights, and creative thoughts. By documenting both the outcomes and the journey, my website becomes an honest representation of who I am, constantly adapting as my interests and perspectives change.</p>
 <h3>Design and Freedom</h3>
@@ -116,7 +156,8 @@
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

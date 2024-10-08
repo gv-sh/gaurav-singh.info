@@ -6,18 +6,23 @@
         <!-- Header -->
         {% include "header.njk" %}
 
-        <!-- Sidebar -->
-        {% include "sidebar.njk" %}
 
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>{{ title }}</h3>
-                <h6>{{ attribution }}</h6>
-            </div>
-            
-            {{ content | safe }}
-        </main>
+        <div class="parent">
+
+            <!-- Sidebar -->
+            {% include "sidebar.njk" %}
+
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>{{ title }}</h3>
+                    <h6>{{ attribution }}</h6>
+                </div>
+                
+                {{ content | safe }}
+            </main>
+
+        </div>
 
         <!-- Footer -->
         {% include "footer.njk" %}

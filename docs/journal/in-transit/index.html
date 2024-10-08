@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/in-transit/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2016: In transit</h3>
-                <p class="meta">
-                    31.12.16
-                </p>
-            </div>
-            <img src="/assets/images/2016/metro.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2016: In transit</h3>
+                    <p class="meta">
+                        31.12.16
+                    </p>
+                </div>
+                <img src="/assets/images/2016/metro.jpg"/>
 <p><em>By the track at Cubbon park metro. Painting work was in progress on the side, power was disabled of course.</em></p>
 <p>The year 2016 was a transformative period, with experiences that impacted my professional and personal growth. My journey commenced with an invitation from Abhiyan Humane to collaborate with Art in Transit. This opportunity allowed me to hone various skills, such as pitching ideas to potential collaborators, supporting artists and students in developing creative technological installations, and handling various administrative tasks. I discovered growing interest in teaching and mentoring as I collaborated with students.</p>
 <p>Observing the unique ways technology intersected with art, design, and other disciplines, I became aware of the benefits and drawbacks of these interactions. This understanding helped my aspiration for students to engage more deeply, honestly, and rigorously in their chosen subjects. But seeing otherwise added to my frustration. A genuine and honest engagement with the subject matter I had sought as a student would lay a solid foundation for their work.</p>
@@ -85,7 +125,8 @@
 <p>2016 was a key year marked by experiences that continue to shape my journey. The lessons and knowledge acquired through my work with Art in Transit and my initial venture into the professional world have left a lasting impact. My commitment to encouraging honest, rigorous, and genuinely curious student engagement remains strong, and I strive to inspire upcoming students to approach their studies with the same conviction.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

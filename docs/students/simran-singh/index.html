@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/students/simran-singh/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,18 +108,19 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Simran Singh</h3>
-                <h6>B.Des Class of 2020, Srishti</h6>
-            </div>
-            <p>Simran is a gifted user experience designer, distinguished by her talent for making complex ideas accessible and easy to understand. Her quest for learning and taking on new challenges is so heartening to find. Known for her clarity of thought and commitment, Simran's work has been showcased in notable events like Reclaiming AI Futures (2021) and IndiaHCI (2019), reflecting her strong abilities, particularly in collaborative settings.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Simran Singh</h3>
+                    <h6>B.Des Class of 2020, Srishti</h6>
+                </div>
+                <p>Simran is a gifted user experience designer, distinguished by her talent for making complex ideas accessible and easy to understand. Her quest for learning and taking on new challenges is so heartening to find. Known for her clarity of thought and commitment, Simran's work has been showcased in notable events like Reclaiming AI Futures (2021) and IndiaHCI (2019), reflecting her strong abilities, particularly in collaborative settings.</p>
 <p>Having worked with Simran during her internship at Mathscapes, I observed her dedication and thorough approach that she continued to display while completing her Bachelor's in Human-Centered Design from the Srishti Institute of Art, Design, and Technology. Since 2021, Simran has been a significant asset to the Microsoft India Development Center in Hyderabad, engaging in several important projects that highlight her expanding set of skills.</p>
 <p>What is truly truly inspiring about Simran is her potential. Her analytical abilities are evolving, promising to enhance—and perhaps outshine—her substantial making skills. She holds great understanding of the subtleties behind her tasks, suggesting that she is on course for a future rich with leadership in HCI projects and teams, driving meaningful innovation.</p>
 <p>I take pride in the journey Simran has embarked upon, progressing from a student in my classes to a professional influencing the future of HCI. Her path is a proof to her ambition and natural aptitude for design and research. I am eager to see how she continues to progress in 'imagining' and 'creating' pathbreaking work in user experience design.</p>
 <p><a href="https://www.linkedin.com/in/simran-singh-7bba87137">LinkedIn</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

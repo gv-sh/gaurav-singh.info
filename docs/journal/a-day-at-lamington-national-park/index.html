@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/a-day-at-lamington-national-park/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Travel</h6>
-                <h3>A day at Lamington National Park</h3>
-                <p class="meta">
-                    07.09.24
-                </p>
-            </div>
-            <p><img src="/assets/images/2024/lamington-12.jpeg" alt="Beechmont">
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Travel</h6>
+                    <h3>A day at Lamington National Park</h3>
+                    <p class="meta">
+                        07.09.24
+                    </p>
+                </div>
+                <p><img src="/assets/images/2024/lamington-12.jpeg" alt="Beechmont">
 <em>On the way to Lamington National Park</em></p>
 <p>Recently, I went on a spontaneous trip to Lamington National Park with some friends, and it was a wonderful experience. It all began when Arpita invited me to join her and Sifa for a day trip to the park. They had also asked Prathap, a mutual friend, to come along. Despite our packed schedules—Prathap had just finished a night shift and had work later in the day, and Arpita had evening commitments—we decided to make it happen. We planned to meet at 7:30 a.m., giving Prathap enough time to rest. That morning, Prathap called around 6 a.m., suggesting we meet at my place after he swung by his home for a change of clothes, just in case we stumbled across a pool to swim in. We reshuffled our plans so that Sifa would pick up Prathap first, then me, and finally Arpita.</p>
 <p><img src="/assets/images/2024/lamington-14.jpeg" alt="Beechmont">
@@ -105,7 +145,8 @@
 <p><em>L: Gwongoorool Pool; M,R: On the way back</em></p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

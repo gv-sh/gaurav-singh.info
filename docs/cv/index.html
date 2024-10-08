@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/cv/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,9 +108,9 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <h3>Latest</h3>
+            <!-- Main content -->
+            <main>
+                <h3>Latest</h3>
 <p>2024 <a target="_blank" href="https://drive.google.com/file/d/19kT7JAYIyZ8CdTuG0G2iNxhY-4UTVLdR/view" title="CV - Academic">CV - Academic</a> <span class="right">(Ver. 0.4)</span><br>
 2024 <a target="_blank" href="https://drive.google.com/file/d/1fTRAL0R_9S0EpAXh13IUEM19kXI-ZHPP/view" title="CV - Professional">CV - Professional</a> <span class="right">(Ver. 0.7)</span><br>
 2022 <a target="_blank" href="https://drive.google.com/file/d/1w2lLkjQ5mf5tzI02w1gc8cV0qYMbfiae/view" title="Personal statement">Personal statement</a> <span class="right">(Ver. 0.1)</span></p>
@@ -84,7 +124,8 @@
 2015 <a target="_blank" href="https://drive.google.com/file/d/1sp0rJ7x-7Bm5QmXDY09w6WnQZ9_RbiIF/preview" title="CV - Professional">CV - Professional</a> <span class="right">(Ver. 0.3)</span><br>
 2012 <a target="_blank" href="https://drive.google.com/file/d/19Sxl2rILnculoPZ8qG12TMHTC1i0-tCh/preview" title="CV - Professional">CV - Professional</a> <span class="right">(Ver. 0.2)</span><br>
 2008 <a target="_blank" href="https://drive.google.com/file/d/1a1xbVhSfCERBoIJg9U3LY5fHh9N81Cvj/preview" title="CV - Professional">CV - Professional</a> <span class="right">(Ver. 0.1)</span></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

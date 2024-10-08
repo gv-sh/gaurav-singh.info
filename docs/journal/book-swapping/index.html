@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/book-swapping/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,21 +108,22 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Yearly note</h6>
-                <h3>Yearly note 2010: Book swapping</h3>
-                <p class="meta">
-                    31.12.10
-                </p>
-            </div>
-            <p>Looking back on 2010, it was a year of continued growth. Moving from my second to third year in <a href="/education/bachelors-cs/">engineering</a> marked a noticeable increase in difficulty. The coursework was more challenging, there were more projects, and deadlines were frequent. Each morning, my alarm reminded me of the busy day ahead. Some classes were enjoyable and mentally engaging, while others were more difficult and required extra effort. Outside of class, I enjoyed working on personal projects, and it was satisfying to see my code turn into functional apps.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Yearly note</h6>
+                    <h3>Yearly note 2010: Book swapping</h3>
+                    <p class="meta">
+                        31.12.10
+                    </p>
+                </div>
+                <p>Looking back on 2010, it was a year of continued growth. Moving from my second to third year in <a href="/education/bachelors-cs/">engineering</a> marked a noticeable increase in difficulty. The coursework was more challenging, there were more projects, and deadlines were frequent. Each morning, my alarm reminded me of the busy day ahead. Some classes were enjoyable and mentally engaging, while others were more difficult and required extra effort. Outside of class, I enjoyed working on personal projects, and it was satisfying to see my code turn into functional apps.</p>
 <p>My days weren’t entirely focused on studying. In the evenings, I often played volleyball or football with friends, which provided a good break from academics. This year, I became closer to a group of friends, and we spent a lot of time together both studying and working on a startup idea. Our goal was to create a platform that allowed students to swap textbooks. Starting our project was relatively easy, but we encountered challenges. I remember one instance when we tried to get older students to use the platform. Despite showing them positive reviews and letting them test it out, we faced difficulties. This experience taught me lessons about teamwork and problem-solving.</p>
 <p>As the year ends, I’ve been reflecting on my approach to the future. My planning style hasn’t changed much, and I still tend to focus on short-term goals rather than long-term aspirations. One thing I’ve realized this year is that I have a natural ability to think logically and clearly when dealing with complex systems. However, I find it harder to apply that same clarity to planning for my future. I’ve also noticed the importance of finding the right people to work with. While I recognize my own strengths and limitations, I understand that working with a good team can enhance my abilities. Going forward, I know these insights will help me as I look for people who share my vision and goals.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

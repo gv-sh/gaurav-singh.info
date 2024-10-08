@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/switching-roles-at-srishti/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Reflection</h6>
-                <h3>Switching roles at Srishti</h3>
-                <p class="meta">
-                    08.09.17
-                </p>
-            </div>
-            <p>The first cycle of the odd semester at Srishti presented me with unexpected challenges. I was assigned to teach classes that were not in line with my interests, which left me feeling disappointed and uncomfortable. While I appreciate the idea behind exposing newcomers to various subjects to better prepare them, I was uncertain if it would benefit me as I have a specific area of interest that I am focused on, and any deviation from it could derail my roadmap. Initially, I was assigned to teach two units in the first cycle: one in Interaction Design for Master's students and another outside of my area of expertise. However, due to a lack of sign-ups, the latter was canceled, and I was reassigned to another unit in Interaction Design for undergraduates.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Reflection</h6>
+                    <h3>Switching roles at Srishti</h3>
+                    <p class="meta">
+                        08.09.17
+                    </p>
+                </div>
+                <p>The first cycle of the odd semester at Srishti presented me with unexpected challenges. I was assigned to teach classes that were not in line with my interests, which left me feeling disappointed and uncomfortable. While I appreciate the idea behind exposing newcomers to various subjects to better prepare them, I was uncertain if it would benefit me as I have a specific area of interest that I am focused on, and any deviation from it could derail my roadmap. Initially, I was assigned to teach two units in the first cycle: one in Interaction Design for Master's students and another outside of my area of expertise. However, due to a lack of sign-ups, the latter was canceled, and I was reassigned to another unit in Interaction Design for undergraduates.</p>
 <p><em>Interaction design beyond screens</em>. In the first unit, <a href="/mentors/naveen-bagalkot/">Dr.Naveen Bagalkot</a> and I led a class on Electronic Prototyping: Genuino 101 as a means of sketching interactions for the Master's students. This class required the students to do a lot of self-learning to grasp the fundamentals of programming and electronic circuits. While some students who had a background in engineering were able to follow along easily, others struggled to keep up with the assignments. Our expectations were based on the scheme of learning we had planned for Srishti's human-centered design program this year. Nevertheless, by the end of the class, some students excelled and produced prototypes of a high standard within the ten-day studio period. It was a great start, although we didn't entirely meet our expectations. In the future, my challenge for similar classes would be determining the median level of the students' knowledge and understanding of electronics and computer programming and providing information packets based on that.</p>
 <p>Electronic Prototyping is now more critical for Interaction Designers than ever, but some students are intimidated by the concept. How can we impress its significance on them? I believe this cannot happen overnight, but rather requires a series of smaller disruptions to create a culture of action. Faculty members, alumni, and senior students should set an example, and we should emphasize the importance of this discipline.</p>
 <p>I'm unsure if I contributed as much as <a href="/mentors/naveen-bagalkot/">Naveen</a> had expected of me. I believe I can improve my assessment skills, and I have a slightly different way of providing feedback that may not be consistent with Srishti's approach. I am working on being more aware of students and their assignments so that I can give feedback that is more helpful and not merely nitpicking minor issues.</p>
@@ -95,7 +135,8 @@
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

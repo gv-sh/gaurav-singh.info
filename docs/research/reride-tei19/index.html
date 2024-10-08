@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/research/reride-tei19/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,21 +108,22 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Embodied self-monitoring</h6>
-                <h3>ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute</h3>
-                <p class="meta">
-                    17.03.19
-                </p>
-            </div>
-            <p>Motorbike commuting is the new frontier for exploring digital technology where designing for embodied interaction takes on a more central role. In this paper, building on previous work on embodied self-monitoring, we present our ongoing work of designing a modular platform with a particular focus on real-time estimation and presentation of posture data while riding. In particular, we present &quot;Bike Area Network' (BANk) as a system architecture to help guide the design of such a platform. We share our ongoing work as an invitation for the community of researchers and practitioners of designing for embodied interaction to further explore this new frontier of research.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Embodied self-monitoring</h6>
+                    <h3>ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute</h3>
+                    <p class="meta">
+                        17.03.19
+                    </p>
+                </div>
+                <p>Motorbike commuting is the new frontier for exploring digital technology where designing for embodied interaction takes on a more central role. In this paper, building on previous work on embodied self-monitoring, we present our ongoing work of designing a modular platform with a particular focus on real-time estimation and presentation of posture data while riding. In particular, we present &quot;Bike Area Network' (BANk) as a system architecture to help guide the design of such a platform. We share our ongoing work as an invitation for the community of researchers and practitioners of designing for embodied interaction to further explore this new frontier of research.</p>
 <p><em>Keywords</em>. Motorbike riding, embodied self-monitoring, bike area network, modular platform</p>
 <p><em>Cite as</em>. N Bagalkot, G Singh, V Rath, T Sokoler, A Shukla. 2019. ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute. In Proceedings of the Thirteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '19). Association for Computing Machinery, New York, NY, USA, 443-450. doi: <a href="https://dl.acm.org/doi/10.1145/3294109.3300986">10.1145/3294109.3300986</a></p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

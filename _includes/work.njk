@@ -6,23 +6,27 @@
         <!-- Header -->
         {% include "header.njk" %}
 
-        <!-- Sidebar -->
-        {% include "sidebar.njk" %}
+        <div class="parent">
 
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">{{ deck }}</h6>
-                <h3>{{ title }}</h3>
-                <p class="meta">
-                {% if startDate %}
-                    {{ startDate | postDate }} to {% if endDate %} {{ endDate | postDate }} {% else %} Present {% endif %} / {{ duration }} {% if remote %} / Remote {% endif %}
-                {% endif %}
-                </p>
-            </div>
-            
-            {{ content | safe }}
-        </main>
+            <!-- Sidebar -->
+            {% include "sidebar.njk" %}
+
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">{{ deck }}</h6>
+                    <h3>{{ title }}</h3>
+                    <p class="meta">
+                    {% if startDate %}
+                        {{ startDate | postDate }} to {% if endDate %} {{ endDate | postDate }} {% else %} Present {% endif %} / {{ duration }} {% if remote %} / Remote {% endif %}
+                    {% endif %}
+                    </p>
+                </div>
+                
+                {{ content | safe }}
+            </main>
+
+        </div>
 
         <!-- Footer -->
         {% include "footer.njk" %}

@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/about-m56/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,23 +108,24 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Summary</h6>
-                <h3>About M56 team</h3>
-                <p class="meta">
-                    02.09.17 / with Triangle
-                </p>
-            </div>
-            <p>M56 is design collective started by three friends — Prakhar, Swati, and Gaurav (me) at Bangalore in 2015. We met during our post-graduate studies at the Srishti School of Art, Design &amp; Technology in 2013. Though they had distinct personalities and objectives, their thoughts often synchronized. Over the two years in Srishti, our bond grew stronger, and we came across the idea of building a collective. This way, M56 was started.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Summary</h6>
+                    <h3>About M56 team</h3>
+                    <p class="meta">
+                        02.09.17 / with Triangle
+                    </p>
+                </div>
+                <p>M56 is design collective started by three friends — Prakhar, Swati, and Gaurav (me) at Bangalore in 2015. We met during our post-graduate studies at the Srishti School of Art, Design &amp; Technology in 2013. Though they had distinct personalities and objectives, their thoughts often synchronized. Over the two years in Srishti, our bond grew stronger, and we came across the idea of building a collective. This way, M56 was started.</p>
 <p>The following is a brief introduction about us, our interests, and our work, written in third person.</p>
 <p><em>Prakhar Ojha</em> has always been captivated by the power of stories. From a young age, he was drawn to movies and games, immersing himself in the characters and the worlds they inhabited. As he grew older, his curiosity only intensified, driving him to explore new ideas and perspectives. But Prakhar soon realized that not all stories were created equal. Some left him empty and unfulfilled, while others inspired him to create something new and meaningful. This realization fueled his passion for design, where he could use his creativity to make natural and correct things. Through his work in design, Prakhar discovered the power of human-centered innovation. He learned to look beyond the surface and consider the deeper needs and desires of the people he was designing for. This led him to study psychology and ethnography, to understand better how people think and feel. Today, Prakhar is a professional experience and interaction designer dedicated to creating products that tell compelling stories and improve people's lives. His passion for storytelling, combined with his expertise in design and innovation, makes him a truly unique and valuable asset in today's rapidly evolving digital landscape. <a href="https://prakhar-ojha.info">Learn more</a></p>
 <p><em>Swati Sharma</em> has always had an insatiable curiosity and a deep desire to uncover the world's mysteries. As a child, she was driven to excel in her pursuits, spending countless hours perfecting her artwork through practice and dedication. Science fascinated her, as it allowed her to explore the hidden intricacies of the world around her. Despite studying engineering in college, Swati found that the teaching methods used needed to be expanded in their scope. She yearned for a deeper understanding of the world and its inner workings and pursued post-graduation in a field that allowed her to explore her many interests. The design expresses our innate desire to improve and create something better than today for Swati. With a background in Electronic, Instrumentation, and Control Engineering, and a post-graduate degree in Innovation and Experience Design, Swati is passionate about pushing the boundaries of what is possible in healthcare, sustainability, and other fields. Her diverse interests, which include the study of flora and fauna, life beyond Earth, and teaching methods, coupled with her unwavering curiosity and passion for innovation, make her a valuable asset to any team or project. <a href="https://swati-sharma.info">Learn more</a></p>
 <p><em>Gaurav Singh</em> is a researcher passionate about algorithms, using mathematics as his language to decode and design. His love for science and mathematics dates back to his childhood, and his early computer exposure only intensified his fascination. Computer programming particularly captivated him, feeling almost like he had discovered a new superpower. For Gaurav, the world is unavoidably complex, and the design process is not about avoiding this complexity but embracing it. By doing so, he believes we can translate complexity into the illusion of simplicity. With a Computer Science &amp; Engineering degree and post-graduation in Innovation and Experience Design, Gaurav started his career as an independent full-stack programmer. However, he has since evolved his practice toward computer science and mathematics research. Currently, he teaches Interaction Design and Programming at the Srishti Institute of Art, Design &amp; Technology in Bangalore. He runs Mathscapes, a CS/Maths Research Lab. Gaurav's research interests are diverse, covering topics such as Human-Computer Interaction, Prime Numbers, Lossless Data Compression, Artificial Intelligence, Automata, and Dynamic Programming. His dedication to research and his deep understanding of computer science and mathematics make him a valuable asset to any team or project. <a href="https://gaurav-singh.info">Learn more</a></p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

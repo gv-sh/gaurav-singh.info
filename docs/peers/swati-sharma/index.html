@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/swati-sharma/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,18 +108,19 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Swati Sharma</h3>
-                <h6>Met at Srishti in 2013</h6>
-            </div>
-            <p>I met Swati Sharma at Srishti in 2013 during our Advanced Diploma Program in Innovation Experience and Design. It was there that Swati's unique blend of strong principles and innovative design thinking became apparent. Her keen and honest interest in understanding and improving the world around her has set her apart.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Swati Sharma</h3>
+                    <h6>Met at Srishti in 2013</h6>
+                </div>
+                <p>I met Swati Sharma at Srishti in 2013 during our Advanced Diploma Program in Innovation Experience and Design. It was there that Swati's unique blend of strong principles and innovative design thinking became apparent. Her keen and honest interest in understanding and improving the world around her has set her apart.</p>
 <p>Swati's journey is marked by a combination of her academic background in Electronic, Instrumentation, and Control Engineering and a postgraduate degree in Innovation and Experience Design. However, it's her ideologies and ethos that truly define her approach to her work. Swati is driven by a deep desire to make a meaningful impact, particularly in the fields of healthcare and sustainability.</p>
 <p>Her professional experiences reflect this commitment. As a Co-founder and Design Lead at M56 Design Lab since 2015, Swati has led projects that focus on creating significant user experiences. Her time as a Design Consultant at Northumbria University from 2019 to 2021 allowed her to transform complex research into accessible visual formats, while her role as a Research Assistant at Srishti Manipal Institute in 2018 and 2019 involved leveraging technology to improve maternal health.</p>
 <p>Swati also brought her innovative approach to Frontier Markets as an Assistant Manager in Branding &amp; Design from 2017 to 2018, where she influenced branding strategies and community engagement. Her collaborations with various organizations, including Mathscapes and Maison Shefali, further highlight her versatility in design and innovation.</p>
 <p>Today, Swati stands as a independent professional whose work is a blend of her ethos and innovative design principles. Her multifaceted career and her dedication to her principles make her an invaluable asset in any team or project she undertakes.</p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

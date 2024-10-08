@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/tco17-india-regionals/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Event</h6>
-                <h3>TCO17 India regionals, Bangalore</h3>
-                <p class="meta">
-                    02.09.17
-                </p>
-            </div>
-            <img src="/assets/images/2017/workshop.jpg" />
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Event</h6>
+                    <h3>TCO17 India regionals, Bangalore</h3>
+                    <p class="meta">
+                        02.09.17
+                    </p>
+                </div>
+                <img src="/assets/images/2017/workshop.jpg" />
 <p><em>Topcoder design workshop at Srishti Institute of Art, Design &amp; Technology, Bangalore on 17 Aug 2017</em></p>
 <p>Topcoder has arrived in the city for their India Regional event and their inaugural design workshop in India. It is with great pleasure that I inform you that Srishti Institute of Art, Design and Technology had the honor of hosting Topcoder's first-ever design workshop in India. The workshop was open to all Srishti students pursuing the Human-Centered Design discipline. The participants were surprised by the two Rapid UX challenges announced by <a href="https://www.linkedin.com/in/adroc/">Adam Morehead</a>, Creative Head of Topcoder, as they had not been provided much detail about Topcoder or the workshop beforehand. The time constraints of RUX and their limited experience in designing interfaces left the students feeling challenged. However, Adam and <a href="https://www.linkedin.com/in/harshitmehta15">Harshit Mehta</a> (Topcoder Evangelist) did a remarkable job of engaging with the students and clearly discussing the future of design. During his presentation, Adam introduced cognitive design and its significance for designers. The RUX winners were rewarded with cash prizes, which certainly made them happier and demonstrated Topcoder's appreciation for their participation.</p>
 <p>Adam provided feedback for all the RUX submissions, which will help students to appreciate the different perspectives and to articulate their decision-making while designing. In a nutshell — an engaging workshop for all of us. Adam and Harshit also invited everyone to take part in the regional event.</p>
@@ -106,7 +146,8 @@
 <p>Thanks to the hard work of the amazing Topcoder community and the TCO organizing team, the event was a great success.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/shannons-theory-of-information/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Study</h6>
-                <h3>Shannon&#39;s theory of information</h3>
-                <p class="meta">
-                    03.11.11
-                </p>
-            </div>
-            <p>In 2008, during my first year of <a href="/education/bachelors-cs/">engineering</a>, I developed a fascination for memory-efficient data structures and algorithms. Combined with a prior interest in prime numbers and their properties, they eventually led me to explore information entropy, which I learned through Claude Shannon's seminal paper, 'A Mathematical Theory of Communication.'[1] Shannon, an American mathematician, and electrical engineer, is often referred to as the 'father of information theory,' His groundbreaking contributions have revolutionized the fields of digital circuit design and communication theory. In his paper, Shannon introduced the concept of entropy as a measure of the amount of information in a message, which has profoundly impacted modern technology's development. The paper has also served as an inspiration for my interest in developing information compression algorithms, which I hope to get to, on one day. In this review note, I will summarize Shannon's paper, analyze its impact and limitations, and explore its ongoing relevance to information theory in the modern world.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Study</h6>
+                    <h3>Shannon&#39;s theory of information</h3>
+                    <p class="meta">
+                        03.11.11
+                    </p>
+                </div>
+                <p>In 2008, during my first year of <a href="/education/bachelors-cs/">engineering</a>, I developed a fascination for memory-efficient data structures and algorithms. Combined with a prior interest in prime numbers and their properties, they eventually led me to explore information entropy, which I learned through Claude Shannon's seminal paper, 'A Mathematical Theory of Communication.'[1] Shannon, an American mathematician, and electrical engineer, is often referred to as the 'father of information theory,' His groundbreaking contributions have revolutionized the fields of digital circuit design and communication theory. In his paper, Shannon introduced the concept of entropy as a measure of the amount of information in a message, which has profoundly impacted modern technology's development. The paper has also served as an inspiration for my interest in developing information compression algorithms, which I hope to get to, on one day. In this review note, I will summarize Shannon's paper, analyze its impact and limitations, and explore its ongoing relevance to information theory in the modern world.</p>
 <p>Shannon, C. E. 'A Mathematical Theory of Communication.' Bell System Technical Journal 27, no. 3 (July 1948): 379-423. doi:<a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">10.1002/j.1538-7305.1948.tb01338.x</a></p>
 <p>In 1948, Claude Shannon published a paper on communication theory that revolutionized the field. Shannon's approach was to quantify information in a message, which marked a significant departure from the prevailing focus on improving communication channel reliability. Shannon introduced the concept of information entropy, which measures the randomness or uncertainty of a message. Shannon's formula for entropy is $$ H(X) = - \sum_{x} p(x) \log p(x),$$ where $p(x)$ is the probability distribution of possible messages. Shannon also proposed a method for encoding information for efficient transmission and storage and introduced the concept of channel capacity, which is the maximum amount of information that can be transmitted through a communication channel. Additionally, Shannon introduced the concept of redundancy in a message, which determines transmission efficiency. His work also introduced error-correcting codes, enabling the detection and correction of errors in information transmission. Shannon's contributions to communication theory have profoundly impacted modern technology. His work has also transformed the field of digital circuit design and remains relevant in communication theory.</p>
 <p>Shannon's work has greatly impacted many areas of study. His ideas have been widely used in the design of communication systems, coding and compression algorithms, and other applications. Shannon's work has also led to new ways to solve math problems and analyze data, such as information theory, coding theory, and signal processing. Shannon's paper on communication theory has inspired me to develop information compression algorithms, which I hope to get to, on one day. His concept of entropy helped me better understand how much data can be compressed and stored. Because of this, I have looked into different compression techniques, like Huffman coding [2], arithmetic coding [3], and Lempel-Ziv-Welch coding [4], to understand better how data can be compressed.</p>
@@ -91,7 +131,8 @@
 </ol>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

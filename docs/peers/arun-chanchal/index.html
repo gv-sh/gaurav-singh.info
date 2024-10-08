@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/peers/arun-chanchal/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,17 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h3>Arun Chanchal</h3>
-                <h6>Met at Srishti in 2021</h6>
-            </div>
-            <p>Arun Chanchal, a former colleague at Srishti Manipal Institute during the 2021-22 academic year, is a true design virtuoso. Trained as both architect and graphic designer (NID Ahmedabad), Arun has a remarkable breadth of expertise that encompasses everything from the subtle art of typography to the diverse expertise in graphic design, among many other facets. His diverse skill set positions him as an exceptionally versatile creative talent, capable of approaching a wide array of design challenges with finesse and innovation.</p>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h3>Arun Chanchal</h3>
+                    <h6>Met at Srishti in 2021</h6>
+                </div>
+                <p>Arun Chanchal, a former colleague at Srishti Manipal Institute during the 2021-22 academic year, is a true design virtuoso. Trained as both architect and graphic designer (NID Ahmedabad), Arun has a remarkable breadth of expertise that encompasses everything from the subtle art of typography to the diverse expertise in graphic design, among many other facets. His diverse skill set positions him as an exceptionally versatile creative talent, capable of approaching a wide array of design challenges with finesse and innovation.</p>
 <p>Yet, Arun's professional accomplishments are just one aspect of his engaging personality. Known for his warm and approachable demeanor, Arun is a person who effortlessly forges connections with those around him. His profound love for travel reflects his insatiable curiosity about the world and the boundless wellsprings of inspiration it provides. Moreover, Arun's exceptional ability to connect with students through his gentle and nurturing teaching style has endeared him to them. His students hold him in high regard, not only for his extensive knowledge but also for his dedication to their growth and development as designers. Arun is not only a standout designer and educator but also a delightful individual who enriches the lives of everyone fortunate enough to cross his path.</p>
 <p><a href="https://srishtimanipalinstitute.in/people/arun-chanchal">Arun Chanchal @ SMI</a></p>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">

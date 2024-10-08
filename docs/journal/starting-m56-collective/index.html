@@ -36,9 +36,49 @@
         <!-- Header -->
         <header>
     <h1 class="title">Gaurav Singh</h1>
-</header>
-        <!-- Sidebar -->
-        <aside>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol id="breadcrumb"></ol>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = '/journal/starting-m56-collective/';
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const parts = path.split('/').filter(Boolean); 
+    let currentPath = '';
+    // Add root home icon
+    const homeLi = document.createElement('li');
+    homeLi.classList.add('breadcrumb-item');
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
+    homeLi.appendChild(homeLink);
+    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
+    breadcrumbContainer.appendChild(homeLi);
+    parts.forEach((part, index) => {
+        currentPath += `/${part}`;
+        const li = document.createElement('li');
+        li.classList.add('breadcrumb-item');
+        if (index === parts.length - 1) {
+            // The last part should not be a link, it's the current page
+            li.textContent = part;
+            li.classList.add('active');
+            li.setAttribute('aria-current', 'page');
+        } else {
+            // Create a link for intermediate parts
+            const a = document.createElement('a');
+            a.href = currentPath + '/';
+            a.textContent = part;
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
+        }
+        breadcrumbContainer.appendChild(li);
+    });
+});
+</script>
+</header> 
+        <div class="parent">
+            <!-- Sidebar -->
+            <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
         <li><a href="/" >Introduction</a></li>
@@ -46,7 +86,7 @@
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
         <li class="sidebar-section">About me</li>
-        <li><a href="/bio/" >Biography</a></li>
+        <li><a href="/biography/" >Biography</a></li>
         <li><a href="/journal/" >Journal</a></li>
         <li><a href="/education/" >Education</a></li>
         <li><a href="/timeline/" >Timeline*</a></li>
@@ -68,16 +108,16 @@
         <li><a href="/index/" >Index</a></li>
     </ul>
 </aside>
-        <!-- Main content -->
-        <main>
-            <div class="item">
-                <h6 class="deck">Update</h6>
-                <h3>Starting M56 collective</h3>
-                <p class="meta">
-                    02.09.17
-                </p>
-            </div>
-            <img src="/assets/images/2017/n2-screening-room.jpg"/>
+            <!-- Main content -->
+            <main>
+                <div class="item">
+                    <h6 class="deck">Update</h6>
+                    <h3>Starting M56 collective</h3>
+                    <p class="meta">
+                        02.09.17
+                    </p>
+                </div>
+                <img src="/assets/images/2017/n2-screening-room.jpg"/>
 <p><em>N2 screening room</em></p>
 <p>In 2013, during the first semester of our post-graduation in Innovation and Experience Design at Srishti School of Art, Design &amp; Technology, Prakhar, Swati, and I (Gaurav) worked on our first project together. We completed a working concept in just a few days, which we were proud of. What went unnoticed initially laid the idea for the future; the team and collaboration were the stepping stones later on. We spent two years together at Srishti, exploring what it means to design and having long, meaningful discussions. Despite having different undergraduate disciplines, our energies synced, and we became a collective. Fast forward to March 2015, when we were close to completing our post-graduation. We discussed each other's ideas, and one of us contemplated doing a job. In contrast, the others were unhappy with Interaction and Experience Design; for that matter, &quot;design&quot; itself was being treated, especially in the country. It was a great opportunity that could be tapped.</p>
 <p>Attempt 1: The idea of M56 was conceived, and we started with rethinking the practices and questioning methods as to how design should be perceived in India and worldwide. In the last twenty-four months, we have studied and developed our philosophy of transforming this idea into a company. In this course, we have done several projects; some worked, and some did not. We are still learning daily and very faithful to our original idea. Our first effort was a learning space, which we started in late 2015. We wanted to open new learning and design thinking avenues for creatives and designers. In its first program, we ran workshops on Creative coding for a month and a half, which had little to no success. We discussed our ideas and questioned everything but needed help to sustain our audience's interest. After trying multiple permutations of operating our learning space, we finally gave up and decided to begin again. We recognized our mistakes and realized that we could not coordinate well and often had different plans in our minds. We accepted that we need to rethink the solution we're trying to apply.</p>
@@ -85,7 +125,8 @@
 <p>Reorienting: Nevertheless, we learned a lesson. We wondered whether we could remove business from design as a team. Doesn't too much business-driven design defeat the purpose of innovation and design? How far can we push design to truly signify the solution to needs and problems and less towards a business motive? We faced personal challenges but tried not to affect M56. Our schedules conflicted more than ever, and we operated from three different places. However, we were more confident than ever about doing it from scratch all over again. We were redoing our strategy to reflect the new M56, which we hope to share soon. We were never short of ideas, and we did not face any problems in accepting each other's ideas. We failed as a team because we could not anticipate the logistics involved and failed to execute them as they should be.</p>
             <!-- Add comment -->
             Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
-        </main>
+            </main>
+        </div>
         <!-- Footer -->
         <footer class="desktop">
     <div class="left social-icons">
