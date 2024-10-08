@@ -35,7 +35,16 @@
     <body>
         <!-- Header -->
         <header>
-    <h1 class="title">Gaurav Singh</h1>
+    <h1><a href="/" class="title" id="dynamic-title">Gaurav Singh</a></h1>
+    <script>
+        const titles = ['Gaurav Singh', 'gaurav-singh.info', 'gvsh.cc'];
+        let index = 0;
+        setInterval(() => {
+            const titleElement = document.getElementById('dynamic-title');
+            index = (index + 1) % titles.length;
+            titleElement.textContent = titles[index];
+        }, 10000);
+    </script>
     <nav class="breadcrumb" aria-label="breadcrumb">
     <ol id="breadcrumb"></ol>
 </nav>
