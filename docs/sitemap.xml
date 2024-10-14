@@ -413,10 +413,6 @@
     <lastmod>2023-10-29</lastmod>  
   </url>
   <url>
-    <loc>/journal/</loc>
-    <lastmod>2023-10-29</lastmod>  
-  </url>
-  <url>
     <loc>/projects/</loc>
     <lastmod>2023-10-29</lastmod>  
   </url>
@@ -593,10 +589,6 @@
     <lastmod>2024-09-07</lastmod>  
   </url>
   <url>
-    <loc>/</loc>
-    <lastmod>2024-09-08</lastmod>  
-  </url>
-  <url>
     <loc>/journal/design-and-evolutionof-my-personal-website/</loc>
     <lastmod>2024-09-17</lastmod>  
   </url>
@@ -635,5 +627,13 @@
   <url>
     <loc>/journal/aatp-demo/</loc>
     <lastmod>2024-10-07</lastmod>  
+  </url>
+  <url>
+    <loc>/</loc>
+    <lastmod>2024-10-14</lastmod>  
+  </url>
+  <url>
+    <loc>/journal/</loc>
+    <lastmod>2024-10-14</lastmod>  
   </url>
   </urlset>
