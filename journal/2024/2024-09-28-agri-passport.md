@@ -324,4 +324,3 @@ aca-py start \
 4. World Wide Web Consortium (W3C). (2021). Verifiable data registries in decentralized ecosystems. W3C Standards Documentation. https://www.w3.org/TR/vc-data-model/
 5. Hardt, D. (2012). The OAuth 2.0 authorization framework. Internet Engineering Task Force (IETF). https://tools.ietf.org/html/rfc6749
 6. Sandhu, R., Coyne, E., Feinstein, H., & Youman, C. (1996). Role-based access control models. IEEE Computer, 29(2), 38-47. https://doi.org/10.1109/2.485845
-7. Hu, S. Y., Chen, J. F., & Chen, T. H. (2006). VON: a scalable peer-to-peer network for virtual environments. IEEE Network, 20(4), 22-31.

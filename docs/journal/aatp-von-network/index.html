@@ -3,10 +3,10 @@
         <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The Personal Website of Gaurav Singh">
-        <meta name="keywords" content="Gaurav Singh, personal website, introduction, CV, journal, projects, teaching, research, Griffith University, Gold Coast, Australia, India, Bangalore, Srishti Manipal, Manipal, HCI, ML, AI, data visualisation, machine learning, human-computer interaction, computer science, design, art, creative practice, innovation, experience design, programming, computational thinking, ethics, societal impact, technology innovation, Griffith Gold Coast, Griffith University Gold Coast, Australia Gold Coast, India Bangalore">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
         <meta name="author" content="Gaurav Singh">
-        <link rel="canonical" href="https://gaurav-singh.info/">
+        <link rel="canonical" href="https://gaurav-singh.info/journal/aatp-von-network/">
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
         <script src="https://kit.fontawesome.com/f3cb49a58e.js" crossorigin="anonymous"></script>
@@ -20,15 +20,15 @@
                             ],
                             throwOnError : false
                         });"></script>
-        <title>Gaurav Singh | Introduction</title>
+        <title>Gaurav Singh | [Draft] Setting up VON network</title>
         <link rel="stylesheet" href="/bundle.css">
         <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "WebPage",
-            "name": "Introduction",
+            "name": "[Draft] Setting up VON network",
             "description": "Exploring ML, data visualization, and ethical engineering solutions",
-            "url": "https://gaurav-singh.info/"
+            "url": "https://gaurav-singh.info/journal/aatp-von-network/"
         }
         </script>
     </head>
@@ -50,7 +50,7 @@
 </nav>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const path = '/';
+    const path = '/journal/aatp-von-network/';
     const breadcrumbContainer = document.getElementById('breadcrumb');
     const parts = path.split('/').filter(Boolean); 
     let currentPath = '';
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <aside>
     <ul>
         <li class="sidebar-section">Front matter</li>
-        <li><a href="/" class="active">Introduction</a></li>
+        <li><a href="/" >Introduction</a></li>
         <!--<li><a href="/foreword/">Foreword</a></li>-->
         <li><a href="/prologue/" >Prologue</a></li>
         <li class="separator"></li>
@@ -119,32 +119,56 @@ document.addEventListener("DOMContentLoaded", function() {
 </aside>
             <!-- Main content -->
             <main>
-                <h3>Hello, I'm Gaurav, based in Gold Coast — Exploring ML and data visualisation to solve engineering challenges.</h3>
-<p>Welcome to my digital space — think of this as an book. Start with the <!--[foreword](/foreword/) from friends, then flip to the--> <a href="/prologue/">prologue</a> to see how it began. Check out my <a href="/cv/">CV</a> for the basics, or dive into the <a href="/journal/">journal</a> for stories and study notes. Explore chapters on my <a href="/education/">education</a>, <a href="/work/">work</a>, <a href="/teaching/">teaching</a>, <a href="/projects/">projects</a>, and <a href="/research/">research</a>. Along the way, meet my <a href="/peers/">peers</a>, <a href="/students/">students</a>, and <a href="/mentors/">mentors</a>. Don’t miss <a href="/mathscapes/">Mathscapes</a>, my life's project<!--, or the [store](/store/) for my latest stuff-->. Use the <a href="/index/">index</a> to find your way around. I hope you find something useful or inspiring here.</p>
-<p><a href="mailto:hi@gvsh.cc">Email</a></p>
+                <div class="item">
+                    <h6 class="deck">academic</h6>
+                    <h3>[Draft] Setting up VON network</h3>
+                    <p class="meta">
+                        14.10.24
+                    </p>
+                </div>
+                <p>The VON Network is a decentralized identity network that enables organizations to issue and verify cryptographically secure credentials using the Hyperledger Indy framework. It supports privacy-preserving, self-sovereign identity management, primarily for organizational use cases [1].</p>
+<p>Run the following commands on a Ubuntu 20.04 (LTS) x64 server instance to setup the VON Network.</p>
+<pre><code>sudo apt update
+sudo apt upgrade
+</code></pre>
+<pre><code class="language-bash"># Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+# Add the repository to Apt sources:
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+</code></pre>
+<pre><code class="language-bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre>
+<pre><code class="language-bash">docker login
+</code></pre>
+<pre><code class="language-bash">sudo docker run hello-world
+</code></pre>
+<pre><code class="language-bash">apt install unzip
+curl -L https://github.com/bcgov/von-network/archive/main.zip &gt; bcovrin.zip &amp;&amp; \
+    unzip bcovrin.zip &amp;&amp; \
+    cd von-network-main &amp;&amp; \
+    chmod a+w ./server/
+</code></pre>
+<pre><code class="language-bash">./manage build
+</code></pre>
+<pre><code class="language-bash">./manage start 170.64.157.197 WEB_SERVER_HOST_PORT=80 &quot;LEDGER_INSTANCE_NAME=AATP_Ledger&quot; REGISTER_NEW_DIDS=True &amp;
+</code></pre>
+<p>The VON Network will be running on port 80 and can be accessed at <a href="http://170.64.236.3">http://170.64.236.3</a>.</p>
+<pre><code>./manage logs
+</code></pre>
 <hr>
-<h4>Latest from my journal</h4>
-<p>14.10.24 <a href="/journal/aatp-von-network/" title="[Draft] Setting up VON network">[Draft] Setting up VON network</a><br>
-07.10.24 <a href="/journal/aatp-demo/" title="[Draft] AATP Demo">[Draft] AATP Demo</a><br>
-29.09.24 <a href="/journal/progress-through-stem-professional-program/" title="Progress through the STEM Professional Program by Griffith Sciences">Progress through the STEM Professional P...</a> <img class="micro" src="/assets/images/2024/stem-award.jpg"></img><br>
-28.09.24 <a href="/journal/photo-essay-flowers-of-toowoomba/" title="[Draft] Photo essay: Flowers of Toowoomba">[Draft] Photo essay: Flowers of Toowoomb...</a> <img class="micro" src="/assets/images/2024/toowoomba/mt-lofty.jpeg"></img><br>
-17.09.24 <a href="/journal/design-and-evolutionof-my-personal-website/" title="Design and evolution of my personal website">Design and evolution of my personal webs...</a><br>
-07.09.24 <a href="/journal/a-day-at-lamington-national-park/" title="A day at Lamington National Park">A day at Lamington National Park</a> <img class="micro" src="/assets/images/2024/lamington-14.jpeg"></img><br>
-30.07.24 <a href="/journal/in-defense-of-a-creative-pursuit/" title="In defense of a creative pursuit">In defense of a creative pursuit</a><br>
-28.07.24 <a href="/journal/what-is-aatp/" title="What is AATP?">What is AATP?</a><br>
-08.01.24 <a href="/journal/a-trip-to-byron-bay-in-rain-and-in-head/" title="A trip to Byron Bay, in rain and in head">A trip to Byron Bay, in rain and in head</a> <img class="micro" src="/assets/images/2024/IMG_0871.jpeg"></img><br>
-18.12.23 <a href="/journal/moved-to-gold-coast/" title="Yearly note 2023: Moved to Gold Coast">Yearly note 2023: Moved to Gold Coast</a> <img class="micro" src="/assets/images/2023/IMG_0021.jpeg"></img></p>
-<p><a href="/journal/">View all posts</a></p>
-<hr>
-<h4>Featured pages</h4>
-<ul>
-<li><a href="/map/">Places I've been</a> (Visualisation)</li>
-<li><a href="/graphic-shots/">Graphic work</a> (Screenshots)</li>
-<li><a target="_blank" href="https://docs.google.com/presentation/d/1ZEFgsGSbvhxkISJNc6xFoFhgyMTzoNEtWAiibE7x--Q/pub?start=false&loop=false&delayms=3000">Introduction slides</a> (External link)</li>
-<li>Story behind my website: <a href="/prologue/">Prologue</a>, <a href="/journal/evolution-of-my-personal-website/">Evolution</a> and <a href="/journal/design-of-my-personal-website/">Design</a></li>
-<li>Five projects that I'm proud of: <a href="/projects/deconstructing-algorithms-2020/">Deconstructing algorithms</a>, <a href="/projects/reride/">ReRide</a>, <a href="/projects/interactive-multimarker-tracking-and-ar-in-low-light-or-partially-obstruction/">IMTAR</a>, <a href="/projects/harr-cascade-based-detection/">HARR-CD</a></li>
-<li>Five of my favorite courses that I've facilitated: <a href="/teaching/making-with-algorithms/">Making with Algorithms</a>, <a href="/teaching/sketch-crit-and-remix/">Sketch, Crit and Remix</a>, <a href="/teaching/mathematics-of-magnificent-flora/">MagFlora</a>, <a href="/teaching/should-you-copyleft/">Should you Copyleft?</a>, <a href="/teaching/digital-making-workshop-for-foundation-students/">Digital Making</a></li>
-</ul>
+<ol>
+<li>Hu, S. Y., Chen, J. F., &amp; Chen, T. H. (2006). VON: a scalable peer-to-peer network for virtual environments. IEEE Network, 20(4), 22-31.</li>
+</ol>
+            <!-- Add comment -->
+            Leave a message: <a class="leave-your-message" target="_blank" href="https://github.com/gv-sh/gaurav-singh.info/issues/new?assignees=&labels=comment&projects=&template=comment_template.md&title=[Comment] New comment">GitHub</a> / <a class="leave-your-message" target="_blank" href="mailto:hi@gvsh.cc">Email</a>
             </main>
         </div>
         <!-- Footer -->
@@ -162,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <script>
                 function copyToClipboard(event) {
                     event.preventDefault();
-                    const citationText = `Gaurav Singh. "Introduction." The Personal Website of Gaurav Singh. Last modified 14.10.24. https://gaurav-singh.info/`;
+                    const citationText = `Gaurav Singh. "[Draft] Setting up VON network." The Personal Website of Gaurav Singh. Last modified 14.10.24. https://gaurav-singh.info/journal/aatp-von-network/`;
                     const copyLink = document.getElementById('copyLink');
                     const originalScrollPosition = window.pageYOffset;
                     navigator.clipboard.writeText(citationText).then(() => {
