@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 :root {
     --primary-bg-color: #fff;
@@ -9,11 +9,11 @@
     --hover-border: #0033CC;
     --highlight-color: #0033CC;
 
-    --font-family-serif: 'Times New Roman', Times, serif;
-    --font-family-sans-serif: Helvetica, Arial, sans-serif;
-    --font-family-mono: 'Fragment Mono', monospace;
+    --font-family-serif: 'Source Serif 4', 'Times', 'Times New Roman', Times, serif;
+    --font-family-sans-serif: 'Source Sans 3', Helvetica, Arial, sans-serif;
+    --font-family-mono: 'Source Code Pro', monospace;
     --font-size-default: 21px;
-    --font-size-small: 14px;
+    --font-size-small: 18px;
     --font-size-large: 32px;
     --font-size-medium: 1.4em;
     --font-size-xsmall: 0.7em;
@@ -69,6 +69,7 @@
     margin: var(--margin-default);
     color: var(--primary-text-color);
     opacity: 0;
+
     animation: fadeIn var(--fade-in-duration) ease-in-out forwards;
 }
 
@@ -103,7 +104,8 @@ body {
 
 header {
     margin-top: var(--margin-large);
-    border-bottom: var(--border-strong);
+    margin-bottom: 3em;
+    /* border-bottom: var(--border-strong); */
 }
 
 .parent {
@@ -114,9 +116,8 @@ header {
 
 aside {
     width: var(--width-aside);
-    border-right: var(--border-strong);
+    /* border-right: var(--border-strong); */
     padding-bottom: 200px;
-    padding-top: var(--margin-small);
 }
 
 aside ul {
@@ -130,8 +131,8 @@ aside ul li a, aside ul li.sidebar-section {
 }
 
 aside ul li.separator {
-    border-bottom: var(--border-medium);
-    margin-top: var(--margin-small);
+    /* border-bottom: var(--border-medium); */
+    margin-top: 1.5em;
 }
 
 aside ul li a {
@@ -165,7 +166,6 @@ ol li {
 
 main {
     flex-basis: 80%;
-    padding-top: 1.8em;
     padding-left: 1.8em;
     flex-grow: 1;
     padding-bottom: 200px;
@@ -174,12 +174,13 @@ main {
 a {
     color: var(--highlight-color);
     text-decoration: none;
-    border-bottom: var(--border-default);
+    /* border-bottom: var(--border-default); */
     transition: color var(--transition-speed) var(--transition-function), border-bottom-color var(--transition-speed) var(--transition-function);
 }
 
 a:hover {
-    border-bottom: var(--border-width) var(--hover-border);
+    /* border-bottom: var(--border-width) var(--hover-border); */
+    text-decoration: underline;
 }
 
 p {
@@ -192,22 +193,29 @@ b {
 
 h1, h1 a {
     font-size: var(--font-size-large);
-    margin-bottom: var(--margin-small);
-    font-weight: var(--font-weight-normal);
+    margin-bottom: 0.25em;
     line-height: var(--line-height-tight);
-    font-family: var(--font-family-sans-serif);
     color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans-serif);
+    font-weight: 700;
+    letter-spacing: -0.015em;
 }
 
 h1 a:hover {
-    border-bottom: var(--border-width) var(--primary-text-color);
+    /* border-bottom: var(--border-width) var(--primary-text-color); */
 }
 
 hr {
     border: var(--margin-default);
     height: 1px;
     background: var(--semi-transparent-border);
-    margin-bottom: var(--margin-medium);
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .spacer {
@@ -222,14 +230,12 @@ h2 {
     font-size: 2em;
     margin-bottom: var(--margin-large);
     line-height: var(--line-height-tight);
-    font-weight: var(--font-weight-normal);
 }
 
 h3 {
     font-size: var(--font-size-medium);
     margin-bottom: var(--margin-small);
     line-height: var(--line-height-loose);
-    font-weight: var(--font-weight-normal);
 }
 
 .item h3 {
@@ -248,21 +254,16 @@ h3 {
 h4 {
     font-size: var(--font-size-h4);
     margin-bottom: var(--margin-small);
-    font-weight: var(--font-weight-normal);
 }
 
 h5 {
     font-size: var(--font-size-xxsmall);
     margin-bottom: var(--margin-small);
-    font-weight: var(--font-weight-normal);
 }
 
 h6 {
     text-transform: uppercase;
-    font-size: var(--font-size-xsmall);
-    font-weight: var(--font-weight-normal);
     margin-bottom: var(--margin-small);
-    font-family: var(--font-family-sans-serif);
 }
 
 nav ol {
@@ -282,11 +283,9 @@ img {
 }
 
 em {
-    font-size: var(--font-size-extra-small);
     font-weight: var(--font-weight-bold);
     text-align: left;
     margin-bottom: var(--margin-medium);
-    margin-top: var(--margin-small);
     font-style: normal;
     font-family: var(--font-family-sans-serif);
     line-height: var(--line-height-tight);
@@ -386,14 +385,13 @@ code {
     font-size: var(--font-size-larger);
 }
 
-li.sidebar-section {
+li.sidebar-section, .deck {
     text-transform: uppercase;
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
+    font-weight: 600;
     font-family: var(--font-family-sans-serif);
     margin-bottom: 5px;
     color: var(--primary-text-color);
-    margin-top: 0.25em;
+    font-size: 1em;
 }
 
 li.sidebar-section:not(:first-child) {
@@ -524,40 +522,6 @@ sup {
     border: var(--border-strong);
 }
 
-#trackInfo {
-    opacity: 0.5;
-}
-#progressBar {
-    width: var(--dimension-full);
-    height: 2px;
-    background-color: var(--color-midgrey);
-    margin-top: var(--margin-small);
-    margin-bottom: var(--margin-small);
-}
-
-#progress {
-    width: 0%;
-    height: 100%;
-    background-color: var(--highlight-color);
-    transition: width 0.5s ease;
-}
-
-#musicControls {
-    opacity: 0.5;
-}
-
-#timeline-container {
-  margin: var(--margin-small) 0;
-  width: var(--dimension-full);
-  position: relative;
-}
-
-#timeline-container svg {
-  display: block;
-  width: var(--dimension-full);
-  height: auto;
-}
-
 .event-text {
   fill: var(--primary-text-color);
 }
@@ -572,10 +536,6 @@ sup {
   border-radius: 4px;
   pointer-events: none;
   color: var(--primary-text-color);
-}
-
-#rotating-greeting {
-    transition: opacity 1s ease-in-out;
 }
 
 details {
@@ -599,11 +559,6 @@ details[open] summary {
 
 .full-width, .full-width main {
     width: var(--dimension-full) !important;
-}
-
-.deck {
-    color: var(--highlight-color);
-    font-weight: var(--font-weight-bold);
 }
 
 .cite-as {
@@ -668,7 +623,7 @@ footer {
     background-color: var(--primary-bg-color-transparent);
     display: flex;
     justify-content: center;
-    border-top: var(--border-strong);
+    /* border-top: var(--border-strong); */
 }
 
 footer .left {
@@ -697,7 +652,8 @@ footer a {
 }
 
 footer a:hover {
-    border-bottom: var(--border-default);
+    text-decoration: underline;
+    /* border-bottom: var(--border-default); */
 }
 
 aside i {

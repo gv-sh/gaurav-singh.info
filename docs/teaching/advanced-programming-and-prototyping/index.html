@@ -45,45 +45,6 @@
             titleElement.textContent = titles[index];
         }, 10000);
     </script>
-    <nav class="breadcrumb" aria-label="breadcrumb">
-    <ol id="breadcrumb"></ol>
-</nav>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const path = '/teaching/advanced-programming-and-prototyping/';
-    const breadcrumbContainer = document.getElementById('breadcrumb');
-    const parts = path.split('/').filter(Boolean); 
-    let currentPath = '';
-    // Add root home icon
-    const homeLi = document.createElement('li');
-    homeLi.classList.add('breadcrumb-item');
-    const homeLink = document.createElement('a');
-    homeLink.href = '/';
-    homeLink.innerHTML = '<i class="fa-solid fa-house" style="font-size: 14px;"></i>'; // Home icon with decreased size
-    homeLi.appendChild(homeLink);
-    homeLi.appendChild(document.createTextNode(' / ')); // Add separator after home icon without spaces
-    breadcrumbContainer.appendChild(homeLi);
-    parts.forEach((part, index) => {
-        currentPath += `/${part}`;
-        const li = document.createElement('li');
-        li.classList.add('breadcrumb-item');
-        if (index === parts.length - 1) {
-            // The last part should not be a link, it's the current page
-            li.textContent = part;
-            li.classList.add('active');
-            li.setAttribute('aria-current', 'page');
-        } else {
-            // Create a link for intermediate parts
-            const a = document.createElement('a');
-            a.href = currentPath + '/';
-            a.textContent = part;
-            li.appendChild(a);
-            li.appendChild(document.createTextNode(' / ')); // Add separator without spaces
-        }
-        breadcrumbContainer.appendChild(li);
-    });
-});
-</script>
 </header> 
         <div class="parent">
             <!-- Sidebar -->
