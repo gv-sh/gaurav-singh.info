@@ -45,3 +45,6 @@ coverage/
 # Cache directories
 .cache/
 .parcel-cache/
+
+# Specify directory
+.specify/
