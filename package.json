@@ -1,7 +1,7 @@
 {
-  "name": "mathscapes.xyz",
+  "name": "gaurav-singh.info",
   "version": "1.0.0",
-  "description": "Mathscapes company website",
+  "description": "Personal website",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve --watch",
