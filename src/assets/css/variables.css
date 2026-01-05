@@ -1,12 +1,13 @@
 :root {
-  --font-size: 18px;
-  --font-family: 'Source Sans 3', sans-serif;
-  --line-height: 1.2;
+  --font-size: 24px;
+  --font-family: 'EB Garamond', serif;
+  --font-family-sans: 'PT Sans', sans-serif;
+  --line-height: 1.3;
   --body-margin: 1em;
   --max-width: 600px;
+
   --text-color: #333;
-  --link-color: #333;
-  --link-underline: #ccc;
-  --link-underline-hover: #333;
-  --link-underline-offset: 3px;
+  --link-color: #0066cc;
+  --gradient-color-1: hsl(0, 0%, 99%);
+  --gradient-color-2: hsl(0, 0%, 98%);
 }
