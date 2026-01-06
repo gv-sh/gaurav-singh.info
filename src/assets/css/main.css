@@ -9,22 +9,13 @@
 
 
 body {
-    margin: 1em auto !important;
+    margin: 1.5em !important;
+    padding: 0 1.5em !important;
     font-family: var(--font-family) !important;
     max-width: var(--max-width) !important;
     color: var(--text-color) !important;
-
-    /* Fallback for no-JS users */
-    background-color: hsl(45, 30%, 95%) !important;
-
-    /* Time-based linear gradient (top to bottom) */
-    background: linear-gradient(to bottom,
-        var(--gradient-color-1, hsl(45, 30%, 95%)) 0%,
-        var(--gradient-color-2, hsl(40, 30%, 90%)) 100%
-    ) !important;
-
-    /* Smooth 2-minute transition between gradient and text color changes */
-    transition: background 120s ease-in-out, color 120s ease-in-out !important;
+    background-color: var(--bg-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
 }
 
 p {
@@ -36,13 +27,17 @@ p:has(a):hover:not(.cta-wrapper) {
     background-color: rgba(0, 0, 0, 0.02) !important;
 }
 
+[data-theme="dark"] p:has(a):hover:not(.cta-wrapper) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
 a {
     color: var(--link-color) !important;
     text-decoration: none !important;
     font-weight: 500 !important;
     font-style: italic !important;
     position: relative !important;
-    transition: color 120s ease-in-out !important;
+    transition: color 0.3s ease !important;
 }
 
 a::after {
@@ -66,7 +61,7 @@ h1 a {
     font-size: var(--font-size) !important;
     font-weight: 400 !important;
     font-style: normal !important;
-    transition: color 120s ease-in-out !important;
+    transition: color 0.3s ease !important;
 }
 
 h1 a::after {
@@ -81,7 +76,7 @@ h1 a::after {
     text-decoration: none !important;
     display: inline !important;
     position: relative !important;
-    transition: color 120s ease-in-out !important;
+    transition: color 0.3s ease !important;
 }
 
 .status a::after {
@@ -119,8 +114,65 @@ h2 + p ~ p {
     font-family: var(--font-family) !important;
 }
 
-@media (min-width: 600px) {
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) {
     body {
-        margin-top: 4em !important;
+        margin: 3em 2em !important;
     }
+}
+
+/* Desktop: > 1024px */
+@media (min-width: 1024px) {
+    body {
+        margin: 6em auto !important;
+        padding: 0 2em !important;
+    }
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.theme-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+[data-theme="dark"] .theme-toggle svg {
+    color: #ffffff;
 }
