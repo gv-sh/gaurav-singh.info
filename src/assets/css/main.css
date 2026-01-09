@@ -9,8 +9,8 @@
 
 
 body {
-    margin: 1.5em !important;
-    padding: 0 1.5em !important;
+    margin: 0.5em !important;
+    padding: 0 0.5em !important;
     font-family: var(--font-family) !important;
     max-width: var(--max-width) !important;
     color: var(--text-color) !important;
