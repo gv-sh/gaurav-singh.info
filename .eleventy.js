@@ -7,6 +7,12 @@ module.exports = function(eleventyConfig) {
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  // Copy GSAP library files
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/gsap/dist/gsap.min.js": "assets/js/gsap.min.js",
+    "node_modules/gsap/dist/ScrollTrigger.min.js": "assets/js/ScrollTrigger.min.js"
+  });
   
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("src/assets/css/");

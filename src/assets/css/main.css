@@ -176,3 +176,20 @@ h2 + p ~ p {
 [data-theme="dark"] .theme-toggle svg {
     color: #ffffff;
 }
+
+/* Scroll gradient indicator */
+.scroll-gradient {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    pointer-events: none;
+    z-index: 10;
+    background: linear-gradient(to top, var(--bg-color) 0%, transparent 100%);
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .scroll-gradient {
+    background: linear-gradient(to top, var(--bg-color) 0%, transparent 100%);
+}

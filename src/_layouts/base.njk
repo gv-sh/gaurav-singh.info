@@ -25,8 +25,10 @@
     <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    
-    <!-- No JavaScript frameworks - keep it simple and fast -->
+
+    <!-- GSAP for subtle animations -->
+    <script src="/assets/js/gsap.min.js"></script>
+    <script src="/assets/js/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <main>
@@ -90,10 +92,128 @@
         button.addEventListener('click', function() {
           const currentTheme = document.documentElement.getAttribute('data-theme');
           const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+          // Add GSAP rotation animation
+          gsap.to(button, {
+            rotation: 360,
+            duration: 0.5,
+            ease: 'power2.inOut',
+            onComplete: function() {
+              gsap.set(button, { rotation: 0 });
+            }
+          });
+
           setTheme(newTheme);
         });
 
         document.body.appendChild(button);
+      });
+    })();
+    </script>
+
+    <!-- GSAP Animations -->
+    <script>
+    (function() {
+      'use strict';
+
+      // Wait for DOM to be ready
+      document.addEventListener('DOMContentLoaded', function() {
+        // 1. Create scroll gradient indicator
+        var scrollGradient = document.createElement('div');
+        scrollGradient.className = 'scroll-gradient';
+        document.body.appendChild(scrollGradient);
+
+        // Check if page has content below the fold
+        var hasScrollContent = document.body.scrollHeight > window.innerHeight + 100;
+
+        if (hasScrollContent) {
+          // Fade out gradient as user scrolls
+          window.addEventListener('scroll', function() {
+            var scrolled = window.scrollY;
+            var maxScroll = 300; // Fade out over first 300px of scroll
+            var opacity = Math.max(0, 1 - (scrolled / maxScroll));
+            scrollGradient.style.opacity = opacity;
+          });
+        } else {
+          // Hide gradient if no scroll needed
+          scrollGradient.style.opacity = 0;
+        }
+
+        // 2. Page load fade-in animation
+        gsap.from('main', {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          ease: 'power2.out'
+        });
+
+        // 2. Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 3. Animations for paragraphs (both visible and below fold)
+        gsap.utils.toArray('p').forEach(function(p, index) {
+          // Check if element is in viewport on load
+          var rect = p.getBoundingClientRect();
+          var isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+          if (isInViewport) {
+            // Animate immediately with stagger for elements already visible
+            gsap.from(p, {
+              opacity: 0,
+              y: 15,
+              duration: 0.6,
+              delay: index * 0.1, // Stagger delay
+              ease: 'power2.out'
+            });
+          } else {
+            // Use ScrollTrigger for elements below the fold
+            gsap.from(p, {
+              scrollTrigger: {
+                trigger: p,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+              },
+              opacity: 0,
+              y: 15,
+              duration: 0.6,
+              ease: 'power2.out'
+            });
+          }
+        });
+
+        // 4. Scroll-triggered animations for headings
+        gsap.utils.toArray('h1, h2').forEach(function(heading) {
+          gsap.from(heading, {
+            scrollTrigger: {
+              trigger: heading,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            },
+            opacity: 0,
+            x: -10,
+            duration: 0.7,
+            ease: 'power2.out'
+          });
+        });
+
+        // 5. Subtle link hover animation
+        document.querySelectorAll('a:not(h1 a)').forEach(function(link) {
+          link.addEventListener('mouseenter', function() {
+            gsap.to(link, {
+              x: 2,
+              duration: 0.3,
+              ease: 'power2.out'
+            });
+          });
+
+          link.addEventListener('mouseleave', function() {
+            gsap.to(link, {
+              x: 0,
+              duration: 0.3,
+              ease: 'power2.out'
+            });
+          });
+        });
       });
     })();
     </script>
