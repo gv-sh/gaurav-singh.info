@@ -196,24 +196,6 @@
           });
         });
 
-        // 5. Subtle link hover animation
-        document.querySelectorAll('a:not(h1 a)').forEach(function(link) {
-          link.addEventListener('mouseenter', function() {
-            gsap.to(link, {
-              x: 2,
-              duration: 0.3,
-              ease: 'power2.out'
-            });
-          });
-
-          link.addEventListener('mouseleave', function() {
-            gsap.to(link, {
-              x: 0,
-              duration: 0.3,
-              ease: 'power2.out'
-            });
-          });
-        });
       });
     })();
     </script>
