@@ -1,4 +1,5 @@
+{% import "status-icon.njk" as statusIcon %}
 <h1>
     <a href="/">{{ site.author.name }}</a>
-    {% if site.author.status %}<span class="status">{{ site.author.status | safe }}</span>{% endif %}
+    {% if site.author.status %}<span class="status">{{ statusIcon.icon() }} {{ site.author.status | safe }}</span>{% endif %}
 </h1>

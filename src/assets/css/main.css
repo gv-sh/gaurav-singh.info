@@ -1,10 +1,12 @@
+@import url('./fonts.css');
 @import url('./variables.css');
 
 * {
     font-size: var(--font-size) !important;
-    font-weight: normal !important;
+    font-weight: 300 !important;
     font-style: normal !important;
     line-height: var(--line-height) !important;
+    letter-spacing: 0.01em !important;
 }
 
 
@@ -18,15 +20,21 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease !important;
 }
 
+p {
+    margin-bottom: 1.5em !important;
+    orphans: 3;
+    widows: 3;
+    text-indent: -2em !important;
+    padding-left: 2em !important;
+}
+
 em {
-    font-style: italic !important;
+    font-style: normal !important;
 }
 
 a {
     color: var(--link-color) !important;
     text-decoration: none !important;
-    font-weight: 500 !important;
-    font-style: italic !important;
     position: relative !important;
     transition: color 0.3s ease !important;
 }
@@ -46,11 +54,13 @@ a:hover::after {
     width: 100% !important;
 }
 
+h1 {
+    margin-bottom: 0.5em !important;
+}
+
 h1 a {
     color: var(--text-color) !important;
     font-family: var(--font-family) !important;
-    font-size: var(--font-size) !important;
-    font-weight: 400 !important;
     font-style: normal !important;
     transition: color 0.3s ease !important;
 }
@@ -59,11 +69,13 @@ h1 a::after {
     display: none !important;
 }
 
+h2 {
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+}
+
 .status a {
     color: var(--link-color) !important;
-    font-weight: 400 !important;
-    font-size: var(--font-size) !important;
-    font-style: italic !important;
     text-decoration: none !important;
     display: inline !important;
     position: relative !important;
@@ -89,10 +101,12 @@ h1 a::after {
 
 .cta-wrapper {
     margin-bottom: 2em !important;
+    text-indent: 0 !important;
+    padding-left: 0 !important;
 }
 
-h2 + p {
-    margin-bottom: 0 !important;
+h1 + p, h2 + p {
+    margin-top: 0 !important;
 }
 
 h2 + p ~ p {
@@ -103,6 +117,31 @@ h2 + p ~ p {
 .status {
     display: block !important;
     font-family: var(--font-family) !important;
+    margin-top: 0.25em !important;
+}
+
+.link-icon {
+    width: 0.85em;
+    height: 0.85em;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.15em;
+}
+
+.chat-icon {
+    width: 0.85em;
+    height: 0.85em;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.25em;
+}
+
+.status-icon {
+    width: 0.85em;
+    height: 0.85em;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.25em;
 }
 
 /* Tablet: 768px - 1024px */
@@ -166,6 +205,56 @@ h2 + p ~ p {
 
 [data-theme="dark"] .theme-toggle svg {
     color: #ffffff;
+}
+
+/* Publication layout */
+.publication {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1.5em !important;
+    margin-bottom: 1.5em !important;
+}
+
+.publication-image {
+    width: 150px !important;
+    min-width: 150px !important;
+    background-color: #f8f8f8 !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.publication-image img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+[data-theme="dark"] .publication-image {
+    background-color: #1a1a1a !important;
+    border-color: #2a2a2a !important;
+}
+
+.publication p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    text-indent: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Mobile: Stack image above text */
+@media (max-width: 767px) {
+    .publication {
+        flex-direction: column !important;
+        gap: 1em !important;
+    }
+
+    .publication-image {
+        width: 120px !important;
+        min-width: 120px !important;
+    }
 }
 
 /* Scroll gradient indicator */
