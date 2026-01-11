@@ -13,6 +13,12 @@ module.exports = function(eleventyConfig) {
     "node_modules/gsap/dist/gsap.min.js": "assets/js/gsap.min.js",
     "node_modules/gsap/dist/ScrollTrigger.min.js": "assets/js/ScrollTrigger.min.js"
   });
+
+  // Copy Three.js library files
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/three/build/three.module.js": "assets/js/three.module.js",
+    "node_modules/three/build/three.core.js": "assets/js/three.core.js"
+  });
   
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("src/assets/css/");

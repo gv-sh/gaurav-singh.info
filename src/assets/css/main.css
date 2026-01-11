@@ -16,8 +16,29 @@ body {
     font-family: var(--font-family) !important;
     max-width: var(--max-width) !important;
     color: var(--text-color) !important;
-    background-color: var(--bg-color) !important;
-    transition: background-color 0.3s ease, color 0.3s ease !important;
+    background-color: transparent !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Explicit theme backgrounds on html element for instant switching */
+html,
+:root[data-theme="light"] {
+    background-color: #ffffff !important;
+    transition: background-color 0.3s ease !important;
+}
+
+:root[data-theme="dark"] {
+    background-color: #1a1a1a !important;
+}
+
+/* Text colors */
+:root[data-theme="light"] body,
+body {
+    color: #444444 !important;
+}
+
+:root[data-theme="dark"] body {
+    color: #cccccc !important;
 }
 
 p {
@@ -294,4 +315,26 @@ h2 + p ~ p {
 
 [data-theme="dark"] .scroll-gradient {
     background: linear-gradient(to top, var(--bg-color) 0%, transparent 100%);
+}
+
+/* Night Sky Canvas - Dark Theme Only */
+#night-sky-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Behind all content */
+    display: block; /* Always block - Safari fix */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* No interaction */
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* No display change in dark theme - only opacity handled by JS */
+
+/* Ensure main content stays above canvas */
+main {
+    position: relative;
+    z-index: 1;
 }

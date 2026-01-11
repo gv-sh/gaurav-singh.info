@@ -9,9 +9,14 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
+    <!-- Google Fonts - Fragment Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
-    
+
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
     
@@ -26,6 +31,9 @@
     <script src="/assets/js/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <!-- Night Sky Canvas (only renders in dark theme) -->
+    <canvas id="night-sky-canvas" aria-hidden="true"></canvas>
+
     <main>
         {{ content | safe }}
     </main>
@@ -194,5 +202,8 @@
       });
     })();
     </script>
+
+    <!-- Night Sky (ES6 Module) -->
+    <script type="module" src="/assets/js/night-sky.js"></script>
 </body>
 </html>
