@@ -1,19 +1,16 @@
-:root {
+:root, :root[data-theme="light"] {
   --font-size: 18px;
   --font-family: 'Sentient', serif;
   --font-family-sans: 'PT Sans', sans-serif;
   --line-height: 1.45;
   --body-margin: 1em;
   --max-width: 600px;
-}
-
-[data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #444444;
   --link-color: #0066cc;
 }
 
-[data-theme="dark"] {
+:root[data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #cccccc;
   --link-color: #66b3ff;

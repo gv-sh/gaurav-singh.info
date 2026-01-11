@@ -136,12 +136,22 @@ h2 + p ~ p {
     margin-right: 0.25em;
 }
 
+@keyframes statusPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
 .status-icon {
     width: 0.85em;
     height: 0.85em;
     display: inline-block;
     vertical-align: baseline;
     margin-right: 0.25em;
+    animation: statusPulse 2s ease-in-out infinite !important;
 }
 
 /* Tablet: 768px - 1024px */
@@ -213,6 +223,7 @@ h2 + p ~ p {
     align-items: flex-start !important;
     gap: 1.5em !important;
     margin-bottom: 1.5em !important;
+    cursor: help !important;
 }
 
 .publication-image {
@@ -242,6 +253,17 @@ h2 + p ~ p {
     margin-bottom: 0 !important;
     text-indent: 0 !important;
     padding-left: 0 !important;
+}
+
+.author-name {
+    text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-decoration-color: rgba(100, 100, 100, 0.3) !important;
+    text-underline-offset: 2px !important;
+}
+
+[data-theme="dark"] .author-name {
+    text-decoration-color: rgba(200, 200, 200, 0.25) !important;
 }
 
 /* Mobile: Stack image above text */
