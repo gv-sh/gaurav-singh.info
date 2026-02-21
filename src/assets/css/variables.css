@@ -1,13 +1,12 @@
 :root, :root[data-theme="light"] {
   --font-size: 18px;
-  --font-family: 'Sentient', serif;
-  --font-family-sans: 'PT Sans', sans-serif;
+  --font-family: 'Inter Variable', 'Inter', sans-serif;
   --line-height: 1.45;
   --body-margin: 1em;
   --max-width: 600px;
   --bg-color: #ffffff;
   --text-color: #444444;
-  --link-color: #0066cc;
+  --link-color: #0000ee;
 }
 
 :root[data-theme="dark"] {

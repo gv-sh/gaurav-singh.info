@@ -5,10 +5,12 @@
   "author": {
     "name": "Gaurav Singh",
     "email": "hi@gvsh.cc",
+    "affiliation": "Independent Researcher",
     "intro": "Gaurav is a researcher at the intersection of design, machine learning, and engineering. Originally from India and now based on the Gold Coast, he was a faculty member at Srishti Manipal Institute from 2017 to 2022. His work explores how mathematical and computational approaches can solve complex problems across disciplines.",
-    "cta_text": "Work with me",
-    "status": "Building <a href=\"https://github.com/mathscapes/iterflow\">Iterflow</a>",
+    "cta_text": "Contact",
     "twitter": "@gvsh_maths",
     "github": "@gv-sh"
-  }
+  },
+  "interests": ["Machine Learning", "Design", "Engineering"],
+  "coauthors": ["N. Bagalkot", "R.S. Dhari", "Z. Javanbakht"]
 }

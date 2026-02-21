@@ -5,35 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
-    <!-- Google Fonts - Fragment Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://rsms.me">
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
-    
+
     <!-- SEO Meta Tags -->
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-
-    <!-- GSAP for subtle animations -->
-    <script src="/assets/js/gsap.min.js"></script>
-    <script src="/assets/js/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <!-- Night Sky Canvas (only renders in dark theme) -->
-    <canvas id="night-sky-canvas" aria-hidden="true"></canvas>
-
     <main>
         {{ content | safe }}
     </main>
@@ -43,35 +35,24 @@
     (function() {
       'use strict';
 
-      // Heroicon SVGs for each mode (filled style, mini size)
       const ICONS = {
         'light': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 1ZM10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM12.95 4.11a.75.75 0 1 0-1.06-1.06l-1.062 1.06a.75.75 0 0 0 1.061 1.062l1.06-1.061ZM15 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 15 8ZM11.89 12.95a.75.75 0 0 0 1.06-1.06l-1.06-1.062a.75.75 0 0 0-1.062 1.061l1.061 1.06ZM8 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 12ZM5.172 11.89a.75.75 0 0 0-1.061-1.062L3.05 11.89a.75.75 0 1 0 1.06 1.06l1.06-1.06ZM4 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 4 8ZM4.11 5.172A.75.75 0 0 0 5.173 4.11L4.11 3.05a.75.75 0 1 0-1.06 1.06l1.06 1.06Z" /></svg>',
         'dark': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M14.438 10.148c.19-.425-.321-.787-.748-.601A5.5 5.5 0 0 1 6.453 2.31c.186-.427-.176-.938-.6-.748a6.501 6.501 0 1 0 8.585 8.586Z" /></svg>'
       };
 
-      // Get saved theme or detect system preference
       function getInitialTheme() {
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-          return savedTheme;
-        }
-
-        // Detect system preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
-        }
-
+        if (savedTheme) return savedTheme;
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
         return 'light';
       }
 
-      // Set theme
       function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         updateToggleButton(theme);
       }
 
-      // Update toggle button icon and label
       function updateToggleButton(theme) {
         const button = document.querySelector('.theme-toggle');
         if (button) {
@@ -80,130 +61,23 @@
         }
       }
 
-      // Initialize theme immediately (prevent FOUC)
       const initialTheme = getInitialTheme();
       document.documentElement.setAttribute('data-theme', initialTheme);
 
-      // Create toggle button after DOM loads
       document.addEventListener('DOMContentLoaded', function() {
         const button = document.createElement('button');
         button.className = 'theme-toggle';
         button.innerHTML = ICONS[initialTheme];
         button.setAttribute('aria-label', `Switch to ${initialTheme === 'light' ? 'dark' : 'light'} mode`);
 
-        // Click handler: toggle between light and dark
         button.addEventListener('click', function() {
           const currentTheme = document.documentElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-          // Add GSAP rotation animation
-          gsap.to(button, {
-            rotation: 360,
-            duration: 0.5,
-            ease: 'power2.inOut',
-            onComplete: function() {
-              gsap.set(button, { rotation: 0 });
-            }
-          });
-
-          setTheme(newTheme);
+          setTheme(currentTheme === 'light' ? 'dark' : 'light');
         });
 
         document.body.appendChild(button);
       });
     })();
     </script>
-
-    <!-- GSAP Animations -->
-    <script>
-    (function() {
-      'use strict';
-
-      // Wait for DOM to be ready
-      document.addEventListener('DOMContentLoaded', function() {
-        // 1. Create scroll gradient indicator
-        var scrollGradient = document.createElement('div');
-        scrollGradient.className = 'scroll-gradient';
-        document.body.appendChild(scrollGradient);
-
-        // Check if page has content below the fold
-        var hasScrollContent = document.body.scrollHeight > window.innerHeight + 100;
-
-        if (hasScrollContent) {
-          // Fade out gradient as user scrolls
-          window.addEventListener('scroll', function() {
-            var scrolled = window.scrollY;
-            var maxScroll = 300; // Fade out over first 300px of scroll
-            var opacity = Math.max(0, 1 - (scrolled / maxScroll));
-            scrollGradient.style.opacity = opacity;
-          });
-        } else {
-          // Hide gradient if no scroll needed
-          scrollGradient.style.opacity = 0;
-        }
-
-        // 2. Page load fade-in animation
-        gsap.from('main', {
-          opacity: 0,
-          y: 20,
-          duration: 0.8,
-          ease: 'power2.out'
-        });
-
-        // 2. Register ScrollTrigger plugin
-        gsap.registerPlugin(ScrollTrigger);
-
-        // 3. Animations for paragraphs (both visible and below fold)
-        gsap.utils.toArray('p').forEach(function(p, index) {
-          // Check if element is in viewport on load
-          var rect = p.getBoundingClientRect();
-          var isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-
-          if (isInViewport) {
-            // Animate immediately with stagger for elements already visible
-            gsap.from(p, {
-              opacity: 0,
-              y: 15,
-              duration: 0.6,
-              delay: index * 0.1, // Stagger delay
-              ease: 'power2.out'
-            });
-          } else {
-            // Use ScrollTrigger for elements below the fold
-            gsap.from(p, {
-              scrollTrigger: {
-                trigger: p,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-              },
-              opacity: 0,
-              y: 15,
-              duration: 0.6,
-              ease: 'power2.out'
-            });
-          }
-        });
-
-        // 4. Scroll-triggered animations for headings
-        gsap.utils.toArray('h1, h2').forEach(function(heading) {
-          gsap.from(heading, {
-            scrollTrigger: {
-              trigger: heading,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            },
-            opacity: 0,
-            x: -10,
-            duration: 0.7,
-            ease: 'power2.out'
-          });
-        });
-
-      });
-    })();
-    </script>
-
-    <!-- Night Sky (ES6 Module) -->
-    <script type="module" src="/assets/js/night-sky.js"></script>
 </body>
 </html>

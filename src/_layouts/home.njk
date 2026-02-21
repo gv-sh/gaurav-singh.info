@@ -1,48 +1,65 @@
 ---
 layout: base.njk
 ---
-{% import "link-icon.njk" as linkIcon %}
 
 {% include "intro.njk" %}
 
 {% include "cta.njk" %}
 
-<div class="publication" title="iterflow is a zero-dependency JavaScript library that integrates online statistical algorithms into lazy iterator pipelines. Welford's variance, EWMA, streaming Pearson correlation, z-score anomaly detection, and windowed extrema are implemented as chainable pipeline stages that compose with map, filter, window, and take while preserving lazy evaluation and O(1) memory per stage.">
-  <div class="publication-image">
-    <img src="/assets/images/publications/iterflow-2026.png" alt="iterflow paper first page" loading="lazy">
-  </div>
-  <p><em class="author-name">G. Singh</em> (2026). iterflow: Composable Streaming Statistics for JavaScript. <em>Mathscapes Research</em>. <a href="https://doi.org/10.5281/zenodo.18610143">{{ linkIcon.icon() }}</a></p>
-</div>
+<div class="content-grid">
+  <div class="main-col">
+    <h2>Publications</h2>
 
-<div class="publication" title="Auxetic structures undergo intricate deformation under external stimuli to dissipate a substantial amount of energy. This study extends the plastic hinge tracing detection method, utilizing machine learning (logistic regression) to objectively identify deformation modes in re-entrant honeycomb structures.">
-  <div class="publication-image">
-    <img src="/assets/images/publications/auxetics-ml-2024.jpg" alt="PCA clustering results from auxetics ML paper" loading="lazy">
-  </div>
-  <p><em class="author-name">G. Singh</em>, R. S. Dhari, & Z. Javanbakht (2024). Automated detection of deformation mechanisms in re-entrant honeycomb auxetics using machine learning. <em>International Journal of Protective Structures</em>. <a href="https://doi.org/10.1177/20414196241281069">{{ linkIcon.icon() }}</a></p>
-</div>
+    <div class="publication">
+      <div class="pub-info">
+        <a class="pub-title" href="https://doi.org/10.5281/zenodo.18610143">iterflow: Composable Streaming Statistics for JavaScript</a>
+        <div class="pub-meta">G. Singh</div>
+        <div class="pub-meta">Mathscapes</div>
+      </div>
+      <span class="pub-year">2026</span>
+    </div>
 
-<div class="publication" title="Motorbike commuting represents an emerging frontier for exploring digital technology where embodied interaction plays a central role. This paper presents ongoing work on designing a modular platform with a focus on real-time estimation and presentation of posture data while riding, introducing 'Bike Area Network' (BANk) as a system architecture.">
-  <div class="publication-image">
-    <img src="/assets/images/publications/reride-tei-2019.png" alt="ReRide TEI 2019 publication first page" loading="lazy">
-  </div>
-  <p>N. Bagalkot, <em class="author-name">G. Singh</em>, V. Rath, T. Sokoler, & A. Shukla (2019). ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute. In <em>Proceedings of the Thirteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '19)</em>, 443-450. Association for Computing Machinery, New York, NY, USA. <a href="https://doi.org/10.1145/3294109.3300986">{{ linkIcon.icon() }}</a></p>
-</div>
+    <div class="publication">
+      <div class="pub-info">
+        <a class="pub-title" href="https://doi.org/10.1177/20414196241281069">Automated detection of deformation mechanisms in re-entrant honeycomb auxetics using machine learning</a>
+        <div class="pub-meta">G. Singh, R. S. Dhari, Z. Javanbakht</div>
+        <div class="pub-meta">International Journal of Protective Structures</div>
+      </div>
+      <span class="pub-year">2024</span>
+    </div>
 
-<div class="publication" title="This demo paper presents an interactive prototype system for collecting and visualizing motorcycle rider posture data. The work explores embodied interaction during motorbike commuting, building on previous research in embodied self-monitoring.">
-  <div class="publication-image">
-    <img src="/assets/images/publications/reride-interact-2017.png" alt="ReRide INTERACT 2017 publication thumbnail" loading="lazy">
-  </div>
-  <p>N. Bagalkot, T. Sokoler, R. Shaikh, <em class="author-name">G. Singh</em>, A. E. Lillie, P. Dixit, A. Rai, V. Chakravarthy, & A. Senthil (2017). ReRide. In <em>Human-Computer Interaction - INTERACT 2017</em>. Lecture Notes in Computer Science, vol 10516. Springer, Cham. <a href="https://doi.org/10.1007/978-3-319-68059-0_43">{{ linkIcon.icon() }}</a></p>
-</div>
+    <div class="publication">
+      <div class="pub-info">
+        <a class="pub-title" href="https://doi.org/10.1145/3294109.3300986">ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute</a>
+        <div class="pub-meta">N. Bagalkot, G. Singh, V. Rath, T. Sokoler, A. Shukla</div>
+        <div class="pub-meta">Proceedings of the Thirteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '19), 443-450</div>
+      </div>
+      <span class="pub-year">2019</span>
+    </div>
 
-<div class="publication" title="Research shows that inherent psychological barriers linked to memory loss shape ageing people's self-efficacy to perform tasks of everyday living. This paper presents SnapTag, a design concept for a mobile application that leverages situated memory to enhance self-efficacy in senior citizens for their wellbeing.">
-  <div class="publication-image">
-    <img src="/assets/images/publications/snaptag-indiahci-2014.png" alt="SnapTag India HCI 2014 publication first page" loading="lazy">
-  </div>
-  <p>S. Baadkar, <em class="author-name">G. Singh</em>, A. Saraf, & N. Bagalkot (2014). SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being. In <em>Proceedings of the India HCI 2014 Conference on Human-Computer Interaction</em>, 136-141. Association for Computing Machinery, New York, NY, USA. <a href="https://doi.org/10.1145/2676702.2676719">{{ linkIcon.icon() }}</a></p>
-</div>
+    <div class="publication">
+      <div class="pub-info">
+        <a class="pub-title" href="https://doi.org/10.1007/978-3-319-68059-0_43">ReRide</a>
+        <div class="pub-meta">N. Bagalkot, T. Sokoler, R. Shaikh, G. Singh, A. E. Lillie, P. Dixit, A. Rai, V. Chakravarthy, A. Senthil</div>
+        <div class="pub-meta">Human-Computer Interaction - INTERACT 2017. Lecture Notes in Computer Science, vol 10516. Springer, Cham</div>
+      </div>
+      <span class="pub-year">2017</span>
+    </div>
 
-{% if collections.posts.length > 0 %}
-<h2>Recent Posts</h2>
-{% include "post-list.njk" %}
-{% endif %}
+    <div class="publication">
+      <div class="pub-info">
+        <a class="pub-title" href="https://doi.org/10.1145/2676702.2676719">SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being</a>
+        <div class="pub-meta">S. Baadkar, G. Singh, A. Saraf, N. Bagalkot</div>
+        <div class="pub-meta">Proceedings of the India HCI 2014 Conference on Human-Computer Interaction, 136-141</div>
+      </div>
+      <span class="pub-year">2014</span>
+    </div>
+  </div>
+
+  <aside class="side-col">
+    <h2>Co-authors</h2>
+    {% for author in site.coauthors %}
+      <div class="coauthor-name">{{ author }}</div>
+    {% endfor %}
+  </aside>
+</div>
