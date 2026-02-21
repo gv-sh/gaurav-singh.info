@@ -53,6 +53,20 @@ a:visited {
     color: purple !important;
 }
 
+.intro {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25em !important;
+    margin-bottom: 1em !important;
+}
+
+.intro-photo {
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+}
+
 h1 {
     font-size: calc(var(--font-size) * 1.25) !important;
     font-weight: 600 !important;
