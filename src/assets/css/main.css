@@ -171,6 +171,10 @@ h2 {
     line-height: 1.8 !important;
 }
 
+.coauthor-count {
+    opacity: 0.35;
+}
+
 /* Desktop: > 1024px */
 @media (min-width: 1024px) {
     body {

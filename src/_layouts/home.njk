@@ -59,7 +59,10 @@ layout: base.njk
   <aside class="side-col">
 <h2>Co-authors</h2>
     {% for author in site.coauthors %}
-      <div class="coauthor-name">{{ author }}</div>
+      <div class="coauthor-name">
+        {% if author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}
+        <span class="coauthor-count">{{ author.count }}</span>
+      </div>
     {% endfor %}
   </aside>
 </div>

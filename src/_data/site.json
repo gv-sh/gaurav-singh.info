@@ -11,5 +11,20 @@
     "twitter": "@gvsh_maths",
     "github": "@gv-sh"
   },
-"coauthors": ["N. Bagalkot", "R.S. Dhari", "Z. Javanbakht"]
+"coauthors": [
+    { "name": "N. Bagalkot", "count": 3, "url": "https://scholar.google.com/citations?user=Dq4sQNMAAAAJ&hl=en" },
+    { "name": "T. Sokoler", "count": 2, "url": "https://scholar.google.com/citations?user=3yhKwbUAAAAJ&hl=da" },
+    { "name": "R.S. Dhari", "count": 1, "url": "https://staffportal.curtin.edu.au/staff/profile/view/rahul-dhari-e7381561/" },
+    { "name": "Z. Javanbakht", "count": 1, "url": "https://www.auxeticslab.com/people.html" },
+    { "name": "V. Rath", "count": 1 },
+    { "name": "A. Shukla", "count": 1 },
+    { "name": "R. Shaikh", "count": 1, "url": "https://www.linkedin.com/in/riyajsheikh/" },
+    { "name": "A.E. Lillie", "count": 1, "url": "https://deepai.org/profile/anders-edelbo-lillie" },
+    { "name": "P. Dixit", "count": 1 },
+    { "name": "A. Rai", "count": 1 },
+    { "name": "V. Chakravarthy", "count": 1 },
+    { "name": "A. Senthil", "count": 1 },
+    { "name": "S. Baadkar", "count": 1 },
+    { "name": "A. Saraf", "count": 1 }
+  ]
 }
