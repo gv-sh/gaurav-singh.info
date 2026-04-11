@@ -1,16 +1,16 @@
 :root, :root[data-theme="light"] {
-  --font-size: 18px;
+  --font-size: 15px;
   --font-family: 'Inter Variable', 'Inter', sans-serif;
   --line-height: 1.45;
   --body-margin: 1em;
   --max-width: 600px;
-  --bg-color: #ffffff;
-  --text-color: #444444;
-  --link-color: #0000ee;
+  --bg-color: #fafaf7;
+  --text-color: #2a2a2a;
+  --link-color: #3b82f6;
 }
 
 :root[data-theme="dark"] {
-  --bg-color: #1a1a1a;
-  --text-color: #cccccc;
-  --link-color: #66b3ff;
+  --bg-color: #141412;
+  --text-color: #d4d4d0;
+  --link-color: #7dafff;
 }
