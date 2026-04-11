@@ -39,6 +39,16 @@ test('extractLede: skips images and HTML at the top of a note', () => {
   assert.equal(extractLede(body), 'Real first paragraph starts here.');
 });
 
+test('extractLede: skips multi-line html figure blocks', () => {
+  const body = '<figure>\n  <img src="/foo.jpg"/>\n</figure>\n\nReal first paragraph.';
+  assert.equal(extractLede(body), 'Real first paragraph.');
+});
+
+test('extractLede: strips leading markdown heading marker', () => {
+  const body = '# My Note Title\n\nThe real body begins after the heading.';
+  assert.equal(extractLede(body), 'My Note Title');
+});
+
 test('extractLede: truncates at ~140 chars with an ellipsis', () => {
   const long = 'x'.repeat(200);
   const result = extractLede(long);

@@ -14,13 +14,15 @@ function slugify(str) {
 }
 
 function extractLede(body) {
-  // Strip leading HTML tags (img, figure, caption italics, etc.) and empty lines.
+  // Strip leading HTML blocks (img, figure, caption italics, etc.) and empty lines.
   const cleaned = body
     .split(/\n\n+/)
     .map((p) => p.trim())
     .filter((p) => p.length > 0)
-    // Drop paragraphs that are pure HTML or a single italic caption.
-    .filter((p) => !/^<[^>]+>$/.test(p))
+    // Drop paragraphs that start with an HTML tag. Covers single-line <img …/>
+    // as well as multi-line <figure>…</figure> blocks in the vault.
+    .filter((p) => !p.startsWith('<'))
+    // Drop single italic captions and standalone image markdown.
     .filter((p) => !/^_[^_]+_$/.test(p))
     .filter((p) => !/^!\[[^\]]*\]\([^)]+\)$/.test(p));
 
@@ -28,6 +30,9 @@ function extractLede(body) {
 
   // Take the first real paragraph.
   let lede = cleaned[0];
+
+  // Strip leading markdown heading marker if the first paragraph is a heading.
+  lede = lede.replace(/^#{1,6}\s+/, '');
 
   // Strip basic markdown: bold, italic, links, inline code.
   lede = lede
@@ -51,6 +56,14 @@ function extractLede(body) {
 }
 
 function assignAutoId(rootNum, indexWithinRoot) {
+  // These are placeholder IDs only — they get replaced by hand-assigned Luhmann
+  // IDs in Task 7. The 2-digit format assumes fewer than 100 notes per root,
+  // which is comfortably above the real count. Warn if we ever exceed it.
+  if (indexWithinRoot >= 99) {
+    console.warn(
+      `assignAutoId: index ${indexWithinRoot} exceeds 2-digit format in root ${rootNum}`
+    );
+  }
   const n = String(indexWithinRoot + 1).padStart(2, '0');
   return `${rootNum}-${n}`;
 }
