@@ -10,4 +10,14 @@ layout: base.njk
   <div class="note-body">
     {{ content | safe }}
   </div>
+  {% if noteBacklinks and noteBacklinks.length > 0 %}
+  <section class="note-backlinks">
+    <h2>Referenced in</h2>
+    <ul>
+      {% for bl in noteBacklinks %}
+      <li><a href="/{{ bl.id }}/">{{ bl.id }} — {{ bl.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </article>

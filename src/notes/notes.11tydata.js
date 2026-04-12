@@ -6,4 +6,10 @@ module.exports = {
   permalink: function(data) {
     return `/${data.id.replace(/\//g, '-')}/`;
   },
+  eleventyComputed: {
+    noteBacklinks: function(data) {
+      const key = (data.id || '').replace(/\//g, '-');
+      return (data.backlinks && data.backlinks[key]) || [];
+    },
+  },
 };
