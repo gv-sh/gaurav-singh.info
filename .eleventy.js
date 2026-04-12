@@ -35,7 +35,12 @@ module.exports = function(eleventyConfig) {
       day: 'numeric'
     });
   });
-  
+
+  // Filter: pick collection items belonging to a specific root number.
+  eleventyConfig.addFilter("byRoot", function(items, rootNum) {
+    return items.filter(item => item.data.root === rootNum);
+  });
+
   // Basic configuration
   return {
     // Input and output directories

@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<article class="note-raw">
+  <header>
+    <p class="note-id">{{ id }}</p>
+    <h1>{{ title }}</h1>
+    <p class="note-date">{{ date | shortDate }}</p>
+  </header>
+  <div class="note-body">
+    {{ content | safe }}
+  </div>
+</article>
