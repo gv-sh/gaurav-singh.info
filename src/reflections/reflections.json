@@ -1,0 +1,4 @@
+{
+  "layout": "reflection.njk",
+  "permalink": "/reflections/{{ year }}/"
+}

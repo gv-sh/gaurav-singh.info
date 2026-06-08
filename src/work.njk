@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Work
+description: Work history of Gaurav Singh
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<h2>Work</h2>
+<ul class="entries">
+{%- for job in work %}
+  <li class="entry">
+    <span class="entry-key">{{ job.years }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ job.org }}</span>
+      <p class="entry-note">{{ job.role }}; {{ job.place }}</p>
+      <p class="entry-blurb">{{ job.blurb }}</p>
+    </div>
+  </li>
+{%- endfor %}
+</ul>

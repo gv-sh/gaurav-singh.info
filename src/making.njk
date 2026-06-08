@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Making
+description: Things Gaurav Singh has made
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<h2>Making</h2>
+<ul class="entries">
+{%- for m in making %}
+  <li class="entry">
+    <span class="entry-key">{{ m.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ m.title }}</span>
+      {%- if m.note %}<p class="entry-note">{{ m.note }}</p>{% endif %}
+      {%- if m.blurb %}<p class="entry-blurb">{{ m.blurb }}</p>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+
+<h3>Theses</h3>
+<ul class="entries">
+{%- for t in theses %}
+  <li class="entry">
+    <span class="entry-key">{{ t.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ t.title }}</span>
+      {%- if t.note %}<p class="entry-note">{{ t.note }}</p>{% endif %}
+      {%- if t.blurb %}<p class="entry-blurb">{{ t.blurb }}</p>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>

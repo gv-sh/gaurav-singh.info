@@ -7,11 +7,14 @@
 // We walk every note in src/notes/, extract its forward links, then
 // invert the graph so each note can look up "what links to me?" in O(1).
 
-const fs = require('node:fs');
-const path = require('node:path');
-const matter = require('gray-matter');
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import matter from "gray-matter";
 
-function extractForwardLinks(body) {
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export function extractForwardLinks(body) {
   // Matches markdown link syntax where href is /<id>/ — IDs are
   // alphanumeric plus hyphens (our post-hyphenation filenames), no slashes.
   const re = /\]\(\/([a-zA-Z0-9][a-zA-Z0-9-]*)\/?\)/g;
@@ -23,7 +26,7 @@ function extractForwardLinks(body) {
   return Array.from(found);
 }
 
-function buildBacklinksMap(notes) {
+export function buildBacklinksMap(notes) {
   const map = {};
   for (const source of notes) {
     const targets = extractForwardLinks(source.content);
@@ -43,13 +46,13 @@ function buildBacklinksMap(notes) {
 }
 
 function loadAllNotes() {
-  const notesDir = path.join(__dirname, '..', 'notes');
+  const notesDir = path.join(__dirname, "..", "notes");
   if (!fs.existsSync(notesDir)) return [];
   return fs
     .readdirSync(notesDir)
-    .filter((f) => f.endsWith('.md'))
+    .filter((f) => f.endsWith(".md"))
     .map((f) => {
-      const raw = fs.readFileSync(path.join(notesDir, f), 'utf8');
+      const raw = fs.readFileSync(path.join(notesDir, f), "utf8");
       const parsed = matter(raw);
       return {
         id: parsed.data.id,
@@ -59,10 +62,6 @@ function loadAllNotes() {
     });
 }
 
-module.exports = function() {
+export default function () {
   return buildBacklinksMap(loadAllNotes());
-};
-
-// Also export helpers for testing.
-module.exports.extractForwardLinks = extractForwardLinks;
-module.exports.buildBacklinksMap = buildBacklinksMap;
+}

@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Reflections
+description: A short year-end letter by Gaurav Singh, 2009 to now
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<h2>Reflections</h2>
+<p class="section-sub">A short letter to myself at the end of each year, 2009 to now.</p>
+<ul class="entries reflection-list">
+{%- for r in collections.reflections %}
+  <li class="entry">
+    <span class="entry-key">{{ r.data.year }}</span>
+    <div class="entry-body">
+      <a class="entry-title" href="{{ r.url }}">{{ r.data.title }}</a>
+    </div>
+  </li>
+{%- endfor %}
+</ul>

@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Teaching
+description: Courses and workshops taught by Gaurav Singh
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<h2>Teaching</h2>
+<p class="section-sub">Courses and workshops I taught from 2013 to 2022, at Srishti in Bangalore from 2016 on.</p>
+<ul class="entries">
+{%- for course in teaching %}
+  <li class="entry">
+    <span class="entry-key">{{ course.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ course.title }}</span>
+      <p class="entry-blurb">{{ course.blurb }}</p>
+    </div>
+  </li>
+{%- endfor %}
+</ul>

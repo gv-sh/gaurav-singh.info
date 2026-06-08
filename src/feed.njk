@@ -7,21 +7,21 @@ eleventyExcludeFromCollections: true
   <title>{{ site.title }}</title>
   <link href="{{ site.url }}/feed.xml" rel="self"/>
   <link href="{{ site.url }}"/>
-  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <updated>{% if collections.posts.length %}{{ (collections.posts | first).date | rfc3339 }}{% else %}{{ "2026-01-01" | rfc3339 }}{% endif %}</updated>
   <id>{{ site.url }}/</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
   <subtitle>{{ site.description }}</subtitle>
-  {%- for post in collections.posts | reverse %}
-  {%- set absolutePostUrl = (site.url + post.url) | url %}
+  {%- for post in collections.posts %}
+  {%- set absolutePostUrl = site.url + post.url %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | rssDate }}</updated>
+    <updated>{{ post.date | rfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">{{ post.templateContent }}</content>
   </entry>
   {%- endfor %}
 </feed>

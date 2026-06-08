@@ -4,74 +4,17 @@ layout: base.njk
 
 {% include "intro.njk" %}
 
-{% include "cta.njk" %}
+{% include "nav.njk" %}
 
-<div class="content-grid">
-  <div class="main-col">
-    <h2>Publications</h2>
+<figure class="photo">
+  <img src="/assets/images/gold-coast.jpeg" alt="View over Surfers Paradise and the Gold Coast coastline" loading="lazy">
+  <figcaption>Gold Coast</figcaption>
+</figure>
 
-    <div class="publication">
-      <div class="pub-info">
-        <a class="pub-title" href="https://doi.org/10.1142/S0218348X26400633">Techno-economic pathways modeling and nonlinear optimized SEEA-ROI longitudinal dynamic simulation for decarbonising Australian heavy transportation systems</a>
-        <div class="pub-meta">G. Singh, E. Chang, Y. Karaca</div>
-        <div class="pub-meta">Fractals</div>
-      </div>
-      <span class="pub-year">2026</span>
-    </div>
+<p>I live in Gold Coast, Australia. I work at the seam between mathematics, computation, and design. I trained as a computer science engineer, took a long detour through design school, and spent most of the last decade <a href="/teaching/">teaching</a> mathematics, algorithms, and human-computer interaction. The detour is the point. It taught me to distrust the gap between a clean result and a thing someone actually has to use.</p>
 
-    <div class="publication">
-      <div class="pub-info">
-        <a class="pub-title" href="https://doi.org/10.5281/zenodo.18610143">Iterflow: Composable Streaming Statistics for JavaScript</a>
-        <div class="pub-meta">G. Singh</div>
-        <div class="pub-meta">Mathscapes</div>
-      </div>
-      <span class="pub-year">2026</span>
-    </div>
+<p>Three commitments organise it. Mathematics I treat as a language for reading the world and designing inside it, less a store of answers than a way of seeing structure. Computation is how that seeing becomes leverage, the interface that turns an idea into something you can run, test, and hand to someone else. Ethics is the part that refuses to be optional: a habit carried over from human-centered design, a long argument with technology about who a system is really for and what it quietly assumes.</p>
 
-    <div class="publication">
-      <div class="pub-info">
-        <a class="pub-title" href="https://doi.org/10.1177/20414196241281069">Automated detection of deformation mechanisms in re-entrant honeycomb auxetics using machine learning</a>
-        <div class="pub-meta">G. Singh, R. S. Dhari, Z. Javanbakht</div>
-        <div class="pub-meta">International Journal of Protective Structures</div>
-      </div>
-      <span class="pub-year">2024</span>
-    </div>
+<p>These days I build machine learning and image processing for engineering problems, with a stubborn interest in the choices made upstream of any model: how a physical thing becomes data, and what that lets a model see or keeps it from seeing. The results land in <a href="/publications/">publications</a>; the tools and side projects, in <a href="/making/">making</a>, and I keep them open and legible rather than locked away. The roles that carried me here are in <a href="/work/">work</a>: faculty, research, and now software.</p>
 
-    <div class="publication">
-      <div class="pub-info">
-        <a class="pub-title" href="https://doi.org/10.1145/3294109.3300986">ReRide: A Bike Area Network for Embodied Self-monitoring during Motorbike Commute</a>
-        <div class="pub-meta">N. Bagalkot, G. Singh, V. Rath, T. Sokoler, A. Shukla</div>
-        <div class="pub-meta">Proceedings of the Thirteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '19), 443-450</div>
-      </div>
-      <span class="pub-year">2019</span>
-    </div>
-
-    <div class="publication">
-      <div class="pub-info">
-        <a class="pub-title" href="https://doi.org/10.1007/978-3-319-68059-0_43">ReRide</a>
-        <div class="pub-meta">N. Bagalkot, T. Sokoler, R. Shaikh, G. Singh, A. E. Lillie, P. Dixit, A. Rai, V. Chakravarthy, A. Senthil</div>
-        <div class="pub-meta">Human-Computer Interaction - INTERACT 2017. Lecture Notes in Computer Science, vol 10516. Springer, Cham</div>
-      </div>
-      <span class="pub-year">2017</span>
-    </div>
-
-    <div class="publication">
-      <div class="pub-info">
-        <a class="pub-title" href="https://doi.org/10.1145/2676702.2676719">SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being</a>
-        <div class="pub-meta">S. Baadkar, G. Singh, A. Saraf, N. Bagalkot</div>
-        <div class="pub-meta">Proceedings of the India HCI 2014 Conference on Human-Computer Interaction, 136-141</div>
-      </div>
-      <span class="pub-year">2014</span>
-    </div>
-  </div>
-
-  <aside class="side-col">
-<h2>Co-authors</h2>
-    {% for author in site.coauthors %}
-      <div class="coauthor-name">
-        {% if author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}
-        <span class="coauthor-count">{{ author.count }}</span>
-      </div>
-    {% endfor %}
-  </aside>
-</div>
+<p>None of it happens alone. The <a href="/people/">people</a> I have learned from run through all of it, a few <a href="/awards-and-services/">awards and services</a> mark the milestones, and <a href="/reflections/">reflections</a> close out each year. I am not the quickest to an answer, but I am good at finding the question worth asking, and patient enough to stay with it.</p>

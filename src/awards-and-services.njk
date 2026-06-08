@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Awards and Services
+description: Awards and service contributions by Gaurav Singh
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<h2>Awards and Services</h2>
+
+<h3>Awards</h3>
+<ul class="entries">
+{%- for a in awards %}
+  <li class="entry">
+    <span class="entry-key">{{ a.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ a.title }}</span>
+      {%- if a.note %}<p class="entry-note">{{ a.note }}</p>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+
+<h3>Services</h3>
+<ul class="entries">
+{%- for s in service %}
+  <li class="entry">
+    <span class="entry-key">{{ s.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ s.title }}</span>
+      {%- if s.note %}<p class="entry-note">{{ s.note }}</p>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>

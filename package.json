@@ -2,19 +2,24 @@
   "name": "gaurav-singh.info",
   "version": "1.0.0",
   "description": "Personal website",
+  "type": "module",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve --watch",
     "clean": "rm -rf _site",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test": "node --test"
   },
   "author": "Mathscapes",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "gray-matter": "^4.0.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
+    "d3-geo": "^3.1.1",
+    "markdown-it-container": "^4.0.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   }
 }

@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: People
+description: People Gaurav Singh has learned from and worked alongside
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<h2>People</h2>
+<p class="section-sub">People I have learned from and worked alongside.</p>
+{%- for grp in people %}
+<h3 class="people-group">{{ grp.group }}</h3>
+<p class="people-names">
+{%- for p in grp.people -%}
+{%- if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{%- if not loop.last %}, {% endif -%}
+{%- endfor -%}
+</p>
+{%- endfor %}

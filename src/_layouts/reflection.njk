@@ -1,0 +1,11 @@
+---
+layout: base.njk
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<article class="reflection">
+  <h2>{{ title }}</h2>
+  <p class="reflection-date"><time datetime="{{ year }}-12-31">{{ year }}</time></p>
+  {{ content | safe }}
+</article>
