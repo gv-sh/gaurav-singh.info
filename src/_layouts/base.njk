@@ -11,6 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
@@ -20,6 +21,7 @@
     <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% if image %}<meta property="og:image" content="{{ site.url }}{{ image }}">{% endif %}
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEN47XT3N8"></script>

@@ -351,3 +351,179 @@ h1 a:hover {
 .reflection-list .entry-title { color: var(--link-color); }
 .reflection-list .entry { padding: 0.1em 0; }
 
+/* notes index: Bear-blog home style — monospace date column, tight rows */
+.notes-list { line-height: 1.7; }
+.notes-list .entry { padding: 0; gap: 1rem; }
+.notes-list .entry-key { flex-basis: 7.5rem; color: var(--text-color); }
+.notes-list .entry-title a { color: var(--link-color); }
+.notes-list .entry-body { flex: 1; }
+.notes-list .entry-cat { flex: 0 0 auto; color: var(--muted); font-size: 0.85em; white-space: nowrap; }
+
+/* ---- Notes: blog-style post pages ---- */
+.note {
+    line-height: 1.6;
+}
+
+.note h2 {
+    margin-top: 0;
+    margin-bottom: 0.15em;
+}
+
+/* title -> italic, muted date, matching the blog */
+.note-date {
+    margin: 0 0 1.8em;
+    color: var(--muted);
+}
+
+/* images sit full-width, block, left-aligned like the blog */
+.note-body img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.6em 0 0.4em;
+}
+
+.note-body p:has(> img) {
+    margin: 0;
+}
+
+/* a lone italic line under an image reads as a caption (left-aligned, muted) */
+.note-body p:has(> em:only-child) {
+    margin-top: 0;
+    color: var(--muted);
+    font-size: 0.9em;
+}
+
+/* responsive video embeds (e.g. the ReRide demo) */
+.note-body .container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 1.6em 0;
+}
+
+.note-body .responsive-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.note-backlinks {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 1px dashed var(--muted);
+}
+
+.note-backlinks h3 {
+    margin: 0 0 0.5em;
+    opacity: 0.7;
+}
+
+.note-backlinks ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+/* ---- Code blocks ---- */
+pre {
+    background-color: var(--code-bg-color);
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    line-height: 1.45;
+    margin: 1.5em 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: var(--code-color);
+    font-size: 0.9em;
+}
+
+/* ---- Tables (site-wide) ---- */
+table {
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+th,
+td {
+    border: 1px solid var(--muted);
+    padding: 0.4em 0.7em;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background-color: var(--code-bg-color);
+}
+
+/* ---- Image galleries in notes ---- */
+.note-body .grid-2,
+.note-body .grid-3 {
+    display: grid;
+    gap: 0.5em;
+    margin: 1.6em 0 0.4em;
+}
+
+.note-body .grid-2 { grid-template-columns: repeat(2, 1fr); }
+.note-body .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.note-body .grid-2 img,
+.note-body .grid-3 img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 3px;
+}
+
+.note-body img.aspect-ratio-3-2 {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .note-body .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- Math (KaTeX): let wide display equations scroll on small screens ---- */
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.25em 0;
+}
+
+/* ---- Footnotes (Bear-style: clickable [n] jumping to the footer) ---- */
+.footnotes {
+    font-size: 0.9em;
+    color: var(--muted);
+}
+
+.footnotes-sep {
+    margin: 2.5em 0 1em;
+}
+
+.footnotes-list {
+    padding-left: 1.2em;
+}
+
+.footnote-item p {
+    margin: 0.3em 0;
+}
+
+sup.footnote-ref a {
+    text-decoration: none;
+}
+
+.footnote-backref {
+    text-decoration: none;
+    margin-left: 0.3em;
+}
+

@@ -17,8 +17,11 @@
     "gray-matter": "^4.0.3"
   },
   "dependencies": {
+    "@vscode/markdown-it-katex": "^1.1.2",
     "d3-geo": "^3.1.1",
+    "katex": "^0.17.0",
     "markdown-it-container": "^4.0.0",
+    "markdown-it-footnote": "^4.0.0",
     "topojson-client": "^3.1.0",
     "world-atlas": "^2.0.2"
   }

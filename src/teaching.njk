@@ -13,7 +13,7 @@ description: Courses and workshops taught by Gaurav Singh
   <li class="entry">
     <span class="entry-key">{{ course.year }}</span>
     <div class="entry-body">
-      <span class="entry-title">{{ course.title }}</span>
+      <span class="entry-title">{%- if course.href %}<a href="{{ course.href }}">{{ course.title }}</a>{% else %}{{ course.title }}{% endif %}</span>
       <p class="entry-blurb">{{ course.blurb }}</p>
     </div>
   </li>

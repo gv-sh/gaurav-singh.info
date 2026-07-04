@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Notes
+description: Atomic notes by Gaurav Singh — writing, projects, and teaching.
+---
+{% include "intro.njk" %}
+
+{% include "nav.njk" %}
+
+<h2>Notes</h2>
+
+<p class="section-sub">Everything I've written down: essays, yearly reflections, project notes (also under <a href="/making/">making</a>), and the courses I've taught (also under <a href="/teaching/">teaching</a>).</p>
+
+<ul class="entries notes-list">
+{%- for note in collections.notesFeed %}
+  <li class="entry">
+    <span class="entry-key"><time datetime="{{ note.date | isoDate }}">{{ note.date | blogDate }}</time></span>
+    <div class="entry-body">
+      <span class="entry-title"><a href="{{ note.url }}">{{ note.title }}</a></span>
+    </div>
+    <span class="entry-cat">{{ note.category }}</span>
+  </li>
+{%- endfor %}
+</ul>

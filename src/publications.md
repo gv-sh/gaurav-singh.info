@@ -11,6 +11,11 @@ description: "Publications by Gaurav Singh"
 <h2>Publications</h2>
 
 <div class="publication">
+  <div class="pub-info"><span class="pub-title">A Framework for Visual-Mathematical Literacy in Applied Machine Learning: Why Representation Choices Shape What Models Can Learn</span>. G. Singh, R. S. Dhari. IOP Machine Learning, 2026.</div>
+  <a class="pub-doi" href="https://doi.org/10.1088/3049-4761/ae7df3">[DOI]</a>
+</div>
+
+<div class="publication">
   <div class="pub-info"><span class="pub-title">Techno-economic pathways modeling and nonlinear optimized SEEA-ROI longitudinal dynamic simulation for decarbonising Australian heavy transportation systems</span>. G. Singh, E. Chang, Y. Karaca. Fractals, 2026.</div>
   <a class="pub-doi" href="https://doi.org/10.1142/S0218348X26400633">[DOI]</a>
 </div>

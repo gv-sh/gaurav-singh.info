@@ -12,7 +12,8 @@ description: People Gaurav Singh has learned from and worked alongside
 <h3 class="people-group">{{ grp.group }}</h3>
 <p class="people-names">
 {%- for p in grp.people -%}
-{%- if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{%- if not loop.last %}, {% endif -%}
+{%- set about = collections.note | noteUrlByTitle(p.name) -%}
+{%- if about %}<a href="{{ about }}">{{ p.name }}</a>{% elif p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{%- if not loop.last %}, {% endif -%}
 {%- endfor -%}
 </p>
 {%- endfor %}

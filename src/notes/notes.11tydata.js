@@ -4,7 +4,7 @@ export default {
   layout: "note.njk",
   tags: ["note"],
   permalink: function (data) {
-    return `/${data.id.replace(/\//g, "-")}/`;
+    return `/notes/${data.slug}/`;
   },
   eleventyComputed: {
     noteBacklinks: function (data) {

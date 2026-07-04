@@ -17,7 +17,8 @@ export default [
   },
   {
     year: "2012",
-    title: "Face Detection System",
+    title: "Harr-cascade based detection",
+    href: "/notes/harr-cascade-based-detection/",
     note: "B.Tech in Computer Science & Engineering, JNTU Anantapur",
     blurb:
       "An embedded system that picks out people approaching a camera, built on component-based classifiers chosen to survive tilted heads and partly hidden faces. My first real computer-vision project.",

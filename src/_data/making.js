@@ -11,7 +11,7 @@ export default [
   {
     year: "2026",
     title: "Visual-mathematical literacy",
-    note: "Paper, under review at IOP Machine Learning: Engineering",
+    note: "Paper in IOP Machine Learning, 2026",
     blurb:
       "A framework for how representation, the way a physical thing gets turned into model input, quietly decides what a machine learning model can ever learn. Grounded in a review of 28 applied studies and an audit of my own auxetics pipeline.",
   },
@@ -32,6 +32,7 @@ export default [
   {
     year: "2024",
     title: "Auxetics ML (DeformDetect)",
+    href: "/notes/automated-detection-of-deformation-mechanisms-in-re-entrant-honeycomb-auxetics-using-machine-learning/",
     note: "Open Python tool; Int. J. Protective Structures",
     blurb:
       "Teaching a computer to read how re-entrant honeycomb structures fold under load, clustering finite-element images to name the deformation modes. It ships as an open Python tool and became the 2024 journal paper.",
@@ -46,6 +47,15 @@ export default [
   {
     year: "2017",
     title: "ReRide",
+    href: "/notes/reride/",
+    links: [
+      { label: "Interact 2017", href: "/notes/interact-2017/" },
+      { label: "Demo", href: "/notes/reride-demo/" },
+      { label: "Platform paper", href: "/notes/reride-a-platform-to-explore-interaction-with-personal-data-before-during-and-after-motorcycle-commuting/" },
+      { label: "Next iteration", href: "/notes/reride-s-next-iteration/" },
+      { label: "Bike Area Network paper", href: "/notes/reride-bike-area-network-paper/" },
+      { label: "Bike Area Network abstract", href: "/notes/reride-bike-area-network-abstract/" },
+    ],
     note: "Bike area network; with Naveen Bagalkot and Tomas Sokoler",
     blurb:
       "A bike area network for motorbike commuters: a posture-sensing rig on the bike, a cloud pipeline behind it, and a dashboard that shows a rider how they sit in real time. Shown at INTERACT 2017 and TEI 2019.",
