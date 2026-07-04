@@ -527,3 +527,31 @@ sup.footnote-ref a {
     margin-left: 0.3em;
 }
 
+/* notes index on small screens: fold each post onto one line —
+   small muted date, title truncated with an ellipsis, category on the right */
+@media (max-width: 540px) {
+    .notes-list .entry {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.55rem;
+        padding: 0.3em 0;
+    }
+    .notes-list .entry-key {
+        flex: 0 0 auto;
+        font-size: 0.78em;
+        color: var(--muted);
+    }
+    .notes-list .entry-body {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .notes-list .entry-cat {
+        flex: 0 0 auto;
+        font-size: 0.72em;
+    }
+}
+
