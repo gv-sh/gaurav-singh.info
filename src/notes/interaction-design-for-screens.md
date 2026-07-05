@@ -6,3 +6,5 @@ root: 4
 slug: interaction-design-for-screens
 ---
 This course covered the design and development of screen-based interfaces: websites and applications. Students learned user-centered design, wireframing, prototyping, and usability testing, and how to build interfaces that meet the needs of the people using them.
+
+**Key reference:** <span class="pub-title">The Design of Everyday Things</span>. D. A. Norman. Basic Books, 2013.

@@ -6,3 +6,5 @@ root: 4
 slug: algorithms-computation-and-hci
 ---
 This studio sat at the intersection of algorithms, computation, and human-computer interaction (HCI). It looked at the theory behind the resources a system needs, algorithms in particular. Students learned to measure how efficiently an algorithm solves a problem, and looked at what computers can and can't do. The point was to tie that theory back to designing interactions.
+
+**Key reference:** <span class="pub-title">Introduction to Algorithms</span>. T. H. Cormen, C. E. Leiserson, R. L. Rivest, C. Stein. MIT Press, 2009.

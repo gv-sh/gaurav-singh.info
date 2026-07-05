@@ -16,7 +16,7 @@ layout: base.njk
     <h3>Referenced in</h3>
     <ul>
       {% for bl in noteBacklinks %}
-      <li><a href="/{{ bl.id }}/">{{ bl.title }}</a></li>
+      <li><a href="/notes/{{ bl.slug }}/">{{ bl.title }}</a></li>
       {% endfor %}
     </ul>
   </section>

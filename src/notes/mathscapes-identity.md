@@ -14,4 +14,4 @@ _Logomark_
 
 _Wordmark_
 
-The Mathscapes wordmark is a registered trademark of Mathscapes Research, which is incorporated under the Companies Act, 2013 (18 of 2013) in India.
+The Mathscapes wordmark is a registered trademark of [Mathscapes Research](/notes/introducing-mathscapes/), which is incorporated under the Companies Act, 2013 (18 of 2013) in India.

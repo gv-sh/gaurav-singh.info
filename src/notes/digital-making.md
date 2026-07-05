@@ -21,7 +21,7 @@ The starting question was whether students with little to no grounding in impera
 
 _Vanshika explaining her project to Keshav_
 
-The workshop introduced students to this paradigm and why it matters for HCD/IXD. The approach is useful for designing software and well beyond it. Alongside OOD, they also worked with the Processing programming language as a medium to sketch interactions.
+The workshop introduced students to this paradigm and why it matters for HCD/IXD. The approach is useful for designing software and well beyond it. Alongside OOD, they also worked with the [Processing programming language](/notes/learning-to-code-with-processing/) as a medium to sketch interactions.
 
 <img src="/assets/images/2017/3.jpg"/>
 
@@ -52,3 +52,5 @@ _Oorja and Janaki demonstrating their prototype of a wrist band by using a mobil
 _The assignments that were given to the students’ involved tasks to understand the underlying complexity through OOAD artifacts and then rethinking interactions through video and Processing._
 
 Thanks to all the students for being amazing throughout the workshop. Akshata, Atharva, Disha, Jaidev, Janaki, Keshav, Kineri, Maithili, Oorja, Pahel, Ramya, Ridhima, Shriya, Sneha, Vanshika, Yamini.
+
+**Key reference:** <span class="pub-title">Mindstorms: Children, Computers, and Powerful Ideas</span>. S. Papert. Basic Books, 1980.

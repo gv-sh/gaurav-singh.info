@@ -8,8 +8,7 @@ export default {
   },
   eleventyComputed: {
     noteBacklinks: function (data) {
-      const key = (data.id || "").replace(/\//g, "-");
-      return (data.backlinks && data.backlinks[key]) || [];
+      return (data.backlinks && data.backlinks[data.slug]) || [];
     },
   },
 };

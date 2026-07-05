@@ -30,3 +30,5 @@ In this workshop, participants collected plant specimens and identified patterns
 ![](/assets/images/2021/magflora-09.jpg)
 
 ![](/assets/images/2021/magflora-10.jpg)
+
+**Key reference:** <span class="pub-title">The Algorithmic Beauty of Plants</span>. P. Prusinkiewicz, A. Lindenmayer. Springer, 1990.

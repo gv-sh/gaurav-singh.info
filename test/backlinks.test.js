@@ -2,46 +2,64 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { extractForwardLinks, buildBacklinksMap } from "../src/_data/backlinks.js";
+import { extractForwardLinks, buildBacklinksMap, buildGraph } from "../lib/note-links.js";
 
-test("extractForwardLinks: finds /<id>/ style links in markdown", () => {
-  const body = "See also [the primes note](/3-01/) and [iterflow](/2-05/).";
-  assert.deepEqual(extractForwardLinks(body).sort(), ["2-05", "3-01"]);
+test("extractForwardLinks: finds /notes/<slug>/ links in markdown", () => {
+  const body = "See also [the primes note](/notes/primes/) and [iterflow](/notes/introducing-mathscapes/).";
+  assert.deepEqual(extractForwardLinks(body).sort(), ["introducing-mathscapes", "primes"]);
 });
 
-test("extractForwardLinks: ignores external links", () => {
-  const body = "External [link](https://example.com) and [another](http://foo.bar/).";
+test("extractForwardLinks: ignores external and non-note links", () => {
+  const body = "External [link](https://example.com) and [work](/work/) and [x](/notes/).";
   assert.deepEqual(extractForwardLinks(body), []);
 });
 
-test("extractForwardLinks: ignores anchor links", () => {
+test("extractForwardLinks: ignores bare anchor links", () => {
   const body = "See [this section](#introduction).";
   assert.deepEqual(extractForwardLinks(body), []);
 });
 
-test("extractForwardLinks: deduplicates", () => {
-  const body = "[a](/2-01/) and [b](/2-01/) both point to 2-01.";
-  assert.deepEqual(extractForwardLinks(body), ["2-01"]);
+test("extractForwardLinks: tolerates a trailing #anchor and deduplicates", () => {
+  const body = "[a](/notes/primes/) and [b](/notes/primes/#top) both point to primes.";
+  assert.deepEqual(extractForwardLinks(body), ["primes"]);
 });
 
-test("buildBacklinksMap: produces the inverse graph", () => {
+test("buildBacklinksMap: produces the inverse graph keyed by slug", () => {
   const notes = [
-    { id: "2-01", title: "Iterflow", content: "Mentions [auxetics](/2-02/)." },
-    { id: "2-02", title: "Auxetics", content: "No links." },
-    { id: "3-01", title: "Primes", content: "Also [iterflow](/2-01/) and [auxetics](/2-02/)." },
+    { slug: "iterflow", title: "Iterflow", content: "Mentions [auxetics](/notes/auxetics/)." },
+    { slug: "auxetics", title: "Auxetics", content: "No links." },
+    { slug: "primes", title: "Primes", content: "Also [iterflow](/notes/iterflow/) and [auxetics](/notes/auxetics/)." },
   ];
   const map = buildBacklinksMap(notes);
-  assert.deepEqual(map["2-01"].map((x) => x.id).sort(), ["3-01"]);
-  assert.deepEqual(map["2-02"].map((x) => x.id).sort(), ["2-01", "3-01"]);
-  assert.deepEqual(map["3-01"] || [], []);
+  assert.deepEqual(map["iterflow"].map((x) => x.slug).sort(), ["primes"]);
+  assert.deepEqual(map["auxetics"].map((x) => x.slug).sort(), ["iterflow", "primes"]);
+  assert.deepEqual(map["primes"] || [], []);
 });
 
-test("buildBacklinksMap: backlinks include title and id of the source note", () => {
+test("buildBacklinksMap: entries carry slug and title of the source note", () => {
   const notes = [
-    { id: "2-01", title: "Iterflow", content: "[primes](/3-01/)" },
-    { id: "3-01", title: "Primes", content: "" },
+    { slug: "iterflow", title: "Iterflow", content: "[primes](/notes/primes/)" },
+    { slug: "primes", title: "Primes", content: "" },
   ];
   const map = buildBacklinksMap(notes);
-  assert.equal(map["3-01"][0].id, "2-01");
-  assert.equal(map["3-01"][0].title, "Iterflow");
+  assert.equal(map["primes"][0].slug, "iterflow");
+  assert.equal(map["primes"][0].title, "Iterflow");
+});
+
+test("buildBacklinksMap: ignores self-links", () => {
+  const notes = [{ slug: "primes", title: "Primes", content: "I link to [myself](/notes/primes/)." }];
+  assert.deepEqual(buildBacklinksMap(notes)["primes"] || [], []);
+});
+
+test("buildGraph: nodes, undirected deduped edges, and degree", () => {
+  const notes = [
+    { slug: "a", title: "A", cat: "2", content: "[b](/notes/b/) and [b again](/notes/b/)" },
+    { slug: "b", title: "B", cat: "3", content: "[a](/notes/a/)" }, // reciprocal — still one edge
+    { slug: "c", title: "C", cat: "4", content: "no links" },
+  ];
+  const g = buildGraph(notes);
+  assert.equal(g.nodes.length, 3);
+  assert.equal(g.links.length, 1); // a-b collapsed to a single undirected edge
+  const deg = Object.fromEntries(g.nodes.map((n) => [n.id, n.deg]));
+  assert.deepEqual(deg, { a: 1, b: 1, c: 0 });
 });

@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Photos
+description: Photo albums by Gaurav Singh
+---
+{% include "intro.njk" %}
+
+{% include "nav.njk" %}
+
+<h2 id="photos">Photos</h2>
+<p class="section-sub">Albums from trips, workshops, and places I have been. Tap an album to flip through it.</p>
+
+<div class="album-grid">
+  {% for album in photos %}
+  <button type="button" class="album-tile" data-album="{{ loop.index0 }}" aria-label="Open album: {{ album.title }}">
+    <span class="album-cover">
+      <img src="{{ album.cover or album.images[0] }}" alt="{{ album.title }}" loading="lazy">
+      {% if album.images.length > 1 %}
+      <span class="album-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="13" height="13" rx="2"/><path d="M3 8v11a2 2 0 0 0 2 2h11"/></svg>
+      </span>
+      {% endif %}
+    </span>
+    <span class="album-caption">{{ album.title }} <span class="album-year">{{ album.year }}</span></span>
+  </button>
+  {% endfor %}
+</div>
+
+<script type="application/json" id="albums-data">{{ photos | dump | safe }}</script>
+<script src="/assets/js/photos.js" defer></script>

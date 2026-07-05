@@ -5,4 +5,6 @@ id: 4-15
 root: 4
 slug: interaction-design-beyond-screens-2017
 ---
-Co-facilitated with Dr. Naveen Bagalkot. The course was about pushing interaction design past screen-based interfaces. Students worked on their own solutions to open-ended problems using a range of methods and tools, with user-centred design at the core, and built experiences that live in the world rather than behind glass.
+Co-facilitated with [Dr. Naveen Bagalkot](/notes/dr-naveen-bagalkot/). The course was about pushing interaction design past screen-based interfaces. Students worked on their own solutions to open-ended problems using a range of methods and tools, with user-centred design at the core, and built experiences that live in the world rather than behind glass.
+
+**Key reference:** <span class="pub-title">The Computer for the 21st Century</span>. M. Weiser. Scientific American, 94-104, 1991.

@@ -6,3 +6,5 @@ root: 4
 slug: interaction-design-beyond-screens-2018
 ---
 Co-facilitated with [Dr.Naveen Bagalkot](/notes/dr-naveen-bagalkot/). This course looked at interaction design past screen-based interfaces. Students worked on problems using a range of design methods and tools, and designed experiences that don't live on a screen. The emphasis throughout was on user-centered design.
+
+**Key reference:** <span class="pub-title">Where the Action Is: The Foundations of Embodied Interaction</span>. P. Dourish. MIT Press, 2001.

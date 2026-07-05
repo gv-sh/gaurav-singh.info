@@ -32,9 +32,10 @@
         gtag('config', 'G-KEN47XT3N8');
     </script>
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     <main>
         {{ content | safe }}
     </main>
+    {% include "footer.njk" %}
 </body>
 </html>

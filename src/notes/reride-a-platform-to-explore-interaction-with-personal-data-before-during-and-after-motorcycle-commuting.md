@@ -13,4 +13,4 @@ The motorcycle could soon be the new frontier for the exploration of human inter
 
 _Keywords_. Motorcike riding, personal informatics, cloud-based platform, interactive prototype
 
-_Cite as_. N Bagalkot, T Sokoler, R Shaikh, G Singh, AE Lillie, P Dixit, A Rai, V Chakravarthy, A Senthil. 2017. ReRide. Human-Computer Interaction - INTERACT 2017. Lecture Notes in Computer Science, vol 10516. Springer, Cham. doi: [10.1007/978-3-319-68059-0_43](https://link.springer.com/chapter/10.1007/978-3-319-68059-0_43)
+_Cite as_. [N Bagalkot](/notes/dr-naveen-bagalkot/), T Sokoler, R Shaikh, G Singh, AE Lillie, P Dixit, A Rai, V Chakravarthy, A Senthil. 2017. [ReRide](/notes/reride/). Human-Computer Interaction - [INTERACT 2017](/notes/interact-2017/). Lecture Notes in Computer Science, vol 10516. Springer, Cham. doi: [10.1007/978-3-319-68059-0_43](https://link.springer.com/chapter/10.1007/978-3-319-68059-0_43)

@@ -9,7 +9,7 @@ slug: reride-s-next-iteration
 
 _Mounting FSRs to study weight distribution during different postures_
 
-ReRide, after the demo at Interact 2017 went into its dormancy for some time due to our teaching engagements. But after an excellent, rigorous session of making and building the prototype for Interact 2017, we did learn a few things about rethinking the underlying architecture to create a more stable platform.
+ReRide, after the [demo at Interact 2017](/notes/interact-2017/) went into its dormancy for some time due to our teaching engagements. But after an excellent, rigorous session of making and building the prototype for Interact 2017, we did learn a few things about rethinking the underlying architecture to create a more stable platform.
 
 _Technical challenges in the earlier demonstration_. Genuino board fell short at handling simultaneous BLE connections from the sensors and the visualisation app suffered due to untimely handshakes and connection latency.
 
@@ -42,7 +42,7 @@ In the next version, we took a step back and looked at first accomplishing the a
 
 <img src="/assets/images/2018/2.jpg"/>
 
-_Enclosure for mounting camera system (by Chakra/Vineeta)_
+_Enclosure for mounting camera system (by [Chakra/Vineeta](/notes/vineeta-rath/))_
 
 _Fixing the Tech stack_. How do we decide and fix the technology stack for the prototype, when the prototype is evolving? Working on the same stack will be easier and convenient for teams but less flexible. And the changing stack could be more flexible to achieve the goals, but not easy for the team.
 

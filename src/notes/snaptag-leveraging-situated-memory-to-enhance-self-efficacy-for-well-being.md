@@ -10,4 +10,4 @@ Research shows that inherent psychological barriers linked to memory loss shape 
 
 _Keywords_. Self-efficacy, situated memory, wellbeing, senior citizens
 
-_Cite as_. S Baadkar, G Singh, A Saraf, N Bagalkot. 2014. SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being. In Proceedings of the India HCI 2014 Conference on Human-Computer Interaction. Association for Computing Machinery, New York, NY, USA, 136-141. doi: [10.1145/2676702.2676719](https://dl.acm.org/doi/10.1145/2676702.2676719)
+_Cite as_. S Baadkar, G Singh, A Saraf, [N Bagalkot](/notes/dr-naveen-bagalkot/). 2014. SnapTag: Leveraging Situated Memory to enhance self-efficacy for well-being. In Proceedings of the India HCI 2014 Conference on Human-Computer Interaction. Association for Computing Machinery, New York, NY, USA, 136-141. doi: [10.1145/2676702.2676719](https://dl.acm.org/doi/10.1145/2676702.2676719)
