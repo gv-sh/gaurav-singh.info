@@ -1,0 +1,103 @@
+---
+layout: base.njk
+title: CV
+description: Curriculum vitae of Gaurav Singh
+noarchive: true
+---
+{% include "intro.njk" %}
+{% include "nav.njk" %}
+
+<p class="section-sub">Varsity Lakes, Australia · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://orcid.org/0000-0003-1651-6602">ORCID</a> · <a href="https://github.com/gv-sh">GitHub</a> · <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">Google Scholar</a><span class="no-print"> · <a href="/assets/cv.pdf">PDF</a></span></p>
+
+<p>Software developer and machine-learning researcher. First-author papers in the International Journal of Protective Structures (2024) and IOP Machine Learning (2026); Master's thesis compared diffusion, GAN, and VAE models on 14.7M air-quality observations. Currently researching transport decarbonisation.</p>
+
+<h3>Research interests</h3>
+<p>Machine learning for engineering problems; generative models for sparse and incomplete data; mathematical modelling and simulation; visual-mathematical literacy.</p>
+
+<h3>Education</h3>
+<ul class="entries">
+{%- for e in education %}
+  <li class="entry">
+    <span class="entry-key">{{ e.years }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ e.degree }}</span>
+      <p class="entry-note">{{ e.institution }}{% if e.note %}; {{ e.note }}{% endif %}</p>
+      {%- if e.blurb %}<p class="entry-blurb">{{ e.blurb }}</p>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+
+<h3>Employment</h3>
+<ul class="entries">
+{%- for job in work %}{% if job.cvBlurb %}
+  <li class="entry">
+    <span class="entry-key">{{ job.years | replace("now", "present") }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ job.role }}</span><span class="entry-note">, {{ job.org }}, {{ job.place }}</span>
+      <p class="entry-blurb">{{ job.cvBlurb }}</p>
+    </div>
+  </li>
+{%- endif %}{% endfor %}
+</ul>
+{%- set others = work | rejectattr("cvBlurb") | rejectattr("cvHide") %}
+<p>Also: {% for job in others %}{{ job.org }} ({{ job.years }}){% if not loop.last %}, {% endif %}{% endfor %}; details in <a href="/work/">work</a>.</p>
+
+<h3>Publications</h3>
+{% for pub in publications %}{% if not pub.kind %}
+{% include "publication.njk" %}
+{% endif %}{% endfor %}
+
+<h3>Software</h3>
+{% for pub in publications %}{% if pub.kind == "software" %}
+{% include "publication.njk" %}
+{% endif %}{% endfor %}
+
+<h3>Teaching</h3>
+<p>{{ teaching | length }} courses and workshops in mathematics, computation, and human-computer interaction (2013–2022), mostly at Srishti Manipal Institute, Bangalore, India; the full list is in <a href="/teaching/">teaching</a>.</p>
+
+<h3>Awards</h3>
+<ul class="entries compact">
+{%- for a in awards %}
+  <li class="entry">
+    <span class="entry-key">{{ a.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ a.title }}</span>{% if a.note %} <span class="entry-note">· {{ a.note }}</span>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+
+<h3>Service</h3>
+<ul class="entries compact">
+{%- for s in service %}{% if s.kind == "service" %}
+  <li class="entry">
+    <span class="entry-key">{{ s.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ s.title }}</span>{% if s.note %} <span class="entry-note">· {{ s.note }}</span>{% endif %}
+    </div>
+  </li>
+{%- endif %}{% endfor %}
+</ul>
+
+<h3>Supervision</h3>
+<ul class="entries compact">
+{%- for s in service %}{% if s.kind == "supervision" %}
+  <li class="entry">
+    <span class="entry-key">{{ s.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ s.title }}</span>{% if s.note %} <span class="entry-note">· {{ s.note | replace("Thesis I supervised; ", "") }}</span>{% endif %}
+    </div>
+  </li>
+{%- endif %}{% endfor %}
+</ul>
+
+<h3>Skills</h3>
+<p>Machine learning: supervised learning, feature engineering, model evaluation and cross-validation; scikit-learn, PyTorch, TensorFlow/Keras.</p>
+<p>Deep learning: convolutional networks for computer vision; transformers and attention; generative models: diffusion (DDPM), GANs (TimeGAN), VAEs (β-VAE).</p>
+<p>Statistics &amp; simulation: probability and statistical inference, exploratory data analysis, uncertainty quantification, nonlinear optimisation, techno-economic and longitudinal modelling.</p>
+<p>LLMs &amp; agents: LLM APIs and integration, structured extraction from documents, agentic workflows, evaluation.</p>
+<p>Data &amp; MLOps: Python (NumPy, Pandas), SQL; Matplotlib; Git, CI/CD; Docker, AWS.</p>
+
+<h3>Referees</h3>
+<p>Referees available on request.</p>

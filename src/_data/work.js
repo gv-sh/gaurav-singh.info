@@ -1,5 +1,8 @@
 // Places Gaurav has worked, roughly newest first (ongoing roles up top).
 // Hand-maintained, drawn from the CV history.
+// `blurb` is the personal-voice text shown on /work/; entries with a `cvBlurb`
+// render as full entries on /cv/, the rest collapse into its "Also:" line,
+// except entries marked `cvHide`, which are left off the CV entirely.
 export default [
   {
     org: "Payments fintech",
@@ -8,12 +11,15 @@ export default [
     years: "2025–now",
     blurb:
       "My primary work right now, since 2025. I work on a payments platform that automates recurring billing and direct debit for businesses: subscriptions, bulk bank-account runs, card payments, and the API other software plugs into.",
+    cvBlurb:
+      "Payment-processing development on a production platform: recurring billing, direct debit, and hosted payment pages.",
   },
   {
     org: "University of the Sunshine Coast",
     role: "Research assistant",
     place: "Sunshine Coast, Australia",
     years: "2024–now",
+    cvHide: true,
     blurb:
       "Research assistant with Dr. Elizabeth Chang on the Decarbon work: techno-economic modelling of how Australia might decarbonise its heavy transport, and what the numbers say about when the switch actually pays off. This is the line of work the 2026 Fractals paper came out of, and it is ongoing.",
   },
@@ -24,6 +30,8 @@ export default [
     years: "2008–now",
     blurb:
       "My own research studio, going since 2008. It is where the maths work lives: studying and designing algorithms, recreational mathematics, and tools that keep maths accessible rather than locked behind a degree. Most of what I make starts here.",
+    cvBlurb:
+      "Independent studio for mathematics and algorithms; open-source libraries and mathematical design tools.",
   },
   {
     org: "M56",
@@ -38,6 +46,7 @@ export default [
     role: "Software developer",
     place: "United States",
     years: "2024",
+    cvHide: true,
     blurb:
       "A short stint, about three months, building machine learning into insurance underwriting at an early-stage fintech.",
   },
@@ -56,6 +65,8 @@ export default [
     years: "2018–2022",
     blurb:
       "Design copilot, working remotely. I helped run design competitions on the platform, shaping briefs and steering crowds of designers through them. I had competed there myself for years before that.",
+    cvBlurb:
+      "Onboarded designers and ran crowdsourced challenges for Fortune 500 clients on the Topcoder platform.",
   },
   {
     org: "Srishti Manipal Institute",
@@ -64,6 +75,8 @@ export default [
     years: "2017–2022",
     blurb:
       "Faculty and researcher for five years. I headed the M.Des in Design Computation, ran the Experimental Maths Lab, and taught most of the courses listed below. Most of the teaching I am proud of happened here.",
+    cvBlurb:
+      "Head of Studies for the M.Des in Design Computation; founded and ran the Experimental Maths Lab.",
   },
   {
     org: "Art in Transit / Srishti",

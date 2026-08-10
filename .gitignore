@@ -48,3 +48,5 @@ coverage/
 
 # Specify directory
 .specify/
+# Generated CV PDF at repo root (the published copy lives in src/assets/)
+/cv.pdf

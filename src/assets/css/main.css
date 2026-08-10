@@ -516,6 +516,15 @@ h1 a:hover {
     text-wrap: pretty;
 }
 
+/* compact entries: one line per row, tighter rhythm (cv awards/service/supervision) */
+.entries.compact .entry {
+    padding: 0.15em 0;
+}
+
+.entries.compact .entry-note {
+    margin: 0;
+}
+
 /* people: sub-group label + comma-separated names per group */
 .people-group {
     margin: 1.5em 0 0.5em;
@@ -807,3 +816,80 @@ sup.footnote-ref a {
     }
 }
 
+
+/* ---- print: clean output for the browser and scripts/generate-cv-pdf.mjs ---- */
+@media print {
+    @page {
+        size: A4;
+        margin: 20mm 18mm;
+    }
+
+    body {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #000;
+        font-size: 8.5pt;
+    }
+
+    .site-nav,
+    .site-footer,
+    .no-print {
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    .entry-title {
+        color: #000;
+    }
+
+    /* links print blue, clickable in the PDF, no URL spelled out */
+    a,
+    a:visited {
+        color: #3273dc;
+        text-decoration: none;
+    }
+
+    .entry,
+    .publication {
+        break-inside: avoid;
+    }
+
+    h2,
+    h3 {
+        break-after: avoid;
+    }
+
+    /* tighter rhythm so the CV fits two pages */
+    main {
+        line-height: 1.4;
+    }
+
+    h2 {
+        margin-top: 0.8em;
+    }
+
+    h3 {
+        margin-top: 0.9em;
+        margin-bottom: 0.4em;
+    }
+
+    p {
+        margin-bottom: 0.6em;
+    }
+
+    .entry {
+        padding: 0.3em 0;
+    }
+
+    .entries.compact .entry {
+        padding: 0.08em 0;
+    }
+
+    .publication {
+        margin-bottom: 0.6em;
+    }
+}

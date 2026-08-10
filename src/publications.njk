@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: "Publications"
+description: "Publications by Gaurav Singh"
+---
+
+{% include "intro.njk" %}
+
+{% include "nav.njk" %}
+
+<h2>Publications</h2>
+
+{% for pub in publications %}{% if not pub.kind %}
+{% include "publication.njk" %}
+{% endif %}{% endfor %}
+
+<h3>Software</h3>
+
+{% for pub in publications %}{% if pub.kind == "software" %}
+{% include "publication.njk" %}
+{% endif %}{% endfor %}
