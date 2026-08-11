@@ -1,0 +1,68 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+# Gaurav Singh — full site content
+
+> Personal website of Gaurav Singh, a researcher working at the intersection of design, machine learning, and engineering. Originally from India and now based in Varsity Lakes, Australia, he was a faculty member at Srishti Manipal Institute from 2017 to 2022.
+
+{{ site.author.intro }}
+
+The structured listings (work, publications, CV, teaching, awards, people) are
+indexed in {{ site.url }}/llms.txt. Below is the full text of every note and
+yearly reflection, in markdown.
+
+{% for note in collections.note | byRootSorted(2) %}
+---
+
+# {{ note.data.title | safe }}
+
+URL: {{ site.url }}{{ note.url }}
+Date: {{ note.date | isoDate }}
+Category: Project
+
+{{ note.rawInput | safe }}
+{% endfor %}
+{%- for note in collections.note | byRootSorted(3) %}
+---
+
+# {{ note.data.title | safe }}
+
+URL: {{ site.url }}{{ note.url }}
+Date: {{ note.date | isoDate }}
+Category: Writing
+
+{{ note.rawInput | safe }}
+{% endfor %}
+{%- for note in collections.note | byRootSorted(4) %}
+---
+
+# {{ note.data.title | safe }}
+
+URL: {{ site.url }}{{ note.url }}
+Date: {{ note.date | isoDate }}
+Category: Teaching
+
+{{ note.rawInput | safe }}
+{% endfor %}
+{%- for note in collections.note | byRootSorted(5) %}
+---
+
+# {{ note.data.title | safe }}
+
+URL: {{ site.url }}{{ note.url }}
+Date: {{ note.date | isoDate }}
+Category: People
+
+{{ note.rawInput | safe }}
+{% endfor %}
+{%- for r in collections.reflections %}
+---
+
+# {{ r.data.title | safe }}
+
+URL: {{ site.url }}{{ r.url }}
+Category: Reflection
+
+{{ r.rawInput | safe }}
+{% endfor %}

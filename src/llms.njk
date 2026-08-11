@@ -1,0 +1,62 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Gaurav Singh
+
+> Personal website of Gaurav Singh, a researcher working at the intersection of design, machine learning, and engineering. Originally from India and now based in Varsity Lakes, Australia, he was a faculty member at Srishti Manipal Institute from 2017 to 2022.
+
+All pages are plain HTML at the URLs below. The full text of the notes and
+yearly reflections is available in one file at {{ site.url }}/llms-full.txt.
+
+## Main pages
+
+- [Home]({{ site.url }}/): Short bio, with the site's sections linked from the prose
+- [Work]({{ site.url }}/work/): Roles and positions held
+- [Making]({{ site.url }}/making/): Projects, software, and theses
+- [Publications]({{ site.url }}/publications/): Peer-reviewed papers and software, with DOIs
+- [CV]({{ site.url }}/cv/): Education, work, publications, teaching, awards, and service
+- [Teaching]({{ site.url }}/teaching/): Courses taught
+- [Awards and services]({{ site.url }}/awards-and-services/): Awards, academic service, and supervision
+- [People]({{ site.url }}/people/): Collaborators, mentors, and students
+- [Photos]({{ site.url }}/photos/): Photo albums
+- [Notes]({{ site.url }}/notes/): Index of all notes, newest first
+- [Reflections]({{ site.url }}/reflections/): Yearly reflections
+- [Contact]({{ site.url }}/contact/): Email and profiles
+- [Blog](https://barelydiscernible.bearblog.dev): External blog
+
+## Publications
+
+{% for pub in publications -%}
+- {{ pub.authors | safe }} ({{ pub.year }}). {{ pub.title | safe }}. {{ pub.venue | safe }}.{% if pub.doi %} https://doi.org/{{ pub.doi }}{% endif %}
+{% endfor %}
+## Project notes
+
+{% for note in collections.note | byRootSorted(2) -%}
+- [{{ note.data.title | safe }}]({{ site.url }}{{ note.url }})
+{% endfor %}
+## Writing
+
+{% for note in collections.note | byRootSorted(3) -%}
+- [{{ note.data.title | safe }}]({{ site.url }}{{ note.url }})
+{% endfor %}
+## Teaching notes
+
+{% for note in collections.note | byRootSorted(4) -%}
+- [{{ note.data.title | safe }}]({{ site.url }}{{ note.url }})
+{% endfor %}
+## People notes
+
+{% for note in collections.note | byRootSorted(5) -%}
+- [{{ note.data.title | safe }}]({{ site.url }}{{ note.url }})
+{% endfor %}
+## Reflections
+
+{% for r in collections.reflections -%}
+- [{{ r.data.title | safe }}]({{ site.url }}{{ r.url }})
+{% endfor %}
+## Optional
+
+- [Full site content]({{ site.url }}/llms-full.txt): Every note and reflection in one markdown file
+- [Atom feed]({{ site.url }}/feed.xml)
+- [Sitemap]({{ site.url }}/sitemap.xml)
