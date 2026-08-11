@@ -28,7 +28,7 @@ export default [
   {
     year: 2013,
     title: "Location and arrival prediction",
-    note: "Thesis I supervised; Shobha R., Pavani A., Kalpana",
+    note: "Thesis I supervised; Shobha R., Pavani A., Kalpana, JNTU Anantapur",
     kind: "supervision",
   },
 ];

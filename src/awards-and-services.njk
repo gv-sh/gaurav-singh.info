@@ -23,7 +23,7 @@ description: Awards and service contributions by Gaurav Singh
 
 <h3>Services</h3>
 <ul class="entries">
-{%- for s in service %}
+{%- for s in service %}{% if s.kind == "service" %}
   <li class="entry">
     <span class="entry-key">{{ s.year }}</span>
     <div class="entry-body">
@@ -31,5 +31,18 @@ description: Awards and service contributions by Gaurav Singh
       {%- if s.note %}<p class="entry-note">{{ s.note }}</p>{% endif %}
     </div>
   </li>
-{%- endfor %}
+{%- endif %}{% endfor %}
+</ul>
+
+<h3>Supervision</h3>
+<ul class="entries">
+{%- for s in service %}{% if s.kind == "supervision" %}
+  <li class="entry">
+    <span class="entry-key">{{ s.year }}</span>
+    <div class="entry-body">
+      <span class="entry-title">{{ s.title }}</span>
+      {%- if s.note %}<p class="entry-note">{{ s.note | replace("Thesis I supervised; ", "") }}</p>{% endif %}
+    </div>
+  </li>
+{%- endif %}{% endfor %}
 </ul>

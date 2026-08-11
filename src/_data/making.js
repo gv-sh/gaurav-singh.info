@@ -4,7 +4,7 @@ export default [
   {
     year: "2026",
     title: "Heavy-transport decarbonisation",
-    note: "Digital-twin modelling; with Elizabeth Chang and Yeliz Karaca",
+    note: "Digital-twin modelling; with Dr. Elizabeth Chang and Dr. Yeliz Karaca",
     blurb:
       "Mathematical models that hand Australian heavy-transport operators a costed pathway off diesel and onto electric and hydrogen fleets. The 2026 Fractals paper is the first of the series, with more underway.",
   },
@@ -42,7 +42,7 @@ export default [
     title: "Together with Touch",
     note: "Walkin Studios, Bangalore",
     blurb:
-      "A collaborative piece made with Heubeush, Unger and Nagaraj, shown at Walkin Studios. It was supported by the International Relief Fund, a programme of the Goethe-Institut and the German Federal Foreign Office.",
+      "A collaborative piece made with Heubusch, Unger and Nagaraj, shown at Walkin Studios. It was supported by the International Relief Fund, a programme of the Goethe-Institut and the German Federal Foreign Office.",
   },
   {
     year: "2017",

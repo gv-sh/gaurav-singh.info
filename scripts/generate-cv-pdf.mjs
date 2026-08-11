@@ -11,9 +11,9 @@ import { fileURLToPath } from "node:url";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const siteDir = path.join(root, "_site");
-// default: the copy served at /assets/cv.pdf (linked from the CV page)
+// default: the copy served at /assets/gaurav-singh-cv.pdf (linked from the CV page)
 const outFile = path.resolve(
-  process.argv[2] ?? path.join(root, "src", "assets", "cv.pdf")
+  process.argv[2] ?? path.join(root, "src", "assets", "gaurav-singh-cv.pdf")
 );
 
 const chromeCandidates = [
@@ -70,7 +70,8 @@ const server = http.createServer(async (req, res) => {
       // (asset links stay relative and load from this local server)
       body = body
         .toString()
-        .replace(/(<a\s[^>]*href=")\//g, `$1${siteUrl}/`);
+        .replace(/(<a\s[^>]*href=")\//g, `$1${siteUrl}/`)
+        .replaceAll("\u2013", "-");  // hyphens parse more reliably in ATS systems
     }
     res.writeHead(200, {
       "content-type": types[path.extname(filePath)] ?? "application/octet-stream",
@@ -102,8 +103,8 @@ try {
   });
   console.log(`wrote ${outFile}`);
   // keep the already-built site current without a second eleventy run
-  const served = path.join(siteDir, "assets", "cv.pdf");
-  if (outFile === path.join(root, "src", "assets", "cv.pdf")) {
+  const served = path.join(siteDir, "assets", "gaurav-singh-cv.pdf");
+  if (outFile === path.join(root, "src", "assets", "gaurav-singh-cv.pdf")) {
     await copyFile(outFile, served);
     console.log(`copied to ${served}`);
   }

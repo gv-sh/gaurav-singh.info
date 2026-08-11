@@ -2,11 +2,11 @@
 # Search engines and LLM crawlers stay fully allowed below.
 User-agent: ia_archiver
 Disallow: /cv/
-Disallow: /assets/cv.pdf
+Disallow: /assets/gaurav-singh-cv.pdf
 
 User-agent: archive.org_bot
 Disallow: /cv/
-Disallow: /assets/cv.pdf
+Disallow: /assets/gaurav-singh-cv.pdf
 
 User-agent: *
 Allow: /

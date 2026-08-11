@@ -4,7 +4,7 @@ export default [
     year: "2025",
     title:
       "Enhancing Climate Forecasting with Advanced Generative Models for Synthetic AQI Data",
-    note: "Master of Information Technology, Griffith University; supervised by Elizabeth Chang",
+    note: "Master of Information Technology, Griffith University; supervised by Dr. Elizabeth Chang",
     blurb:
       "Using generative models to produce synthetic air-quality data good enough to sharpen climate forecasting where real readings are sparse.",
   },
@@ -17,10 +17,10 @@ export default [
   },
   {
     year: "2012",
-    title: "Harr-cascade based detection",
-    href: "/notes/harr-cascade-based-detection/",
+    title: "Multimarker tracking for AR",
+    href: "/notes/multimarker-tracking-for-ar/",
     note: "B.Tech in Computer Science & Engineering, JNTU Anantapur",
     blurb:
-      "An embedded system that picks out people approaching a camera, built on component-based classifiers chosen to survive tilted heads and partly hidden faces. My first real computer-vision project.",
+      "Real-time tracking of multiple AR markers in partially obstructed images. My undergraduate thesis, and the start of my computer-vision work.",
   },
 ];

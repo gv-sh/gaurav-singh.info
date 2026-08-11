@@ -61,20 +61,20 @@ export default function (eleventyConfig) {
   // "Making" as one consolidated list: curated things made (making + theses,
   // each optionally linking to its detail note) plus the standalone project
   // notes folded in. Notes already represented elsewhere are excluded — 2-02,
-  // 2-03, 2-08 link from their curated entry; 2-01 lives on the teaching page.
+  // 2-07, 2-08 link from their curated entry; 2-01 lives on the teaching page.
   eleventyConfig.addCollection("made", function (collection) {
     // ReRide (2-08) is the single curated entry; its sibling notes (2-04, 2-09,
     // 2-10, 2-11, 2-12, 2-13) are linked from it rather than listed separately.
-    // 2-01 lives on teaching; 2-02/2-03 link from their own curated entries.
+    // 2-01 lives on teaching; 2-02/2-07 link from their own curated entries.
     const covered = new Set([
-      "2-01", "2-02", "2-03", "2-04", "2-08", "2-09", "2-10", "2-11", "2-12", "2-13",
+      "2-01", "2-02", "2-04", "2-07", "2-08", "2-09", "2-10", "2-11", "2-12", "2-13",
     ]);
     // One-line descriptions for the folded-in project notes (which have no blurb
     // of their own), keyed by note id.
     const desc = {
       "2-05": "The origins and aims of Mathscapes, my maths research studio.",
       "2-06": "The Mathscapes wordmark and its trademark registration.",
-      "2-07": "Tracking multiple AR markers in real time, my undergraduate thesis project.",
+      "2-03": "Detecting people approaching a camera with Haar-cascade classifiers; my pre-thesis project.",
       "2-14": "A mobile app using situated memory to support senior citizens' wellbeing.",
     };
     const noteItems = collection

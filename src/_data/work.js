@@ -12,13 +12,13 @@ export default [
     blurb:
       "My primary work right now, since 2025. I work on a payments platform that automates recurring billing and direct debit for businesses: subscriptions, bulk bank-account runs, card payments, and the API other software plugs into.",
     cvBlurb:
-      "Payment-processing development on a production platform: recurring billing, direct debit, and hosted payment pages.",
+      "I build payment infrastructure businesses rely on daily: recurring billing, direct debit, and hosted payment pages.",
   },
   {
     org: "University of the Sunshine Coast",
     role: "Research assistant",
     place: "Sunshine Coast, Australia",
-    years: "2024–now",
+    years: "2025–now",
     cvHide: true,
     blurb:
       "Research assistant with Dr. Elizabeth Chang on the Decarbon work: techno-economic modelling of how Australia might decarbonise its heavy transport, and what the numbers say about when the switch actually pays off. This is the line of work the 2026 Fractals paper came out of, and it is ongoing.",
@@ -31,7 +31,7 @@ export default [
     blurb:
       "My own research studio, going since 2008. It is where the maths work lives: studying and designing algorithms, recreational mathematics, and tools that keep maths accessible rather than locked behind a degree. Most of what I make starts here.",
     cvBlurb:
-      "Independent studio for mathematics and algorithms; open-source libraries and mathematical design tools.",
+      "My own studio, going since 2008, where the maths work lives: open-source libraries and design tools that keep mathematics accessible rather than locked behind a degree.",
   },
   {
     org: "M56",
@@ -53,7 +53,7 @@ export default [
   {
     org: "Griffith University",
     role: "Research assistant",
-    place: "Gold Coast, Australia",
+    place: "Remote",
     years: "2022–2023",
     blurb:
       "Research assistant to Dr. Zia Javanbakht, working on machine learning for engineering problems. This grew out of the auxetics paper and led into further study in ML.",
@@ -66,7 +66,7 @@ export default [
     blurb:
       "Design copilot, working remotely. I helped run design competitions on the platform, shaping briefs and steering crowds of designers through them. I had competed there myself for years before that.",
     cvBlurb:
-      "Onboarded designers and ran crowdsourced challenges for Fortune 500 clients on the Topcoder platform.",
+      "I ran design challenges for Fortune 500 clients and steered crowds of designers through them, after years of competing on the platform myself.",
   },
   {
     org: "Srishti Manipal Institute",
@@ -76,7 +76,7 @@ export default [
     blurb:
       "Faculty and researcher for five years. I headed the M.Des in Design Computation, ran the Experimental Maths Lab, and taught most of the courses listed below. Most of the teaching I am proud of happened here.",
     cvBlurb:
-      "Head of Studies for the M.Des in Design Computation; founded and ran the Experimental Maths Lab.",
+      "I headed the M.Des in Design Computation and founded the Experimental Maths Lab, a room for recreational mathematics inside a design school. Most of the teaching I am proud of happened here.",
   },
   {
     org: "Art in Transit / Srishti",

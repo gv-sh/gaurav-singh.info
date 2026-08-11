@@ -7,12 +7,12 @@ noarchive: true
 {% include "intro.njk" %}
 {% include "nav.njk" %}
 
-<p class="section-sub">Varsity Lakes, Australia · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://orcid.org/0000-0003-1651-6602">ORCID</a> · <a href="https://github.com/gv-sh">GitHub</a> · <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">Google Scholar</a><span class="no-print"> · <a href="/assets/cv.pdf">PDF</a></span></p>
+<p class="section-sub">Varsity Lakes, Australia · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://orcid.org/0000-0003-1651-6602">ORCID</a> · <a href="https://github.com/gv-sh">GitHub</a> · <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">Google Scholar</a> · <a href="https://www.linkedin.com/in/gv-sh">LinkedIn</a><span class="no-print"> · <a href="/assets/gaurav-singh-cv.pdf">PDF</a></span></p>
 
-<p>Software developer and machine-learning researcher. First-author papers in the International Journal of Protective Structures (2024) and IOP Machine Learning (2026); Master's thesis compared diffusion, GAN, and VAE models on 14.7M air-quality observations. Currently researching transport decarbonisation.</p>
+<p>Machine-learning researcher and software developer. I came to machine learning by an unusual route: engineering, then design school, then a decade of teaching programming and human-computer interaction to designers. What ties it together is a care for the choices made before any model runs: how a physical thing becomes data, and what that data lets a model see. First-author papers in the International Journal of Protective Structures (2024) and IOP Machine Learning (2026); Master's research applied generative models to large-scale environmental time-series data.</p>
 
 <h3>Research interests</h3>
-<p>Machine learning for engineering problems; generative models for sparse and incomplete data; mathematical modelling and simulation; visual-mathematical literacy.</p>
+<p>How representation choices shape what models can learn; making models work where data is sparse and incomplete; mathematical modelling of physical and economic systems; visual-mathematical literacy.</p>
 
 <h3>Education</h3>
 <ul class="entries">
@@ -28,7 +28,7 @@ noarchive: true
 {%- endfor %}
 </ul>
 
-<h3>Employment</h3>
+<h3>Experience</h3>
 <ul class="entries">
 {%- for job in work %}{% if job.cvBlurb %}
   <li class="entry">
@@ -41,7 +41,7 @@ noarchive: true
 {%- endif %}{% endfor %}
 </ul>
 {%- set others = work | rejectattr("cvBlurb") | rejectattr("cvHide") %}
-<p>Also: {% for job in others %}{{ job.org }} ({{ job.years }}){% if not loop.last %}, {% endif %}{% endfor %}; details in <a href="/work/">work</a>.</p>
+<p>Also: {% for job in others %}{{ job.org }} ({{ job.years }}){% if not loop.last %}, {% endif %}{% endfor %}; details on <a href="/work/">my website</a>.</p>
 
 <h3>Publications</h3>
 {% for pub in publications %}{% if not pub.kind %}
@@ -54,7 +54,7 @@ noarchive: true
 {% endif %}{% endfor %}
 
 <h3>Teaching</h3>
-<p>{{ teaching | length }} courses and workshops in mathematics, computation, and human-computer interaction (2013–2022), mostly at Srishti Manipal Institute, Bangalore, India; the full list is in <a href="/teaching/">teaching</a>.</p>
+<p>{{ teaching | length }} courses and workshops over a decade (2013–2022), mostly at Srishti Manipal Institute in Bangalore: fractals drawn with code, algorithmic botany, physical computing, and interaction design; the full list is in <a href="/teaching/">teaching</a>.</p>
 
 <h3>Awards</h3>
 <ul class="entries compact">
@@ -93,8 +93,8 @@ noarchive: true
 </ul>
 
 <h3>Skills</h3>
-<p>Machine learning: supervised learning, feature engineering, model evaluation and cross-validation; scikit-learn, PyTorch, TensorFlow/Keras.</p>
-<p>Deep learning: convolutional networks for computer vision; transformers and attention; generative models: diffusion (DDPM), GANs (TimeGAN), VAEs (β-VAE).</p>
+<p>Machine learning: supervised learning, feature engineering, model evaluation and cross-validation, time-series forecasting; scikit-learn, PyTorch, TensorFlow/Keras.</p>
+<p>Deep learning: neural networks for computer vision, sequence modelling, and generative modelling.</p>
 <p>Statistics &amp; simulation: probability and statistical inference, exploratory data analysis, uncertainty quantification, nonlinear optimisation, techno-economic and longitudinal modelling.</p>
 <p>LLMs &amp; agents: LLM APIs and integration, structured extraction from documents, agentic workflows, evaluation.</p>
 <p>Data &amp; MLOps: Python (NumPy, Pandas), SQL; Matplotlib; Git, CI/CD; Docker, AWS.</p>

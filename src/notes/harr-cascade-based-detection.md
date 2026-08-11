@@ -1,5 +1,5 @@
 ---
-title: Harr-cascade based detection
+title: Haar-cascade based detection
 date: 2011-05-10T00:00:00.000Z
 image: /assets/images/2011/harr.jpg
 id: 2-03
@@ -10,13 +10,13 @@ slug: harr-cascade-based-detection
 
 _An example of early Haar-like features used by Viola and Jones in 2001 [^1], and tilted extensions proposed by Lienhart and Maydt [^5]._
 
-The aim of this 2011 study was to build an efficient face detection system that could still find faces in hard conditions: low light, partial obstruction, and changing facial expressions. I used the Harr cascade mechanism [^1][^2] and the Adaboost algorithm [^3][^4], which hold up well under those conditions.
+The aim of this 2011 study was to build an efficient face detection system that could still find faces in hard conditions: low light, partial obstruction, and changing facial expressions. I used the Haar cascade mechanism [^1][^2] and the Adaboost algorithm [^3][^4], which hold up well under those conditions.
  
-I looked closely at how the Harr cascade and Adaboost work and where they could be applied in face detection. The Harr cascade is a machine-learning approach where a cascade function, trained on positive and negative images, uses a series of simple features called Harr features to detect faces. The function runs in stages that discard non-facial regions, continuing until a face is found or the region is dismissed. Adaboost (Adaptive Boosting) works alongside it, combining weak classifiers into a strong one through ensemble learning. For face detection, Adaboost picks the most relevant Harr features and weights them, so the system focuses on the parts of the face that matter most and gets more accurate.
+I looked closely at how the Haar cascade and Adaboost work and where they could be applied in face detection. The Haar cascade is a machine-learning approach where a cascade function, trained on positive and negative images, uses a series of simple features called Harr features to detect faces. The function runs in stages that discard non-facial regions, continuing until a face is found or the region is dismissed. Adaboost (Adaptive Boosting) works alongside it, combining weak classifiers into a strong one through ensemble learning. For face detection, Adaboost picks the most relevant Harr features and weights them, so the system focuses on the parts of the face that matter most and gets more accurate.
 
 The study also drew a line between face detection and face recognition. Detection is about locating a face in an image or video frame; recognition is about identifying a specific person from their facial features. The two get conflated, and keeping them apart matters.
 
-The work showed that learning-based face detection, using Harr cascade and Adaboost, could extend HCI systems past traditional input methods. It also flagged how much bias can creep into the way these systems are trained and built, which affects both fairness and accuracy, and how much room there still is to develop the approach further.
+The work showed that learning-based face detection, using Haar cascade and Adaboost, could extend HCI systems past traditional input methods. It also flagged how much bias can creep into the way these systems are trained and built, which affects both fairness and accuracy, and how much room there still is to develop the approach further.
 
 Looked at together, the project showed what learning-based detection can do while making clear that bias and the detection-versus-recognition distinction both need attention. Those were the insights I took from it toward more accurate and fairer face detection.
 

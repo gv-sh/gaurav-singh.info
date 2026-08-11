@@ -5,7 +5,7 @@ id: 5-15
 root: 5
 slug: swati-sharma
 ---
-I met Swati Sharma at Srishti in 2013, in the Advanced Diploma in Innovation, Experience and Design. Her mix of strong principles and inventive design thinking stood out, along with an honest, restless interest in understanding and improving the world around her.
+I met Swati Sharma at Srishti in 2013, in the Advanced Diploma in Innovation and Experience Design. Her mix of strong principles and inventive design thinking stood out, along with an honest, restless interest in understanding and improving the world around her.
 
 She came in with a background in Electronic, Instrumentation and Control Engineering and added a postgraduate degree in Innovation and Experience Design, but it's her values that really shape how she works. She wants her work to matter, especially in healthcare and sustainability.
 
