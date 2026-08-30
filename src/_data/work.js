@@ -5,14 +5,15 @@
 // except entries marked `cvHide`, which are left off the CV entirely.
 export default [
   {
-    org: "Payments fintech",
-    role: "Software developer",
+    org: "Payments Technology Company",
+    role: "Software Developer",
     place: "Australia",
     years: "2025–now",
+    cvOrder: 1,
     blurb:
       "My primary work right now, since 2025. I work on a payments platform that automates recurring billing and direct debit for businesses: subscriptions, bulk bank-account runs, card payments, and the API other software plugs into.",
     cvBlurb:
-      "I build payment infrastructure businesses rely on daily: recurring billing, direct debit, and hosted payment pages.",
+      "Develop payment-platform software supporting recurring billing, direct debit, subscriptions, bank-account runs, card payments, hosted payment pages, and API integrations. Current stack: C#, .NET, TypeScript, Vue, Azure DevOps, and REST APIs.",
   },
   {
     org: "University of the Sunshine Coast",
@@ -25,13 +26,15 @@ export default [
   },
   {
     org: "Mathscapes",
-    role: "Founder and researcher",
+    role: "Founder and Researcher",
     place: "India",
     years: "2008–now",
+    cvOrder: 5,
+    cvPlace: "India / Remote",
     blurb:
       "My own research studio, going since 2008. It is where the maths work lives: studying and designing algorithms, recreational mathematics, and tools that keep maths accessible rather than locked behind a degree. Most of what I make starts here.",
     cvBlurb:
-      "My own studio, going since 2008, where the maths work lives: open-source libraries and design tools that keep mathematics accessible rather than locked behind a degree.",
+      "Develop open-source libraries and design tools focused on algorithms, recreational mathematics, and accessible mathematical practice, including the Iterflow streaming-statistics library.",
   },
   {
     org: "M56",
@@ -52,31 +55,37 @@ export default [
   },
   {
     org: "Griffith University",
-    role: "Research assistant",
+    role: "Research Assistant",
     place: "Remote",
     years: "2022–2023",
+    cvOrder: 2,
+    cvPlace: "Australia",
     blurb:
       "Research assistant to Dr. Zia Javanbakht, working on machine learning for engineering problems. This grew out of the auxetics paper and led into further study in ML.",
+    cvBlurb:
+      "Applied machine learning, computer vision, and image processing to engineering research on deformation mechanisms in re-entrant honeycomb auxetics. The work contributed to a first-author peer-reviewed publication.",
   },
   {
     org: "Topcoder",
-    role: "Design copilot",
+    role: "Design Copilot",
     place: "Remote",
     years: "2018–2022",
+    cvOrder: 3,
     blurb:
       "Design copilot, working remotely. I helped run design competitions on the platform, shaping briefs and steering crowds of designers through them. I had competed there myself for years before that.",
     cvBlurb:
-      "I ran design challenges for Fortune 500 clients and steered crowds of designers through them, after years of competing on the platform myself.",
+      "Ran design challenges for Fortune 500 clients and guided distributed groups of designers through competition briefs, after several years competing on the platform.",
   },
   {
     org: "Srishti Manipal Institute",
-    role: "Faculty member and researcher",
+    role: "Faculty Member and Researcher",
     place: "Bangalore, India",
     years: "2017–2022",
+    cvOrder: 4,
     blurb:
       "Faculty and researcher for five years. I headed the M.Des in Design Computation, ran the Experimental Maths Lab, and taught most of the courses listed below. Most of the teaching I am proud of happened here.",
     cvBlurb:
-      "I headed the M.Des in Design Computation and founded the Experimental Maths Lab, a room for recreational mathematics inside a design school. Most of the teaching I am proud of happened here.",
+      "Headed the Master of Design in Design Computation, founded the Experimental Maths Lab, and taught programming, algorithms, machine learning, physical computing, interaction design, and human-computer interaction.",
   },
   {
     org: "Art in Transit / Srishti",

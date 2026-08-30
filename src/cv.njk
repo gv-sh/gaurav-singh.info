@@ -1,15 +1,23 @@
 ---
 layout: base.njk
 title: CV
-description: Curriculum vitae of Gaurav Singh
+description: Curriculum vitae of Gaurav Singh, a software developer and applied machine-learning researcher based in Australia
 noarchive: true
 ---
 {% include "intro.njk" %}
 {% include "nav.njk" %}
 
-<p class="section-sub">Varsity Lakes, Australia · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://orcid.org/0000-0003-1651-6602">ORCID</a> · <a href="https://github.com/gv-sh">GitHub</a> · <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">Google Scholar</a> · <a href="https://www.linkedin.com/in/gv-sh">LinkedIn</a><span class="no-print"> · <a href="/assets/gaurav-singh-cv.pdf">PDF</a></span></p>
+<p class="section-sub">Varsity Lakes, Australia · Full Australian work rights · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://orcid.org/0000-0003-1651-6602">ORCID</a> · <a href="https://github.com/gv-sh">GitHub</a> · <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">Google Scholar</a> · <a href="https://www.linkedin.com/in/gv-sh">LinkedIn</a><span class="no-print"> · <a href="/assets/gaurav-singh-cv.pdf">PDF</a></span></p>
 
-<p>Machine-learning researcher and software developer. I came to machine learning by an unusual route: engineering, then design school, then a decade of teaching programming and human-computer interaction to designers. What ties it together is a care for the choices made before any model runs: how a physical thing becomes data, and what that data lets a model see. First-author papers in the International Journal of Protective Structures (2024) and IOP Machine Learning (2026); Master's research applied generative models to large-scale environmental time-series data.</p>
+<h3>Professional profile</h3>
+<p>Software developer and applied machine-learning researcher with current commercial experience building payment-platform software. I work across C#, .NET, TypeScript, Vue, REST APIs, Python, and modern machine-learning frameworks. My background spans computer science, engineering research, design, and a decade of university teaching. I have first-author peer-reviewed publications in applied machine learning and visual-mathematical literacy, and a Master of Information Technology focused on generative models for environmental time-series data.</p>
+
+<h3>Technical skills</h3>
+<p>Software engineering: C#, .NET, JavaScript, TypeScript, Vue, Azure DevOps, REST APIs, Git, and CI/CD; Docker and AWS.</p>
+<p>Machine learning: supervised learning, feature engineering, model evaluation and cross-validation, time-series forecasting; scikit-learn, PyTorch, TensorFlow/Keras.</p>
+<p>Deep learning: neural networks for computer vision, sequence modelling, and generative modelling.</p>
+<p>Data and modelling: Python, NumPy, Pandas, SQL, Matplotlib; probability and statistical inference, exploratory data analysis, uncertainty quantification, nonlinear optimisation, techno-economic modelling, and longitudinal modelling.</p>
+<p>LLMs and agents: LLM API integration, structured document extraction, agentic workflows, and evaluation.</p>
 
 <h3>Research interests</h3>
 <p>How representation choices shape what models can learn; making models work where data is sparse and incomplete; mathematical modelling of physical and economic systems; visual-mathematical literacy.</p>
@@ -30,31 +38,30 @@ noarchive: true
 
 <h3>Experience</h3>
 <ul class="entries">
-{%- for job in work %}{% if job.cvBlurb %}
+{%- set cvJobs = work | selectattr("cvBlurb") | sort(false, false, "cvOrder") %}
+{%- for job in cvJobs %}
   <li class="entry">
     <span class="entry-key">{{ job.years | replace("now", "present") }}</span>
     <div class="entry-body">
-      <span class="entry-title">{{ job.role }}</span><span class="entry-note">, {{ job.org }}, {{ job.place }}</span>
+      <span class="entry-title">{{ job.role }}</span><span class="entry-note">, {{ job.org }}, {{ job.cvPlace or job.place }}</span>
       <p class="entry-blurb">{{ job.cvBlurb }}</p>
     </div>
   </li>
-{%- endif %}{% endfor %}
+{%- endfor %}
 </ul>
-{%- set others = work | rejectattr("cvBlurb") | rejectattr("cvHide") %}
-<p>Also: {% for job in others %}{{ job.org }} ({{ job.years }}){% if not loop.last %}, {% endif %}{% endfor %}; details on <a href="/work/">my website</a>.</p>
 
 <h3>Publications</h3>
 {% for pub in publications %}{% if not pub.kind %}
 {% include "publication.njk" %}
 {% endif %}{% endfor %}
 
-<h3>Software</h3>
+<h3>Selected software</h3>
 {% for pub in publications %}{% if pub.kind == "software" %}
 {% include "publication.njk" %}
 {% endif %}{% endfor %}
 
-<h3>Teaching</h3>
-<p>{{ teaching | length }} courses and workshops over a decade (2013–2022), mostly at Srishti Manipal Institute in Bangalore: fractals drawn with code, algorithmic botany, physical computing, and interaction design; the full list is in <a href="/teaching/">teaching</a>.</p>
+<h3>Teaching and academic leadership</h3>
+<p>Designed and taught {{ teaching | length }} courses and workshops over a decade (2013–2022), mostly at Srishti Manipal Institute in Bangalore, spanning creative coding, algorithmic botany, physical computing, machine learning, interaction design, and human-computer interaction.</p>
 
 <h3>Awards</h3>
 <ul class="entries compact">
@@ -91,13 +98,3 @@ noarchive: true
   </li>
 {%- endif %}{% endfor %}
 </ul>
-
-<h3>Skills</h3>
-<p>Machine learning: supervised learning, feature engineering, model evaluation and cross-validation, time-series forecasting; scikit-learn, PyTorch, TensorFlow/Keras.</p>
-<p>Deep learning: neural networks for computer vision, sequence modelling, and generative modelling.</p>
-<p>Statistics &amp; simulation: probability and statistical inference, exploratory data analysis, uncertainty quantification, nonlinear optimisation, techno-economic and longitudinal modelling.</p>
-<p>LLMs &amp; agents: LLM APIs and integration, structured extraction from documents, agentic workflows, evaluation.</p>
-<p>Data &amp; MLOps: Python (NumPy, Pandas), SQL; Matplotlib; Git, CI/CD; Docker, AWS.</p>
-
-<h3>Referees</h3>
-<p>Referees available on request.</p>
