@@ -14,6 +14,10 @@ export default function (eleventyConfig) {
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  // Ink Signal is staged as a self-contained project site because its source
+  // repository is private and GitHub Pages cannot check it out with the
+  // site's read-only GITHUB_TOKEN.
+  eleventyConfig.addPassthroughCopy({ "src/ink-signal": "ink-signal" });
 
   // KaTeX stylesheet + fonts (math is rendered to HTML at build time).
   eleventyConfig.addPassthroughCopy({
