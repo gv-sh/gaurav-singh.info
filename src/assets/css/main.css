@@ -64,9 +64,10 @@ nav a {
     align-items: baseline;
     justify-content: space-between;
     gap: 1em;
-    margin: -0.5em 0 2em;
-    padding: 0.85em 1em;
+    margin: -0.5em 0 2.75em;
+    padding: 1em 1.1em;
     border: 1px solid currentColor;
+    background: var(--code-bg-color);
     font-size: 0.9em;
 }
 
