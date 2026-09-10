@@ -59,6 +59,36 @@ nav a {
     margin-bottom: 2em;
 }
 
+.ink-signal-banner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1em;
+    margin: -0.5em 0 2em;
+    padding: 0.85em 1em;
+    border: 1px solid currentColor;
+    font-size: 0.9em;
+}
+
+.ink-signal-banner strong {
+    color: inherit;
+}
+
+.ink-signal-banner a,
+.ink-signal-banner a:visited {
+    flex: none;
+    color: var(--link-color);
+    white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+    .ink-signal-banner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.45em;
+    }
+}
+
 /* keep nav links one colour (no purple :visited) so the Blog arrow,
    which can't inherit the visited colour, always matches the text */
 .site-nav a:visited {
