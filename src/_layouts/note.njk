@@ -3,22 +3,11 @@ layout: base.njk
 ---
 {% include "intro.njk" %}
 
-{% include "nav.njk" %}
-
 <article class="note">
   <h2>{{ title }}</h2>
   <p class="note-date"><time datetime="{{ date | isoDate }}">{{ date | blogDate }}</time></p>
+  {% if description %}<p class="note-intro">{{ description }}</p>{% endif %}
   <div class="note-body">
     {{ content | safe }}
   </div>
-  {% if noteBacklinks and noteBacklinks.length > 0 %}
-  <section class="note-backlinks">
-    <h3>Referenced in</h3>
-    <ul>
-      {% for bl in noteBacklinks %}
-      <li><a href="/notes/{{ bl.slug }}/">{{ bl.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
 </article>

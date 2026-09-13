@@ -1,0 +1,113 @@
+/* Paste inside a <style> element in Bear Blog's Header field. */
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --width: 660px;
+  --background-color: #fff;
+  --text-color: #222;
+  --link-color: #79546d;
+}
+
+html {
+  font-synthesis: none;
+  text-size-adjust: 100%;
+}
+
+body {
+  max-width: var(--width);
+  margin: auto;
+  padding: 28px 22px;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: InterVariable, Inter, system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  line-height: 1.65;
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  text-wrap: balance;
+}
+
+h1 { margin: 0; }
+@media screen and (min-width: 768px) {
+  body { padding-top: 64px !important; }
+}
+.capital-g-spur,
+.title h1 {
+  font-feature-settings: "cv10" 1;
+}
+h2 { margin: 2.25em 0 .75em; }
+h3 { margin: 2em 0 .65em; }
+p { margin: 0 0 1.15em; text-wrap: pretty; }
+
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--link-color) 70%, var(--text-color));
+}
+
+a:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--link-color) 55%, transparent);
+  outline-offset: 3px;
+}
+
+a[href^="http"]:not([href*="barelydiscernible.bearblog.dev"])::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: .25em;
+}
+
+nav a + a { margin-left: 1em; }
+header { margin-bottom: 3em; }
+footer { margin-top: 4em; padding-top: 0; }
+hr { display: none; }
+
+ul.blog-posts {
+  padding: 0;
+  list-style: none;
+}
+
+ul.blog-posts li {
+  display: flex;
+  gap: 1em;
+  margin-bottom: .35em;
+}
+
+ul.blog-posts li span {
+  flex: 0 0 6em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+img { max-width: 100%; height: auto; }
+blockquote { margin: 1.5em 0; padding-left: 1.25em; }
+code, pre { font: inherit; }
+pre { overflow-x: auto; white-space: pre-wrap; }
+
+@media (max-width: 540px) {
+  body { padding: 22px 18px; }
+  ul.blog-posts li { display: block; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #01242e;
+    --text-color: #eee;
+    --link-color: #d8b4cc;
+  }
+}

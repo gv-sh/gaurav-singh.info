@@ -11,6 +11,7 @@ const matter = require('gray-matter');
 // Maps vault folders to the five roots.
 // Root 1 (Reading) is intentionally empty at launch.
 const VAULT_ROOT = '/Users/gvsh/Library/Mobile Documents/iCloud~md~obsidian/Documents/obsidian/gvsh.cc';
+const KIND_BY_ROOT = { 2: 'project', 3: 'essay', 4: 'teaching', 5: 'person' };
 
 const IMPORT_MAP = [
   // Root 2: Making
@@ -113,9 +114,10 @@ function transformFrontmatter(input, assignments) {
   delete out.layout;
   // Strip the old "meta" field — it was a year label in the old site.
   delete out.meta;
+  delete out.root;
   // Inject assignments.
   out.id = assignments.id;
-  out.root = assignments.root;
+  out.kind = assignments.kind || KIND_BY_ROOT[assignments.root];
   out.slug = assignments.slug;
   if (assignments.profile_url) out.profile_url = assignments.profile_url;
   return out;
@@ -137,6 +139,7 @@ function readVaultFiles() {
       if (entry.only && !entry.only.includes(dirent.name)) continue;
       files.push({
         root: entry.root,
+        kind: KIND_BY_ROOT[entry.root],
         sourcePath: path.join(folder, dirent.name),
         sourceName: dirent.name,
       });
@@ -190,6 +193,7 @@ function importVault() {
       const newFrontmatter = transformFrontmatter(parsed.data, {
         id,
         root: rootNum,
+        kind: f.kind,
         slug,
       });
 

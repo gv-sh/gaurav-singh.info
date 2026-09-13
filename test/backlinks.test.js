@@ -53,9 +53,9 @@ test("buildBacklinksMap: ignores self-links", () => {
 
 test("buildGraph: nodes, undirected deduped edges, and degree", () => {
   const notes = [
-    { slug: "a", title: "A", cat: "2", content: "[b](/notes/b/) and [b again](/notes/b/)" },
-    { slug: "b", title: "B", cat: "3", content: "[a](/notes/a/)" }, // reciprocal — still one edge
-    { slug: "c", title: "C", cat: "4", content: "no links" },
+    { slug: "a", title: "A", cat: "project", content: "[b](/notes/b/) and [b again](/notes/b/)" },
+    { slug: "b", title: "B", cat: "essay", content: "[a](/notes/a/)" }, // reciprocal — still one edge
+    { slug: "c", title: "C", cat: "teaching", content: "no links" },
   ];
   const g = buildGraph(notes);
   assert.equal(g.nodes.length, 3);

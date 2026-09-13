@@ -1,5 +1,6 @@
 ---
 layout: home.njk
 title: "Home"
-description: "Personal website of Gaurav Singh: mathematics, computation, and design"
+description: "Gaurav Singh is a software developer and researcher working across machine learning, mathematics, and physical systems."
+hideFooter: true
 ---

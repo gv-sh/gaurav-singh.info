@@ -3,12 +3,5 @@
 export default {
   layout: "note.njk",
   tags: ["note"],
-  permalink: function (data) {
-    return `/notes/${data.slug}/`;
-  },
-  eleventyComputed: {
-    noteBacklinks: function (data) {
-      return (data.backlinks && data.backlinks[data.slug]) || [];
-    },
-  },
+  permalink: function (data) { return `/notes/${data.slug}/`; },
 };

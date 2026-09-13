@@ -62,7 +62,7 @@ test('assignAutoId: gives sequential 2-digit IDs within a root', () => {
   assert.equal(assignAutoId(3, 14), '3-15');
 });
 
-test('transformFrontmatter: preserves title and date, injects id/root/slug, strips layout', () => {
+test('transformFrontmatter: preserves title and date, injects id/kind/slug, strips layout', () => {
   const input = {
     title: 'Primes',
     date: '2013-03-05',
@@ -72,7 +72,8 @@ test('transformFrontmatter: preserves title and date, injects id/root/slug, stri
   assert.equal(out.title, 'Primes');
   assert.equal(out.date, '2013-03-05');
   assert.equal(out.id, '3-05');
-  assert.equal(out.root, 3);
+  assert.equal(out.kind, 'essay');
+  assert.equal(out.root, undefined);
   assert.equal(out.slug, 'primes');
   assert.equal(out.layout, undefined, 'legacy layout field should be stripped');
 });

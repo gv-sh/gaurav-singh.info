@@ -12,6 +12,7 @@ export default [
     years: "2013–2015",
     degree: "Advanced Diploma, Innovation & Experience Design",
     institution: "Srishti Institute of Art, Design and Technology, Bangalore, India",
+    institutionUrl: "https://srishtimanipalinstitute.in/",
   },
   {
     years: "2008–2012",
