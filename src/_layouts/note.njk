@@ -1,10 +1,10 @@
 ---
 layout: base.njk
 ---
-{% include "intro.njk" %}
+<div class="intro"><p class="capital-g-spur"><a href="/">{{ site.author.name }}</a></p></div>
 
 <article class="note">
-  <h2>{{ title }}</h2>
+  <h1>{{ title }}</h1>
   <p class="note-date"><time datetime="{{ date | isoDate }}">{{ date | blogDate }}</time></p>
   {% if description %}<p class="note-intro">{{ description }}</p>{% endif %}
   <div class="note-body">
