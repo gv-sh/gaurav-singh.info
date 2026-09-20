@@ -10,21 +10,20 @@ isCv: true
 ---
 {% include "intro.njk" %}
 
-<p class="profile-links no-print"><span>CV: <a href="/cv/">Professional</a> / <span aria-current="page">Academic</span></span><a href="/assets/gaurav-singh-academic-cv.pdf?v=20260913-inter-full">Download PDF</a></p>
+<p class="profile-links no-print"><span>CV: <a href="/cv/">Professional</a> / <span aria-current="page">Academic</span></span><a href="/assets/gaurav-singh-academic-cv.pdf?v=20260920-cv-alignment">Download PDF</a></p>
 
 <div class="cv-preview no-print" aria-label="Academic CV page previews">
-  <a class="cv-preview-page" href="/assets/gaurav-singh-academic-cv.pdf?v=20260913-inter-full#page=1" aria-label="Open page 1 of the Academic CV as a PDF"><img src="/assets/academic-1.webp?v=20260913-inter-full" alt="" width="1240" height="1754" loading="eager" decoding="async"></a>
-  <a class="cv-preview-page" href="/assets/gaurav-singh-academic-cv.pdf?v=20260913-inter-full#page=2" aria-label="Open page 2 of the Academic CV as a PDF"><img src="/assets/academic-2.webp?v=20260913-inter-full" alt="" width="1240" height="1754" loading="eager" decoding="async"></a>
+  <a class="cv-preview-page" href="/assets/gaurav-singh-academic-cv.pdf?v=20260920-cv-alignment#page=1" aria-label="Open page 1 of the Academic CV as a PDF"><img src="/assets/academic-1.webp?v=20260920-cv-alignment" alt="" width="1240" height="1754" loading="eager" decoding="async"></a>
+  <a class="cv-preview-page" href="/assets/gaurav-singh-academic-cv.pdf?v=20260920-cv-alignment#page=2" aria-label="Open page 2 of the Academic CV as a PDF"><img src="/assets/academic-2.webp?v=20260920-cv-alignment" alt="" width="1240" height="1754" loading="eager" decoding="async"></a>
 </div>
 
 <div class="cv-source">
 <p class="section-sub profile-links"><span>Varsity Lakes, Australia</span><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">Google Scholar</a><a href="https://orcid.org/0000-0003-1651-6602">ORCID</a></p>
 
 <h3>Research profile</h3>
-<p>Applied machine-learning researcher working across visual-mathematical literacy, computer vision, generative modelling, and nonlinear simulation. My background combines computer science, design, and a decade of university teaching. I also maintain Mathscapes as an independent mathematical practice.</p>
+<p>Applied machine-learning researcher with publications on visual-mathematical literacy, deformation detection in auxetic structures, and transport decarbonisation modelling. Former head of the Master of Design in Design Computation and founder of the Experimental Maths Lab at Srishti Manipal Institute. Maintain Mathscapes as an independent mathematical practice.</p>
 
-<h3>Research interests</h3>
-<p>Applied machine learning, mathematical modelling, computer vision, time-series and generative models, statistical inference, human-computer interaction, and algorithmic literacy.</p>
+
 
 <h3>Education</h3>
 <ul class="entries">
@@ -45,7 +44,7 @@ isCv: true
 {% include "publication.njk" %}
 {% endif %}{% endfor %}
 
-<h3>Academic experience</h3>
+<h3 class="cv-page-two">Academic appointment and leadership</h3>
 <ul class="entries">
 {%- for job in work %}
   {%- if job.org == "Srishti Manipal Institute" %}
@@ -53,53 +52,50 @@ isCv: true
     <span class="entry-key">{{ job.years | replace("now", "present") }}</span>
     <div class="entry-body">
       <span class="entry-title">{{ job.role }}</span><span class="entry-note">, {% if job.orgUrl %}<a href="{{ job.orgUrl }}">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}, {{ job.cvPlace or job.place }}</span>
-      <p class="entry-blurb">{{ job.cvBlurb }}</p>
+      <ul class="cv-bullets">
+        {% for bullet in job.cvBullets %}<li>{{ bullet }}</li>{% endfor %}
+      </ul>
     </div>
   </li>
   {%- endif %}
 {%- endfor %}
 </ul>
 
-<h3>Teaching and academic leadership</h3>
-<p>Designed and taught 30 courses and workshops over a decade (2013–2022), mostly at <a href="https://srishtimanipalinstitute.in/">Srishti Manipal Institute</a> in Bangalore, spanning creative coding, algorithmic botany, physical computing, machine learning, interaction design, and human-computer interaction.</p>
+<h3>Teaching and curriculum</h3>
+<p>Designed and taught 30 courses and workshops (2013–2022), primarily at <a href="https://srishtimanipalinstitute.in/">Srishti Manipal Institute</a> in Bangalore, spanning creative coding, algorithmic botany, physical computing, machine learning, interaction design, and human-computer interaction.</p>
+
+<p>Designed and facilitated <a href="/notes/deconstructing-algorithms/">Deconstructing Algorithms</a>, a 2020 undergraduate thesis studio with five students investigating algorithmic literacy through explainable AI and impact-investment information.</p>
 
 <h3>Technical methods</h3>
 <p>Python, scikit-learn, computer vision, time-series and generative modelling, statistical inference, nonlinear optimisation, experimental design, and data visualisation.</p>
 
+<h3>Thesis supervision</h3>
+<ul class="entries compact">
+{% for s in service %}{% if s.kind == "supervision" %}
+  <li class="entry"><span class="entry-key">{{ s.year }}</span><div class="entry-body"><span class="entry-title">{{ s.title }}</span><p class="entry-note">{{ s.note | replace("Thesis I supervised; ", "Thesis supervisor; students: ") }}</p></div></li>
+{% endif %}{% endfor %}
+</ul>
+
+<h3>Academic service</h3>
+<ul class="entries compact">
+{% for s in service %}{% if s.kind == "service" %}
+  <li class="entry"><span class="entry-key">{{ s.year }}</span><div class="entry-body"><span class="entry-title">{{ s.title }}</span><p class="entry-note">{{ s.note | replace("Thesis I supervised; ", "Thesis supervisor; students: ") }}</p></div></li>
+{% endif %}{% endfor %}
+</ul>
+
 <h3>Awards</h3>
 <ul class="entries compact">
-{%- for a in awards %}
-  <li class="entry">
-    <span class="entry-key">{{ a.year }}</span>
-    <div class="entry-body">
-      <span class="entry-title">{{ a.title }}</span>{% if a.note %} <span class="entry-note">{{ a.note }}</span>{% endif %}
-    </div>
-  </li>
-{%- endfor %}
+{% for a in awards %}{% if a.note != "Design grant" %}
+  <li class="entry"><span class="entry-key">{{ a.year }}</span><div class="entry-body"><span class="entry-title">{{ a.title }}</span>{% if a.note %}<span class="entry-note">({{ a.note }})</span>{% endif %}</div></li>
+{% endif %}{% endfor %}
 </ul>
 
-<h3>Academic service and supervision</h3>
+<h3>Grants</h3>
 <ul class="entries compact">
-{%- for s in service %}
-  <li class="entry">
-    <span class="entry-key">{{ s.year }}</span>
-    <div class="entry-body">
-      <span class="entry-title">{{ s.title }}</span>{% if s.note %} <span class="entry-note">{{ s.note | replace("Thesis I supervised; ", "") }}</span>{% endif %}
-    </div>
-  </li>
-{%- endfor %}
+{% for a in awards %}{% if a.note == "Design grant" %}
+  <li class="entry"><span class="entry-key">{{ a.year }}</span><div class="entry-body"><span class="entry-title">{{ a.title }}</span>{% if a.note %}<span class="entry-note">({{ a.note }})</span>{% endif %}</div></li>
+{% endif %}{% endfor %}
 </ul>
 
-<div class="cv-print-links print-only">
-<h3>Links</h3>
-<ul>
-  <li>Web version: <a href="{{ site.url }}/cv/academic/">{{ site.url }}/cv/academic/</a></li>
-  <li>Website: <a href="{{ site.url }}/">{{ site.url }}/</a></li>
-  <li>Google Scholar: <a href="https://scholar.google.com/citations?user=JibwQiQAAAAJ">https://scholar.google.com/citations?user=JibwQiQAAAAJ</a></li>
-  <li>ORCID: <a href="https://orcid.org/0000-0003-1651-6602">https://orcid.org/0000-0003-1651-6602</a></li>
-  <li>Srishti Manipal Institute: <a href="https://srishtimanipalinstitute.in/">https://srishtimanipalinstitute.in/</a></li>
-</ul>
-</div>
-
-<p class="cv-references">References available on request.</p>
+<p class="cv-footer">Website: <a href="{{ site.url }}/">{{ site.url }}</a> · GitHub: <a href="https://github.com/gv-sh">github.com/gv-sh</a></p>
 </div>

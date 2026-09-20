@@ -304,6 +304,10 @@ footer {
     margin: 0 0 0 0.5em;
 }
 
+.entries.compact p.entry-note {
+    margin-left: 0;
+}
+
 .cv-page .entry {
     display: grid;
     grid-template-columns: 7rem minmax(0, 1fr);
@@ -313,6 +317,19 @@ footer {
 
 .cv-page .entry-key {
     width: auto;
+}
+
+.cv-bullets {
+    margin: 0.35em 0 0;
+    padding-left: 1.15em;
+}
+
+.cv-bullets li + li {
+    margin-top: 0.2em;
+}
+
+.cv-footer {
+    margin-top: 1.25em;
 }
 
 .cv-page {
@@ -498,6 +515,11 @@ footer {
         font-size: 8.5pt;
     }
 
+    body.cv-page {
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+
     .site-nav,
     .site-footer,
     .no-print {
@@ -565,7 +587,7 @@ footer {
         break-after: avoid;
     }
 
-    .cv-publications-heading {
+    .cv-page-two {
         break-before: page;
     }
 
