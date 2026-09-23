@@ -14,7 +14,7 @@ layout: base.njk
     <li>{% if project.href %}<a href="{{ project.href }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</li>
     {%- endif %}
   {%- endfor %}
-    <li><a href="/notes/deconstructing-algorithms/">Deconstructing Algorithms</a></li>
+    <li><a href="/notes/deconstructing-algorithms/">Deconstructing Algorithms: a thesis studio on algorithmic literacy</a></li>
   {%- for pub in publications %}
     {%- if not pub.hideFromHome %}
     <li><a href="https://doi.org/{{ pub.doi }}">{{ pub.shortTitle or pub.title }}</a></li>

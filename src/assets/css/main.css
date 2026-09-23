@@ -101,13 +101,6 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-a[href^="http://"]::after,
-a[href^="https://"]::after {
-    content: "↗";
-    display: inline-block;
-    margin-left: 0.25em;
-}
-
 .site-nav {
     display: flex;
     flex-wrap: wrap;
@@ -554,11 +547,6 @@ footer {
         display: block;
         margin: 0.1em 0;
         overflow-wrap: anywhere;
-    }
-
-    a[href^="http://"]::after,
-    a[href^="https://"]::after {
-        display: none;
     }
 
     h1,
