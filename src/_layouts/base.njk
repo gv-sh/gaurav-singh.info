@@ -16,7 +16,7 @@
 
     <!-- CSS -->
     <link rel="preload" href="/assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/css/main.css?v=20260923-clean-links">
+    <link rel="stylesheet" href="/assets/css/main.css?v=20260924-consistent-cv">
     <!-- SEO Meta Tags -->
     <meta property="og:title" content="{% if page.url == "/" %}{{ site.title }}{% elif title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
@@ -69,7 +69,7 @@
           "description": {{ description | default(site.description) | json | safe }},
           "url": "{{ site.url }}{{ page.url }}",
           "datePublished": "{{ date | isoDate }}",
-          "image": "{{ site.url }}{{ image }}",
+          {% if image %}"image": "{{ site.url }}{{ image }}",{% endif %}
           "creator": { "@id": "{{ site.url }}/#person" },
           "mainEntityOfPage": { "@id": "{{ site.url }}{{ page.url }}#webpage" }
         }{% endif %}

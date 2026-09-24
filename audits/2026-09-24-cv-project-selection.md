@@ -52,3 +52,31 @@ Reviewed the gv-sh repository inventory and Mathscapes repositories, shortlisted
 - Regenerated the professional PDF and both WebP page previews, including their copies in the built site. Updated the professional CV asset cache key.
 - PDF metadata confirms two A4 pages; extracted text contains all three project descriptions on page one.
 - Visually inspected both rendered pages. No clipped text, overlapping content, or broken project entries; existing type size and page break are preserved.
+
+## Further CV revision
+
+The user requested recommendations 2–5 and excluded recommendation 1 (rewriting Pay Advantage). Its wording and the shared employment data remain unchanged.
+
+- Sharpened the profile around payment-system development and published applied ML/modelling research.
+- Added dated project headings, implementation decisions, demonstrated scope and research results. Current employment and selected projects occupy page one; earlier employment, education, compact publications and recognition occupy page two. Full publication citations remain in the unchanged academic CV.
+- Added public AATP and auxetic-ML case studies and linked them from the CV. The AATP page documents ownership, architecture, product-ID tracing and the demonstration workflow without exposing the private repository. The research page distinguishes four-mode coverage from classification accuracy and avoids unsupported evaluation claims.
+- AATP's 2024 date is supported by the repository's October 2024 implementation history. Additional detail comes from `docs/07_troubleshooting.md` (agent/ledger connectivity, Docker, macOS/Ubuntu and Indy/OpenSSL compatibility) and `tests/test_credential.py` (mocked credential API tests). Troubleshooting activity is not described as independently verified production reliability; mocked tests are not presented as end-to-end validation.
+- Rebuilt the site and professional PDF/previews. All 20 existing tests passed; the PDF contains two A4 pages with 10-point body text. Both rendered PDF pages were visually inspected and their case-study/DOI links checked.
+- Both case studies passed desktop (1100 px) and mobile (390 px) browser checks: no horizontal overflow, one main heading, valid JSON-LD and working internal links. Light desktop and dark mobile screenshots were visually inspected.
+
+## Consistent CV formatting
+
+- Applied shared entry-title emphasis across the academic and professional CVs and matched their second-page continuation headers.
+- Removed the name hyperlink on both CV routes and removed the professional-only enlarged heading. Both names inherit the body-text size (10 points in the PDFs).
+- Regenerated both PDFs and all four previews; confirmed two A4 pages each and visually inspected every rendered page. Verified both built name headings contain plain text without anchors. Build, all 20 existing tests and whitespace checks passed.
+
+## Subsequent user refinements
+
+- Names link home on the CV webpages only; print uses plain text at body size. The Professional/Academic switcher is screen-only. Cross-references between the PDFs and the AATP project-title hyperlink were removed.
+- The academic appointment title now explicitly states “Head of Programme, M.Des Design Computation”, as clarified by the user.
+- Professional selected publications now use the same full-citation include as the academic CV, retaining three selected articles and removing the separate first-author statement.
+- Expanded technical skills using inspected implementation evidence: `aqi-synthetic-research/src/models/base.py` and `src/models/transformer/gpt.py` use PyTorch/PyTorch Lightning for generative modelling; `src/optimization/hyperopt.py` creates and runs Optuna studies; `src/training/wandb_callbacks.py` logs metrics and artifacts with Weights & Biases. These support framework and experiment-tool skills, not a claim of production ML deployment.
+- `sg2/src/server/services.ts` implements chat-completion and image-generation API calls, parameterised prompts and SQLite operations. Its application source supports React, Node.js/Express and TypeScript. Existing AATP evidence supports Python/Flask, Docker and Linux; this site's workflow files substantiate GitHub Actions build/deployment use. No RAG, fine-tuning or agent-framework expertise was inferred.
+- The academic skills section is placed on page one, near the research profile. Both CVs retain the shared font sizing and citation formatting.
+- The user's final selections emphasise automated testing/delivery and ML experiment tracking/optimisation in the professional CV, and generative time-series modelling, simulation-based ML and representation/feature design in the academic CV. Model serving/monitoring was also selected but remains pending a concrete experience clarification; it is not yet claimed as an existing skill. Regenerated both PDFs/previews and visually checked all four pages; both remain two pages.
+- Final user refinements remove second-page continuation headers, describe the 2011/2012 Topcoder finals as invitations, replace “founded” with “set up” for the Experimental Maths Lab, and add a subtle Barely Discernible blog link to both footers. Both PDF blog annotations were verified. Screen navigation and linked names remain; PDF names stay plain text and PDFs do not cross-link. All four final pages were visually checked, and the build, 20 existing tests and whitespace checks passed before commit.

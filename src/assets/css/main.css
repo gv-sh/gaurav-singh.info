@@ -325,6 +325,37 @@ footer {
     margin-top: 1.25em;
 }
 
+.cv-page .entry-title,
+.cv-page .cv-project h4 {
+    font-weight: 600;
+}
+
+.cv-project {
+    margin: 0 0 1em;
+    break-inside: avoid;
+}
+
+.cv-project-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25em 1em;
+    flex-wrap: wrap;
+}
+
+.cv-project-heading h4 {
+    margin: 0;
+}
+
+.cv-project-heading > span,
+.cv-project-context {
+    font-size: 0.9em;
+}
+
+.cv-project-context {
+    margin: 0.2em 0 0;
+}
+
 .cv-page {
     max-width: 1400px;
 }
@@ -476,6 +507,22 @@ footer {
     margin: 0;
 }
 
+.case-architecture {
+    margin: 1.25em 0;
+    padding: 1em;
+    border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+    border-radius: 4px;
+}
+
+.case-architecture ol {
+    margin: 0;
+    padding-left: 1.3em;
+}
+
+.case-architecture li + li {
+    margin-top: 0.6em;
+}
+
 /* responsive video embeds (e.g. the ReRide demo) */
 .note-body .container {
     position: relative;
@@ -511,6 +558,10 @@ footer {
     body.cv-page {
         font-size: 10pt;
         line-height: 1.4;
+    }
+
+    .cv-page .cv-project {
+        margin-bottom: 0.75em;
     }
 
     .site-nav,

@@ -16,16 +16,17 @@ export default [
     org: "Srishti Manipal Institute",
     orgUrl: "https://srishtimanipalinstitute.in/",
     role: "Faculty Member and Researcher",
+    academicRole: "Head of Programme, M.Des Design Computation",
     place: "Bangalore, India",
     years: "2017–2022",
     cvOrder: 4,
     cvBullets: [
       "Headed the Master of Design in Design Computation.",
-      "Founded the Experimental Maths Lab.",
+      "Set up the Experimental Maths Lab.",
       "Taught programming, algorithms, machine learning, physical computing, and interaction design.",
     ],
     cvBlurb:
-      "Over five years, headed the Master of Design in Design Computation, founded the Experimental Maths Lab, and taught programming, algorithms, machine learning, physical computing, and interaction design.",
+      "Over five years, headed the Master of Design in Design Computation, set up the Experimental Maths Lab, and taught programming, algorithms, machine learning, physical computing, and interaction design.",
   },
   {
     org: "Topcoder",

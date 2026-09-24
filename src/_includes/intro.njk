@@ -1,5 +1,5 @@
 <div class="intro">
     <h1 class="capital-g-spur">
-        <a href="/">{{ site.author.name }}</a>
+        {% if isCv %}<a class="no-print" href="/">{{ site.author.name }}</a><span class="print-only">{{ site.author.name }}</span>{% else %}<a href="/">{{ site.author.name }}</a>{% endif %}
     </h1>
 </div>

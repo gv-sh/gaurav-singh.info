@@ -5,6 +5,6 @@ export default [
   { year: 2023, title: "Adobe Fund for Design", note: "Design grant" },
   { year: 2021, title: "Adobe Fund for Design", note: "Design grant" },
   { year: 2017, title: "Topcoder Open Design Champion", note: "India Regionals" },
-  { year: 2012, title: "Topcoder Open Studio Finals", note: "6th, Orlando" },
-  { year: 2011, title: "Topcoder Open Studio Finals", note: "11th, Fort Lauderdale" },
+  { year: 2012, title: "Invited to Topcoder Open Studio Finals", note: "6th, Orlando" },
+  { year: 2011, title: "Invited to Topcoder Open Studio Finals", note: "11th, Fort Lauderdale" },
 ];
