@@ -23,7 +23,7 @@ export default [
     cvBullets: [
       "Headed the Master of Design in Design Computation.",
       "Set up the Experimental Maths Lab.",
-      "Taught programming, algorithms, machine learning, physical computing, and interaction design.",
+      "Taught interaction design and human-computer interaction alongside programming, algorithms, machine learning and physical computing.",
     ],
     cvBlurb:
       "Over five years, headed the Master of Design in Design Computation, set up the Experimental Maths Lab, and taught programming, algorithms, machine learning, physical computing, and interaction design.",

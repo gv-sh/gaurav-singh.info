@@ -1,7 +1,7 @@
   <li class="entry">
     <span class="entry-key">{{ job.years | replace("now", "present") }}</span>
     <div class="entry-body">
-      <span class="entry-title">{{ job.role }}</span><span class="entry-note">, {% if job.orgUrl %}<a href="{{ job.orgUrl }}">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}, {{ job.cvPlace or job.place }}</span>
+      <span class="entry-title">{% if job.org == "Topcoder" %}<mark class="cv-highlight">{{ job.role }}</mark>{% else %}{{ job.role }}{% endif %}</span><span class="entry-note">, {% if job.orgUrl %}<a href="{{ job.orgUrl }}">{{ job.org }}</a>{% else %}{{ job.org }}{% endif %}, {{ job.cvPlace or job.place }}</span>
       {% if job.cvBullets %}<ul class="cv-bullets">
         {% for bullet in job.cvBullets %}<li>{{ bullet }}</li>{% endfor %}
       </ul>{% else %}<p class="entry-blurb">{{ job.cvBlurb }}</p>{% endif %}

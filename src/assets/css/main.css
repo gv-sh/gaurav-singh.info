@@ -206,6 +206,11 @@ footer {
     margin-top: 3em;
 }
 
+.home-selection .external-link-marker {
+    display: inline-block;
+    font-size: inherit;
+}
+
 .plain-index {
     margin: 0;
     padding: 0;
@@ -347,17 +352,26 @@ footer {
     margin: 0;
 }
 
-.cv-project-heading > span,
-.cv-project-context {
-    font-size: 0.9em;
-}
-
 .cv-project-context {
     margin: 0.2em 0 0;
 }
 
 .cv-page {
     max-width: 1400px;
+}
+
+.cv-page * {
+    font-size: inherit;
+}
+
+.cv-highlight {
+    color: #000;
+    background-color: #dfff85;
+    padding: 0 0.06em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .cv-preview {

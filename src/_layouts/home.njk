@@ -17,7 +17,7 @@ layout: base.njk
     <li><a href="/notes/deconstructing-algorithms/">Deconstructing Algorithms: a thesis studio on algorithmic literacy</a></li>
   {%- for pub in publications %}
     {%- if not pub.hideFromHome %}
-    <li><a href="https://doi.org/{{ pub.doi }}">{{ pub.shortTitle or pub.title }}</a></li>
+    <li><a href="https://doi.org/{{ pub.doi }}" title="View at {{ pub.publisher }}" aria-label="{{ pub.shortTitle or pub.title }} ({{ pub.publisher }}, external website)">{{ pub.shortTitle or pub.title }}&nbsp;<span class="external-link-marker" aria-hidden="true">({{ pub.publisher }})</span></a></li>
     {%- endif %}
   {%- endfor %}
   </ul>
